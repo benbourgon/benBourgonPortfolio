@@ -13,7 +13,12 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
+    color: white;
 
     h1 {
         text-align: center;
@@ -51,7 +56,10 @@ header {
         @include boxReset;
         margin-top: 100px;
     }
-    i {
+    a, button {
         color: white;
+        &:visited {
+            color: $mandarin;
+        }
     }
 }

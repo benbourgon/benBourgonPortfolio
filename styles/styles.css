@@ -238,6 +238,13 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
+header {
+  color: white;
+}
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -271,14 +278,18 @@ header p {
   padding: 0;
   margin-top: 100px;
 }
-header i {
+header a, header button {
   color: white;
+}
+header a:visited, header button:visited {
+  color: #ef8354;
 }
 
 body {
   background: white;
   margin: 0;
   padding: 0;
+  color: black;
 }
 
 ul {
@@ -299,8 +310,6 @@ img {
 }
 
 a {
-  color: white;
-  text-decoration: none;
   margin: 0;
   padding: 0;
 }
@@ -328,17 +337,15 @@ header {
           align-items: center;
   color: white;
 }
-header i {
-  margin-top: 150px;
-}
 
 .about {
   background-color: #63adf2;
+  color: white;
   margin: 0;
   padding: 0;
 }
 .about img {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  border-radius: 200px;
+  border-radius: 50%;
 }

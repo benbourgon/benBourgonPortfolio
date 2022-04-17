@@ -16,7 +16,9 @@
     <header>
         <div class="wrapper"></div>
             <nav>
-                <button class="mobileNavButton"><i class="fi fi-ss-menu-burger"></i></button>
+                <button class="mobileNavButton">
+                    <i class="fi fi-ss-menu-burger"></i>
+                </button> <!--.mobileNavButton end-->
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">My Work</a></li>
@@ -27,8 +29,10 @@
             </nav>
             <h1><span class="benName">Ben</span>Bourgon</h1>
             <h3>Front-End Developer</h3>
-            <a href="#about"><i class="fi fi-sr-arrow-down"></i></a>
-        </div>
+            <a href="#about">
+                <i class="fi fi-sr-arrow-down"></i>
+            </a>
+        </div> <!--.wrapper END-->
     </header>
     <main>
         <section class="about" id="about">
@@ -36,24 +40,51 @@
                 <h4>who am I?</h4>
                 <h2>hello</h2>
                 <div class="imageContainer">
-                    <img src="./assets/benBio.jpg" alt="A picture of me, Ben Bourgon, the developer writing this alt text!">
-                </div>
-                <div class="contentContainer"></div>
-
-                <h3>I'm a Front-End Web Developer based in Toronto, ON. I love combining my creativity with my analytic abilities to solve problems and write clean, DRY code with a focus on accessibility.</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla minus commodi ea ullam odio veniam sint nam natus molestias debitis repudiandae sequi doloremque voluptate non asperiores, at veritatis omnis eaque saepe facere recusandae! Corporis, laudantium?</p>
-                <a href="#profile">My Profile</a>
-            </div>
-        </section>
+                    <img src="./assets/benBioCropped.png" alt="A picture of me, Ben Bourgon, the developer writing this alt text!">
+                </div> <!--.imageContainer end-->
+                <div class="contentContainer">
+                    <h3>I'm a Front-End Web Developer based in Toronto, ON. I love combining my creativity with my analytic abilities to solve problems and write clean, DRY code with a focus on accessibility.</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla minus commodi ea ullam odio veniam sint nam natus molestias debitis repudiandae sequi doloremque voluptate non asperiores, at veritatis omnis eaque saepe facere recusandae! Corporis, laudantium?</p>
+                    <a href="#profile">My Profile</a>
+                </div> <!--.contentContainer end-->
+            </div> <!--.wrapper end-->
+        </section> <!--About section end-->
         <section class="projects" id="projects">
             <div class="wrapper">
-                <h4>very cool projects</h4>
+                <h4>some cool projects</h4>
                 <h3>My Work</h3>
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li>
+                        <a href="https://pairedproject.netlify.app/">
+                            <img src="./assets/projectScreenshots/taglinesDesktop.png" alt="Screenshot of the'Taglines..with a Vengeance!' website">
+                            <h3>Taglines...with a Vengeance!</h3>
+                            <p>A fun movie tagline quiz built using data from the TMDb API.</p>
+                            <p>HTML5 | SASS/SCSS/CSS3 | JavaScript | RESTful API</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://benbourgon-project-one.netlify.app/">
+                            <img src="./assets/projectScreenshots/underTheSeaDesktop.png" alt="Screenshot of the 'Under the Sea' website">
+                            <h3>Under the Sea</h3>
+                            <p>A PSD conversion with an aquarium theme.</p>
+                            <p>HTML5 | SASS/SCSS/CSS3</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://goodgoodgames.netlify.app/">
+                            <img src="./assets/projectScreenshots/goodGoodGamesDesktop.png"
+                            alt="Screenshot of 'Good Good Games' website">
+                            <h3>Good Good Games</h3>
+                            <p>Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
+                            <p>HTML5 | CSS3 | JavaScript | RESTful API</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gameboymodconfigurator.netlify.app/"><img src="./assets/projectScreenshots/gameBoyModConfiguratorDesktop.png" alt="Screenshot of 'Game Boy Mod Configurator' website">
+                        <h3>Game Boy Mod Configurator</h3>
+                        <p>A tool to plan your ultimate custom Game Boy build.</p>
+                        <p>HTML5 | CSS3 | JavaScript</p></a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -62,7 +93,10 @@
         <section class="contact" id="contact"></section>
     </main>
     <footer>
-        Developed by Ben Bourgon. Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+        <div class="wrapper">
+            <p>Designed and Developed by Ben Bourgon.</p>
+            <p>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
+        </div>
     </footer>
 </body>
 </html>

@@ -2,6 +2,7 @@
 body {
     background: white;
     @include boxReset;
+    color: black;
 }
 ul {
     @include boxReset;
@@ -19,8 +20,6 @@ img {
 }
 
 a {
-    color: white;
-    text-decoration: none;
     @include boxReset;
 }
 
