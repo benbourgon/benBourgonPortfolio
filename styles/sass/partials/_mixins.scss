@@ -1,0 +1,11 @@
+// Mixins
+
+@mixin fontSize($sizeValue) {
+    font-size: calc($sizeValue * 1px);
+    font-size: calc(($sizeValue / 10) * 1rem);
+}
+
+@mixin boxReset {
+    margin: 0;
+    padding: 0;
+}

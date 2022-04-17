@@ -225,3 +225,64 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 62.5%;
+  color: white;
+  font-family: "Montserrat";
+}
+
+body {
+  background: #135c71;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+header h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8.3rem;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 8.3rem;
+  margin: 0;
+  padding: 0;
+}
+header h1 .benName {
+  display: block;
+  font-size: 5.5rem;
+  line-height: 5.6rem;
+}
+header h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+header p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+}

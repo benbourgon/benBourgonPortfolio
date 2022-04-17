@@ -1,0 +1,40 @@
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    h1 {
+        text-align: center;
+        .benName {
+            display: block;
+            font-size: $benHeadingSize;
+            line-height: $benHeadingHeight;
+        }
+        font-family: $headingFont, sans-serif;
+        font-size: $bourgonHeadingSize;
+        display: block;
+        text-transform: uppercase;
+        font-weight: $bold;
+        line-height: $bourgonHeadingSize;
+        @include boxReset;
+    }
+    h2 {
+        font-family: $headingFont, sans-serif;
+        font-weight: $regular;
+        font-size: $heading2Size;
+        display: block;
+        @include boxReset;
+    }
+    p {
+        font-family: $bodyFont,
+        sans-serif;
+        font-weight: $regular;
+        font-size: $bodySize;
+        display: block;
+        @include boxReset;
+        margin-top: 100px;
+    }
+}

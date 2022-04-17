@@ -3,5 +3,7 @@
 @import "./partials/setup";
 @import "./partials/variables";
 @import "./partials/typography";
-// Add remaining partials here as needed
-
+@import "./partials/mixins";
+@import "./partials/baseStyles";
+@import "./partials/header";
+@import "./partials/footer";
