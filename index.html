@@ -7,21 +7,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="/your-path-to-uicons/css/uicons-solid-rounded.css" 
-    rel="stylesheet">
-    <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Ben Bourgon: Portfolio</title>
 </head>
 <body>
     <header>
-        <h1><span class="benName">Ben</span> Bourgon</h1>
-        <h2>Front-End Developer</h2>
-        <p>Portfolio coming soon</p>
+        <div class="wrapper"></div>
+            <nav>
+                <button class="mobileNavButton"><i class="fi fi-ss-menu-burger"></i></button>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">My Work</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1><span class="benName">Ben</span>Bourgon</h1>
+            <h3>Front-End Developer</h3>
+            <a href="#about"><i class="fi fi-sr-arrow-down"></i></a>
+        </div>
     </header>
-    <body>
-    </body>
+    <main>
+        <section class="about" id="about">
+            <div class="wrapper">
+                <h4>who am I?</h4>
+                <h2>hello</h2>
+                <div class="imageContainer">
+                    <img src="./assets/benBio.jpg" alt="A picture of me, Ben Bourgon, the developer writing this alt text!">
+                </div>
+                <div class="contentContainer"></div>
+
+                <h3>I'm a Front-End Web Developer based in Toronto, ON. I love combining my creativity with my analytic abilities to solve problems and write clean, DRY code with a focus on accessibility.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla minus commodi ea ullam odio veniam sint nam natus molestias debitis repudiandae sequi doloremque voluptate non asperiores, at veritatis omnis eaque saepe facere recusandae! Corporis, laudantium?</p>
+                <a href="#profile">My Profile</a>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="wrapper">
+                <h4>very cool projects</h4>
+                <h3>My Work</h3>
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="blog" id="blog"></section>
+        <section class="profile" id="profile"></section>
+        <section class="contact" id="contact"></section>
+    </main>
     <footer>
+        Developed by Ben Bourgon. Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
     </footer>
 </body>
 </html>

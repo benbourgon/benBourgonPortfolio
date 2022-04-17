@@ -1,0 +1,9 @@
+.about {
+    background-color: $blue-jeans;
+    @include boxReset;
+
+    img {
+        flex-basis: 100%;
+        border-radius: 200px;
+    }
+}

@@ -1,4 +1,30 @@
 // base styles
 body {
-    background: $blue-sapphire;
+    background: white;
+    @include boxReset;
+}
+ul {
+    @include boxReset;
+    list-style: none;
+}
+
+img { 
+    max-width: 100%;
+    height: auto;
+}
+.wrapper {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    @include boxReset;
+}
+
+button {
+    background-color: transparent;
+    border: none;
 }

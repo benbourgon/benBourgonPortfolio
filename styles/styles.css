@@ -228,16 +228,91 @@ html {
 
 html {
   font-size: 62.5%;
-  color: white;
-  font-family: "Montserrat";
 }
 
 body {
-  background: #135c71;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: auto;
+  color: white;
+}
+
+header h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5.2rem;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 5.3rem;
+  margin: 0;
+  padding: 0;
+}
+header h1 .benName {
+  display: block;
+  font-size: 3.5rem;
+  line-height: 3.6rem;
+}
+header h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+header p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+}
+header i {
+  color: white;
+}
+
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 header {
   height: 100vh;
+  background-color: #135c71;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,36 +328,17 @@ header {
           align-items: center;
   color: white;
 }
-header h1 {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 6.3rem;
-  display: block;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 6.3rem;
+header i {
+  margin-top: 150px;
+}
+
+.about {
+  background-color: #63adf2;
   margin: 0;
   padding: 0;
 }
-header h1 .benName {
-  display: block;
-  font-size: 3.5rem;
-  line-height: 3.6rem;
-}
-header h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 2.5rem;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-header p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  display: block;
-  margin: 0;
-  padding: 0;
-  margin-top: 100px;
+.about img {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  border-radius: 200px;
 }

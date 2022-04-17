@@ -1,6 +1,57 @@
+// TYPOGRAPHY
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; // base font size of 10px;
+}
+
+// Universal font styling
+body {
+    font-family: $bodyFont, sans-serif;
+    font-size: $bodySize;
+    font-weight: $regular;
+    line-height: $bodyHeight;
     color: white;
-    font-family: $bodyFont;
+}
+
+header {
+
+    h1 {
+        text-align: center;
+    
+        .benName {
+            display: block;
+            font-size: $benHeadingSize;
+            line-height: $benHeadingHeight;
+        }
+    
+        font-family: $headingFont,
+        sans-serif;
+        font-size: $bourgonHeadingSize;
+        display: block;
+        text-transform: uppercase;
+        font-weight: $bold;
+        line-height: $bourgonHeadingHeight;
+        @include boxReset;
+    }
+    
+    h3 {
+        font-family: $headingFont, sans-serif;
+        font-weight: $regular;
+        font-size: $heading2Size;
+        display: block;
+        @include boxReset;
+    }
+    
+    p {
+        font-family: $bodyFont,
+            sans-serif;
+        font-weight: $regular;
+        font-size: $bodySize;
+        display: block;
+        @include boxReset;
+        margin-top: 100px;
+    }
+    i {
+        color: white;
+    }
 }
