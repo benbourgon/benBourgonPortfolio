@@ -256,18 +256,18 @@ header {
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 8.3rem;
+  font-size: 6.3rem;
   display: block;
   text-transform: uppercase;
   font-weight: 700;
-  line-height: 8.3rem;
+  line-height: 6.3rem;
   margin: 0;
   padding: 0;
 }
 header h1 .benName {
   display: block;
-  font-size: 5.5rem;
-  line-height: 5.6rem;
+  font-size: 3.5rem;
+  line-height: 3.6rem;
 }
 header h2 {
   font-family: "Montserrat", sans-serif;
