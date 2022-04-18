@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Ben Bourgon: Portfolio</title>
 </head>
@@ -57,46 +58,118 @@
                     <li>
                         <a href="https://pairedproject.netlify.app/">
                             <img src="./assets/projectScreenshots/taglinesDesktop.png" alt="Screenshot of the'Taglines..with a Vengeance!' website">
-                            <h3>Taglines...with a Vengeance!</h3>
-                            <p>A fun movie tagline quiz built using data from the TMDb API.</p>
-                            <p>HTML5 | SASS/SCSS/CSS3 | JavaScript | RESTful API</p>
+                            <div class="textContainer">
+                                <h3>Taglines...with a Vengeance!</h3>
+                                <p>Match the given tagline with the correct movie! Built as a pair programming project with Cristina Grosser, this quiz creates random questions generated with data from the TMDb API.</p>
+                                <p>HTML5 | SASS/SCSS/CSS3 | JavaScript | RESTful API</p>
+                            </div> <!--.textContainer end-->
                         </a>
+                        <a href="https://github.com/TaglinesWithAVengeance/pairedProject">See the code on GitHub <i class="fi fi-brands-github"></i></a>
                     </li>
                     <li>
                         <a href="https://benbourgon-project-one.netlify.app/">
                             <img src="./assets/projectScreenshots/underTheSeaDesktop.png" alt="Screenshot of the 'Under the Sea' website">
-                            <h3>Under the Sea</h3>
-                            <p>A PSD conversion with an aquarium theme.</p>
-                            <p>HTML5 | SASS/SCSS/CSS3</p>
+                            <div class="textContainer">
+                                <h3>Under the Sea</h3>
+                                <p>A multi-page responsive PSD conversion with an aquarium theme and a ton of elements breaking out of their containers!</p>
+                                <p>HTML5 | SASS/SCSS/CSS3</p>
+                            </div> <!--.textContainer end-->
                         </a>
+                        <a href="https://github.com/benbourgon/benBourgonProjectOne">See the code on GitHub <i class="fi fi-brands-github"></i></a>
                     </li>
                     <li>
                         <a href="https://goodgoodgames.netlify.app/">
                             <img src="./assets/projectScreenshots/goodGoodGamesDesktop.png"
                             alt="Screenshot of 'Good Good Games' website">
-                            <h3>Good Good Games</h3>
-                            <p>Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
-                            <p>HTML5 | CSS3 | JavaScript | RESTful API</p>
+                            <div class="textContainer">
+                                <h3>Good Good Games</h3>
+                                <p>Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
+                                <p>HTML5 | CSS3 | JavaScript | RESTful API</p>
+                            </div> <!--.textContainer end-->
                         </a>
+                        <a href="https://github.com/benbourgon/goodGoodGames">See the code on GitHub <i class="fi fi-brands-github"></i></a>
                     </li>
                     <li>
                         <a href="https://gameboymodconfigurator.netlify.app/"><img src="./assets/projectScreenshots/gameBoyModConfiguratorDesktop.png" alt="Screenshot of 'Game Boy Mod Configurator' website">
-                        <h3>Game Boy Mod Configurator</h3>
-                        <p>A tool to plan your ultimate custom Game Boy build.</p>
-                        <p>HTML5 | CSS3 | JavaScript</p></a>
+                        <div class="textContainer">
+                            <h3>Game Boy Mod Configurator</h3>
+                            <p>Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
+                            <p>HTML5 | CSS3 | JavaScript</p>
+                        </a>
+                        <a href="https://github.com/benbourgon/gameBoyModConfigurator">See the code on GitHub <i class="fi fi-brands-github"></i></a>
+                        </div> <!--.textContainer end-->
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="blog" id="blog"></section>
-        <section class="profile" id="profile"></section>
-        <section class="contact" id="contact"></section>
-    </main>
+        <section class="blog" id="blog">
+            <div class="wrapper">
+                <h4>writing re: writing code</h4>
+                <h3>My Blog</h3>
+                <ul>
+                    <li>
+                        <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
+                            <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
+                            <div class="textContainer">
+                                <h3>Trading call sheets for style sheets</h3>
+                                <p>Or why I’m pivoting to become a front-end web developer.</p>
+                                <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">Read More</a>
+                            </div> <!--.textContainer end-->
+                        </a>
+                    </li>
+                </ul>
+            </div> <!--.wrapper ends-->
+        </section> <!--blog section ends-->
+        <section class="profile" id="profile">
+            <div class="wrapper">
+                <h4>more about me</h4>
+                <h3>Profile</h3>
+                <nav class="profileNav">
+                    <ul>
+                        <li>Bio</li>
+                        <li>Skills</li>
+                        <li>Interests</li>
+                    </ul>
+                </nav>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quibusdam ut dicta amet placeat libero facilis harum voluptates nobis accusantium nemo ex, perferendis ducimus quaerat. Magni, ex. Enim, unde?</p>
+                <a href="">Message Me</a>
+                <a href="">Request Resume</a>
+            </div> <!--.wrapper end-->
+        </section> <!--profile section ends-->
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <h4>get in touch</h4>
+                <h3>Contact</h3>
+                <form action="submit">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" name="name" id="name" class="nameInput" placeholder="Name" required>
+                    <label for="phone" class="sr-only">Phone (optional)</label>
+                    <input type="text" name="phone" id="phone" class="phoneInput" placeholder="Phone (optional)">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
+                    <label for="messageBox">Message (Say hi/request resume/set up coffee/Zoom chat)</label>
+                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="5"></textarea>
+                    <input type="button" value="Send">
+                </form>
+                <p class="or">or</p>
+                <a href="mailto:benjaminbourgon@gmail.com">benjaminbourgon@gmail.com</a>
+                <a href="tel:16049289742">604.928.9742</a>
+                <nav>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div> <!--.wrapper ends-->
+        </section> <!--contact section ends-->
+    </main> <!--end of Main-->
     <footer>
         <div class="wrapper">
-            <p>Designed and Developed by Ben Bourgon.</p>
+            <p><i class="fi fi-sr-copyright"></i> Ben Bourgon 2022.</p>pDesigned and Developed by Ben Bourgon.</p>
             <p>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
-        </div>
-    </footer>
+        </div> <!--.wrapper end-->
+    </footer> 
 </body>
 </html>
