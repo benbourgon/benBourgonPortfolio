@@ -10,6 +10,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Ben Bourgon: Portfolio</title>
 </head>
@@ -22,6 +23,7 @@
                 </button> <!--.mobileNavButton end-->
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">My Work</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#profile">Profile</a></li>
@@ -50,10 +52,78 @@
                 </div> <!--.contentContainer end-->
             </div> <!--.wrapper end-->
         </section> <!--About section end-->
+        <section class="skills" id="skills">
+            <div class="wrapper">
+                <h4>checkout my</h4>
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <i></i>
+                        <p>Accessibility</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Project management & teamwork</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Creative problem solving</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Communication skills</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>JavaScript</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>SCSS/SASS</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Git/GitHub version control & collaboration</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Wireframing & scope documentation</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>RESTful API's and Firebase</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Responsive Design</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Paired programming</p>
+                    </li>
+                    <li>
+                        <i></i>
+                        <p>Adobe Creative Cloud</p>
+                    </li>
+                </ul>
+            </div> <!--.wrapper end-->
+        </section> <!--Skills section end-->
         <section class="projects" id="projects">
             <div class="wrapper">
                 <h4>some cool projects</h4>
-                <h3>My Work</h3>
+                <h2>My Work</h2>
                 <ul>
                     <li>
                         <a href="https://pairedproject.netlify.app/">
@@ -105,7 +175,7 @@
         <section class="blog" id="blog">
             <div class="wrapper">
                 <h4>writing re: writing code</h4>
-                <h3>My Blog</h3>
+                <h2>My Blog</h2>
                 <ul>
                     <li>
                         <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
@@ -123,17 +193,37 @@
         <section class="profile" id="profile">
             <div class="wrapper">
                 <h4>more about me</h4>
-                <h3>Profile</h3>
+                <h2>Profile</h2>
+                <ul>
+                    <li>Bio</li>
+                    <li>Achievements</li>
+                    <li>Interests</li>
+                    <li>Coffee</li>
+                </ul>
                 <nav class="profileNav">
                     <ul>
-                        <li>Bio</li>
-                        <li>Skills</li>
-                        <li>Interests</li>
+                        <li>
+                            <i class="icon-user"></i>
+                        </li>
+                        <li>
+                            <i class="icon-trophy"></i>
+                        </li>
+                        <li>
+                            <i class="icon-energy"></i>
+                        </li>
+                        <li>
+                            <i class="icon-cup"></i>
+                        </li>
                     </ul>
                 </nav>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quibusdam ut dicta amet placeat libero facilis harum voluptates nobis accusantium nemo ex, perferendis ducimus quaerat. Magni, ex. Enim, unde?</p>
-                <a href="">Message Me</a>
-                <a href="">Request Resume</a>
+                <p>Creative and analytical front-end developer driven to build accessible, user-friendly applications through clean,
+                responsive, and organized code. After a decade working in Film and TV production, I excel at problem-solving, project
+                management strategies, and communicating with colleagues of all technical abilities. Bringing my passion for continuous
+                learning, an artistic eye for detail, and strong foundations in JavaScript, CSS, and HTML, I am seeking opportunities
+                for challenge and growth as a developer. Outside of work, I enjoy modifying/fixing gaming hardware, playing and mixing
+                music, and exercise through basketball and hiking.</p>
+                <a href="#contact">Message Me</a>
+                <a href="#contact">Request Resume</a>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
         <section class="contact" id="contact">
@@ -147,19 +237,37 @@
                     <input type="text" name="phone" id="phone" class="phoneInput" placeholder="Phone (optional)">
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
-                    <label for="messageBox">Message (Say hi/request resume/set up coffee/Zoom chat)</label>
-                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="5"></textarea>
+                    <label for="messageBox">Your Message:</label>
+                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="5" placeholder="Say hi/request resume/set up coffee/Zoom chat"></textarea>
                     <input type="button" value="Send">
                 </form>
                 <p class="or">or</p>
                 <a href="mailto:benjaminbourgon@gmail.com">benjaminbourgon@gmail.com</a>
-                <a href="tel:16049289742">604.928.9742</a>
+                <a href="tel:16049289742">1.604.928.9742</a>
                 <nav>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            <label for="gitHubContact" class="sr-only">GitHub icon</label>
+                            <a href="https://github.com/benbourgon"><i id="gitHubContact" class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li>
+                            <label for="linkedInContact" class="sr-only">LinkedIn icon</label>
+                            <a href="https://www.linkedin.com/in/benbourgon/">
+                                <i id="linkedInContact" class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="twitterContact" class="sr-only">Twitter icon</label>
+                            <a href="https://twitter.com/benbourgon">
+                                <i id="twitterContact" class="icon-social-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="emailContactIcon" class="sr-only">Email icon</label>
+                            <a href="mailto:benjaminbourgon@gmail.com">
+                                <i id="emailContactIcon" class="icon-envelope"></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div> <!--.wrapper ends-->
@@ -167,9 +275,11 @@
     </main> <!--end of Main-->
     <footer>
         <div class="wrapper">
-            <p><i class="fi fi-sr-copyright"></i> Ben Bourgon 2022.</p>pDesigned and Developed by Ben Bourgon.</p>
+            <p>Designed and Developed by Ben Bourgon.</p>
             <p>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
+            <p>©️ 2022 Ben Bourgon</p>
         </div> <!--.wrapper end-->
-    </footer> 
+    </footer>
+    <script src="https://kit.fontawesome.com/89439f417a.js" crossorigin="anonymous"></script>
 </body>
 </html>
