@@ -1090,6 +1090,11 @@ header a:visited, header button:visited {
   color: #ef8354;
 }
 
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: white;
   margin: 0;
@@ -1124,6 +1129,11 @@ button {
   border: none;
 }
 
+.hidden {
+  position: absolute;
+  right: 50000px;
+}
+
 header {
   height: 100vh;
   background-color: #135c71;
@@ -1143,16 +1153,27 @@ header {
   color: white;
 }
 
+footer {
+  background-color: #ef8354;
+  padding: 100px 0 50px 0;
+}
+
 .about {
   background-color: #63adf2;
   color: white;
   margin: 0;
   padding: 0;
+  padding: 100px 0;
 }
 .about img {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   border-radius: 50%;
+}
+
+.contact {
+  background-color: #ef8354;
+  padding: 50px 0;
 }
 
 .adobeIcon {

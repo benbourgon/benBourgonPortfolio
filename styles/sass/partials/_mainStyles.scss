@@ -2,6 +2,7 @@
     background-color: $blue-jeans;
     color: white;
     @include boxReset;
+    padding: 100px 0;
 
     img {
         flex-basis: 100%;
@@ -9,6 +10,11 @@
     }
 }
 
+
+.contact {
+    background-color: $mandarin;
+    padding: 50px 0;
+}
 .adobeIcon {
     max-width: 30px;
     height: auto;
