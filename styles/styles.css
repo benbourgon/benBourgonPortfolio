@@ -1154,3 +1154,8 @@ header {
       flex-basis: 100%;
   border-radius: 50%;
 }
+
+.adobeIcon {
+  max-width: 30px;
+  height: auto;
+}
