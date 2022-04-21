@@ -6,4 +6,47 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
+    position: relative;
+
+    .logoContainer {
+        border: 2px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        width: 65px;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+
+        .logo {
+            font-family: "Montserrat",
+            sans-serif;
+            font-weight: $bold;
+        }
+    }
+
+    .downArrow {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        padding: 20px;
+        font-size: 3rem;
+        color: white;
+
+
+        &:visited {
+            color: white;
+        }
+    }
+
+    .mobileNavButton {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        padding: 20px;
+        font-size: 3.0rem;
+        cursor: pointer;
+    }
 }

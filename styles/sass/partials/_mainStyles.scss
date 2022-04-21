@@ -1,21 +1,46 @@
-.about {
-    background-color: $blue-jeans;
-    color: white;
-    @include boxReset;
-    padding: 100px 0;
+// Main styling
 
+// About section
+.about {
+    background-color: white;
+    color: black;
     img {
         flex-basis: 100%;
         border-radius: 50%;
     }
 }
+// Skills section
+.skills {
+    background-color: $grey;
+    i,
+    svg {
+        color: $blue-sapphire;
+    }
+}
+// Projects section
+.projects {
+    background-color: $blue-jeans;
+    color: black;
+    a,
+    i {
+        color: black;
+    }
+}
+// Blog section
+.blog {
 
+}
+// Profile section
+.profile {
+    background-color: $grey;
+}
 
+// Contact section
 .contact {
     background-color: $mandarin;
-    padding: 50px 0;
 }
+
 .adobeIcon {
-    max-width: 30px;
+    max-width: 25px;
     height: auto;
 }

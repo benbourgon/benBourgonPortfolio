@@ -1,6 +1,7 @@
 // base styles
 body {
     background: white;
+    overflow-x: hidden;
     @include boxReset;
     color: black;
 }
@@ -21,6 +22,17 @@ img {
 
 a {
     @include boxReset;
+    transition: 0.1s;
+    
+    &:hover,
+    &:focus {
+        transform: scale(1.2)
+    }
+}
+
+section {
+    @include boxReset;
+    padding: 100px 0;
 }
 
 button {

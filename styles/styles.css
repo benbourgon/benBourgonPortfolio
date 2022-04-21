@@ -1047,6 +1047,10 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
 header {
   color: white;
 }
@@ -1086,9 +1090,6 @@ header p {
 header a, header button {
   color: white;
 }
-header a:visited, header button:visited {
-  color: #ef8354;
-}
 
 h4 {
   margin: 0;
@@ -1097,6 +1098,7 @@ h4 {
 
 body {
   background: white;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   color: black;
@@ -1122,6 +1124,18 @@ img {
 a {
   margin: 0;
   padding: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+a:hover, a:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  padding: 100px 0;
 }
 
 button {
@@ -1151,6 +1165,48 @@ header {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  position: relative;
+}
+header .logoContainer {
+  border: 2px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+header .logoContainer .logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+header .downArrow {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  padding: 20px;
+  font-size: 3rem;
+  color: white;
+}
+header .downArrow:visited {
+  color: white;
+}
+header .mobileNavButton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 20px;
+  font-size: 3rem;
+  cursor: pointer;
 }
 
 footer {
@@ -1159,11 +1215,8 @@ footer {
 }
 
 .about {
-  background-color: #63adf2;
-  color: white;
-  margin: 0;
-  padding: 0;
-  padding: 100px 0;
+  background-color: white;
+  color: black;
 }
 .about img {
   -ms-flex-preferred-size: 100%;
@@ -1171,12 +1224,32 @@ footer {
   border-radius: 50%;
 }
 
+.skills {
+  background-color: #F7F7F7;
+}
+.skills i,
+.skills svg {
+  color: #135c71;
+}
+
+.projects {
+  background-color: #63adf2;
+  color: black;
+}
+.projects a,
+.projects i {
+  color: black;
+}
+
+.profile {
+  background-color: #F7F7F7;
+}
+
 .contact {
   background-color: #ef8354;
-  padding: 50px 0;
 }
 
 .adobeIcon {
-  max-width: 30px;
+  max-width: 25px;
   height: auto;
 }
