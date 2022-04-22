@@ -1124,6 +1124,12 @@ header a, header button {
   text-align: center;
 }
 
+.skills p {
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 body {
   background: white;
   overflow-x: hidden;
@@ -1378,6 +1384,35 @@ footer {
 }
 .skills ul {
   color: #135c71;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills li {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 42%;
+      flex-basis: 42%;
 }
 .skills h2, .skills h4 {
   color: black;
@@ -1400,7 +1435,8 @@ footer {
   background-color: #63adf2;
 }
 
+.firebaseIcon,
 .adobeIcon {
-  max-width: 25px;
+  max-width: 40px;
   height: auto;
 }

@@ -101,3 +101,10 @@ header {
         text-align: center;
     }
 }
+
+.skills {
+    p {
+        @include fontSize(14);
+        text-align: center;
+    }
+}

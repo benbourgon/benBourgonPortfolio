@@ -35,6 +35,19 @@
     background-color: $grey;
     ul {
         color: $blue-sapphire;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    li {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 42%;
     }
     h2, h4 {
         color: black;
@@ -63,7 +76,8 @@
     background-color: $blue-jeans;
 }
 
+.firebaseIcon,
 .adobeIcon {
-    max-width: 25px;
+    max-width: 40px;
     height: auto;
 }
