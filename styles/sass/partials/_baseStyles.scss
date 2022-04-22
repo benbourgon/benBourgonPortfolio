@@ -3,7 +3,6 @@ body {
     background: white;
     overflow-x: hidden;
     @include boxReset;
-    color: black;
 }
 ul {
     @include boxReset;
@@ -24,20 +23,32 @@ a {
     @include boxReset;
     transition: 0.1s;
     
-    &:hover,
-    &:focus {
-        transform: scale(1.2)
+    &:hover {
+        transform: scale(1.1);
     }
+    &:focus {
+        border: 3px solid $blue-jeans;
+    }
+}
+
+i {
+    font-size: $iconSize;
 }
 
 section {
     @include boxReset;
-    padding: 100px 0;
+    padding: 150px 0;
 }
 
 button {
     background-color: transparent;
     border: none;
+    transition: 0.2s;
+    &:hover,
+    &:focus {
+
+        transform: scale(1.2);
+    }
 }
 
 .hidden {

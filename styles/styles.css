@@ -1049,6 +1049,20 @@ a {
 
 h2 {
   text-transform: uppercase;
+  text-align: center;
+  font-size: 5.3rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 header {
@@ -1057,7 +1071,7 @@ header {
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 5.2rem;
+  font-size: 5.3rem;
   display: block;
   text-transform: uppercase;
   font-weight: 700;
@@ -1065,7 +1079,7 @@ header h1 {
   margin: 0;
   padding: 0;
 }
-header h1 .benName {
+header h1 .firstName {
   display: block;
   font-size: 3.5rem;
   line-height: 3.6rem;
@@ -1073,7 +1087,7 @@ header h1 .benName {
 header h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -1091,17 +1105,11 @@ header a, header button {
   color: white;
 }
 
-h4 {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: white;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  color: black;
 }
 
 ul {
@@ -1127,20 +1135,33 @@ a {
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
-a:hover, a:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+a:focus {
+  border: 3px solid #63adf2;
+}
+
+i {
+  font-size: 3rem;
 }
 
 section {
   margin: 0;
   padding: 0;
-  padding: 100px 0;
+  padding: 150px 0;
 }
 
 button {
   background-color: transparent;
   border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+button:hover, button:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .hidden {
@@ -1151,6 +1172,54 @@ button {
 header {
   height: 100vh;
   background-color: #135c71;
+}
+header .wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+header .logoCircle {
+  border: 3px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  width: 65px;
+}
+header .logoCircle .logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+header .headingContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,53 +1233,47 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
-  position: relative;
+  margin-bottom: 50px;
 }
-header .logoContainer {
-  border: 2px solid white;
-  border-radius: 50%;
+header .downArrowContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 85%;
+}
+header .downArrowContainer .downArrow {
+  padding: 20px;
+  color: white;
+}
+header .downArrowContainer .downArrow:visited {
+  color: white;
+}
+header .downArrowContainer i {
+  font-size: 4rem;
+}
+header .headerNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 65px;
-  width: 65px;
-  position: absolute;
-  top: 10px;
-  left: 15px;
-}
-header .logoContainer .logo {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-header .downArrow {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  padding: 20px;
-  font-size: 3rem;
-  color: white;
-}
-header .downArrow:visited {
-  color: white;
 }
 header .mobileNavButton {
-  position: absolute;
-  right: 5px;
-  top: 5px;
   padding: 20px;
   font-size: 3rem;
   cursor: pointer;
 }
 
 footer {
-  background-color: #ef8354;
+  background-color: #63adf2;
   padding: 100px 0 50px 0;
 }
 
@@ -1227,8 +1290,7 @@ footer {
 .skills {
   background-color: #F7F7F7;
 }
-.skills i,
-.skills svg {
+.skills ul {
   color: #135c71;
 }
 
@@ -1246,7 +1308,7 @@ footer {
 }
 
 .contact {
-  background-color: #ef8354;
+  background-color: #63adf2;
 }
 
 .adobeIcon {

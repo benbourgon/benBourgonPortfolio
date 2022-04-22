@@ -1,24 +1,27 @@
 header {
     height: 100vh;
     background-color: $blue-sapphire;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
+    .wrapper    {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .logoContainer {
-        border: 2px solid white;
+        display: flex;
+        width: max-content;
+        justify-content: flex-start;
+    }
+    .logoCircle {
+        border: 3px solid white;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 65px;
         width: 65px;
-        position: absolute;
-        top: 10px;
-        left: 15px;
 
         .logo {
             font-family: "Montserrat",
@@ -26,27 +29,38 @@ header {
             font-weight: $bold;
         }
     }
-
-    .downArrow {
-        position: absolute;
-        bottom: 5px;
-        left: 5px;
-        padding: 20px;
-        font-size: 3rem;
-        color: white;
-
-
-        &:visited {
+    .headingContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .downArrowContainer {
+        display: flex;
+        justify-content: flex-start;
+        width: 85%;
+        .downArrow {
+            padding: 20px;
             color: white;
+    
+            &:visited {
+                color: white;
+            }
+        }
+        i {
+            font-size: 4.0rem;
         }
     }
-
+    .headerNav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .mobileNavButton {
-        position: absolute;
-        right: 5px;
-        top: 5px;
         padding: 20px;
-        font-size: 3.0rem;
+        font-size: $iconSize;
         cursor: pointer;
     }
 }

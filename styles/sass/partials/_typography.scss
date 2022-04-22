@@ -19,16 +19,28 @@ a {
 
 h2 {
     text-transform: uppercase;
+    text-align: center;
+    font-size: $heading2Size;
+    @include boxReset;
+    margin-bottom: 50px;
 }
 
+h4 {
+    @include boxReset;
+    font-family: $subHeadingFont, serif;
+    font-size: $heading4Size;
+    text-transform: lowercase;
+    text-align: center;
+}
 
+// header typography
 header {
     color: white;
 
     h1 {
         text-align: center;
     
-        .benName {
+        .firstName {
             display: block;
             font-size: $benHeadingSize;
             line-height: $benHeadingHeight;
@@ -47,7 +59,7 @@ header {
     h3 {
         font-family: $headingFont, sans-serif;
         font-weight: $regular;
-        font-size: $heading2Size;
+        font-size: $heading3Size;
         display: block;
         @include boxReset;
     }
@@ -64,8 +76,4 @@ header {
     a, button {
         color: white;
     }
-}
-
-h4 {
-    @include boxReset;
 }
