@@ -29,6 +29,7 @@ h4 {
     @include boxReset;
     font-family: $subHeadingFont, serif;
     font-size: $heading4Size;
+    font-weight: $regular;
     text-transform: lowercase;
     text-align: center;
 }
@@ -75,5 +76,28 @@ header {
     }
     a, button {
         color: white;
+    }
+}
+
+.about {
+    h3,
+    p {
+        @include fontSize(17);
+        line-height: $roomyLineHeight;
+    }
+    a {
+        color: $blue-sapphire;
+        font-weight: $semiBold;
+        text-decoration: underline;
+        padding: 2px;
+    }
+
+    .linkContainer {
+
+    }
+    .myProfileLink {
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
     }
 }

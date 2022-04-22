@@ -49,7 +49,7 @@ header {
             }
         }
         i {
-            font-size: 4.0rem;
+            @include fontSize(35);
         }
     }
     .headerNav {

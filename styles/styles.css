@@ -1060,7 +1060,8 @@ h4 {
   margin: 0;
   padding: 0;
   font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   text-transform: lowercase;
   text-align: center;
 }
@@ -1105,6 +1106,24 @@ header a, header button {
   color: white;
 }
 
+.about h3,
+.about p {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+}
+.about a {
+  color: #135c71;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 2px;
+}
+.about .myProfileLink {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
 body {
   background: white;
   overflow-x: hidden;
@@ -1127,6 +1146,19 @@ img {
   max-width: 1260px;
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 a {
@@ -1162,6 +1194,36 @@ button {
 button:hover, button:focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.subHeadingContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subHeadingContainer h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  margin-left: 40%;
+  padding-left: 10px;
+  padding-top: 34px;
+  text-align: left;
+  border-left: 1px solid black;
 }
 
 .hidden {
@@ -1252,7 +1314,8 @@ header .downArrowContainer .downArrow:visited {
   color: white;
 }
 header .downArrowContainer i {
-  font-size: 4rem;
+  font-size: 35px;
+  font-size: 3.5rem;
 }
 header .headerNav {
   width: 100%;
@@ -1286,12 +1349,38 @@ footer {
       flex-basis: 100%;
   border-radius: 50%;
 }
+.about h3 {
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+.about .linkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about .linkContainer .myProfileLink {
+  margin-top: 50px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  border-bottom: 3px solid #135c71;
+}
+.about .linkContainer .myProfileLink:hover, .about .linkContainer .myProfileLink:focus {
+  font-weight: 700;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .skills {
   background-color: #F7F7F7;
 }
 .skills ul {
   color: #135c71;
+}
+.skills h2, .skills h4 {
+  color: black;
 }
 
 .projects {

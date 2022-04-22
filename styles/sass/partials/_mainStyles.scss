@@ -8,12 +8,36 @@
         flex-basis: 100%;
         border-radius: 50%;
     }
+
+    h3 {
+        @include fontSize(17);
+    }
+    .linkContainer {
+        display: flex;
+        justify-content: center;
+        
+
+        .myProfileLink {
+            margin-top: 50px;
+            transition: 0.2s ease-in;
+            border-bottom: 3px solid $blue-sapphire;
+            &:hover,
+            &:focus {
+                font-weight: $bold;
+                transform: scale(1.1)
+            }
+        }
+    }
+
 }
 // Skills section
 .skills {
     background-color: $grey;
     ul {
         color: $blue-sapphire;
+    }
+    h2, h4 {
+        color: black;
     }
 }
 // Projects section

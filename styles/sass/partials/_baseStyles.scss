@@ -17,6 +17,10 @@ img {
     max-width: 1260px;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a {
@@ -48,6 +52,24 @@ button {
     &:focus {
 
         transform: scale(1.2);
+    }
+}
+
+.subHeadingContainer {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    h4 {
+        width: fit-content;
+        height: 50px;
+        margin-left: 40%;
+        padding-left: 10px;
+        padding-top: 34px;
+        text-align: left;
+        border-left: 1px solid black;
     }
 }
 
