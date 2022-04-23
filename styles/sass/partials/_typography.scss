@@ -258,11 +258,13 @@ header {
         text-transform: uppercase;
         font-weight: $semiBold;
         color: white;
+        font-family: $bodyFont, sans-serif;
 
         &:focus,
         &:hover {
             font-weight: $bold;
             outline: 3px solid white;
+            transform: scale(1.1);
         }
     }
     a {
@@ -271,5 +273,17 @@ header {
     }
     p {
         text-transform: uppercase;
+    }
+    .contactPhoneNumber,
+    .contactEmailAddress {
+        &:hover,
+        &:focus {
+            transform: none;
+            font-weight: $semiBold;
+        }
+    }
+    .contactPhoneNumber {
+        font-size: $phoneNumberSize;
+        margin-top: 0;
     }
 }

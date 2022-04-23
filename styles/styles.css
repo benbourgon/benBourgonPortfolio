@@ -1278,10 +1278,13 @@ header a, header button {
   text-transform: uppercase;
   font-weight: 600;
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 .contact .sendButton:focus, .contact .sendButton:hover {
   font-weight: 700;
   outline: 3px solid white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .contact a {
   color: white;
@@ -1289,6 +1292,17 @@ header a, header button {
 }
 .contact p {
   text-transform: uppercase;
+}
+.contact .contactPhoneNumber:hover, .contact .contactPhoneNumber:focus,
+.contact .contactEmailAddress:hover,
+.contact .contactEmailAddress:focus {
+  -webkit-transform: none;
+          transform: none;
+  font-weight: 600;
+}
+.contact .contactPhoneNumber {
+  font-size: 3.5rem;
+  margin-top: 0;
 }
 
 body {
@@ -1797,20 +1811,30 @@ footer i {
   padding: 10px 0;
   margin: 25px 0;
 }
+.contact nav {
+  width: 100%;
+}
 .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .contact ul li {
-  -ms-flex-preferred-size: 24%;
-      flex-basis: 24%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 .contact ul i {
   display: block;
-  margin: 20px;
 }
