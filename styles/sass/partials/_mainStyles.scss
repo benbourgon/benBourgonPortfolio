@@ -126,6 +126,7 @@
     }
     .readMore {
         margin-top: 25px;
+        padding: 10px 2px 5px 2px;
     }
 }
 // Profile section
@@ -161,10 +162,9 @@
 
 // Contact section
 .contact {
-    background-color: $blue-jeans;
+    background-color: $blue-sapphire;
 
     form {
-        font-family: $bodyFont, sans-serif;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -176,27 +176,39 @@
         padding: 10px 5px;
         margin: 10px 0;
         border: none;
-        border-bottom: 1px solid black;
-        color: white;
-        background-color: $blue-jeans;
-        width: 90%;
+        transition: 0.1s;
+        border-bottom: 1px solid white;
+        background-color: $blue-sapphire;
+        width: 100%;
 
         &::placeholder {
             opacity: 1;
-            font-weight: $regular;
+        }
+
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid $mandarin;
+        }
+    }
+    textarea {
+        border: 1px solid white;
+        &:focus,
+        &:hover {
+            border: 1px solid $mandarin;
         }
     }
     label {
-        padding: 5px;
+        padding: 25px 5px 5px 5px;
         color: white;
         align-self: flex-start;
+        width: 90%;
+        display: block;
     }
 
     .sendButton {
         width: 200px;
         border: 1px solid white;
         border-radius: 25px;
-        color: white;
         padding: 10px 0;
         margin: 25px 0;
     }

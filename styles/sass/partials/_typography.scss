@@ -105,6 +105,7 @@ header {
     }
     .myProfileLink {
         text-decoration: none;
+        padding: 10px 2px 5px 2px;
     }
 }
 
@@ -224,5 +225,51 @@ header {
 }
 
 .contact {
-    color: black;
+    color: white;
+
+    .subHeadingContainer h4 {
+        border-left: 1px solid white;
+    }
+    form {
+        font-family: $bodyFont,
+        sans-serif;
+        color: white;
+
+        input,
+        textarea {
+            font-family: $bodyFont,
+            sans-serif;
+        }
+    }
+    input,
+    textarea {
+        color: white;
+
+        &:focus,
+        &:hover {
+            font-weight: $semiBold;
+            &::placeholder {
+                font-weight: $semiBold;
+            }
+        }
+
+    }
+    .sendButton {
+        text-transform: uppercase;
+        font-weight: $semiBold;
+        color: white;
+
+        &:focus,
+        &:hover {
+            font-weight: $bold;
+            outline: 3px solid white;
+        }
+    }
+    a {
+        color: white;
+        margin: 15px 0;
+    }
+    p {
+        text-transform: uppercase;
+    }
 }

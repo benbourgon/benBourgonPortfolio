@@ -1132,6 +1132,7 @@ header a, header button {
 }
 .about .myProfileLink {
   text-decoration: none;
+  padding: 10px 2px 5px 2px;
 }
 
 .skills p {
@@ -1234,7 +1235,60 @@ header a, header button {
 }
 
 .contact {
-  color: black;
+  color: white;
+}
+.contact .subHeadingContainer h4 {
+  border-left: 1px solid white;
+}
+.contact form {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.contact form input,
+.contact form textarea {
+  font-family: "Montserrat", sans-serif;
+}
+.contact input,
+.contact textarea {
+  color: white;
+}
+.contact input:focus, .contact input:hover,
+.contact textarea:focus,
+.contact textarea:hover {
+  font-weight: 600;
+}
+.contact input:focus::-webkit-input-placeholder, .contact input:hover::-webkit-input-placeholder, .contact textarea:focus::-webkit-input-placeholder, .contact textarea:hover::-webkit-input-placeholder {
+  font-weight: 600;
+}
+.contact input:focus::-moz-placeholder, .contact input:hover::-moz-placeholder, .contact textarea:focus::-moz-placeholder, .contact textarea:hover::-moz-placeholder {
+  font-weight: 600;
+}
+.contact input:focus:-ms-input-placeholder, .contact input:hover:-ms-input-placeholder, .contact textarea:focus:-ms-input-placeholder, .contact textarea:hover:-ms-input-placeholder {
+  font-weight: 600;
+}
+.contact input:focus::-ms-input-placeholder, .contact input:hover::-ms-input-placeholder, .contact textarea:focus::-ms-input-placeholder, .contact textarea:hover::-ms-input-placeholder {
+  font-weight: 600;
+}
+.contact input:focus::placeholder, .contact input:hover::placeholder,
+.contact textarea:focus::placeholder,
+.contact textarea:hover::placeholder {
+  font-weight: 600;
+}
+.contact .sendButton {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+.contact .sendButton:focus, .contact .sendButton:hover {
+  font-weight: 700;
+  outline: 3px solid white;
+}
+.contact a {
+  color: white;
+  margin: 15px 0;
+}
+.contact p {
+  text-transform: uppercase;
 }
 
 body {
@@ -1375,6 +1429,10 @@ header .logoContainer {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+header .logoContainer:focus, header .logoContainer:hover {
+  -webkit-transform: none;
+          transform: none;
+}
 header .logoCircle {
   border: 3px solid white;
   border-radius: 50%;
@@ -1449,8 +1507,7 @@ header .mobileNavButton {
 }
 
 footer {
-  background-color: #63adf2;
-  padding: 100px 0 50px 0;
+  background-color: #135c71;
 }
 
 .about {
@@ -1627,6 +1684,7 @@ footer {
 }
 .blog .readMore {
   margin-top: 25px;
+  padding: 10px 2px 5px 2px;
 }
 
 .profile {
@@ -1661,10 +1719,9 @@ footer {
 }
 
 .contact {
-  background-color: #63adf2;
+  background-color: #135c71;
 }
 .contact form {
-  font-family: "Montserrat", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1684,43 +1741,51 @@ footer {
   padding: 10px 5px;
   margin: 10px 0;
   border: none;
-  border-bottom: 1px solid black;
-  color: white;
-  background-color: #63adf2;
-  width: 90%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-bottom: 1px solid white;
+  background-color: #135c71;
+  width: 100%;
 }
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
   opacity: 1;
-  font-weight: 400;
 }
 .contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
   opacity: 1;
-  font-weight: 400;
 }
 .contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
   opacity: 1;
-  font-weight: 400;
 }
 .contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder {
   opacity: 1;
-  font-weight: 400;
 }
 .contact input::placeholder,
 .contact textarea::placeholder {
   opacity: 1;
-  font-weight: 400;
+}
+.contact input:focus, .contact input:hover,
+.contact textarea:focus,
+.contact textarea:hover {
+  border-bottom: 1px solid #ef8354;
+}
+.contact textarea {
+  border: 1px solid white;
+}
+.contact textarea:focus, .contact textarea:hover {
+  border: 1px solid #ef8354;
 }
 .contact label {
-  padding: 5px;
+  padding: 25px 5px 5px 5px;
   color: white;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: 90%;
+  display: block;
 }
 .contact .sendButton {
   width: 200px;
   border: 1px solid white;
   border-radius: 25px;
-  color: white;
   padding: 10px 0;
   margin: 25px 0;
 }

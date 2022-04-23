@@ -13,6 +13,11 @@ header {
         display: flex;
         width: max-content;
         justify-content: flex-start;
+
+        &:focus,
+        &:hover {
+            transform: none;
+        }
     }
     .logoCircle {
         border: 3px solid white;
