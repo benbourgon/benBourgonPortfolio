@@ -1,8 +1,8 @@
 // base styles
 body {
     background: white;
+    overflow-x: hidden;
     @include boxReset;
-    color: black;
 }
 ul {
     @include boxReset;
@@ -17,13 +17,63 @@ img {
     max-width: 1260px;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a {
     @include boxReset;
+    transition: 0.1s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:focus {
+        border: 3px solid $blue-jeans;
+    }
+}
+
+i {
+    font-size: $iconSize;
+}
+
+section {
+    @include boxReset;
+    padding: 150px 0;
 }
 
 button {
     background-color: transparent;
     border: none;
+    transition: 0.2s;
+    &:hover,
+    &:focus {
+
+        transform: scale(1.2);
+    }
+}
+
+.subHeadingContainer {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    h4 {
+        width: fit-content;
+        height: 50px;
+        margin-left: 40%;
+        padding-left: 10px;
+        padding-top: 34px;
+        text-align: left;
+        border-left: 1px solid black;
+    }
+}
+
+.hidden {
+    position: absolute;
+    right: 50000px;
 }

@@ -1,15 +1,233 @@
-.about {
-    background-color: $blue-jeans;
-    color: white;
-    @include boxReset;
+// Main styling
 
+// About section
+.about {
+    background-color: white;
+    color: black;
     img {
         flex-basis: 100%;
         border-radius: 50%;
     }
+
+    h3 {
+        @include fontSize(17);
+    }
+    .linkContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
+.myProfileLink,
+.readMore {
+    margin-top: 50px;
+    transition: 0.2s ease-out;
+    border-bottom: 3px solid $blue-sapphire;
+
+    &:hover,
+    &:focus {
+        font-weight: $bold;
+        transform: scale(1.1);
+    }
 }
 
-.adobeIcon {
-    max-width: 30px;
-    height: auto;
+// Skills section
+.skills {
+    background-color: $grey;
+    ul {
+        color: $blue-sapphire;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    li {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 42%;
+    }
+    h2, h4 {
+        color: black;
+    }
+    .firebaseIcon,
+    .adobeIcon {
+        max-width: 40px;
+        height: auto;
+    }
+}
+// Projects section
+.projects {
+    background-color: $blue-jeans;
+    color: black;
+    a,
+    i {
+        color: black;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projectListItem {
+        margin: 25px 0;
+    }
+    .techListItem {
+        flex-basis: 50%;
+        margin-top: 10px;
+    }
+    .githubLink,
+    .viewLiveLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue-jeans;
+        margin-top: 25px;
+        width: 200px;
+        border-radius: 25px;
+        padding: 0 10px;
+        outline: 1px solid black;
+
+
+        &:hover,
+        &:focus {
+            outline: 3px solid black;
+            font-weight: $bold;
+        }
+    }
+}
+// Blog section
+.blog {
+    color: black;
+    .subHeadingContainer h4 {
+        padding-top: 16px;
+    }
+    .blogTitle {
+        &:hover,
+        &:focus {
+            transform: none;
+            text-decoration: underline;
+        }
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .readMore {
+        margin-top: 25px;
+        padding: 10px 2px 5px 2px;
+    }
+}
+// Profile section
+.profile {
+    color: black;
+    background-color: $grey;
+    li {
+        position: relative;
+    }
+    .hidden {
+        position: absolute;
+    }
+    .profileListItem {
+        background-color: white;
+        padding: 30px 15px;
+    }
+}
+// Profile radio buttons
+.profileForm {
+    display: flex;
+    margin: 25px 0;
+    label {
+        transition: 0.2s;
+        padding: 25px;
+    }
+    .profileFormIcon {
+        &:hover,
+        &:focus {
+            transform: scale(1.4)
+        }
+    }
+}
+
+// Contact section
+.contact {
+    background-color: $blue-sapphire;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    input,
+    textarea {
+        padding: 10px 5px;
+        margin: 10px 0;
+        border: none;
+        transition: 0.1s;
+        border-bottom: 1px solid white;
+        background-color: $blue-sapphire;
+        width: 100%;
+
+        &::placeholder {
+            opacity: 1;
+        }
+
+        &:focus,
+        &:hover {
+            border-bottom: 3px solid white;
+        }
+    }
+    textarea {
+        border: 1px solid white;
+        &:focus,
+        &:hover {
+            border: 3px solid white;
+        }
+    }
+    label {
+        padding: 25px 5px 5px 5px;
+        color: white;
+        align-self: flex-start;
+        width: 90%;
+        display: block;
+    }
+
+    .sendButton {
+        width: 200px;
+        border: 1px solid white;
+        border-radius: 25px;
+        padding: 10px 0;
+        margin: 25px 0;
+    }
+    nav {
+        width: 100%;
+    }
+    ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li {
+            display: flex;
+            justify-content: center;
+            flex-basis: 20%;
+        }
+        i {
+            display: block;
+        }
+    }
+
 }

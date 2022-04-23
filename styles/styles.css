@@ -1037,14 +1037,45 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: auto;
   color: white;
 }
 
+p {
+  line-height: 2.8rem;
+}
+
 a {
   text-decoration: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5.3rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.myProfileLink,
+.readMore {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #135c71;
 }
 
 header {
@@ -1053,7 +1084,7 @@ header {
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 5.2rem;
+  font-size: 5.3rem;
   display: block;
   text-transform: uppercase;
   font-weight: 700;
@@ -1061,7 +1092,7 @@ header h1 {
   margin: 0;
   padding: 0;
 }
-header h1 .benName {
+header h1 .firstName {
   display: block;
   font-size: 3.5rem;
   line-height: 3.6rem;
@@ -1069,7 +1100,7 @@ header h1 .benName {
 header h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -1077,7 +1108,7 @@ header h3 {
 header p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -1086,15 +1117,199 @@ header p {
 header a, header button {
   color: white;
 }
-header a:visited, header button:visited {
-  color: #ef8354;
+
+.about h3,
+.about p {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+}
+.about a {
+  color: #135c71;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 2px;
+}
+.about .myProfileLink {
+  text-decoration: none;
+  padding: 10px 2px 5px 2px;
+}
+
+.skills p {
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2.8rem;
+}
+
+.projects h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 50px 0 25px 0;
+}
+.projects p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.projects .techListItem p {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.projects .githubLink,
+.projects .viewLiveLink {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: auto;
+}
+
+.blog .writing,
+.blog .callSheets {
+  display: block;
+}
+.blog h3 {
+  text-align: left;
+  font-size: 2rem;
+  width: 100%;
+}
+.blog p {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.blog .readMore {
+  text-align: left;
+  font-weight: 600;
+}
+
+.profile h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.profile .profileListItem i {
+  font-size: 5rem;
+  color: #135c71;
+  position: absolute;
+  right: 20px;
+  top: 42px;
+}
+.profile .profileLink {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: auto;
+  padding: 10px 0;
+  margin: 25px 0;
+  border-radius: 25px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.profile .messageMe {
+  color: #63adf2;
+  outline: 1px solid #63adf2;
+}
+.profile .messageMe:focus, .profile .messageMe:hover {
+  font-weight: 700;
+  outline: 3px solid #63adf2;
+}
+.profile .requestResume {
+  background-color: #a755c2;
+  color: white;
+  outline: 1px solid #a755c2;
+}
+.profile .requestResume:focus, .profile .requestResume:hover {
+  font-weight: 700;
+  outline: 3px solid #a755c2;
+}
+
+.profileForm label {
+  line-height: 3.6rem;
+}
+.profileForm input[type=radio] {
+  display: none;
+}
+.profileForm input[type=radio]:checked + label {
+  color: #135c71;
+}
+
+.contact {
+  color: white;
+}
+.contact .subHeadingContainer h4 {
+  border-left: 1px solid white;
+}
+.contact form {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.contact form input,
+.contact form textarea {
+  font-family: "Montserrat", sans-serif;
+}
+.contact input,
+.contact textarea {
+  color: white;
+}
+.contact input:focus, .contact input:hover,
+.contact textarea:focus,
+.contact textarea:hover {
+  font-weight: 600;
+}
+.contact input:focus::-webkit-input-placeholder, .contact input:hover::-webkit-input-placeholder, .contact textarea:focus::-webkit-input-placeholder, .contact textarea:hover::-webkit-input-placeholder {
+  font-weight: 600;
+}
+.contact input:focus::-moz-placeholder, .contact input:hover::-moz-placeholder, .contact textarea:focus::-moz-placeholder, .contact textarea:hover::-moz-placeholder {
+  font-weight: 600;
+}
+.contact input:focus:-ms-input-placeholder, .contact input:hover:-ms-input-placeholder, .contact textarea:focus:-ms-input-placeholder, .contact textarea:hover:-ms-input-placeholder {
+  font-weight: 600;
+}
+.contact input:focus::-ms-input-placeholder, .contact input:hover::-ms-input-placeholder, .contact textarea:focus::-ms-input-placeholder, .contact textarea:hover::-ms-input-placeholder {
+  font-weight: 600;
+}
+.contact input:focus::placeholder, .contact input:hover::placeholder,
+.contact textarea:focus::placeholder,
+.contact textarea:hover::placeholder {
+  font-weight: 600;
+}
+.contact .sendButton {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.contact .sendButton:focus, .contact .sendButton:hover {
+  font-weight: 700;
+  outline: 3px solid white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.contact a {
+  color: white;
+  margin: 15px 0;
+}
+.contact p {
+  text-transform: uppercase;
+}
+.contact .contactPhoneNumber:hover, .contact .contactPhoneNumber:focus,
+.contact .contactEmailAddress:hover,
+.contact .contactEmailAddress:focus {
+  -webkit-transform: none;
+          transform: none;
+  font-weight: 600;
+}
+.contact .contactPhoneNumber {
+  font-size: 3.5rem;
+  margin-top: 0;
 }
 
 body {
   background: white;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  color: black;
 }
 
 ul {
@@ -1112,21 +1327,146 @@ img {
   max-width: 1260px;
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 a {
   margin: 0;
   padding: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+a:focus {
+  border: 3px solid #63adf2;
+}
+
+i {
+  font-size: 3rem;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  padding: 150px 0;
 }
 
 button {
   background-color: transparent;
   border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+button:hover, button:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.subHeadingContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subHeadingContainer h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  margin-left: 40%;
+  padding-left: 10px;
+  padding-top: 34px;
+  text-align: left;
+  border-left: 1px solid black;
+}
+
+.hidden {
+  position: absolute;
+  right: 50000px;
 }
 
 header {
   height: 100vh;
   background-color: #135c71;
+}
+header .wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+header .logoContainer:focus, header .logoContainer:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+header .logoCircle {
+  border: 3px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  width: 65px;
+}
+header .logoCircle .logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+header .headingContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1140,22 +1480,361 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
+}
+header .downArrowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+header .downArrowContainer .downArrow {
+  padding: 20px;
   color: white;
+}
+header .downArrowContainer .downArrow:visited {
+  color: white;
+}
+header .downArrowContainer i {
+  font-size: 35px;
+  font-size: 3.5rem;
+}
+header .headerNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .mobileNavButton {
+  padding: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #135c71;
+  color: white;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer i {
+  font-size: 1.6rem;
 }
 
 .about {
-  background-color: #63adf2;
-  color: white;
-  margin: 0;
-  padding: 0;
+  background-color: white;
+  color: black;
 }
 .about img {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   border-radius: 50%;
 }
+.about h3 {
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+.about .linkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
-.adobeIcon {
-  max-width: 30px;
+.myProfileLink,
+.readMore {
+  margin-top: 50px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  border-bottom: 3px solid #135c71;
+}
+.myProfileLink:hover, .myProfileLink:focus,
+.readMore:hover,
+.readMore:focus {
+  font-weight: 700;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.skills {
+  background-color: #F7F7F7;
+}
+.skills ul {
+  color: #135c71;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills li {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 42%;
+      flex-basis: 42%;
+}
+.skills h2, .skills h4 {
+  color: black;
+}
+.skills .firebaseIcon,
+.skills .adobeIcon {
+  max-width: 40px;
   height: auto;
+}
+
+.projects {
+  background-color: #63adf2;
+  color: black;
+}
+.projects a,
+.projects i {
+  color: black;
+}
+.projects ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.projects li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projects .projectListItem {
+  margin: 25px 0;
+}
+.projects .techListItem {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-top: 10px;
+}
+.projects .githubLink,
+.projects .viewLiveLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #63adf2;
+  margin-top: 25px;
+  width: 200px;
+  border-radius: 25px;
+  padding: 0 10px;
+  outline: 1px solid black;
+}
+.projects .githubLink:hover, .projects .githubLink:focus,
+.projects .viewLiveLink:hover,
+.projects .viewLiveLink:focus {
+  outline: 3px solid black;
+  font-weight: 700;
+}
+
+.blog {
+  color: black;
+}
+.blog .subHeadingContainer h4 {
+  padding-top: 16px;
+}
+.blog .blogTitle:hover, .blog .blogTitle:focus {
+  -webkit-transform: none;
+          transform: none;
+  text-decoration: underline;
+}
+.blog article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.blog .readMore {
+  margin-top: 25px;
+  padding: 10px 2px 5px 2px;
+}
+
+.profile {
+  color: black;
+  background-color: #F7F7F7;
+}
+.profile li {
+  position: relative;
+}
+.profile .hidden {
+  position: absolute;
+}
+.profile .profileListItem {
+  background-color: white;
+  padding: 30px 15px;
+}
+
+.profileForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px 0;
+}
+.profileForm label {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 25px;
+}
+.profileForm .profileFormIcon:hover, .profileForm .profileFormIcon:focus {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.contact {
+  background-color: #135c71;
+}
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.contact input,
+.contact textarea {
+  padding: 10px 5px;
+  margin: 10px 0;
+  border: none;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-bottom: 1px solid white;
+  background-color: #135c71;
+  width: 100%;
+}
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
+  opacity: 1;
+}
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+  opacity: 1;
+}
+.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
+  opacity: 1;
+}
+.contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder {
+  opacity: 1;
+}
+.contact input::placeholder,
+.contact textarea::placeholder {
+  opacity: 1;
+}
+.contact input:focus, .contact input:hover,
+.contact textarea:focus,
+.contact textarea:hover {
+  border-bottom: 3px solid white;
+}
+.contact textarea {
+  border: 1px solid white;
+}
+.contact textarea:focus, .contact textarea:hover {
+  border: 3px solid white;
+}
+.contact label {
+  padding: 25px 5px 5px 5px;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 90%;
+  display: block;
+}
+.contact .sendButton {
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 10px 0;
+  margin: 25px 0;
+}
+.contact nav {
+  width: 100%;
+}
+.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.contact ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.contact ul i {
+  display: block;
 }

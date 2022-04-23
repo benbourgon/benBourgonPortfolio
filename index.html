@@ -12,50 +12,82 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Ben Bourgon: Portfolio</title>
+    <title>Ben Bourgon</title>
 </head>
 <body>
     <header>
-        <div class="wrapper"></div>
-            <nav>
+        <div class="wrapper">
+            <nav class="headerNav">
+                <a href="#about" class="logoContainer">
+                    <span class="sr-only">skip to main content</span>
+                    <div class="logoCircle">
+                        <h3 class="logo">BB</h3>
+                    </div>
+                </a>
                 <button class="mobileNavButton">
                     <i class="fi fi-ss-menu-burger"></i>
                 </button> <!--.mobileNavButton end-->
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">My Work</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="navList hidden">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">My Work</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
-            <h1><span class="benName">Ben</span>Bourgon</h1>
-            <h3>Front-End Developer</h3>
-            <a href="#about">
-                <i class="fi fi-sr-arrow-down"></i>
-            </a>
+            <div class="headingContainer">
+                <h1>
+                    <span class="firstName">Ben</span>Bourgon
+                </h1>
+                <h3>Front-End Developer</h3>
+            </div> <!---headingContainer end-->
+            <div class="downArrowContainer">
+                <a class="downArrow" href="#about">
+                    <i class="fi fi-sr-arrow-down"></i>
+                </a>
+            </div>
         </div> <!--.wrapper END-->
     </header>
     <main>
         <section class="about" id="about">
             <div class="wrapper">
-                <h4>who am I?</h4>
-                <h2>hello</h2>
+                <div class="subHeadingContainer">
+                    <h4>who am I?</h4>
+                    <h2>hello</h2>
+                </div>
                 <div class="imageContainer">
-                    <img src="./assets/benBioCropped.png" alt="A picture of me, Ben Bourgon, the developer writing this alt text!">
+                    <img src="./assets/benBioCropped.png" alt="A picture of me, Ben Bourgon, the web developer writing this alt text!">
                 </div> <!--.imageContainer end-->
                 <div class="contentContainer">
-                    <h3>I'm a Front-End Web Developer based in Toronto, ON. I love combining my creativity with my analytic abilities to solve problems and write clean, DRY, accessible code</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla minus commodi ea ullam odio veniam sint nam natus molestias debitis repudiandae sequi doloremque voluptate non asperiores, at veritatis omnis eaque saepe facere recusandae! Corporis, laudantium?</p>
-                    <a href="#profile">My Profile</a>
+                    <h3>I'm Ben, a Front-End Developer based in Toronto, ON.</h3>
+                    <h3>I'm at my best when combining my analytic abilities with a creative instinct to solve tough problems and write clean, dry, and accessible code.</h3>
+                    <h3>That and when eating pizza or ramen. The perfect foods.</h3>
+                    <p>While you're here, you can have a look at <a href="#projects">my past work</a>, read about <a href="#blog">my journey</a> from TV & film production to web development, get to know more <a href="#profile">about me</a>, or <a href="#contact">reach out to me</a>. I'd love to hear from you!</p>
+                    <div class="linkContainer">
+                        <a href="#profile" class="myProfileLink">My Profile</a>
+                    </div>
                 </div> <!--.contentContainer end-->
             </div> <!--.wrapper end-->
         </section> <!--About section end-->
         <section class="skills" id="skills">
             <div class="wrapper">
-                <h4>checkout my</h4>
-                <h2>Skills</h2>
+                <div class="subHeadingContainer">
+                    <h4>check out my</h4>
+                    <h2>Skills</h2>
+                </div>
                 <ul>
                     <li>
                         <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
@@ -63,7 +95,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-                        <p>Project management & teamwork</p>
+                        <p>Project management</p>
                     </li>
                     <li>
                         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
@@ -91,15 +123,19 @@
                     </li>
                     <li>
                         <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
-                        <p>Git/GitHub version control & collaboration</p>
+                        <p>Git/GitHub</p>
                     </li>
                     <li>
                         <i class="fa-solid fa-object-group" aria-hidden="true"></i>
-                        <p>Wireframing & scope documentation</p>
+                        <p>Wireframing</p>
                     </li>
                     <li>
                         <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                        <p>RESTful API's and Firebase</p>
+                        <p>RESTful APIs</p>
+                    </li>
+                    <li>
+                        <img id="firebaseIcon" class="firebaseIcon" src="./assets/firebase-edit.svg" aria-hidden="true">
+                        <p>Firebase</p>
                     </li>
                     <li>
                         <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
@@ -111,10 +147,10 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-handshake-simple" aria-hidden="true"></i>
-                        <p>Paired programming</p>
+                        <p>Pair programming</p>
                     </li>
                     <li>
-                        <img id="adobeIcon" class="adobeIcon" src="./assets/Adobe-Creative-Cloud-03.svg">
+                        <img id="adobeIcon" class="adobeIcon" src="./assets/Adobe-Creative-Cloud-edited.svg" aria-hidden="true">
                         <p>Adobe Creative Cloud</p>
                     </li>
                 </ul>
@@ -122,201 +158,224 @@
         </section> <!--Skills section end-->
         <section class="projects" id="projects">
             <div class="wrapper">
-                <h4>some cool projects</h4>
-                <h2>My Work</h2>
+                <div class="subHeadingContainer">
+                    <h4>some cool projects</h4>
+                    <h2>My Work</h2>
+                </div>
                 <ul>
-                    <li>
+                    <li class="projectListItem">
+                        <h3>Taglines...with a Vengeance!</h3>
                         <a href="https://pairedproject.netlify.app/">
-                            <img src="./assets/projectScreenshots/taglinesDesktop.png" alt="Screenshot of the'Taglines..with a Vengeance!' website">
-                            <div class="textContainer">
-                                <h3>Taglines...with a Vengeance!</h3>
-                                <p>Match the given tagline with the correct movie! Built as a pair programming project with Cristina Grosser, this quiz creates random questions generated with data from the TMDb API.</p>
-                                <ul>
-                                    <li>
-                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                        <p>HTML5</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                        <p>SASS</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                        <p>JavaScript</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                        <p>RESTful API</p>
-                                    </li>
-                                </ul>
-                            </div> <!--.textContainer end-->
+                            <img src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website">
                         </a>
-                        <a href="https://github.com/TaglinesWithAVengeance/pairedProject">See the code on GitHub <i class="fi fi-brands-github"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://benbourgon-project-one.netlify.app/">
-                            <img src="./assets/projectScreenshots/underTheSeaDesktop.png" alt="Screenshot of the 'Under the Sea' website">
-                            <div class="textContainer">
-                                <h3>Under the Sea</h3>
-                                <p>A multi-page responsive PSD conversion with an aquarium theme and a ton of elements breaking out of their containers!</p>
-                                <ul>
-                                    <li>
-                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                        <p>HTML5</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                        <p>SASS</p>
-                                    </li>
-                                </ul>
-                            </div> <!--.textContainer end-->
-                        </a>
-                        <a href="https://github.com/benbourgon/benBourgonProjectOne">See the code on GitHub <i class="fi fi-brands-github"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://goodgoodgames.netlify.app/">
-                            <img src="./assets/projectScreenshots/goodGoodGamesDesktop.png"
-                            alt="Screenshot of 'Good Good Games' website">
-                            <div class="textContainer">
-                                <h3>Good Good Games</h3>
-                                <p>Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
-                                <ul>
-                                    <li>
-                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                        <p>HTML5</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-brands fa-css3" aria-hidden="true"></i>
-                                        <p>CSS3</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                        <p>JavaScript</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                        <p>RESTful API</p>
-                                    </li>
-                                </ul>
-                            </div> <!--.textContainer end-->
-                        </a>
-                        <a href="https://github.com/benbourgon/goodGoodGames">See the code on GitHub <i class="fi fi-brands-github"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://gameboymodconfigurator.netlify.app/"><img src="./assets/projectScreenshots/gameBoyModConfiguratorDesktop.png" alt="Screenshot of 'Game Boy Mod Configurator' website">
                         <div class="textContainer">
-                            <h3>Game Boy Mod Configurator</h3>
-                            <p>Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
+                            <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project with Cristina Grosser, this quiz creates random questions generated with data from the TMDb API.</p>
                             <ul>
-                                <li>
+                                <li class="techListItem">
                                     <i class="fa-brands fa-html5" aria-hidden="true"></i>
                                     <p>HTML5</p>
                                 </li>
-                                <li>
+                                <li class="techListItem">
+                                    <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                    <p>SASS</p>
+                                </li>
+                                <li class="techListItem">
+                                    <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                    <p>JavaScript</p>
+                                </li>
+                                <li class="techListItem">
+                                    <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                    <p>RESTful API</p>
+                                </li>
+                            </ul>
+                        </div> <!--.textContainer end-->
+                        <a href="https://github.com/TaglinesWithAVengeance/pairedProject" class="githubLink"> 
+                            <p>Code on GitHub</p>
+                        </a>
+                        <a href="https://pairedproject.netlify.app/" class="viewLiveLink">
+                            <p>View Live</p>
+                        </a>
+                    </li>
+                    <li class="projectListItem">
+                        <h3>Under the Sea</h3>
+                        <a href="https://benbourgon-project-one.netlify.app/">
+                            <img src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website">
+                        </a>
+                        <div class="textContainer">
+                            <p class="projectDescription">A multi-page responsive PSD conversion with an aquarium theme and a ton of elements breaking out of their containers!</p>
+                            <ul>
+                                <li class="techListItem">
+                                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                    <p>HTML5</p>
+                                </li>
+                                <li class="techListItem">
+                                    <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                    <p>SASS</p>
+                                </li>
+                            </ul>
+                        </div> <!--.textContainer end-->
+                        <a href="https://github.com/benbourgon/benBourgonProjectOne" class="githubLink">
+                            <p>Code on GitHub</p>
+                        </a>
+                        <a href="https://benbourgon-project-one.netlify.app/" class="viewLiveLink">
+                            <p>View Live</p>
+                        </a>
+                    </li>
+                    <li class="projectListItem">
+                            <h3>Good Good Games</h3>
+                            <a href="https://goodgoodgames.netlify.app/">
+                                <img src="./assets/projectScreenshots/goodGoodGamesMockupGreen.png"
+                                alt="The 'Good Good Games' website">
+                            </a>
+                            <div class="textContainer">
+                                <p class="projectDescription">Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
+                                <ul>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                        <p>HTML5</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-css3" aria-hidden="true"></i>
+                                        <p>CSS3</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                        <p>RESTful API</p>
+                                    </li>
+                                </ul>
+                            </div> <!--.textContainer end-->
+                        <a href="https://github.com/benbourgon/goodGoodGames" class="githubLink">
+                            <p>Code on GitHub</p>
+                        </a>
+                        <a href="https://goodgoodgames.netlify.app/" class="viewLiveLink">
+                            <p>View Live</p>
+                        </a>
+                    </li>
+                    <li class="projectListItem">
+                        <h3>Game Boy Configurator</h3>
+                        <a href="https://gameboymodconfigurator.netlify.app/">
+                            <img src="./assets/projectScreenshots/gameBoyConfiguratorMockupPurple.png" alt="The 'Game Boy Mod Configurator' website">
+                        </a>
+                        <div class="textContainer">
+                            <p class="projectDescription">Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
+                            <ul>
+                                <li class="techListItem">
+                                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                    <p>HTML5</p>
+                                </li>
+                                <li class="techListItem">
                                     <i class="fa-brands fa-css3" aria-hidden="true"></i>
                                     <p>CSS3</p>
                                 </li>
-                                <li>
+                                <li class="techListItem">
                                     <i class="fa-brands fa-js-square" aria-hidden="true"></i>
                                     <p>JavaScript</p>
                                 </li>
                             </ul>
-                        </a>
-                        <a href="https://github.com/benbourgon/gameBoyModConfigurator">See the code on GitHub <i class="fi fi-brands-github"></i></a>
                         </div> <!--.textContainer end-->
+                        <a href="https://github.com/benbourgon/gameBoyModConfigurator" class="githubLink">
+                            <p>Code on GitHub</p>
+                        </a>
+                        <a href="https://gameboymodconfigurator.netlify.app/" class="viewLiveLink">
+                            <p>View Live</p>
+                        </a>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="blog" id="blog">
             <div class="wrapper">
-                <h4>writing re: writing code</h4>
-                <h2>My Blog</h2>
+                <div class="subHeadingContainer">
+                    <h4><span class="writing">writing re:</span>writing code</h4>
+                    <h2>My Blog</h2>
+                </div>
                 <ul>
                     <li>
-                        <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
-                            <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
-                            <div class="textContainer">
-                                <h3>Trading call sheets for style sheets</h3>
-                                <p>Or why I’m pivoting to become a front-end web developer.</p>
-                                <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">Read More</a>
-                            </div> <!--.textContainer end-->
-                        </a>
+                        <article>
+                            <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="blogTitle">
+                                <h3><span class="callSheets">Trading call sheets for</span> style sheets:</h3>
+                            </a>
+                            <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
+                                <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
+                            </a>
+                            <p>Or why I'm pivoting to become a front-end web developer.</p>
+                            <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore">Read More</a>
+                        </article>
                     </li>
                 </ul>
             </div> <!--.wrapper ends-->
         </section> <!--blog section ends-->
         <section class="profile" id="profile">
             <div class="wrapper">
-                <h4>more about me</h4>
-                <h2>Profile</h2>
+                <div class="subHeadingContainer">
+                    <h4>more about me</h4>
+                    <h2>Profile</h2>
+                </div>
                 <ul>
-                    <li>
-                        <h3>Bio</h3>
+                    <li class="profileListItem">
+                        <h3>About Me</h3>
                         <p>I am a creative and analytical front-end developer driven to build accessible, user-friendly applications through clean, responsive, and organized code.</p>
-                        <p>After a decade working in Film and TV production, I excel at problem-solving,project management strategies, and
-                        communicating with colleagues of all technical abilities. Bringing my passion for continuous learning, an artistic eye
+                        <p>After a decade working in TV & film production, I excel at problem-solving, project management strategies, and
+                        communicating with colleagues of all technical abilities.</p>
+                        <p>Bringing my passion for continuous learning, an artistic eye
                         for detail, and strong foundations in JavaScript, CSS, and HTML, I am seeking opportunities for challenge and growth as
                         a developer.</p>
+                        <i class="icon-user">
+                            <span class="sr-only">About Me</span>
+                        </i>
                     </li>
-                    <li>
-                        <h3>Achievements</h3>
-                        <ul>
-                            <li>Achievement 1</li>
-                            <li>Achievement 2</li>
-                            <li>Achievement 3</li>
-                        </ul>
-                    </li>
-                    <li>
+                    <li class="profileListItem hidden">
                         <h3>Interests</h3>
                         <p>When I'm not writing or thinking about code, I can usually be found listening to or playing music (bass and guitar), tinkering with and and modifying old Game Boys, playing video games (Elden Ring currently) and tabletop/board games, trying to keep up with movies and TV, and getting exercise through basketball and hikes.</p>
+                        <i class="icon-energy">
+                            <span class="sr-only">Interests</span>
+                        </i>
                     </li>
-                    <li>
+                    <li class="profileListItem hidden">
                         <h3>Coffee</h3>
                         <p>I'd love to hear from you. Click the button below to message me for a coffee or Zoom chat.</p>
+                        <i class="icon-cup">
+                            <span class="sr-only">Coffee</span>
+                        </i>
                     </li>
                 </ul>
-                <nav class="profileNav">
-                    <ul>
-                        <li>
-                            <button>
-                                <i class="icon-user">
-                                    <span class="sr-only">Profile</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <i class="icon-trophy">
-                                    <span class="sr-only">Achievements</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <i class="icon-energy">
-                                    <span class="sr-only">Interests</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <i class="icon-cup">
-                                    <span class="sr-only">Coffee</span>
-                                </i>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-                <p>Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume</p>
-                <a href="#contact">Message Me</a>
-                <a href="#contact">Request Resume</a>
+                <form class="profileForm">
+                    <input type="radio" name="profileNav" id="profileAboutMe" checked>
+                    <label for="profileAboutMe" class="profileFormIcon">
+                        <i class="icon-user">
+                            <span class="sr-only">About Me</span>
+                        </i>
+                    </label>
+
+                    <input type="radio" name="profileNav" id="profileInterests">
+                    <label for="profileInterests" class="profileFormIcon">
+                        <i class="icon-energy">
+                            <span class="sr-only">Interests</span>
+                        </i>
+                    </label>
+
+                    <input type="radio" name="profileNav" id="profileCoffee">
+                    <label for="profileCoffee" class="profileFormIcon">
+                        <i class="icon-cup">
+                            <span class="sr-only">Coffee</span>
+                        </i>
+                    </label>
+                </form>
+                <p>Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
+                <a href="#contact" class="messageMe profileLink">Message Me</a>
+                <a href="#contact" class="requestResume profileLink">Request Resume</a>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
         <section class="contact" id="contact">
             <div class="wrapper">
-                <h4>get in touch</h4>
-                <h3>Contact</h3>
+                <div class="subHeadingContainer">
+                    <h4>get in touch</h4>
+                    <h2>Contact</h2>
+                </div>
                 <form action="submit">
                     <label for="name" class="sr-only">Name</label>
                     <input type="text" name="name" id="name" class="nameInput" placeholder="Name" required>
@@ -325,12 +384,12 @@
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
                     <label for="messageBox">Your Message:</label>
-                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="5" placeholder="Say hi/request resume/set up coffee/Zoom chat"></textarea>
-                    <input type="button" value="Send">
+                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="10"></textarea>
+                    <button type="submit" class="sendButton">Send</button>
                 </form>
                 <p class="or">or</p>
-                <a href="mailto:benjaminbourgon@gmail.com">benjaminbourgon@gmail.com</a>
-                <a href="tel:16049289742">1.604.928.9742</a>
+                <a href="mailto:benjaminbourgon@gmail.com" class="contactEmailAddress">benjaminbourgon@gmail.com</a>
+                <a href="tel:16049289742" class="contactPhoneNumber">1.604.928.9742</a>
                 <nav>
                     <ul>
                         <li>
@@ -364,9 +423,9 @@
     </main> <!--end of Main-->
     <footer>
         <div class="wrapper">
-            <p>Designed and Developed by Ben Bourgon.</p>
+            <p>Developed by Ben Bourgon</p>
             <p>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
-            <p>©️ 2022 Ben Bourgon</p>
+            <p><i class="fi fi-rr-copyright"></i> 2022 Ben Bourgon</p>
         </div> <!--.wrapper end-->
     </footer>
     <script src="https://kit.fontawesome.com/89439f417a.js" crossorigin="anonymous"></script>

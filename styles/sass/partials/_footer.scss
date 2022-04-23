@@ -1,0 +1,14 @@
+// Footer styling
+
+footer {
+    background-color: $blue-sapphire;
+    color: white;
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+    i {
+        font-size: $bodySize;
+    }
+}
