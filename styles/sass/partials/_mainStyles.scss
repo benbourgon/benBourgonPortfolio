@@ -187,14 +187,14 @@
 
         &:focus,
         &:hover {
-            border-bottom: 1px solid $mandarin;
+            border-bottom: 3px solid white;
         }
     }
     textarea {
         border: 1px solid white;
         &:focus,
         &:hover {
-            border: 1px solid $mandarin;
+            border: 3px solid white;
         }
     }
     label {
@@ -212,4 +212,17 @@
         padding: 10px 0;
         margin: 25px 0;
     }
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        li {
+            flex-basis: 24%;
+        }
+        i {
+            display: block;
+            margin: 20px;
+        }
+    }
+
 }

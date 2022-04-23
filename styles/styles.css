@@ -1508,6 +1508,14 @@ header .mobileNavButton {
 
 footer {
   background-color: #135c71;
+  color: white;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer i {
+  font-size: 1.6rem;
 }
 
 .about {
@@ -1766,13 +1774,13 @@ footer {
 .contact input:focus, .contact input:hover,
 .contact textarea:focus,
 .contact textarea:hover {
-  border-bottom: 1px solid #ef8354;
+  border-bottom: 3px solid white;
 }
 .contact textarea {
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
-  border: 1px solid #ef8354;
+  border: 3px solid white;
 }
 .contact label {
   padding: 25px 5px 5px 5px;
@@ -1788,4 +1796,21 @@ footer {
   border-radius: 25px;
   padding: 10px 0;
   margin: 25px 0;
+}
+.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact ul li {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+.contact ul i {
+  display: block;
+  margin: 20px;
 }
