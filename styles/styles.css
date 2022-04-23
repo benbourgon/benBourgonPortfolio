@@ -1128,6 +1128,29 @@ header a, header button {
   font-size: 14px;
   font-size: 1.4rem;
   text-align: center;
+  line-height: 2.8rem;
+}
+
+.projects h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 50px 0 25px 0;
+}
+.projects p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.projects .techListItem p {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.projects .githubLink,
+.projects .viewLiveLink {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: auto;
 }
 
 body {
@@ -1307,10 +1330,10 @@ header .downArrowContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 85%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 header .downArrowContainer .downArrow {
   padding: 20px;
@@ -1426,8 +1449,67 @@ footer {
 .projects i {
   color: black;
 }
+.projects ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.projects li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projects .projectListItem {
+  margin: 25px 0;
+}
+.projects .techListItem {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-top: 10px;
+}
+.projects .githubLink,
+.projects .viewLiveLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #63adf2;
+  margin-top: 25px;
+  width: 200px;
+  border-radius: 25px;
+  padding: 0 10px;
+  outline: 1px solid black;
+}
+.projects .githubLink:hover, .projects .githubLink:focus,
+.projects .viewLiveLink:hover,
+.projects .viewLiveLink:focus {
+  outline: 3px solid black;
+  font-weight: 700;
+}
+
+.blog {
+  color: black;
+}
 
 .profile {
+  color: black;
   background-color: #F7F7F7;
 }
 

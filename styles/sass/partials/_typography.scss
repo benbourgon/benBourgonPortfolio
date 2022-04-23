@@ -91,10 +91,6 @@ header {
         text-decoration: underline;
         padding: 2px;
     }
-
-    .linkContainer {
-
-    }
     .myProfileLink {
         text-transform: uppercase;
         text-decoration: none;
@@ -106,5 +102,27 @@ header {
     p {
         @include fontSize(14);
         text-align: center;
+        line-height: $roomyLineHeight;
+    }
+}
+
+.projects {
+    h3 {
+        @include fontSize(18);
+        text-align: center;
+        margin: 50px 0 25px 0;
+    }
+    p {
+        @include fontSize(16);
+        line-height: $roomyLineHeight;
+    }
+    .techListItem p {
+        @include fontSize(14);
+    }
+    .githubLink,
+    .viewLiveLink {
+        font-weight: $semiBold;
+        text-transform: uppercase;
+        line-height: $bodyHeight;
     }
 }
