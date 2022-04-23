@@ -317,8 +317,9 @@
                     <li class="profileListItem">
                         <h3>About Me</h3>
                         <p>I am a creative and analytical front-end developer driven to build accessible, user-friendly applications through clean, responsive, and organized code.</p>
-                        <p>After a decade working in Film and TV production, I excel at problem-solving,project management strategies, and
-                        communicating with colleagues of all technical abilities. Bringing my passion for continuous learning, an artistic eye
+                        <p>After a decade working in TV & film production, I excel at problem-solving, project management strategies, and
+                        communicating with colleagues of all technical abilities.</p>
+                        <p>Bringing my passion for continuous learning, an artistic eye
                         for detail, and strong foundations in JavaScript, CSS, and HTML, I am seeking opportunities for challenge and growth as
                         a developer.</p>
                         <i class="icon-user">
@@ -340,34 +341,31 @@
                         </i>
                     </li>
                 </ul>
-                <nav class="profileNav">
-                    <ul>
-                        <li>
-                            <button>
-                                <i class="icon-user">
-                                    <span class="sr-only">About Me</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <i class="icon-energy">
-                                    <span class="sr-only">Interests</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <i class="icon-cup">
-                                    <span class="sr-only">Coffee</span>
-                                </i>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-                <p>Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume</p>
-                <a href="#contact">Message Me</a>
-                <a href="#contact">Request Resume</a>
+                <form class="profileForm">
+                    <input type="radio" name="profileNav" id="profileAboutMe" checked>
+                    <label for="profileAboutMe" class="profileFormIcon">
+                        <i class="icon-user">
+                            <span class="sr-only">About Me</span>
+                        </i>
+                    </label>
+
+                    <input type="radio" name="profileNav" id="profileInterests">
+                    <label for="profileInterests" class="profileFormIcon">
+                        <i class="icon-energy">
+                            <span class="sr-only">Interests</span>
+                        </i>
+                    </label>
+
+                    <input type="radio" name="profileNav" id="profileCoffee">
+                    <label for="profileCoffee" class="profileFormIcon">
+                        <i class="icon-cup">
+                            <span class="sr-only">Coffee</span>
+                        </i>
+                    </label>
+                </form>
+                <p>Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
+                <a href="#contact" class="messageMe profileLink">Message Me</a>
+                <a href="#contact" class="requestResume profileLink">Request Resume</a>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
         <section class="contact" id="contact">
@@ -384,8 +382,8 @@
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
                     <label for="messageBox">Your Message:</label>
-                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="5" placeholder="Say hi/request resume/set up coffee/Zoom chat"></textarea>
-                    <input type="button" value="Send">
+                    <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="5"></textarea>
+                    <button type="submit" class="sendButton">Send</button>
                 </form>
                 <p class="or">or</p>
                 <a href="mailto:benjaminbourgon@gmail.com">benjaminbourgon@gmail.com</a>
@@ -423,7 +421,7 @@
     </main> <!--end of Main-->
     <footer>
         <div class="wrapper">
-            <p>Designed and Developed by Ben Bourgon.</p>
+            <p>Developed by Ben Bourgon.</p>
             <p>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
             <p>©️ 2022 Ben Bourgon</p>
         </div> <!--.wrapper end-->

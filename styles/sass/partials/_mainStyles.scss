@@ -20,13 +20,13 @@
 .myProfileLink,
 .readMore {
     margin-top: 50px;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-out;
     border-bottom: 3px solid $blue-sapphire;
 
     &:hover,
     &:focus {
         font-weight: $bold;
-        transform: scale(1.1)
+        transform: scale(1.1);
     }
 }
 
@@ -121,17 +121,83 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+    }
+    .readMore {
+        margin-top: 25px;
     }
 }
 // Profile section
 .profile {
     color: black;
     background-color: $grey;
+    li {
+        position: relative;
+    }
+    .hidden {
+        position: absolute;
+    }
+    .profileListItem {
+        background-color: white;
+        padding: 30px 15px;
+    }
+}
+// Profile radio buttons
+.profileForm {
+    display: flex;
+    margin: 25px 0;
+    label {
+        transition: 0.2s;
+        padding: 25px;
+    }
+    .profileFormIcon {
+        &:hover,
+        &:focus {
+            transform: scale(1.4)
+        }
+    }
 }
 
 // Contact section
 .contact {
     background-color: $blue-jeans;
+
+    form {
+        font-family: $bodyFont, sans-serif;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    input,
+    textarea {
+        padding: 10px 5px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 1px solid black;
+        color: white;
+        background-color: $blue-jeans;
+        width: 90%;
+
+        &::placeholder {
+            opacity: 1;
+            font-weight: $regular;
+        }
+    }
+    label {
+        padding: 5px;
+        color: white;
+        align-self: flex-start;
+    }
+
+    .sendButton {
+        width: 200px;
+        border: 1px solid white;
+        border-radius: 25px;
+        color: white;
+        padding: 10px 0;
+        margin: 25px 0;
+    }
 }

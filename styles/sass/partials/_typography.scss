@@ -13,6 +13,10 @@ body {
     color: white;
 }
 
+p {
+    line-height: $roomyLineHeight;
+}
+
 a {
     text-decoration: none;
 }
@@ -86,7 +90,7 @@ header {
         color: white;
     }
 }
-
+// about section typography
 .about {
     h3,
     p {
@@ -104,6 +108,7 @@ header {
     }
 }
 
+// skills section typography
 .skills {
     p {
         @include fontSize(14);
@@ -112,6 +117,7 @@ header {
     }
 }
 
+// projects section typography
 .projects {
     h3 {
         @include fontSize(18);
@@ -133,13 +139,14 @@ header {
     }
 }
 
+// blog section typography
 .blog {
     .writing,
     .callSheets {
         display: block;
     }
     h3 {
-        text-align: center;
+        text-align: left;
         font-size: $heading3Size;
         width: 100%;
     }
@@ -148,7 +155,74 @@ header {
         line-height: $roomyLineHeight;
     }
     .readMore {
-        text-align: center;
+        text-align: left;
         font-weight: $semiBold;
     }
+}
+
+// profile section typography
+.profile {
+    h3 {
+        text-transform: uppercase;
+        font-weight: $regular;
+        font-size: 3.0rem;
+    }
+    .profileListItem i {
+        font-size: 5.0rem;
+        color: $blue-sapphire;
+        position: absolute;
+        right: 20px;
+        top: 42px;
+    }
+
+    .profileLink {
+        font-weight: $semiBold;
+        text-transform: uppercase;
+        line-height: $bodyHeight;
+        padding: 10px 0;
+        margin: 25px 0;
+        border-radius: 25px;
+        width: 200px;
+        text-align: center;
+        transition: 0.2s ease-out;
+    }
+    .messageMe {
+        color: $blue-jeans;
+        outline: 1px solid $blue-jeans;
+
+        &:focus,
+        &:hover {
+            font-weight: $bold;
+            outline: 3px solid $blue-jeans;
+        }
+    }
+    .requestResume {
+        background-color: $purple-plum;
+        color: white;
+        outline: 1px solid $purple-plum;
+
+        &:focus,
+        &:hover {
+            font-weight: $bold;
+            outline: 3px solid $purple-plum;
+        }
+    }
+}
+.profileForm {
+    label {
+        line-height: $benHeadingHeight;
+    }
+    input[type="radio"] {
+        display: none;
+
+        &:checked {
+            + label {
+                color: $blue-sapphire;
+            }
+        }
+    }
+}
+
+.contact {
+    color: black;
 }

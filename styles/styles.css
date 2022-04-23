@@ -1043,6 +1043,10 @@ body {
   color: white;
 }
 
+p {
+  line-height: 2.8rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -1164,7 +1168,7 @@ header a, header button {
   display: block;
 }
 .blog h3 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   width: 100%;
 }
@@ -1173,8 +1177,64 @@ header a, header button {
   line-height: 2.8rem;
 }
 .blog .readMore {
-  text-align: center;
+  text-align: left;
   font-weight: 600;
+}
+
+.profile h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.profile .profileListItem i {
+  font-size: 5rem;
+  color: #135c71;
+  position: absolute;
+  right: 20px;
+  top: 42px;
+}
+.profile .profileLink {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: auto;
+  padding: 10px 0;
+  margin: 25px 0;
+  border-radius: 25px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.profile .messageMe {
+  color: #63adf2;
+  outline: 1px solid #63adf2;
+}
+.profile .messageMe:focus, .profile .messageMe:hover {
+  font-weight: 700;
+  outline: 3px solid #63adf2;
+}
+.profile .requestResume {
+  background-color: #a755c2;
+  color: white;
+  outline: 1px solid #a755c2;
+}
+.profile .requestResume:focus, .profile .requestResume:hover {
+  font-weight: 700;
+  outline: 3px solid #a755c2;
+}
+
+.profileForm label {
+  line-height: 3.6rem;
+}
+.profileForm input[type=radio] {
+  display: none;
+}
+.profileForm input[type=radio]:checked + label {
+  color: #135c71;
+}
+
+.contact {
+  color: black;
 }
 
 body {
@@ -1418,8 +1478,8 @@ footer {
 .myProfileLink,
 .readMore {
   margin-top: 50px;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
   border-bottom: 3px solid #135c71;
 }
 .myProfileLink:hover, .myProfileLink:focus,
@@ -1558,19 +1618,109 @@ footer {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.blog .readMore {
+  margin-top: 25px;
 }
 
 .profile {
   color: black;
   background-color: #F7F7F7;
 }
+.profile li {
+  position: relative;
+}
+.profile .hidden {
+  position: absolute;
+}
+.profile .profileListItem {
+  background-color: white;
+  padding: 30px 15px;
+}
+
+.profileForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px 0;
+}
+.profileForm label {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 25px;
+}
+.profileForm .profileFormIcon:hover, .profileForm .profileFormIcon:focus {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
 
 .contact {
   background-color: #63adf2;
+}
+.contact form {
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.contact input,
+.contact textarea {
+  padding: 10px 5px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+  background-color: #63adf2;
+  width: 90%;
+}
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
+  opacity: 1;
+  font-weight: 400;
+}
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+  opacity: 1;
+  font-weight: 400;
+}
+.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
+  opacity: 1;
+  font-weight: 400;
+}
+.contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder {
+  opacity: 1;
+  font-weight: 400;
+}
+.contact input::placeholder,
+.contact textarea::placeholder {
+  opacity: 1;
+  font-weight: 400;
+}
+.contact label {
+  padding: 5px;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.contact .sendButton {
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 0;
+  margin: 25px 0;
 }
