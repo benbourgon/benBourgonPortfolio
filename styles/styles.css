@@ -1687,7 +1687,7 @@ footer i {
           transform: none;
   text-decoration: underline;
 }
-.blog li {
+.blog article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
