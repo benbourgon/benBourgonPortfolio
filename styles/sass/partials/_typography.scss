@@ -34,6 +34,14 @@ h4 {
     text-align: center;
 }
 
+.myProfileLink,
+.readMore {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: $blue-sapphire;
+}
+
 // header typography
 header {
     color: white;
@@ -92,9 +100,7 @@ header {
         padding: 2px;
     }
     .myProfileLink {
-        text-transform: uppercase;
         text-decoration: none;
-        text-align: center;
     }
 }
 
@@ -124,5 +130,25 @@ header {
         font-weight: $semiBold;
         text-transform: uppercase;
         line-height: $bodyHeight;
+    }
+}
+
+.blog {
+    .writing,
+    .callSheets {
+        display: block;
+    }
+    h3 {
+        text-align: center;
+        font-size: $heading3Size;
+        width: 100%;
+    }
+    p {
+        font-size: $bodySize;
+        line-height: $roomyLineHeight;
+    }
+    .readMore {
+        text-align: center;
+        font-weight: $semiBold;
     }
 }

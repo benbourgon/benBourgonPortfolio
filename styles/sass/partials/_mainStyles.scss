@@ -15,21 +15,21 @@
     .linkContainer {
         display: flex;
         justify-content: center;
-        
-
-        .myProfileLink {
-            margin-top: 50px;
-            transition: 0.2s ease-in;
-            border-bottom: 3px solid $blue-sapphire;
-            &:hover,
-            &:focus {
-                font-weight: $bold;
-                transform: scale(1.1)
-            }
-        }
     }
-
 }
+.myProfileLink,
+.readMore {
+    margin-top: 50px;
+    transition: 0.2s ease-in;
+    border-bottom: 3px solid $blue-sapphire;
+
+    &:hover,
+    &:focus {
+        font-weight: $bold;
+        transform: scale(1.1)
+    }
+}
+
 // Skills section
 .skills {
     background-color: $grey;
@@ -51,6 +51,11 @@
     }
     h2, h4 {
         color: black;
+    }
+    .firebaseIcon,
+    .adobeIcon {
+        max-width: 40px;
+        height: auto;
     }
 }
 // Projects section
@@ -102,6 +107,23 @@
 // Blog section
 .blog {
     color: black;
+    .subHeadingContainer h4 {
+        padding-top: 16px;
+    }
+    .blogTitle {
+        &:hover,
+        &:focus {
+            transform: none;
+            text-decoration: underline;
+        }
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }
 // Profile section
 .profile {
@@ -112,10 +134,4 @@
 // Contact section
 .contact {
     background-color: $blue-jeans;
-}
-
-.firebaseIcon,
-.adobeIcon {
-    max-width: 40px;
-    height: auto;
 }

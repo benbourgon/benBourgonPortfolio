@@ -290,19 +290,19 @@
         <section class="blog" id="blog">
             <div class="wrapper">
                 <div class="subHeadingContainer">
-                    <h4>writing re: writing code</h4>
+                    <h4><span class="writing">writing re:</span>writing code</h4>
                     <h2>My Blog</h2>
                 </div>
                 <ul>
                     <li>
+                        <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="blogTitle">
+                            <h3><span class="callSheets">Trading call sheets for</span> style sheets:</h3>
+                        </a>
                         <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
                             <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
-                            <div class="textContainer">
-                                <h3>Trading call sheets for style sheets</h3>
-                                <p>Or why I’m pivoting to become a front-end web developer.</p>
-                                <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">Read More</a>
-                            </div> <!--.textContainer end-->
                         </a>
+                        <p>Or why I'm pivoting to become a front-end web developer.</p>
+                        <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore">Read More</a>
                     </li>
                 </ul>
             </div> <!--.wrapper ends-->
@@ -314,29 +314,30 @@
                     <h2>Profile</h2>
                 </div>
                 <ul>
-                    <li>
-                        <h3>Bio</h3>
+                    <li class="profileListItem">
+                        <h3>About Me</h3>
                         <p>I am a creative and analytical front-end developer driven to build accessible, user-friendly applications through clean, responsive, and organized code.</p>
                         <p>After a decade working in Film and TV production, I excel at problem-solving,project management strategies, and
                         communicating with colleagues of all technical abilities. Bringing my passion for continuous learning, an artistic eye
                         for detail, and strong foundations in JavaScript, CSS, and HTML, I am seeking opportunities for challenge and growth as
                         a developer.</p>
+                        <i class="icon-user">
+                            <span class="sr-only">About Me</span>
+                        </i>
                     </li>
-                    <li>
-                        <h3>Achievements</h3>
-                        <ul>
-                            <li>Achievement 1</li>
-                            <li>Achievement 2</li>
-                            <li>Achievement 3</li>
-                        </ul>
-                    </li>
-                    <li>
+                    <li class="profileListItem hidden">
                         <h3>Interests</h3>
                         <p>When I'm not writing or thinking about code, I can usually be found listening to or playing music (bass and guitar), tinkering with and and modifying old Game Boys, playing video games (Elden Ring currently) and tabletop/board games, trying to keep up with movies and TV, and getting exercise through basketball and hikes.</p>
+                        <i class="icon-energy">
+                            <span class="sr-only">Interests</span>
+                        </i>
                     </li>
-                    <li>
+                    <li class="profileListItem hidden">
                         <h3>Coffee</h3>
                         <p>I'd love to hear from you. Click the button below to message me for a coffee or Zoom chat.</p>
+                        <i class="icon-cup">
+                            <span class="sr-only">Coffee</span>
+                        </i>
                     </li>
                 </ul>
                 <nav class="profileNav">
@@ -344,14 +345,7 @@
                         <li>
                             <button>
                                 <i class="icon-user">
-                                    <span class="sr-only">Profile</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <i class="icon-trophy">
-                                    <span class="sr-only">Achievements</span>
+                                    <span class="sr-only">About Me</span>
                                 </i>
                             </button>
                         </li>

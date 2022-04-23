@@ -1037,7 +1037,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: auto;
   color: white;
@@ -1064,6 +1064,14 @@ h4 {
   font-weight: 400;
   text-transform: lowercase;
   text-align: center;
+}
+
+.myProfileLink,
+.readMore {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #135c71;
 }
 
 header {
@@ -1096,7 +1104,7 @@ header h3 {
 header p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -1119,9 +1127,7 @@ header a, header button {
   padding: 2px;
 }
 .about .myProfileLink {
-  text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
 }
 
 .skills p {
@@ -1151,6 +1157,24 @@ header a, header button {
   font-weight: 600;
   text-transform: uppercase;
   line-height: auto;
+}
+
+.blog .writing,
+.blog .callSheets {
+  display: block;
+}
+.blog h3 {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+.blog p {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.blog .readMore {
+  text-align: center;
+  font-weight: 600;
 }
 
 body {
@@ -1390,13 +1414,17 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.about .linkContainer .myProfileLink {
+
+.myProfileLink,
+.readMore {
   margin-top: 50px;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   border-bottom: 3px solid #135c71;
 }
-.about .linkContainer .myProfileLink:hover, .about .linkContainer .myProfileLink:focus {
+.myProfileLink:hover, .myProfileLink:focus,
+.readMore:hover,
+.readMore:focus {
   font-weight: 700;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -1439,6 +1467,11 @@ footer {
 }
 .skills h2, .skills h4 {
   color: black;
+}
+.skills .firebaseIcon,
+.skills .adobeIcon {
+  max-width: 40px;
+  height: auto;
 }
 
 .projects {
@@ -1507,6 +1540,31 @@ footer {
 .blog {
   color: black;
 }
+.blog .subHeadingContainer h4 {
+  padding-top: 16px;
+}
+.blog .blogTitle:hover, .blog .blogTitle:focus {
+  -webkit-transform: none;
+          transform: none;
+  text-decoration: underline;
+}
+.blog li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
 .profile {
   color: black;
@@ -1515,10 +1573,4 @@ footer {
 
 .contact {
   background-color: #63adf2;
-}
-
-.firebaseIcon,
-.adobeIcon {
-  max-width: 40px;
-  height: auto;
 }
