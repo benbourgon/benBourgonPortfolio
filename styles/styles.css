@@ -374,7 +374,6 @@ html {
 .icon-volume-1,
 .icon-volume-2 {
   font-family: "Simple-Line-Icons";
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1050,9 +1049,6 @@ p {
 a {
   text-decoration: none;
 }
-a:visited {
-  color: #a755c2;
-}
 
 h2 {
   text-transform: uppercase;
@@ -1135,9 +1131,6 @@ header a, header button {
   font-weight: 600;
   padding: 2px;
 }
-.about a:hover, .about a:focus {
-  text-decoration: underline;
-}
 
 .skills p {
   font-size: 14px;
@@ -1176,6 +1169,9 @@ header a, header button {
   font-size: 1.7rem;
   width: 100%;
 }
+.blog a:visited {
+  color: #a755c2;
+}
 .blog p {
   font-size: 1.6rem;
   line-height: 2.8rem;
@@ -1208,26 +1204,30 @@ header a, header button {
   margin: 25px 0;
   border-radius: 25px;
   width: 200px;
+  height: 39px;
   text-align: center;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
+.profile .profileLink:hover, .profile .profileLink:focus {
+  text-decoration: none;
+}
 .profile .messageMe {
   color: #63adf2;
-  outline: 1px solid #63adf2;
+  border: 1px solid #63adf2;
 }
 .profile .messageMe:focus, .profile .messageMe:hover {
   font-weight: 700;
-  outline: 3px solid #63adf2;
+  border: 2px solid #63adf2;
 }
 .profile .requestResume {
   background-color: #a755c2;
+  background-size: cover;
   color: white;
-  outline: 1px solid #a755c2;
 }
 .profile .requestResume:focus, .profile .requestResume:hover {
+  height: 100%;
   font-weight: 700;
-  outline: 3px solid #a755c2;
 }
 
 .profileForm label {
@@ -1255,6 +1255,10 @@ header a, header button {
 }
 .contact input,
 .contact textarea {
+  color: white;
+}
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder {
   color: white;
 }
 .contact input:focus, .contact input:hover,
@@ -1287,7 +1291,6 @@ header a, header button {
 }
 .contact .sendButton:focus, .contact .sendButton:hover {
   font-weight: 700;
-  outline: 3px solid white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -1353,6 +1356,7 @@ a {
   padding: 0;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  border: none;
 }
 a:hover {
   -webkit-transform: scale(1.1);
@@ -1360,6 +1364,8 @@ a:hover {
 }
 a:focus {
   border: 5px solid #63adf2;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 i {
@@ -1529,6 +1535,17 @@ header .mobileNavButton {
 footer {
   background-color: #135c71;
   color: white;
+}
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer a {
   color: white;
@@ -1713,14 +1730,15 @@ footer i {
   background-color: #63adf2;
   margin-top: 25px;
   width: 200px;
+  height: 50px;
   border-radius: 25px;
   padding: 15px 10px;
-  outline: 1px solid black;
+  border: 1px solid black;
 }
 .projects .githubLink:hover, .projects .githubLink:focus,
 .projects .viewLiveLink:hover,
 .projects .viewLiveLink:focus {
-  outline: 3px solid black;
+  border: 3px solid black;
   font-weight: 700;
 }
 
@@ -1801,6 +1819,15 @@ footer i {
   background-color: white;
   padding: 30px 15px;
 }
+.profile .linksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
 .profileForm {
   display: -webkit-box;
@@ -1821,7 +1848,8 @@ footer i {
 .contact {
   background-color: #135c71;
 }
-.contact form {
+.contact form,
+.contact .phoneEmailInputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1942,7 +1970,6 @@ footer i {
 .about h3,
 .about p,
 .projects h3,
-.blog h3,
 .myProfileLink,
 .readMore {
     font-size: 1.87rem;
@@ -1983,6 +2010,10 @@ footer i {
   }
 }
 @media (min-width: 768px) {
+  h2 {
+    font-size: 7.95rem;
+  }
+
   header h1 {
     font-size: 7.95rem;
     line-height: 7.95rem;
@@ -2149,11 +2180,6 @@ header .logoContainer {
         flex-basis: 30%;
   }
 
-  .blog article {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .blog h3 {
     font-size: 3.4rem;
   }
@@ -2174,11 +2200,49 @@ header .logoContainer {
   .blog .flexContainer .contentContainer {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .blog .readMore {
     padding-top: 62px;
+  }
+
+  .profile p {
+    font-size: 1.92rem;
+  }
+  .profile .linksContainer {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .contact .phoneEmailInputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .phoneEmailInputs input {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+
+  footer .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }

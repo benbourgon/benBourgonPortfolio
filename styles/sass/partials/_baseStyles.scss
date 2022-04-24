@@ -27,12 +27,14 @@ img {
 a {
     @include boxReset;
     transition: 0.1s;
+    border: none;
     
     &:hover {
         transform: scale(1.1);
     }
     &:focus {
         border: 5px solid $blue-jeans;
+        transform: scale(1.1);
     }
 }
 
@@ -51,7 +53,6 @@ button {
     transition: 0.2s;
     &:hover,
     &:focus {
-
         transform: scale(1.1);
     }
 }

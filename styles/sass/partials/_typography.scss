@@ -19,9 +19,6 @@ p {
 
 a {
     text-decoration: none;
-    &:visited {
-        color: $purple-plum;
-    }
 }
 
 h2 {
@@ -108,11 +105,6 @@ header {
         color: $blue-sapphire;
         font-weight: $semiBold;
         padding: 2px;
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
     }
 }
 
@@ -157,6 +149,9 @@ header {
         font-size: $heading3Size;
         width: 100%;
     }
+    a:visited {
+        color: $purple-plum;
+    }
     p {
         font-size: $bodySize;
         line-height: $roomyLineHeight;
@@ -193,28 +188,35 @@ header {
         margin: 25px 0;
         border-radius: 25px;
         width: 200px;
+        height: 39px;
         text-align: center;
         transition: 0.2s ease-out;
+
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
     }
     .messageMe {
         color: $blue-jeans;
-        outline: 1px solid $blue-jeans;
+        border: 1px solid $blue-jeans;
 
         &:focus,
         &:hover {
             font-weight: $bold;
-            outline: 3px solid $blue-jeans;
+            border: 2px solid $blue-jeans;
         }
     }
     .requestResume {
         background-color: $purple-plum;
+        background-size: cover;
         color: white;
-        outline: 1px solid $purple-plum;
 
         &:focus,
         &:hover {
+            height: 100%;
             font-weight: $bold;
-            outline: 3px solid $purple-plum;
         }
     }
 }
@@ -252,6 +254,9 @@ header {
     input,
     textarea {
         color: white;
+        &::-webkit-input-placeholder {
+            color: white;
+        }
 
         &:focus,
         &:hover {
@@ -271,7 +276,6 @@ header {
         &:focus,
         &:hover {
             font-weight: $bold;
-            outline: 3px solid white;
             transform: scale(1.1);
         }
     }
