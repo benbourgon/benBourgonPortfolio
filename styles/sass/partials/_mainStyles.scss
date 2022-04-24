@@ -80,6 +80,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        width: 100%;
     }
     li {
         display: flex;
@@ -95,13 +96,24 @@
     .projectListItem {
         margin: 25px 0;
     }
+    .projectDescription {
+        width: 100%;
+        margin-top: 30px;
+    }
     .techListItem {
         flex-basis: 49%;
         margin-top: 10px;
         text-align: center;
     }
+    .linksContainer {
+        margin-top: 50px;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     .githubLink,
     .viewLiveLink {
+        text-align: center;
         background-color: $blue-jeans;
         margin-top: 25px;
         width: 200px;
