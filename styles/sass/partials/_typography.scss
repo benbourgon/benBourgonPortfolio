@@ -19,6 +19,9 @@ p {
 
 a {
     text-decoration: none;
+    &:visited {
+        color: $purple-plum;
+    }
 }
 
 h2 {
@@ -45,7 +48,7 @@ h4 {
 .myProfileLink,
 .readMore {
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: underline;
     text-align: center;
     color: $blue-sapphire;
 }
@@ -104,12 +107,12 @@ header {
     a {
         color: $blue-sapphire;
         font-weight: $semiBold;
-        text-decoration: underline;
         padding: 2px;
-    }
-    .myProfileLink {
-        text-decoration: none;
-        padding: 10px 2px 5px 2px;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 

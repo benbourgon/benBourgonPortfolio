@@ -30,7 +30,8 @@
 .readMore {
     margin-top: 50px;
     transition: 0.2s ease-out;
-    border-bottom: 3px solid $blue-sapphire;
+    text-decoration: underline;
+    padding: 10px 2px 5px 2px;
 
     &:hover,
     &:focus {
@@ -141,6 +142,9 @@
             text-decoration: underline;
         }
     }
+    p {
+        margin: 25px 0;
+    }
     article {
         display: flex;
         flex-direction: column;
@@ -148,9 +152,20 @@
         align-items: flex-start;
         justify-content: center;
     }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     .readMore {
-        margin-top: 25px;
-        padding: 10px 2px 5px 2px;
+        padding: 39px 2px 5px 2px;
+        width: fit-content;
+        margin: 0;
+    }
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 // Profile section
