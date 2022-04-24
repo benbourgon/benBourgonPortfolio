@@ -225,6 +225,7 @@
         border-bottom: 1px solid white;
         background-color: $blue-sapphire;
         width: 100%;
+        height: 50px;
 
         &::placeholder {
             opacity: 1;
@@ -236,6 +237,7 @@
         }
     }
     textarea {
+        height: 275px;
         border: 1px solid white;
         &:focus,
         &:hover {

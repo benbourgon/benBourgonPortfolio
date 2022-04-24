@@ -1874,6 +1874,7 @@ footer i {
   border-bottom: 1px solid white;
   background-color: #135c71;
   width: 100%;
+  height: 50px;
 }
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
   opacity: 1;
@@ -1897,6 +1898,7 @@ footer i {
   border-bottom: 3px solid white;
 }
 .contact textarea {
+  height: 275px;
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
@@ -1990,7 +1992,7 @@ footer i {
     line-height: 4.32rem;
   }
   header h3 {
-    font-size: 2.21rem;
+    font-size: 2.04rem;
   }
 
   .about .imageContainer {
@@ -2131,6 +2133,12 @@ header .logoContainer {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
+  .projects .rowReverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
   .projects .projectDescription {
     font-size: 2.08rem;
     line-height: 3.5rem;
@@ -2244,5 +2252,79 @@ header .logoContainer {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+@media (min-width: 940px) {
+  h2 {
+    font-size: 10.6rem;
+    line-height: 10.6rem;
+  }
+
+  .subHeadingContainer h4 {
+    font-size: 2.4rem;
+    padding-top: 25px;
+  }
+
+  header h1 {
+    font-size: 10.6rem;
+    line-height: 10.6rem;
+  }
+  header h1 .firstName {
+    font-size: 7rem;
+    line-height: 7.2rem;
+  }
+  header h3 {
+    font-size: 3.4rem;
+  }
+  header .logoCircle {
+    height: 80px;
+    width: 80px;
+  }
+  header .downArrow i {
+    font-size: 5.1rem;
+  }
+
+  .about h3,
+.about p,
+.about .myProfileLink {
+    font-size: 2.55rem;
+    line-height: 3.4rem;
+  }
+
+  .skills p {
+    font-size: 1.92rem;
+  }
+  .skills i {
+    font-size: 3.6rem;
+  }
+
+  .projects h3 {
+    font-size: 4.25rem;
+  }
+  .projects .techListItem p {
+    font-size: 2.08rem;
+  }
+  .projects .techListItem i {
+    font-size: 3.6rem;
+  }
+  .projects .projectDescription {
+    font-size: 2.56rem;
+    line-height: 4.16rem;
+  }
+
+  .blog .subHeadingContainer h4 {
+    height: 60px;
+    padding-top: 7px;
+  }
+  .blog p,
+.blog .readMore {
+    font-size: 2.55rem;
+    line-height: 3.4rem;
+  }
+
+  .profile .profileListItem p,
+.profile .profileInstructions {
+    font-size: 2.38rem;
+    line-height: 3.57rem;
   }
 }
