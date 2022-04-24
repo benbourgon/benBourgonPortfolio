@@ -29,6 +29,10 @@ h2 {
     margin-bottom: 50px;
 }
 
+h3 {
+    font-size: $heading3Size;
+}
+
 h4 {
     @include boxReset;
     font-family: $subHeadingFont, serif;
@@ -94,7 +98,7 @@ header {
 .about {
     h3,
     p {
-        @include fontSize(17);
+        font-size:  $heading3Size;
         line-height: $roomyLineHeight;
     }
     a {
@@ -123,7 +127,7 @@ header {
     h3 {
         @include fontSize(18);
         text-align: center;
-        margin: 50px 0 25px 0;
+        margin: 50px 0 40px 0;
     }
     p {
         @include fontSize(16);
@@ -138,12 +142,15 @@ header {
         text-transform: uppercase;
         line-height: $bodyHeight;
     }
+
+    .projectDescription {
+        margin-top: 30px;
+    }
 }
 
 // blog section typography
 .blog {
-    .writing,
-    .callSheets {
+    .writing {
         display: block;
     }
     h3 {
@@ -168,9 +175,12 @@ header {
         font-weight: $regular;
         font-size: 3.0rem;
     }
+    .profileInstructions {
+        padding: 0 15px;
+    }
     .profileListItem i {
         font-size: 5.0rem;
-        color: $blue-sapphire;
+        color: $purple-plum;
         position: absolute;
         right: 20px;
         top: 42px;
@@ -212,18 +222,17 @@ header {
 .profileForm {
     label {
         line-height: $benHeadingHeight;
+        transition: none;
     }
     input[type="radio"] {
-        display: none;
-
         &:checked {
             + label {
-                color: $blue-sapphire;
+                color: $purple-plum;
             }
         }
     }
 }
-
+// contact section typography
 .contact {
     color: white;
 

@@ -1060,6 +1060,10 @@ h2 {
   margin-bottom: 50px;
 }
 
+h3 {
+  font-size: 1.7rem;
+}
+
 h4 {
   margin: 0;
   padding: 0;
@@ -1100,7 +1104,7 @@ header h1 .firstName {
 header h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -1120,7 +1124,6 @@ header a, header button {
 
 .about h3,
 .about p {
-  font-size: 17px;
   font-size: 1.7rem;
   line-height: 2.8rem;
 }
@@ -1146,7 +1149,7 @@ header a, header button {
   font-size: 18px;
   font-size: 1.8rem;
   text-align: center;
-  margin: 50px 0 25px 0;
+  margin: 50px 0 40px 0;
 }
 .projects p {
   font-size: 16px;
@@ -1163,14 +1166,16 @@ header a, header button {
   text-transform: uppercase;
   line-height: auto;
 }
+.projects .projectDescription {
+  margin-top: 30px;
+}
 
-.blog .writing,
-.blog .callSheets {
+.blog .writing {
   display: block;
 }
 .blog h3 {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 100%;
 }
 .blog p {
@@ -1187,9 +1192,12 @@ header a, header button {
   font-weight: 400;
   font-size: 3rem;
 }
+.profile .profileInstructions {
+  padding: 0 15px;
+}
 .profile .profileListItem i {
   font-size: 5rem;
-  color: #135c71;
+  color: #a755c2;
   position: absolute;
   right: 20px;
   top: 42px;
@@ -1226,12 +1234,11 @@ header a, header button {
 
 .profileForm label {
   line-height: 3.6rem;
-}
-.profileForm input[type=radio] {
-  display: none;
+  -webkit-transition: none;
+  transition: none;
 }
 .profileForm input[type=radio]:checked + label {
-  color: #135c71;
+  color: #a755c2;
 }
 
 .contact {
@@ -1321,10 +1328,11 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .wrapper {
-  max-width: 1260px;
+  max-width: 900px;
   width: 90%;
   margin: 0 auto;
   display: -webkit-box;
@@ -1353,7 +1361,7 @@ a:hover {
           transform: scale(1.1);
 }
 a:focus {
-  border: 3px solid #63adf2;
+  border: 5px solid #63adf2;
 }
 
 i {
@@ -1373,8 +1381,8 @@ button {
   transition: 0.2s;
 }
 button:hover, button:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .subHeadingContainer {
@@ -1553,6 +1561,24 @@ footer i {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.about .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about .imageContainer {
+  width: 85%;
+}
 
 .myProfileLink,
 .readMore {
@@ -1666,7 +1692,7 @@ footer i {
   margin-top: 25px;
   width: 200px;
   border-radius: 25px;
-  padding: 0 10px;
+  padding: 15px 10px;
   outline: 1px solid black;
 }
 .projects .githubLink:hover, .projects .githubLink:focus,
@@ -1810,15 +1836,23 @@ footer i {
   border-radius: 25px;
   padding: 10px 0;
   margin: 25px 0;
+  cursor: pointer;
 }
 .contact nav {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  max-width: 260px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -1837,4 +1871,222 @@ footer i {
 }
 .contact ul i {
   display: block;
+}
+
+@media (min-width: 360px) {
+  .headerNav {
+    margin-top: 25px;
+  }
+
+  .downArrowContainer {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 5.9996rem;
+  }
+
+  header h3,
+.about h3,
+.about p,
+.projects h3,
+.blog h3,
+.myProfileLink,
+.readMore {
+    font-size: 1.87rem;
+    line-height: 3.08rem;
+  }
+
+  .about .imageContainer {
+    width: 75%;
+  }
+}
+@media (min-width: 428px) {
+  header h1 {
+    font-size: 6.36rem;
+    line-height: 6.36rem;
+  }
+  header h1 .firstName {
+    font-size: 4.2rem;
+    line-height: 4.32rem;
+  }
+  header h3 {
+    font-size: 2.21rem;
+  }
+
+  .about .imageContainer {
+    width: 60%;
+  }
+
+  .projects .techListItem {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+  }
+  .projects h3 {
+    font-size: 2.499rem;
+  }
+  .projects p {
+    font-size: 2rem;
+    line-height: calc(auto * 1.25);
+  }
+}
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 7.95rem;
+    line-height: 7.95rem;
+  }
+  header h1 .firstName {
+    font-size: 5.25rem;
+    line-height: 5.4rem;
+  }
+  header h3 {
+    font-size: 2.55rem;
+  }
+  header .mobileNavButton,
+header .logoContainer {
+    position: absolute;
+    right: 50000px;
+  }
+  header .headerNav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px auto 0 auto;
+  }
+  header .navList {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 2.38rem;
+    margin-top: 20px;
+  }
+  header .navList a {
+    padding: 20px 5px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  header .navList a:focus, header .navList a:hover {
+    border-bottom: 3px solid white;
+  }
+  header .navList .desktopLogoContainer:hover, header .navList .desktopLogoContainer:focus {
+    border: none;
+  }
+
+  .about h3,
+.about p,
+.about .myProfileLink {
+    font-size: 1.92rem;
+  }
+  .about .flexContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .imageContainer,
+.about .contentContainer {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .about .imageContainer {
+    padding-bottom: 150px;
+  }
+
+  .skills ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skills li {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+
+  .projects .projectDescription {
+    font-size: 2.08rem;
+    line-height: 3.5rem;
+    -ms-flex-preferred-size: 38%;
+        flex-basis: 38%;
+    margin-left: 10px;
+    padding-left: 25px;
+  }
+  .projects .projectListItem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 50px 0;
+  }
+  .projects .projectListItem ul {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 50px 0;
+  }
+  .projects .projectListItem a {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+  .projects h3 {
+    display: block;
+    width: 100%;
+    font-size: 3.4rem;
+  }
+  .projects .techListItem {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+    margin: 25px 0;
+  }
+  .projects .linksContainer {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .projects .linksContainer a {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .projects img {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
 }

@@ -1,0 +1,212 @@
+// Media Queries
+
+// Large screen portrait phones
+@media (min-width: 360px) {
+    // 360px header media queries
+    .headerNav {
+        margin-top: 25px;
+    }
+    .downArrowContainer {
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: calc($heading2Size * 1.132);
+    }
+    header h3,
+    .about h3,
+    .about p,
+    .projects h3,
+    .blog h3,
+    .myProfileLink,
+    .readMore {
+        font-size: calc($heading3Size * 1.1);
+        line-height: calc($roomyLineHeight * 1.1);
+    }
+    // 360px about section media queries
+    .about {
+        .imageContainer {
+            width: 75%;
+        }
+    }
+}
+
+// Landscape phone to portrait tablet
+@media (min-width: 428px) {
+    // 428px header media queries
+    header {
+        h1 {
+            font-size: calc($bourgonHeadingSize * 1.2);
+            line-height: calc($bourgonHeadingHeight * 1.2);
+    
+            .firstName {
+                font-size: calc($benHeadingSize * 1.2);
+                line-height: calc($benHeadingHeight * 1.2);
+            }
+        }
+        h3 {
+            font-size: calc($heading3Size * 1.3);
+        }
+    }
+    // 428px about section media queries
+    .about {
+        .imageContainer {
+            width: 60%
+        }
+    }
+    // 428px projects media queries
+    .projects {
+        .techListItem {
+            flex-basis: 32%;
+        }
+        h3 {
+            font-size: calc($heading3Size * 1.47);
+        }
+        p {
+            font-size: calc($bodySize * 1.25);
+            line-height: calc($bodyHeight * 1.25);
+        }
+    }
+}
+
+// Portrait tablet to small desktops
+@media (min-width: 768px) {
+    // 768px header media queries
+    header {
+
+        h1 {
+            font-size: calc($bourgonHeadingSize * 1.5);
+            line-height: calc($bourgonHeadingHeight * 1.5);
+        
+            .firstName {
+                font-size: calc($benHeadingSize * 1.5);
+                line-height: calc($benHeadingHeight * 1.5);
+            }
+        }
+        
+        h3 {
+            font-size: calc($heading3Size * 1.5);
+        }
+
+        .mobileNavButton,
+        .logoContainer {
+            position: absolute;
+            right: 50000px;
+        }
+        .headerNav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto 0 auto;
+        }
+        .navList {
+            position: static;
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            align-items: center;
+            font-size: calc($heading3Size * 1.4);
+            margin-top: 20px;
+            
+            a {
+                padding: 20px 5px;
+                transition: 0.2s;
+                &:focus,
+                &:hover {
+                    border-bottom: 3px solid white;
+                }
+            }
+            
+            .desktopLogoContainer {
+                &:hover,
+                &:focus {
+                    border: none;
+                }
+            }
+
+        }
+    }
+
+    // 768px about section media queries
+    .about {
+        h3,
+        p,
+        .myProfileLink {
+            font-size: calc($bodySize * 1.2)
+        }
+        .flexContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .imageContainer,
+        .contentContainer {
+            flex-basis: 47%;
+        }
+        .imageContainer {
+            padding-bottom: 150px;
+        }
+    }
+    // 768px skills section media queries
+    .skills {
+        ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li {
+            flex-basis: 30%;
+        }
+    }
+    // 768px projects media queries
+    .projects {
+        .projectDescription {
+            font-size: calc($bodySize * 1.3);
+            line-height: 3.5rem;
+            flex-basis: 38%;
+            margin-left: 10px;
+            padding-left: 25px;
+        }
+        .projectListItem {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 50px 0;
+
+            ul {
+                flex-basis: 100%;
+                margin: 50px 0;
+            }
+            a {
+                flex-basis: 48%;
+            }
+        }
+        h3 {
+            display: block;
+            width: 100%;
+            font-size: calc($heading3Size * 2.0)
+        }
+        .techListItem {
+            flex-basis: 24%;
+            margin: 25px 0;
+        }
+        .linksContainer {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            a {
+                flex-basis: 30%;
+            }
+        }
+        img {
+            flex-basis: 60%;
+        }
+    }
+}
+
+// Laptop screens to desktop monitors
+@media (min-width: 940px){
+
+}

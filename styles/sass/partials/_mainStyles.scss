@@ -16,6 +16,15 @@
         display: flex;
         justify-content: center;
     }
+    .flexContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .imageContainer {
+        width: 85%;
+    }
 }
 .myProfileLink,
 .readMore {
@@ -93,9 +102,8 @@
         margin-top: 25px;
         width: 200px;
         border-radius: 25px;
-        padding: 0 10px;
+        padding: 15px 10px;
         outline: 1px solid black;
-
 
         &:hover,
         &:focus {
@@ -211,13 +219,17 @@
         border-radius: 25px;
         padding: 10px 0;
         margin: 25px 0;
+        cursor: pointer;
     }
     nav {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
     ul {
         display: flex;
         width: 100%;
+        max-width: 260px;
         flex-wrap: wrap;
         justify-content: space-evenly;
         li {
