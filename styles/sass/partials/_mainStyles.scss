@@ -173,20 +173,24 @@
 .profile {
     color: black;
     background-color: $grey;
-    li {
-        position: relative;
-    }
-    .hidden {
-        position: absolute;
-    }
     .profileListItem {
         background-color: white;
         padding: 30px 15px;
+    }
+    .itemHeadingContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
     }
     .linksContainer {
         display: flex;
         flex-direction: column;
     }
+
 }
 // Profile radio buttons
 .profileForm {

@@ -53,6 +53,11 @@ h4 {
 // header typography
 header {
     color: white;
+    .logo {
+        font-family: "Montserrat",
+            sans-serif;
+        font-weight: $bold;
+    }
 
     h1 {
         text-align: center;
@@ -175,9 +180,6 @@ header {
     .profileListItem i {
         font-size: 5.0rem;
         color: $purple-plum;
-        position: absolute;
-        right: 20px;
-        top: 42px;
     }
 
     .profileLink {
