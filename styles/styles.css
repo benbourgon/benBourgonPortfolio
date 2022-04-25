@@ -374,7 +374,6 @@ html {
 .icon-volume-1,
 .icon-volume-2 {
   font-family: "Simple-Line-Icons";
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1060,6 +1059,10 @@ h2 {
   margin-bottom: 50px;
 }
 
+h3 {
+  font-size: 1.7rem;
+}
+
 h4 {
   margin: 0;
   padding: 0;
@@ -1073,7 +1076,7 @@ h4 {
 .myProfileLink,
 .readMore {
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: underline;
   text-align: center;
   color: #135c71;
 }
@@ -1100,7 +1103,7 @@ header h1 .firstName {
 header h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: block;
   margin: 0;
   padding: 0;
@@ -1120,19 +1123,13 @@ header a, header button {
 
 .about h3,
 .about p {
-  font-size: 17px;
   font-size: 1.7rem;
   line-height: 2.8rem;
 }
 .about a {
   color: #135c71;
   font-weight: 600;
-  text-decoration: underline;
   padding: 2px;
-}
-.about .myProfileLink {
-  text-decoration: none;
-  padding: 10px 2px 5px 2px;
 }
 
 .skills p {
@@ -1146,7 +1143,7 @@ header a, header button {
   font-size: 18px;
   font-size: 1.8rem;
   text-align: center;
-  margin: 50px 0 25px 0;
+  margin: 50px 0 40px 0;
 }
 .projects p {
   font-size: 16px;
@@ -1164,14 +1161,16 @@ header a, header button {
   line-height: auto;
 }
 
-.blog .writing,
-.blog .callSheets {
+.blog .writing {
   display: block;
 }
 .blog h3 {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 100%;
+}
+.blog a:visited {
+  color: #a755c2;
 }
 .blog p {
   font-size: 1.6rem;
@@ -1187,9 +1186,12 @@ header a, header button {
   font-weight: 400;
   font-size: 3rem;
 }
+.profile .profileInstructions {
+  padding: 0 15px;
+}
 .profile .profileListItem i {
   font-size: 5rem;
-  color: #135c71;
+  color: #a755c2;
   position: absolute;
   right: 20px;
   top: 42px;
@@ -1202,36 +1204,39 @@ header a, header button {
   margin: 25px 0;
   border-radius: 25px;
   width: 200px;
+  height: 39px;
   text-align: center;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
+.profile .profileLink:hover, .profile .profileLink:focus {
+  text-decoration: none;
+}
 .profile .messageMe {
   color: #63adf2;
-  outline: 1px solid #63adf2;
+  border: 1px solid #63adf2;
 }
 .profile .messageMe:focus, .profile .messageMe:hover {
   font-weight: 700;
-  outline: 3px solid #63adf2;
+  border: 2px solid #63adf2;
 }
 .profile .requestResume {
   background-color: #a755c2;
+  background-size: cover;
   color: white;
-  outline: 1px solid #a755c2;
 }
 .profile .requestResume:focus, .profile .requestResume:hover {
+  height: 100%;
   font-weight: 700;
-  outline: 3px solid #a755c2;
 }
 
 .profileForm label {
   line-height: 3.6rem;
-}
-.profileForm input[type=radio] {
-  display: none;
+  -webkit-transition: none;
+  transition: none;
 }
 .profileForm input[type=radio]:checked + label {
-  color: #135c71;
+  color: #a755c2;
 }
 
 .contact {
@@ -1250,6 +1255,10 @@ header a, header button {
 }
 .contact input,
 .contact textarea {
+  color: white;
+}
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder {
   color: white;
 }
 .contact input:focus, .contact input:hover,
@@ -1282,7 +1291,6 @@ header a, header button {
 }
 .contact .sendButton:focus, .contact .sendButton:hover {
   font-weight: 700;
-  outline: 3px solid white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -1321,10 +1329,11 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .wrapper {
-  max-width: 1260px;
+  max-width: 900px;
   width: 90%;
   margin: 0 auto;
   display: -webkit-box;
@@ -1347,13 +1356,16 @@ a {
   padding: 0;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  border: none;
 }
 a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 a:focus {
-  border: 3px solid #63adf2;
+  border: 5px solid #63adf2;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 i {
@@ -1373,8 +1385,8 @@ button {
   transition: 0.2s;
 }
 button:hover, button:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .subHeadingContainer {
@@ -1524,6 +1536,17 @@ footer {
   background-color: #135c71;
   color: white;
 }
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 footer a {
   color: white;
   text-decoration: underline;
@@ -1553,13 +1576,32 @@ footer i {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.about .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about .imageContainer {
+  width: 85%;
+}
 
 .myProfileLink,
 .readMore {
   margin-top: 50px;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
-  border-bottom: 3px solid #135c71;
+  text-decoration: underline;
+  padding: 10px 2px 5px 2px;
 }
 .myProfileLink:hover, .myProfileLink:focus,
 .readMore:hover,
@@ -1630,6 +1672,7 @@ footer i {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100%;
 }
 .projects li {
   display: -webkit-box;
@@ -1643,36 +1686,59 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
 }
-.projects .projectListItem {
-  margin: 25px 0;
-}
-.projects .techListItem {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  margin-top: 10px;
-}
-.projects .githubLink,
-.projects .viewLiveLink {
+.projects .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+.projects .projectListItem {
+  margin: 25px 0;
+}
+.projects .projectDescription {
+  width: 100%;
+  margin-top: 30px;
+}
+.projects .techListItem {
+  -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+  margin-top: 10px;
+  text-align: center;
+}
+.projects .linksContainer {
+  margin-top: 50px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.projects .githubLink,
+.projects .viewLiveLink {
+  text-align: center;
   background-color: #63adf2;
   margin-top: 25px;
   width: 200px;
+  height: 50px;
   border-radius: 25px;
-  padding: 0 10px;
-  outline: 1px solid black;
+  padding: 15px 10px;
+  border: 1px solid black;
 }
 .projects .githubLink:hover, .projects .githubLink:focus,
 .projects .viewLiveLink:hover,
 .projects .viewLiveLink:focus {
-  outline: 3px solid black;
+  border: 3px solid black;
   font-weight: 700;
 }
 
@@ -1686,6 +1752,9 @@ footer i {
   -webkit-transform: none;
           transform: none;
   text-decoration: underline;
+}
+.blog p {
+  margin: 25px 0;
 }
 .blog article {
   display: -webkit-box;
@@ -1704,9 +1773,36 @@ footer i {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.blog .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .blog .readMore {
-  margin-top: 25px;
-  padding: 10px 2px 5px 2px;
+  padding: 39px 2px 5px 2px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+.blog .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .profile {
@@ -1722,6 +1818,15 @@ footer i {
 .profile .profileListItem {
   background-color: white;
   padding: 30px 15px;
+}
+.profile .linksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .profileForm {
@@ -1743,7 +1848,8 @@ footer i {
 .contact {
   background-color: #135c71;
 }
-.contact form {
+.contact form,
+.contact .phoneEmailInputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1768,6 +1874,7 @@ footer i {
   border-bottom: 1px solid white;
   background-color: #135c71;
   width: 100%;
+  height: 50px;
 }
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
   opacity: 1;
@@ -1791,6 +1898,7 @@ footer i {
   border-bottom: 3px solid white;
 }
 .contact textarea {
+  height: 275px;
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
@@ -1810,15 +1918,23 @@ footer i {
   border-radius: 25px;
   padding: 10px 0;
   margin: 25px 0;
+  cursor: pointer;
 }
 .contact nav {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  max-width: 260px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -1837,4 +1953,378 @@ footer i {
 }
 .contact ul i {
   display: block;
+}
+
+@media (min-width: 360px) {
+  .headerNav {
+    margin-top: 25px;
+  }
+
+  .downArrowContainer {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 5.9996rem;
+  }
+
+  header h3,
+.about h3,
+.about p,
+.projects h3,
+.myProfileLink,
+.readMore {
+    font-size: 1.87rem;
+    line-height: 3.08rem;
+  }
+
+  .about .imageContainer {
+    width: 75%;
+  }
+}
+@media (min-width: 428px) {
+  header h1 {
+    font-size: 6.36rem;
+    line-height: 6.36rem;
+  }
+  header h1 .firstName {
+    font-size: 4.2rem;
+    line-height: 4.32rem;
+  }
+  header h3 {
+    font-size: 2.04rem;
+  }
+
+  .about .imageContainer {
+    width: 60%;
+  }
+
+  .projects .techListItem {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+  }
+  .projects h3 {
+    font-size: 2.499rem;
+  }
+  .projects p {
+    font-size: 2rem;
+    line-height: calc(auto * 1.25);
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 7.95rem;
+  }
+
+  header h1 {
+    font-size: 7.95rem;
+    line-height: 7.95rem;
+  }
+  header h1 .firstName {
+    font-size: 5.25rem;
+    line-height: 5.4rem;
+  }
+  header h3 {
+    font-size: 2.55rem;
+  }
+  header .mobileNavButton,
+header .logoContainer {
+    position: absolute;
+    right: 50000px;
+  }
+  header .headerNav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px auto 0 auto;
+  }
+  header .navList {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 2.38rem;
+    margin-top: 20px;
+  }
+  header .navList a {
+    padding: 20px 5px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  header .navList a:focus, header .navList a:hover {
+    border-bottom: 3px solid white;
+  }
+  header .navList .desktopLogoContainer:hover, header .navList .desktopLogoContainer:focus {
+    border: none;
+  }
+
+  .about h3,
+.about p,
+.about .myProfileLink {
+    font-size: 1.92rem;
+  }
+  .about .flexContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .imageContainer,
+.about .contentContainer {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .about .imageContainer {
+    padding-bottom: 150px;
+  }
+
+  .skills ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skills li {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+
+  .projects .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .flexContainer a {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .projects .rowReverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .projects .projectDescription {
+    font-size: 2.08rem;
+    line-height: 3.5rem;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin: 0;
+  }
+  .projects .projectListItem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 50px 0;
+  }
+  .projects .projectListItem ul {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 50px 0 25px 0;
+  }
+  .projects h3 {
+    display: block;
+    width: 100%;
+    font-size: 3.4rem;
+  }
+  .projects .techListItem {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+    margin: 25px 0;
+  }
+  .projects .linksContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 25px;
+  }
+  .projects .linksContainer a {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+
+  .blog h3 {
+    font-size: 3.4rem;
+  }
+  .blog p {
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+  .blog .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .blog .flexContainer a {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .blog .flexContainer .contentContainer {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .blog .readMore {
+    padding-top: 62px;
+  }
+
+  .profile p {
+    font-size: 1.92rem;
+  }
+  .profile .linksContainer {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .contact .phoneEmailInputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .phoneEmailInputs input {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+
+  footer .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media (min-width: 940px) {
+  h2 {
+    font-size: 10.6rem;
+    line-height: 10.6rem;
+  }
+
+  .subHeadingContainer h4 {
+    font-size: 2.4rem;
+    padding-top: 25px;
+  }
+
+  header h1 {
+    font-size: 10.6rem;
+    line-height: 10.6rem;
+  }
+  header h1 .firstName {
+    font-size: 7rem;
+    line-height: 7.2rem;
+  }
+  header h3 {
+    font-size: 3.4rem;
+  }
+  header .logoCircle {
+    height: 80px;
+    width: 80px;
+  }
+  header .downArrow i {
+    font-size: 5.1rem;
+  }
+
+  .about h3,
+.about p,
+.about .myProfileLink {
+    font-size: 2.55rem;
+    line-height: 3.4rem;
+  }
+
+  .skills p {
+    font-size: 1.92rem;
+  }
+  .skills i {
+    font-size: 3.6rem;
+  }
+
+  .projects h3 {
+    font-size: 4.25rem;
+  }
+  .projects .techListItem p {
+    font-size: 2.08rem;
+  }
+  .projects .techListItem i {
+    font-size: 3.6rem;
+  }
+  .projects .projectDescription {
+    font-size: 2.56rem;
+    line-height: 4.16rem;
+  }
+
+  .blog .subHeadingContainer h4 {
+    height: 60px;
+    padding-top: 7px;
+  }
+  .blog p,
+.blog .readMore {
+    font-size: 2.55rem;
+    line-height: 3.4rem;
+  }
+
+  .profile .profileListItem p,
+.profile .profileInstructions {
+    font-size: 2.38rem;
+    line-height: 3.57rem;
+  }
 }

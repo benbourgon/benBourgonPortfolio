@@ -29,6 +29,10 @@ h2 {
     margin-bottom: 50px;
 }
 
+h3 {
+    font-size: $heading3Size;
+}
+
 h4 {
     @include boxReset;
     font-family: $subHeadingFont, serif;
@@ -41,7 +45,7 @@ h4 {
 .myProfileLink,
 .readMore {
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: underline;
     text-align: center;
     color: $blue-sapphire;
 }
@@ -94,18 +98,13 @@ header {
 .about {
     h3,
     p {
-        @include fontSize(17);
+        font-size:  $heading3Size;
         line-height: $roomyLineHeight;
     }
     a {
         color: $blue-sapphire;
         font-weight: $semiBold;
-        text-decoration: underline;
         padding: 2px;
-    }
-    .myProfileLink {
-        text-decoration: none;
-        padding: 10px 2px 5px 2px;
     }
 }
 
@@ -123,7 +122,7 @@ header {
     h3 {
         @include fontSize(18);
         text-align: center;
-        margin: 50px 0 25px 0;
+        margin: 50px 0 40px 0;
     }
     p {
         @include fontSize(16);
@@ -142,14 +141,16 @@ header {
 
 // blog section typography
 .blog {
-    .writing,
-    .callSheets {
+    .writing {
         display: block;
     }
     h3 {
         text-align: left;
         font-size: $heading3Size;
         width: 100%;
+    }
+    a:visited {
+        color: $purple-plum;
     }
     p {
         font-size: $bodySize;
@@ -168,9 +169,12 @@ header {
         font-weight: $regular;
         font-size: 3.0rem;
     }
+    .profileInstructions {
+        padding: 0 15px;
+    }
     .profileListItem i {
         font-size: 5.0rem;
-        color: $blue-sapphire;
+        color: $purple-plum;
         position: absolute;
         right: 20px;
         top: 42px;
@@ -184,46 +188,52 @@ header {
         margin: 25px 0;
         border-radius: 25px;
         width: 200px;
+        height: 39px;
         text-align: center;
         transition: 0.2s ease-out;
+
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
     }
     .messageMe {
         color: $blue-jeans;
-        outline: 1px solid $blue-jeans;
+        border: 1px solid $blue-jeans;
 
         &:focus,
         &:hover {
             font-weight: $bold;
-            outline: 3px solid $blue-jeans;
+            border: 2px solid $blue-jeans;
         }
     }
     .requestResume {
         background-color: $purple-plum;
+        background-size: cover;
         color: white;
-        outline: 1px solid $purple-plum;
 
         &:focus,
         &:hover {
+            height: 100%;
             font-weight: $bold;
-            outline: 3px solid $purple-plum;
         }
     }
 }
 .profileForm {
     label {
         line-height: $benHeadingHeight;
+        transition: none;
     }
     input[type="radio"] {
-        display: none;
-
         &:checked {
             + label {
-                color: $blue-sapphire;
+                color: $purple-plum;
             }
         }
     }
 }
-
+// contact section typography
 .contact {
     color: white;
 
@@ -244,6 +254,9 @@ header {
     input,
     textarea {
         color: white;
+        &::-webkit-input-placeholder {
+            color: white;
+        }
 
         &:focus,
         &:hover {
@@ -263,7 +276,6 @@ header {
         &:focus,
         &:hover {
             font-weight: $bold;
-            outline: 3px solid white;
             transform: scale(1.1);
         }
     }

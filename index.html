@@ -19,9 +19,8 @@
         <div class="wrapper">
             <nav class="headerNav">
                 <a href="#about" class="logoContainer">
-                    <span class="sr-only">skip to main content</span>
                     <div class="logoCircle">
-                        <h3 class="logo">BB</h3>
+                        <h3 class="logo" aria-hidden="true">BB</h3>
                     </div>
                 </a>
                 <button class="mobileNavButton">
@@ -29,16 +28,15 @@
                 </button> <!--.mobileNavButton end-->
                 <ul class="navList hidden">
                     <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills">Skills</a>
+                        <a href="#about" class="desktopLogoContainer">
+                            <div class="logoCircle">
+                                <span class="sr-only">About</span>
+                                <h3 class="logo" aria-hidden="true">BB</h3>
+                            </div>
+                        </a>
                     </li>
                     <li>
                         <a href="#projects">My Work</a>
-                    </li>
-                    <li>
-                        <a href="#blog">Blog</a>
                     </li>
                     <li>
                         <a href="#profile">Profile</a>
@@ -56,6 +54,7 @@
             </div> <!---headingContainer end-->
             <div class="downArrowContainer">
                 <a class="downArrow" href="#about">
+                    <span class="sr-only">Skip to Main Content</span>
                     <i class="fi fi-sr-arrow-down"></i>
                 </a>
             </div>
@@ -68,18 +67,20 @@
                     <h4>who am I?</h4>
                     <h2>hello</h2>
                 </div>
-                <div class="imageContainer">
-                    <img src="./assets/benBioCropped.png" alt="A picture of me, Ben Bourgon, the web developer writing this alt text!">
-                </div> <!--.imageContainer end-->
-                <div class="contentContainer">
-                    <h3>I'm Ben, a Front-End Developer based in Toronto, ON.</h3>
-                    <h3>I'm at my best when combining my analytic abilities with a creative instinct to solve tough problems and write clean, dry, and accessible code.</h3>
-                    <h3>That and when eating pizza or ramen. The perfect foods.</h3>
-                    <p>While you're here, you can have a look at <a href="#projects">my past work</a>, read about <a href="#blog">my journey</a> from TV & film production to web development, get to know more <a href="#profile">about me</a>, or <a href="#contact">reach out to me</a>. I'd love to hear from you!</p>
-                    <div class="linkContainer">
-                        <a href="#profile" class="myProfileLink">My Profile</a>
-                    </div>
-                </div> <!--.contentContainer end-->
+                <div class="flexContainer">
+                    <div class="imageContainer">
+                        <img src="./assets/benBioCropped.png" alt="A picture of me, Ben Bourgon, the web developer writing this alt text!">
+                    </div> <!--.imageContainer end-->
+                    <div class="contentContainer">
+                        <h3>I'm Ben, a Front-End Developer based in Toronto, ON.</h3>
+                        <h3>I'm at my best when combining my analytic abilities with a creative instinct to solve tough problems and write clean, dry, and accessible code.</h3>
+                        <h3>That and when eating pizza or ramen. The best foods.</h3>
+                        <p>While you're here, please feel free to have a look at <a href="#projects">my work</a>, read about <a href="#blog">my journey</a> from TV & film production to web development, get to know more <a href="#profile">about me</a>, or <a href="#contact">reach out to me</a>. I'd love to hear from you!</p>
+                        <div class="linkContainer">
+                            <a href="#profile" class="myProfileLink">My Profile</a>
+                        </div> <!--.linkContainer end-->
+                    </div> <!--.contentContainer end-->
+                </div> <!--.flexContainer end-->
             </div> <!--.wrapper end-->
         </section> <!--About section end-->
         <section class="skills" id="skills">
@@ -165,127 +166,119 @@
                 <ul>
                     <li class="projectListItem">
                         <h3>Taglines...with a Vengeance!</h3>
-                        <a href="https://pairedproject.netlify.app/">
-                            <img src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website">
-                        </a>
-                        <div class="textContainer">
-                            <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project with Cristina Grosser, this quiz creates random questions generated with data from the TMDb API.</p>
-                            <ul>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                    <p>HTML5</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                    <p>SASS</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                    <p>JavaScript</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                    <p>RESTful API</p>
-                                </li>
-                            </ul>
-                        </div> <!--.textContainer end-->
-                        <a href="https://github.com/TaglinesWithAVengeance/pairedProject" class="githubLink"> 
-                            <p>Code on GitHub</p>
-                        </a>
-                        <a href="https://pairedproject.netlify.app/" class="viewLiveLink">
-                            <p>View Live</p>
-                        </a>
+                        <div class="flexContainer">
+                            <a href="https://pairedproject.netlify.app/">
+                                <img src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website">
+                            </a>
+                            <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the TMDb API.</p>
+                        </div> <!--.flexContainer end-->
+                        <ul>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <p>HTML5</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                <p>SASS</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                <p>JavaScript</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                <p>RESTful API</p>
+                            </li>
+                        </ul>
+                        <div class="linksContainer">
+                            <a href="https://github.com/TaglinesWithAVengeance/pairedProject" class="githubLink">Code on GitHub</a>
+                            <a href="https://pairedproject.netlify.app/" class="viewLiveLink">View Live</a>
+                        </div> <!--linksContainer end-->
                     </li>
                     <li class="projectListItem">
                         <h3>Under the Sea</h3>
-                        <a href="https://benbourgon-project-one.netlify.app/">
-                            <img src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website">
-                        </a>
-                        <div class="textContainer">
+                        <div class="flexContainer rowReverse">
+                            <a href="https://benbourgon-project-one.netlify.app/">
+                                <img src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website">
+                            </a>
                             <p class="projectDescription">A multi-page responsive PSD conversion with an aquarium theme and a ton of elements breaking out of their containers!</p>
-                            <ul>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                    <p>HTML5</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                    <p>SASS</p>
-                                </li>
-                            </ul>
-                        </div> <!--.textContainer end-->
-                        <a href="https://github.com/benbourgon/benBourgonProjectOne" class="githubLink">
-                            <p>Code on GitHub</p>
-                        </a>
-                        <a href="https://benbourgon-project-one.netlify.app/" class="viewLiveLink">
-                            <p>View Live</p>
-                        </a>
+                        </div> <!--.flexContainer end-->
+                        <ul>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <p>HTML5</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                <p>SASS</p>
+                            </li>
+                        </ul>
+                        <div class="linksContainer">
+                            <a href="https://github.com/benbourgon/benBourgonProjectOne" class="githubLink">Code on GitHub</a>
+                            <a href="https://benbourgon-project-one.netlify.app/" class="viewLiveLink">View Live</a>
+                        </div> <!--.linksContainer end-->
                     </li>
                     <li class="projectListItem">
-                            <h3>Good Good Games</h3>
+                        <h3>Good Good Games</h3>
+                        <div class="flexContainer">
                             <a href="https://goodgoodgames.netlify.app/">
                                 <img src="./assets/projectScreenshots/goodGoodGamesMockupGreen.png"
                                 alt="The 'Good Good Games' website">
                             </a>
-                            <div class="textContainer">
-                                <p class="projectDescription">Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
-                                <ul>
-                                    <li class="techListItem">
-                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                        <p>HTML5</p>
-                                    </li>
-                                    <li class="techListItem">
-                                        <i class="fa-brands fa-css3" aria-hidden="true"></i>
-                                        <p>CSS3</p>
-                                    </li>
-                                    <li class="techListItem">
-                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                        <p>JavaScript</p>
-                                    </li>
-                                    <li class="techListItem">
-                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                        <p>RESTful API</p>
-                                    </li>
-                                </ul>
-                            </div> <!--.textContainer end-->
-                        <a href="https://github.com/benbourgon/goodGoodGames" class="githubLink">
-                            <p>Code on GitHub</p>
-                        </a>
-                        <a href="https://goodgoodgames.netlify.app/" class="viewLiveLink">
-                            <p>View Live</p>
-                        </a>
+                            <p class="projectDescription">Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
+                        </div> <!--.flexContainer end-->
+                        <ul>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <p>HTML5</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-css3" aria-hidden="true"></i>
+                                <p>CSS3</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                <p>JavaScript</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                <p>RESTful API</p>
+                            </li>
+                        </ul>
+                        <div class="linksContainer">
+                            <a href="https://github.com/benbourgon/goodGoodGames" class="githubLink">Code on GitHub</a>
+                            <a href="https://goodgoodgames.netlify.app/" class="viewLiveLink">View Live</a>
+                        </div> <!--.linksContainer end-->
                     </li>
                     <li class="projectListItem">
                         <h3>Game Boy Configurator</h3>
-                        <a href="https://gameboymodconfigurator.netlify.app/">
-                            <img src="./assets/projectScreenshots/gameBoyConfiguratorMockupPurple.png" alt="The 'Game Boy Mod Configurator' website">
-                        </a>
-                        <div class="textContainer">
+                        <div class="flexContainer rowReverse">
+                            <a href="https://gameboymodconfigurator.netlify.app/">
+                                <img src="./assets/projectScreenshots/gameBoyConfiguratorMockupPurple.png" alt="The 'Game Boy Mod Configurator' website">
+                            </a>
                             <p class="projectDescription">Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
-                            <ul>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                    <p>HTML5</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-css3" aria-hidden="true"></i>
-                                    <p>CSS3</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                    <p>JavaScript</p>
-                                </li>
-                            </ul>
-                        </div> <!--.textContainer end-->
-                        <a href="https://github.com/benbourgon/gameBoyModConfigurator" class="githubLink">
-                            <p>Code on GitHub</p>
-                        </a>
-                        <a href="https://gameboymodconfigurator.netlify.app/" class="viewLiveLink">
-                            <p>View Live</p>
-                        </a>
+                        </div> <!--.flexContainer end-->
+                        <ul>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <p>HTML5</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-css3" aria-hidden="true"></i>
+                                <p>CSS3</p>
+                            </li>
+                            <li class="techListItem">
+                                <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                <p>JavaScript</p>
+                            </li>
+                        </ul>
+                        <div class="linksContainer">
+                            <a href="https://github.com/benbourgon/gameBoyModConfigurator" class="githubLink">Code on GitHub</a>
+                            <a href="https://gameboymodconfigurator.netlify.app/" class="viewLiveLink">View Live</a> <!--.linksContainer end-->
+                        </div>
                     </li>
                 </ul>
-            </div>
+            </div> <!--.wrapper end-->
         </section>
         <section class="blog" id="blog">
             <div class="wrapper">
@@ -297,13 +290,17 @@
                     <li>
                         <article>
                             <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="blogTitle">
-                                <h3><span class="callSheets">Trading call sheets for</span> style sheets:</h3>
+                                <h3>Trading call sheets for style sheets</h3>
                             </a>
-                            <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
-                                <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
-                            </a>
-                            <p>Or why I'm pivoting to become a front-end web developer.</p>
-                            <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore">Read More</a>
+                            <div class="flexContainer">
+                                <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
+                                    <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
+                                </a>
+                                <div class="contentContainer">
+                                    <p>Or why I'm pivoting to become a front-end web developer.</p>
+                                    <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore">Read More</a>
+                                </div> <!--.contentContainer end-->
+                            </div> <!--.flexContainer end-->
                         </article>
                     </li>
                 </ul>
@@ -330,7 +327,7 @@
                     </li>
                     <li class="profileListItem hidden">
                         <h3>Interests</h3>
-                        <p>When I'm not writing or thinking about code, I can usually be found listening to or playing music (bass and guitar), tinkering with and and modifying old Game Boys, playing video games (Elden Ring currently) and tabletop/board games, trying to keep up with movies and TV, and getting exercise through basketball and hikes.</p>
+                        <p>When I'm not writing or thinking about code, I can usually be found listening to or playing music (bass and guitar), tinkering with and and modifying old Game Boys, playing video and tabletop games, trying to keep up with movies and TV, or getting exercise through basketball and hikes.</p>
                         <i class="icon-energy">
                             <span class="sr-only">Interests</span>
                         </i>
@@ -344,30 +341,32 @@
                     </li>
                 </ul>
                 <form class="profileForm">
-                    <input type="radio" name="profileNav" id="profileAboutMe" checked>
+                    <input type="radio" name="profileNav" id="profileAboutMe" class="hidden" checked>
                     <label for="profileAboutMe" class="profileFormIcon">
                         <i class="icon-user">
                             <span class="sr-only">About Me</span>
                         </i>
                     </label>
 
-                    <input type="radio" name="profileNav" id="profileInterests">
+                    <input type="radio" name="profileNav" id="profileInterests" class="hidden">
                     <label for="profileInterests" class="profileFormIcon">
                         <i class="icon-energy">
                             <span class="sr-only">Interests</span>
                         </i>
                     </label>
 
-                    <input type="radio" name="profileNav" id="profileCoffee">
+                    <input type="radio" name="profileNav" id="profileCoffee" class="hidden">
                     <label for="profileCoffee" class="profileFormIcon">
                         <i class="icon-cup">
                             <span class="sr-only">Coffee</span>
                         </i>
                     </label>
                 </form>
-                <p>Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
-                <a href="#contact" class="messageMe profileLink">Message Me</a>
-                <a href="#contact" class="requestResume profileLink">Request Resume</a>
+                <p class="profileInstructions">Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
+                <div class="linksContainer">
+                    <a href="#contact" class="messageMe profileLink">Message Me</a>
+                    <a href="#contact" class="requestResume profileLink">Request Resume</a>
+                </div>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
         <section class="contact" id="contact">
@@ -376,13 +375,15 @@
                     <h4>get in touch</h4>
                     <h2>Contact</h2>
                 </div>
-                <form action="submit">
+                <form action="https://formspree.io/f/mgedpvld" method="POST">
                     <label for="name" class="sr-only">Name</label>
                     <input type="text" name="name" id="name" class="nameInput" placeholder="Name" required>
-                    <label for="phone" class="sr-only">Phone (optional)</label>
-                    <input type="text" name="phone" id="phone" class="phoneInput" placeholder="Phone (optional)">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
+                    <div class="phoneEmailInputs">
+                        <label for="phone" class="sr-only">Phone (optional)</label>
+                        <input type="text" name="phone" id="phone" class="phoneInput" placeholder="Phone (optional)">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
+                    </div>
                     <label for="messageBox">Your Message:</label>
                     <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="10"></textarea>
                     <button type="submit" class="sendButton">Send</button>
