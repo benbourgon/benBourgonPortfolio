@@ -176,12 +176,21 @@
     .profileListItem {
         background-color: white;
         padding: 30px 15px;
-        position: relative;
+    }
+    .itemHeadingContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
     }
     .linksContainer {
         display: flex;
         flex-direction: column;
     }
+
 }
 // Profile radio buttons
 .profileForm {

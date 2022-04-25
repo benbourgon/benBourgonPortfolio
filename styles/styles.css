@@ -1196,9 +1196,6 @@ header a, header button {
 .profile .profileListItem i {
   font-size: 5rem;
   color: #a755c2;
-  position: absolute;
-  right: 20px;
-  top: 42px;
 }
 .profile .profileLink {
   font-weight: 600;
@@ -1557,10 +1554,14 @@ header .mobileNavList a {
   padding: 5px 5px;
   width: 100px;
 }
-header .mobileNavList a:hover, header .mobileNavList a:focus, header .mobileNavList a:active {
+header .mobileNavList a:hover, header .mobileNavList a:focus {
   border-bottom: 3px solid #135c71;
   -webkit-transform: none;
           transform: none;
+}
+header .mobileNavList a:active {
+  border: none;
+  font-weight: 700;
 }
 header .navOpen {
   -webkit-transition: all 0.3s;
@@ -1916,7 +1917,21 @@ footer i {
 .profile .profileListItem {
   background-color: white;
   padding: 30px 15px;
-  position: relative;
+}
+.profile .itemHeadingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.profile .itemHeadingContainer i {
+  margin-right: 5px;
+  margin-bottom: 20px;
 }
 .profile .linksContainer {
   display: -webkit-box;

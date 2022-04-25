@@ -88,10 +88,13 @@ header {
             width: 100px;
 
             &:hover,
-            &:focus,
-            &:active {
+            &:focus {
                 border-bottom: 3px solid $blue-sapphire;
                 transform: none;
+            }
+            &:active {
+                border: none;
+                font-weight: $bold;
             }
         }
     }
