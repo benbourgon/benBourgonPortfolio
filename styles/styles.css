@@ -1084,6 +1084,10 @@ h4 {
 header {
   color: white;
 }
+header .logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -1420,13 +1424,17 @@ button:hover, button:focus {
 }
 
 .hidden {
-  position: absolute;
-  right: 50000px;
+  display: none;
 }
 
 header {
   height: 100vh;
   background-color: #135c71;
+}
+header .mobileNavWrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 header .wrapper {
   height: 100%;
@@ -1444,16 +1452,46 @@ header .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
+header .desktopNav {
+  display: none;
+  z-index: 20;
+}
+header .headerNav {
+  width: 100%;
+  margin-top: 20px;
+}
+header .mobileContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .mobileFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100px;
+}
 header .logoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 20;
+  height: 80px;
+  width: 80px;
 }
 header .logoContainer:focus, header .logoContainer:hover {
   -webkit-transform: none;
@@ -1474,9 +1512,92 @@ header .logoCircle {
   height: 65px;
   width: 65px;
 }
-header .logoCircle .logo {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+header .mobileNavButton {
+  padding: 15px 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 20;
+}
+header .mobileNavList {
+  position: fixed;
+  top: -300px;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  background-color: white;
+  border-bottom: 5px solid #135c71;
+}
+header .mobileNavList li {
+  font-size: 1.92rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  z-index: 30;
+  height: 50px;
+  margin-left: 10px;
+}
+header .mobileNavList a {
+  color: #135c71;
+  padding: 5px 5px;
+  width: 100px;
+}
+header .mobileNavList a:hover, header .mobileNavList a:focus, header .mobileNavList a:active {
+  border-bottom: 3px solid #135c71;
+  -webkit-transform: none;
+          transform: none;
+}
+header .navOpen {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  margin-bottom: 50%;
+}
+header .navOpen .mobileContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  background-color: white;
+}
+header .navOpen button {
+  color: #135c71;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+header .navOpen .mobileNavList {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  margin-top: 100px;
+}
+header .navOpen .logoCircle {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+  color: #135c71;
+  border: 3px solid #135c71;
 }
 header .headingContainer {
   display: -webkit-box;
@@ -1513,23 +1634,6 @@ header .downArrowContainer .downArrow:visited {
 header .downArrowContainer i {
   font-size: 35px;
   font-size: 3.5rem;
-}
-header .headerNav {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-header .mobileNavButton {
-  padding: 20px;
-  font-size: 3rem;
-  cursor: pointer;
 }
 
 footer {
@@ -1809,15 +1913,10 @@ footer i {
   color: black;
   background-color: #F7F7F7;
 }
-.profile li {
-  position: relative;
-}
-.profile .hidden {
-  position: absolute;
-}
 .profile .profileListItem {
   background-color: white;
   padding: 30px 15px;
+  position: relative;
 }
 .profile .linksContainer {
   display: -webkit-box;
@@ -1956,10 +2055,6 @@ footer i {
 }
 
 @media (min-width: 360px) {
-  .headerNav {
-    margin-top: 25px;
-  }
-
   .downArrowContainer {
     margin-bottom: 25px;
   }
@@ -2027,53 +2122,49 @@ footer i {
   header h3 {
     font-size: 2.55rem;
   }
-  header .mobileNavButton,
-header .logoContainer {
-    position: absolute;
-    right: 50000px;
+  header .mobileContainer {
+    display: none;
   }
-  header .headerNav {
+  header .desktopNav {
     width: 100%;
+    height: 125px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 20px auto 0 auto;
-  }
-  header .navList {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 90%;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 2.38rem;
-    margin-top: 20px;
   }
-  header .navList a {
-    padding: 20px 5px;
+  header .desktopNav a {
+    padding: 25px 10px;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+    font-size: 2.21rem;
   }
-  header .navList a:focus, header .navList a:hover {
+  header .desktopNav a:hover, header .desktopNav a:focus {
     border-bottom: 3px solid white;
   }
-  header .navList .desktopLogoContainer:hover, header .navList .desktopLogoContainer:focus {
+  header .navOpen {
+    margin-bottom: 0;
+  }
+  header .desktopLogoContainer a {
+    width: 100%;
+    height: 100%;
+  }
+  header .desktopLogoContainer a:hover, header .desktopLogoContainer a:focus {
     border: none;
+  }
+  header .desktopLogoContainer a .logoCircle {
+    color: white;
+    border: 3px solid white;
+    font-size: 2.21rem;
   }
 
   .about h3,
@@ -2287,8 +2378,13 @@ header .logoContainer {
   .about h3,
 .about p,
 .about .myProfileLink {
-    font-size: 2.55rem;
+    font-size: 2.38rem;
     line-height: 3.4rem;
+  }
+  .about .imageContainer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .skills p {

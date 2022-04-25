@@ -53,6 +53,11 @@ h4 {
 // header typography
 header {
     color: white;
+    .logo {
+        font-family: "Montserrat",
+            sans-serif;
+        font-weight: $bold;
+    }
 
     h1 {
         text-align: center;

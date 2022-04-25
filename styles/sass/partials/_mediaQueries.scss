@@ -3,9 +3,6 @@
 // Large screen portrait phones
 @media (min-width: 360px) {
     // 360px header media queries
-    .headerNav {
-        margin-top: 25px;
-    }
     .downArrowContainer {
         margin-bottom: 25px;
     }
@@ -75,7 +72,7 @@
         font-size: calc($heading2Size * 1.5)
     }
 
-    // 768px header media queries
+    // 768px header media queris
     header {
 
         h1 {
@@ -92,46 +89,45 @@
             font-size: calc($heading3Size * 1.5);
         }
 
-        .mobileNavButton,
-        .logoContainer {
-            position: absolute;
-            right: 50000px;
+        .mobileContainer {
+            display: none;
         }
-        .headerNav {
+        .desktopNav{
             width: 100%;
+            height: 125px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto 0 auto;
-        }
-        .navList {
-            position: static;
-            display: flex;
-            width: 90%;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            font-size: calc($heading3Size * 1.4);
-            margin-top: 20px;
-            
+
             a {
-                padding: 20px 5px;
+                padding: 25px 10px;
                 transition: 0.2s;
-                &:focus,
-                &:hover {
+                font-size: calc($heading3Size * 1.3);
+                &:hover,
+                &:focus {
                     border-bottom: 3px solid white;
                 }
             }
-            
-            .desktopLogoContainer {
-                &:hover,
-                &:focus {
-                    border: none;
-                }
+        }
+        .navOpen {
+            margin-bottom: 0;
+        }
+        .desktopLogoContainer a{
+            width: 100%;
+            height: 100%;
+            &:hover,
+            &:focus {
+                border: none;
             }
-
+            .logoCircle {
+                color: white;
+                border: 3px solid white;
+                font-size: calc($heading3Size * 1.3)
+            }
         }
     }
+
 
     // 768px about section media queries
     .about {
@@ -307,8 +303,11 @@
         h3,
         p,
         .myProfileLink{
-            font-size: calc($heading3Size * 1.5);
+            font-size: calc($heading3Size * 1.4);
             line-height: calc($heading3Size * 2);
+        }
+        .imageContainer {
+            justify-content: flex-start;
         }
     }
     // 940px skills media queries
@@ -350,7 +349,7 @@
             line-height: calc($heading3Size * 2);
         }
     }
-    // 928px profile section media queries
+    // 940px profile section media queries
     .profile {
         .profileListItem p,
         .profileInstructions {

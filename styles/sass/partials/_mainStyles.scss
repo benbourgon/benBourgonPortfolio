@@ -173,15 +173,10 @@
 .profile {
     color: black;
     background-color: $grey;
-    li {
-        position: relative;
-    }
-    .hidden {
-        position: absolute;
-    }
     .profileListItem {
         background-color: white;
         padding: 30px 15px;
+        position: relative;
     }
     .linksContainer {
         display: flex;

@@ -16,49 +16,67 @@
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <nav class="headerNav">
-                <a href="#about" class="logoContainer">
-                    <div class="logoCircle">
-                        <h3 class="logo" aria-hidden="true">BB</h3>
-                    </div>
-                </a>
-                <button class="mobileNavButton">
-                    <i class="fi fi-ss-menu-burger"></i>
-                </button> <!--.mobileNavButton end-->
-                <ul class="navList hidden">
-                    <li>
-                        <a href="#about" class="desktopLogoContainer">
-                            <div class="logoCircle">
-                                <span class="sr-only">About</span>
-                                <h3 class="logo" aria-hidden="true">BB</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects">My Work</a>
-                    </li>
-                    <li>
-                        <a href="#profile">Profile</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="headingContainer">
-                <h1>
-                    <span class="firstName">Ben</span>Bourgon
-                </h1>
-                <h3>Front-End Developer</h3>
-            </div> <!---headingContainer end-->
-            <div class="downArrowContainer">
-                <a class="downArrow" href="#about">
-                    <span class="sr-only">Skip to Main Content</span>
-                    <i class="fi fi-sr-arrow-down"></i>
-                </a>
-            </div>
-        </div> <!--.wrapper END-->
+        <div class="mobileNavWrapper">
+            <div class="wrapper">
+                <nav class="headerNav">
+                    <div class="mobileContainer">
+                        <ul class="mobileNavList">
+                            <li>
+                                <a href="#projects">My Work</a>
+                            </li>
+                            <li>
+                                <a href="#profile">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="mobileFlexContainer">
+                            <a href="#about" class="logoContainer">
+                                <div class="logoCircle">
+                                    <span class="sr-only">About</span>
+                                    <h3 class="logo" aria-hidden="true">BB</h3>
+                                </div>
+                            </a>
+                            <button class="mobileNavButton">
+                                <i class="fi fi-ss-menu-burger"></i>
+                            </button> <!--.mobileNavButton end-->
+                        </div>
+                    </div> <!--.mobileContainer end-->
+                    <ul class="desktopNav">
+                        <li class="desktopLogoContainer">
+                            <a href="#about">
+                                <div class="logoCircle">
+                                    <span class="sr-only">About</span>
+                                    <h3 class="logo" aria-hidden="true">BB</h3>
+                                </div>
+                            </a>
+                        </li> <!--.desktopLogoContainer-->
+                        <li>
+                            <a href="#projects">My Work</a>
+                        </li>
+                        <li>
+                            <a href="#profile">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul> <!--.desktopNav end-->
+                </nav>
+                <div class="headingContainer">
+                    <h1>
+                        <span class="firstName">Ben</span>Bourgon
+                    </h1>
+                    <h3>Front-End Developer</h3>
+                </div> <!---headingContainer end-->
+                <div class="downArrowContainer">
+                    <a class="downArrow" href="#about">
+                        <span class="sr-only">Skip to Main Content</span>
+                        <i class="fi fi-sr-arrow-down"></i>
+                    </a>
+                </div>
+            </div> <!--header .wrapper end-->
+        </div> <!--.mobileNavWrapper end-->
     </header>
     <main>
         <section class="about" id="about">
@@ -430,5 +448,6 @@
         </div> <!--.wrapper end-->
     </footer>
     <script src="https://kit.fontawesome.com/89439f417a.js" crossorigin="anonymous"></script>
+    <script src="./scripts/mobileNav.js"></script>
 </body>
 </html>
