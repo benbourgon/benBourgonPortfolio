@@ -4,8 +4,9 @@ header {
     background-color: $blue-sapphire;
     .mobileNavWrapper {
         position: relative;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
     }
     .wrapper {
         height: 100%;
@@ -32,6 +33,7 @@ header {
         align-items: center;
         width: 100%;
         height: 100px;
+        max-width: 100%;
     }
     .logoContainer {
         display: flex;
@@ -63,7 +65,7 @@ header {
     }
     .mobileNavList {
         position: fixed;
-        top: -300px;
+        top: -400px;
         left: 0;
         flex-direction: column;
         justify-content: space-between;
@@ -102,12 +104,16 @@ header {
         transition: all 0.3s;
         transition-delay: 0.3s;
         margin-bottom: 50%;
+        max-width: 100%;
+        display: block;
         .mobileContainer {
             position: fixed;
             left: 0;
             top: 0;
             flex-direction: column-reverse;
             background-color: white;
+            width: 100%;
+            max-width: 100%;
         }
         button {
             color: $blue-sapphire;
@@ -137,6 +143,7 @@ header {
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-bottom: 60px;
         .downArrow {
             padding: 20px;
             color: white;
