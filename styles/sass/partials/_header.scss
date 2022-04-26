@@ -6,14 +6,10 @@ header {
         position: relative;
         height: 100%;
         width: 100%;
-        max-width: 100%;
+        max-width: 100vw;
     }
     .wrapper {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
     }
     .desktopNav {
         display: none;
@@ -21,7 +17,7 @@ header {
     }
     .headerNav {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 20px auto;
     }
     .mobileContainer {
         width: 100%;
@@ -34,6 +30,7 @@ header {
         width: 100%;
         height: 100px;
         max-width: 100%;
+        margin: 0 auto;
     }
     .logoContainer {
         display: flex;

@@ -6,9 +6,6 @@ const profileNavApp = {};
 // query the form elements
 profileNavApp.profileForm = document.querySelector(".profileForm");
 profileNavApp.radioButtons = document.querySelectorAll(".profileForm input");
-profileNavApp.aboutMeButton = document.querySelector("#profileAboutMe");
-profileNavApp.interestsButton = document.querySelector("#profileInterests");
-profileNavApp.coffeeButton = document.querySelector("#profileCoffee");
 
 // query the content elements to display
 profileNavApp.aboutMeContents = document.querySelector(".aboutMeItem");
@@ -20,8 +17,8 @@ profileNavApp.coffeeContents = document.querySelector(".coffeeItem");
 profileNavApp.handleChange = (event) => {
     profileNavApp.currentValue = event.target.value;
     console.log(profileNavApp.currentValue);
-    
-    // 
+
+    // hide or display the correct contents depending on the value of the selected radio button
     if (profileNavApp.currentValue === "aboutMe"){
         profileNavApp.interestsContents.classList.add("hidden");
         profileNavApp.coffeeContents.classList.add("hidden")
