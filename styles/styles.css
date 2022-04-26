@@ -1319,6 +1319,10 @@ header a, header button {
   margin-top: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: white;
   overflow-x: hidden;
@@ -1437,6 +1441,7 @@ header .mobileNavWrapper {
   position: relative;
   height: 100%;
   width: 100%;
+  max-width: 100%;
 }
 header .wrapper {
   height: 100%;
@@ -1480,6 +1485,7 @@ header .mobileFlexContainer {
           align-items: center;
   width: 100%;
   height: 100px;
+  max-width: 100%;
 }
 header .logoContainer {
   display: -webkit-box;
@@ -1574,6 +1580,8 @@ header .navOpen {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
   margin-bottom: 50%;
+  max-width: 100%;
+  display: block;
 }
 header .navOpen .mobileContainer {
   position: fixed;
@@ -1584,6 +1592,8 @@ header .navOpen .mobileContainer {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   background-color: white;
+  width: 100%;
+  max-width: 100%;
 }
 header .navOpen button {
   color: #135c71;

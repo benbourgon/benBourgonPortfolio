@@ -1,9 +1,13 @@
 // base styles
+html {
+    overflow-x: hidden;
+}
 body {
     background: white;
     overflow-x: hidden;
     @include boxReset;
 }
+
 ul {
     @include boxReset;
     list-style: none;
