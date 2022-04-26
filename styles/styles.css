@@ -1213,6 +1213,11 @@ header a, header button {
 .profile .profileLink:hover, .profile .profileLink:focus {
   text-decoration: none;
 }
+.profile .coffeeLink {
+  margin-top: 50px;
+  width: 200px;
+  display: block;
+}
 .profile .messageMe {
   color: #63adf2;
   border: 1px solid #63adf2;
@@ -1430,8 +1435,8 @@ header {
 }
 header .mobileNavWrapper {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 header .wrapper {
   height: 100%;
@@ -1517,7 +1522,7 @@ header .mobileNavButton {
 }
 header .mobileNavList {
   position: fixed;
-  top: -300px;
+  top: -400px;
   left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1624,6 +1629,7 @@ header .downArrowContainer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin-bottom: 60px;
 }
 header .downArrowContainer .downArrow {
   padding: 20px;
@@ -1811,6 +1817,9 @@ footer i {
   width: 100%;
   margin-top: 30px;
 }
+.projects .projectDescription a {
+  text-decoration: underline;
+}
 .projects .techListItem {
   -ms-flex-preferred-size: 49%;
       flex-basis: 49%;
@@ -1913,10 +1922,25 @@ footer i {
 .profile {
   color: black;
   background-color: #F7F7F7;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 100%;
 }
 .profile .profileListItem {
   background-color: white;
   padding: 30px 15px;
+  min-height: 570px;
+  min-width: 100%;
+}
+.profile .profileListItem ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: block;
+}
+.profile .profileListItem li {
+  margin: 20px 0;
+  font-size: 1.6rem;
+  text-align: left;
 }
 .profile .itemHeadingContainer {
   display: -webkit-box;
@@ -1928,6 +1952,8 @@ footer i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
 }
 .profile .itemHeadingContainer i {
   margin-right: 5px;
@@ -2070,10 +2096,6 @@ footer i {
 }
 
 @media (min-width: 360px) {
-  .downArrowContainer {
-    margin-bottom: 25px;
-  }
-
   h2 {
     font-size: 5.9996rem;
   }
@@ -2103,6 +2125,9 @@ footer i {
   }
   header h3 {
     font-size: 2.04rem;
+  }
+  header .headingContainer {
+    margin-bottom: 25px;
   }
 
   .about .imageContainer {
@@ -2322,7 +2347,8 @@ footer i {
     padding-top: 62px;
   }
 
-  .profile p {
+  .profile p,
+.profile .profileListItem li {
     font-size: 1.92rem;
   }
   .profile .linksContainer {
@@ -2434,6 +2460,7 @@ footer i {
   }
 
   .profile .profileListItem p,
+.profile .profileListItem li,
 .profile .profileInstructions {
     font-size: 2.38rem;
     line-height: 3.57rem;

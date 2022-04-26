@@ -331,7 +331,7 @@
                     <h2>Profile</h2>
                 </div>
                 <ul>
-                    <li class="profileListItem">
+                    <li class="profileListItem aboutMeItem">
                         <div class="itemHeadingContainer">
                             <h3>About Me</h3>
                             <i class="icon-user">
@@ -345,41 +345,50 @@
                         for detail, and strong foundations in JavaScript, CSS, and HTML, I am seeking opportunities for challenge and growth as
                         a developer.</p>
                     </li>
-                    <li class="profileListItem hidden">
+                    <li class="profileListItem hidden interestsItem">
                         <div class="itemHeadingContainer">
                             <h3>Interests</h3>
                             <i class="icon-energy">
                                 <span class="sr-only">Interests</span>
                             </i>
                         </div> <!--.itemHeadingContainer-->
-                        <p>When I'm not writing or thinking about code, I can usually be found listening to or playing music (bass and guitar), tinkering with and and modifying old Game Boys, playing video and tabletop games, trying to keep up with movies and TV, or getting exercise through basketball and hikes.</p>
+                        <p>When I'm not writing or thinking about code, I can usually be found:</p>
+                        <ul>
+                            <li> listening to music or playing bass & guitar</li>
+                            <li> modding old Game Boys</li>
+                            <li> playing video and tabletop games</li>
+                            <li> trying to keep up with movies and TV</li>
+                            <li> exercising, playing basketball and hiking</li>
+                        </ul>
                     </li>
-                    <li class="profileListItem hidden">
+                    <li class="profileListItem hidden coffeeItem">
                         <div class="itemHeadingContainer">
+                            <h3>Coffee</h3>
                             <i class="icon-cup">
                                 <span class="sr-only">Coffee</span>
                             </i>
                         </div> <!--.itemHeadingContainer-->
-                        <h3>Coffee</h3>
-                        <p>I'd love to hear from you. Click the button below to message me for a coffee or Zoom chat.</p>
+                        <p>I'd love to hear from you.</p>
+                        <p>Click the button below to message me for a coffee or Zoom chat.</p>
+                        <a href="#contact" class="coffeeLink messageMe profileLink">Message Me</a>
                     </li>
                 </ul>
                 <form class="profileForm">
-                    <input type="radio" name="profileNav" id="profileAboutMe" class="hidden" checked>
+                    <input type="radio" name="profileNav" id="profileAboutMe" class="hidden" value="aboutMe" checked>
                     <label for="profileAboutMe" class="profileFormIcon">
                         <i class="icon-user">
                             <span class="sr-only">About Me</span>
                         </i>
                     </label>
 
-                    <input type="radio" name="profileNav" id="profileInterests" class="hidden">
+                    <input type="radio" name="profileNav" id="profileInterests" class="hidden" value="interests">
                     <label for="profileInterests" class="profileFormIcon">
                         <i class="icon-energy">
                             <span class="sr-only">Interests</span>
                         </i>
                     </label>
 
-                    <input type="radio" name="profileNav" id="profileCoffee" class="hidden">
+                    <input type="radio" name="profileNav" id="profileCoffee" class="hidden" value="coffee">
                     <label for="profileCoffee" class="profileFormIcon">
                         <i class="icon-cup">
                             <span class="sr-only">Coffee</span>
@@ -455,5 +464,6 @@
     </footer>
     <script src="https://kit.fontawesome.com/89439f417a.js" crossorigin="anonymous"></script>
     <script src="./scripts/mobileNav.js"></script>
+    <script src="./scripts/profileNav.js"></script>
 </body>
 </html>

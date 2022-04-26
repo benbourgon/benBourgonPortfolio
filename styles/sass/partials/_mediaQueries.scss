@@ -3,9 +3,6 @@
 // Large screen portrait phones
 @media (min-width: 360px) {
     // 360px header media queries
-    .downArrowContainer {
-        margin-bottom: 25px;
-    }
     h2 {
         font-size: calc($heading2Size * 1.132);
     }
@@ -41,6 +38,9 @@
         }
         h3 {
             font-size: calc($heading3Size * 1.2);
+        }
+        .headingContainer {
+            margin-bottom: 25px;
         }
     }
     // 428px about section media queries
@@ -236,8 +236,9 @@
     }
     // 768px profile section media queries
     .profile {
-        p {
-            font-size: ($bodySize * 1.2)
+        p,
+        .profileListItem li {
+            font-size: ($bodySize * 1.2);
         }
         .linksContainer {
             width: 100%;
@@ -352,6 +353,7 @@
     // 940px profile section media queries
     .profile {
         .profileListItem p,
+        .profileListItem li,
         .profileInstructions {
             font-size: calc($heading3Size * 1.4);
             line-height: calc($heading3Size * 2.1);
