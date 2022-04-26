@@ -1,0 +1,360 @@
+// Media Queries
+
+// Large screen portrait phones
+@media (min-width: 360px) {
+    // 360px header media queries
+    .downArrowContainer {
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: calc($heading2Size * 1.132);
+    }
+    header h3,
+    .about h3,
+    .about p,
+    .projects h3,
+    .myProfileLink,
+    .readMore {
+        font-size: calc($heading3Size * 1.1);
+        line-height: calc($roomyLineHeight * 1.1);
+    }
+    // 360px about section media queries
+    .about {
+        .imageContainer {
+            width: 75%;
+        }
+    }
+}
+
+// Landscape phone to portrait tablet
+@media (min-width: 428px) {
+    // 428px header media queries
+    header {
+        h1 {
+            font-size: calc($bourgonHeadingSize * 1.2);
+            line-height: calc($bourgonHeadingHeight * 1.2);
+    
+            .firstName {
+                font-size: calc($benHeadingSize * 1.2);
+                line-height: calc($benHeadingHeight * 1.2);
+            }
+        }
+        h3 {
+            font-size: calc($heading3Size * 1.2);
+        }
+    }
+    // 428px about section media queries
+    .about {
+        .imageContainer {
+            width: 60%
+        }
+    }
+    // 428px projects media queries
+    .projects {
+        .techListItem {
+            flex-basis: 32%;
+        }
+        h3 {
+            font-size: calc($heading3Size * 1.47);
+        }
+        p {
+            font-size: calc($bodySize * 1.25);
+            line-height: calc($bodyHeight * 1.25);
+        }
+    }
+}
+
+// Portrait tablet to small desktops
+@media (min-width: 768px) {
+    // general 768px media queries
+
+    h2 {
+        font-size: calc($heading2Size * 1.5)
+    }
+
+    // 768px header media queris
+    header {
+
+        h1 {
+            font-size: calc($bourgonHeadingSize * 1.5);
+            line-height: calc($bourgonHeadingHeight * 1.5);
+        
+            .firstName {
+                font-size: calc($benHeadingSize * 1.5);
+                line-height: calc($benHeadingHeight * 1.5);
+            }
+        }
+        
+        h3 {
+            font-size: calc($heading3Size * 1.5);
+        }
+
+        .mobileContainer {
+            display: none;
+        }
+        .desktopNav{
+            width: 100%;
+            height: 125px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                padding: 25px 10px;
+                transition: 0.2s;
+                font-size: calc($heading3Size * 1.3);
+                &:hover,
+                &:focus {
+                    border-bottom: 3px solid white;
+                }
+            }
+        }
+        .navOpen {
+            margin-bottom: 0;
+        }
+        .desktopLogoContainer a{
+            width: 100%;
+            height: 100%;
+            &:hover,
+            &:focus {
+                border: none;
+            }
+            .logoCircle {
+                color: white;
+                border: 3px solid white;
+                font-size: calc($heading3Size * 1.3)
+            }
+        }
+    }
+
+
+    // 768px about section media queries
+    .about {
+        h3,
+        p,
+        .myProfileLink {
+            font-size: calc($bodySize * 1.2)
+        }
+        .flexContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .imageContainer,
+        .contentContainer {
+            flex-basis: 47%;
+        }
+        .imageContainer {
+            padding-bottom: 150px;
+        }
+    }
+    // 768px skills section media queries
+    .skills {
+        ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li {
+            flex-basis: 30%;
+        }
+    }
+    // 768px projects section media queries
+    .projects {
+        .flexContainer {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                flex-basis: 50%;
+            }
+        }
+        .rowReverse {
+            flex-direction: row-reverse;
+        }
+        .projectDescription {
+            font-size: calc($bodySize * 1.3);
+            line-height: 3.5rem;
+            flex-basis: 45%;
+            margin: 0;
+        }
+        .projectListItem {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 50px 0;
+
+            ul {
+                flex-basis: 100%;
+                margin: 50px 0 25px 0;
+            }
+        }
+        h3 {
+            display: block;
+            width: 100%;
+            font-size: calc($heading3Size * 2.0);
+        }
+        .techListItem {
+            flex-basis: 24%;
+            margin: 25px 0;
+        }
+        .linksContainer {
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 25px;
+            a {
+                flex-basis: 30%;
+            }
+        }
+    }
+
+    // 768px blog section media queries
+    .blog {
+        h3 {
+            font-size: calc($heading3Size * 2);
+        }
+        p {
+            margin-top: 0;
+            font-size: calc($bodySize * 1.5)
+        }
+        .flexContainer {
+            flex-direction: row;
+
+            a {
+                flex-basis: 50%;
+            }
+            .contentContainer {
+                flex-basis: 45%;
+                justify-content: flex-start;
+            }
+        }
+        .readMore {
+            padding-top: 62px;
+        }
+    }
+    // 768px profile section media queries
+    .profile {
+        p {
+            font-size: ($bodySize * 1.2)
+        }
+        .linksContainer {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    // 768px contact section media queries
+    .contact {
+        .phoneEmailInputs {
+            flex-direction: row;
+            justify-content: space-between;
+            
+            input {
+                flex-basis: 49%
+            }
+        }
+    }
+    // 768px footer section media queries
+    footer .wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+}
+
+// Laptop screens to desktop monitors
+@media (min-width: 940px){
+    // base 940px media queries
+    h2 {
+        font-size: calc($heading2Size * 2);
+        line-height: calc($heading2Size * 2);
+    }
+    .subHeadingContainer h4 {
+        font-size: calc($heading4Size * 1.5);
+        padding-top: 25px;
+    }
+    // 940px header media queries
+    header {
+        h1 {
+            font-size: calc($bourgonHeadingSize * 2);
+            line-height: calc($bourgonHeadingHeight * 2);
+            
+            .firstName {
+                font-size: calc($benHeadingSize * 2);
+                line-height: calc($benHeadingHeight * 2);
+            }
+        }
+
+        h3 {
+            font-size: calc($heading3Size * 2);
+        }
+        .logoCircle {
+            height: 80px;
+            width: 80px;
+        }
+        .downArrow i{
+            font-size: calc($iconSize * 1.7)
+        }
+    }
+    // 940px about section media queries
+    .about {
+        h3,
+        p,
+        .myProfileLink{
+            font-size: calc($heading3Size * 1.4);
+            line-height: calc($heading3Size * 2);
+        }
+        .imageContainer {
+            justify-content: flex-start;
+        }
+    }
+    // 940px skills media queries
+    .skills {
+        p {
+            font-size: calc($bodySize * 1.2);
+        }
+        i {
+            font-size: calc($iconSize * 1.2);
+        }
+    }
+    // 940px projects media queries
+    .projects {
+        h3 {
+            font-size: calc($heading3Size * 2.5)
+        }
+        .techListItem {
+            p {
+                font-size: calc($bodySize * 1.3)
+            }
+            i {
+                font-size: calc($iconSize * 1.2)
+            }
+        }
+        .projectDescription {
+            font-size: calc($bodySize * 1.6);
+            line-height: calc($bodySize * 2.6);
+        }
+    }
+    .blog {
+        .subHeadingContainer h4 {
+            height: 60px;
+            padding-top: 7px;
+        }
+
+        p,
+        .readMore {
+            font-size: calc($heading3Size * 1.5);
+            line-height: calc($heading3Size * 2);
+        }
+    }
+    // 940px profile section media queries
+    .profile {
+        .profileListItem p,
+        .profileInstructions {
+            font-size: calc($heading3Size * 1.4);
+            line-height: calc($heading3Size * 2.1);
+        }
+    }
+}

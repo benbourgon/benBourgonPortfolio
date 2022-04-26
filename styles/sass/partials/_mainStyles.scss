@@ -1,0 +1,288 @@
+// Main styling
+
+// About section
+.about {
+    background-color: white;
+    color: black;
+    img {
+        flex-basis: 100%;
+        border-radius: 50%;
+    }
+
+    h3 {
+        @include fontSize(17);
+    }
+    .linkContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .flexContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .imageContainer {
+        width: 85%;
+    }
+}
+.myProfileLink,
+.readMore {
+    margin-top: 50px;
+    transition: 0.2s ease-out;
+    text-decoration: underline;
+    padding: 10px 2px 5px 2px;
+
+    &:hover,
+    &:focus {
+        font-weight: $bold;
+        transform: scale(1.1);
+    }
+}
+
+// Skills section
+.skills {
+    background-color: $grey;
+    ul {
+        color: $blue-sapphire;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    li {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 42%;
+    }
+    h2, h4 {
+        color: black;
+    }
+    .firebaseIcon,
+    .adobeIcon {
+        max-width: 40px;
+        height: auto;
+    }
+}
+// Projects section
+.projects {
+    background-color: $blue-jeans;
+    color: black;
+    a,
+    i {
+        color: black;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .projectListItem {
+        margin: 25px 0;
+    }
+    .projectDescription {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .techListItem {
+        flex-basis: 49%;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .linksContainer {
+        margin-top: 50px;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .githubLink,
+    .viewLiveLink {
+        text-align: center;
+        background-color: $blue-jeans;
+        margin-top: 25px;
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
+        padding: 15px 10px;
+        border: 1px solid black;
+
+        &:hover,
+        &:focus {
+            border: 3px solid black;
+            font-weight: $bold;
+        }
+    }
+}
+// Blog section
+.blog {
+    color: black;
+    .subHeadingContainer h4 {
+        padding-top: 16px;
+    }
+    .blogTitle {
+        &:hover,
+        &:focus {
+            transform: none;
+            text-decoration: underline;
+        }
+    }
+    p {
+        margin: 25px 0;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .readMore {
+        padding: 39px 2px 5px 2px;
+        width: fit-content;
+        margin: 0;
+    }
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+// Profile section
+.profile {
+    color: black;
+    background-color: $grey;
+    .profileListItem {
+        background-color: white;
+        padding: 30px 15px;
+    }
+    .itemHeadingContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
+    }
+    .linksContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+// Profile radio buttons
+.profileForm {
+    display: flex;
+    margin: 25px 0;
+    label {
+        transition: 0.2s;
+        padding: 25px;
+    }
+    .profileFormIcon {
+        &:hover,
+        &:focus {
+            transform: scale(1.4)
+        }
+    }
+}
+
+// Contact section
+.contact {
+    background-color: $blue-sapphire;
+
+    form,
+    .phoneEmailInputs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    input,
+    textarea {
+        padding: 10px 5px;
+        margin: 10px 0;
+        border: none;
+        transition: 0.1s;
+        border-bottom: 1px solid white;
+        background-color: $blue-sapphire;
+        width: 100%;
+        height: 50px;
+
+        &::placeholder {
+            opacity: 1;
+        }
+
+        &:focus,
+        &:hover {
+            border-bottom: 3px solid white;
+        }
+    }
+    textarea {
+        height: 275px;
+        border: 1px solid white;
+        &:focus,
+        &:hover {
+            border: 3px solid white;
+        }
+    }
+    label {
+        padding: 25px 5px 5px 5px;
+        color: white;
+        align-self: flex-start;
+        width: 90%;
+        display: block;
+    }
+
+    .sendButton {
+        width: 200px;
+        border: 1px solid white;
+        border-radius: 25px;
+        padding: 10px 0;
+        margin: 25px 0;
+        cursor: pointer;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    ul {
+        display: flex;
+        width: 100%;
+        max-width: 260px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li {
+            display: flex;
+            justify-content: center;
+            flex-basis: 20%;
+        }
+        i {
+            display: block;
+        }
+    }
+
+}

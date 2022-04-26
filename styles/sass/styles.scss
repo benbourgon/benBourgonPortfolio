@@ -2,8 +2,11 @@
 
 @import "./partials/setup";
 @import "./partials/variables";
-@import "./partials/typography";
 @import "./partials/mixins";
+@import "./partials/fontFaces";
+@import "./partials/typography";
 @import "./partials/baseStyles";
 @import "./partials/header";
 @import "./partials/footer";
+@import "./partials/mainStyles";
+@import "./partials/mediaQueries";

@@ -1,0 +1,20 @@
+// Footer styling
+
+footer {
+    background-color: $blue-sapphire;
+    color: white;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+    i {
+        font-size: $bodySize;
+    }
+}
