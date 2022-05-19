@@ -1441,7 +1441,7 @@ header .mobileNavWrapper {
   position: relative;
   height: 100%;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
 }
 header .wrapper {
   height: 100%;
@@ -1472,7 +1472,6 @@ header .mobileFlexContainer {
           align-items: center;
   width: 100%;
   height: 100px;
-  max-width: 100%;
   margin: 0 auto;
 }
 header .logoContainer {
@@ -1568,7 +1567,7 @@ header .navOpen {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
   margin-bottom: 50%;
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 header .navOpen .mobileContainer {
@@ -1581,7 +1580,6 @@ header .navOpen .mobileContainer {
           flex-direction: column-reverse;
   background-color: white;
   width: 100%;
-  max-width: 100%;
 }
 header .navOpen button {
   color: #135c71;
@@ -1644,7 +1642,7 @@ header .downArrowContainer i {
 footer {
   background-color: #135c71;
   color: white;
-  max-width: 100vw;
+  width: 100%;
 }
 footer .wrapper {
   display: -webkit-box;
