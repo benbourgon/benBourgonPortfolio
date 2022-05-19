@@ -1321,11 +1321,11 @@ header a, header button {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background: white;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }

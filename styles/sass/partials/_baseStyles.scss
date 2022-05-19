@@ -1,10 +1,10 @@
 // base styles
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body {
     background: white;
-    overflow-x: hidden;
     @include boxReset;
 }
 
