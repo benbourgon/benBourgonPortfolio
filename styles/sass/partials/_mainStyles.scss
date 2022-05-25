@@ -75,7 +75,6 @@
     a,
     i {
         color: black;
-        transition: none;
     }
 
     ul {
@@ -97,6 +96,9 @@
     }
     .projectListItem {
         margin: 25px 0;
+    }
+    .mockup {
+        transform: none;
     }
     .projectDescription {
         width: 100%;
@@ -178,13 +180,13 @@
 .profile {
     color: black;
     background-color: $grey;
-    transition: all 0.3s ease-out;
-    width: 100%;
+    transition: 0.3s ease-out;
+    
     .profileListItem {
         background-color: white;
-        padding: 30px 15px;
+        padding: 30px 30px;
         min-height: 570px;
-        min-width: 100%;
+        max-width: 70rem;
 
         ul {
             list-style-type: disc;

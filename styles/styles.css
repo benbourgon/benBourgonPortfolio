@@ -1056,7 +1056,8 @@ h2 {
   font-size: 5.3rem;
   margin: 0;
   padding: 0;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
+  width: 100%;
 }
 
 h3 {
@@ -1091,7 +1092,7 @@ header .logo {
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 5.3rem;
+  font-size: 5.1rem;
   display: block;
   text-transform: uppercase;
   font-weight: 700;
@@ -1192,6 +1193,7 @@ header a, header button {
 }
 .profile .profileInstructions {
   padding: 0 15px;
+  max-width: 80rem;
 }
 .profile .profileListItem i {
   font-size: 5rem;
@@ -1341,12 +1343,18 @@ header a, header button {
 }
 
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  border: 1px solid greenyellow;
 }
 
 body {
-  max-width: 100%;
-  background: white;
+  width: 100%;
+  overflow-x: hidden;
+  border: 1px solid red;
   margin: 0;
   padding: 0;
 }
@@ -1364,31 +1372,16 @@ img {
 }
 
 .overflowContainer {
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
   margin: 0;
   padding: 0;
-  max-width: 900px;
+  max-width: 1100px;
   width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 a {
@@ -1417,6 +1410,20 @@ section {
   padding: 0;
   padding: 10rem 0;
   overflow: hidden;
+}
+section .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 button {
@@ -1689,6 +1696,9 @@ footer .wrapper {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer a {
   color: white;
@@ -1805,8 +1815,6 @@ footer i {
 .projects a,
 .projects i {
   color: black;
-  -webkit-transition: none;
-  transition: none;
 }
 .projects ul {
   display: -webkit-box;
@@ -1846,6 +1854,10 @@ footer i {
 }
 .projects .projectListItem {
   margin: 25px 0;
+}
+.projects .mockup {
+  -webkit-transform: none;
+          transform: none;
 }
 .projects .projectDescription {
   width: 100%;
@@ -1956,15 +1968,14 @@ footer i {
 .profile {
   color: black;
   background-color: #F7F7F7;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  width: 100%;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .profile .profileListItem {
   background-color: white;
-  padding: 30px 15px;
+  padding: 30px 30px;
   min-height: 570px;
-  min-width: 100%;
+  max-width: 70rem;
 }
 .profile .profileListItem ul {
   list-style-type: disc;
@@ -2151,7 +2162,7 @@ footer i {
 }
 @media (min-width: 428px) {
   header h1 {
-    font-size: 6.36rem;
+    font-size: 6.12rem;
     line-height: 6.36rem;
   }
   header h1 .firstName {
@@ -2187,7 +2198,7 @@ footer i {
   }
 
   header h1 {
-    font-size: 7.95rem;
+    font-size: 7.65rem;
     line-height: 7.95rem;
   }
   header h1 .firstName {
@@ -2437,7 +2448,7 @@ footer i {
   }
 
   header h1 {
-    font-size: 9.54rem;
+    font-size: 9.18rem;
     line-height: 9.54rem;
   }
   header h1 .firstName {
