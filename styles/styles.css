@@ -1348,11 +1348,12 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
-  border: 1px solid greenyellow;
+  background-color: greenyellow;
 }
 
 body {
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
   border: 1px solid red;
   margin: 0;
@@ -1372,7 +1373,8 @@ img {
 }
 
 .overflowContainer {
-  max-width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   overflow-x: hidden;
 }
 
@@ -1473,10 +1475,10 @@ button:hover, button:focus {
 
 header {
   min-height: 320px;
+  max-width: 100%;
   background-color: #135c71;
 }
 header .wrapper {
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1496,12 +1498,22 @@ header .headerNav {
   max-width: 100%;
   height: 60%;
   margin-top: 20px auto;
-}
-header .mobileContainer {
-  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .mobileContainer {
+  max-width: 100%;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header .mobileFlexContainer {
   display: -webkit-box;
@@ -1513,9 +1525,9 @@ header .mobileFlexContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100vw;
   max-width: 100%;
   height: 100px;
-  margin: 0 auto;
 }
 header .logoContainer {
   display: -webkit-box;
@@ -1552,14 +1564,27 @@ header .logoCircle {
 }
 header .mobileNavButton {
   padding: 1.5rem 2rem;
+  padding-right: 0.5rem;
   font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   z-index: 20;
 }
+header .mobileNavButton p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
 header .mobileNavList {
-  position: fixed;
-  top: -400px;
-  left: 0;
+  position: absolute;
+  top: -1px;
+  left: -10000px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1571,6 +1596,7 @@ header .mobileNavList {
       -ms-flex-align: start;
           align-items: flex-start;
   max-width: 100%;
+  width: 100%;
   background-color: white;
   border-bottom: 5px solid #135c71;
 }
@@ -1586,9 +1612,10 @@ header .mobileNavList li {
       -ms-flex-align: center;
           align-items: center;
   max-width: 100%;
+  width: 100%;
   z-index: 30;
   height: 50px;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 header .mobileNavList a {
   color: #135c71;
@@ -1609,11 +1636,11 @@ header .navOpen {
   transition: display display 0.3s;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  margin-bottom: 50%;
+  margin-bottom: 20rem;
   display: block;
 }
 header .navOpen .mobileContainer {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   -webkit-box-orient: vertical;
@@ -1635,6 +1662,7 @@ header .navOpen .mobileNavList {
   display: -ms-flexbox;
   display: flex;
   top: 0;
+  left: 0;
   margin-top: 100px;
 }
 header .navOpen .logoCircle {
@@ -1904,6 +1932,7 @@ footer i {
 
 .blog {
   color: black;
+  background-color: white;
 }
 .blog .subHeadingContainer h4 {
   padding-top: 16px;
@@ -2212,7 +2241,7 @@ footer i {
     display: none;
   }
   header .desktopNav {
-    width: 100%;
+    max-width: 100%;
     height: 125px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2306,9 +2335,8 @@ footer i {
         -ms-flex-align: center;
             align-items: center;
   }
-  .projects .flexContainer a {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+  .projects .flexContainer img {
+    max-width: 50%;
   }
   .projects .rowReverse {
     -webkit-box-orient: horizontal;

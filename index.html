@@ -27,13 +27,13 @@
                         <div class="mobileContainer">
                             <ul class="mobileNavList">
                                 <li>
-                                    <a href="#projects">My Work</a>
+                                    <a class="mobileMenuLink" href="#projects">My Work</a>
                                 </li>
                                 <li>
-                                    <a href="#profile">Profile</a>
+                                    <a class="mobileMenuLink" href="#profile">Profile</a>
                                 </li>
                                 <li>
-                                    <a href="#contact">Contact</a>
+                                    <a class="mobileMenuLink" href="#contact">Contact</a>
                                 </li>
                             </ul>
                             <div class="mobileFlexContainer">
@@ -45,11 +45,12 @@
                                 </a>
                                 <button class="mobileNavButton">
                                     <i class="fi fi-ss-menu-burger"></i>
+                                    <p class="navButtonText">Menu</p>
                                 </button> <!--.mobileNavButton end-->
                             </div>
                         </div> <!--.mobileContainer end-->
                         <ul class="desktopNav">
-                            <li class="desktopLogoContainer">
+                            <li class="desktopLogoContainer" class="mobileMenuLink">
                                 <a href="#about">
                                     <div class="logoCircle">
                                         <span class="sr-only">About</span>
@@ -190,26 +191,28 @@
                             <h3>Taglines...with a Vengeance!</h3>
                             <div class="flexContainer">
                                 <img class="mockup" src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website">
-                                <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the <a href="https://www.themoviedb.org/documentation/api">TMDb API</a>.</p>
+                                <div class="projectContentContainer">
+                                    <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the <a href="https://www.themoviedb.org/documentation/api" target="_blank" rel="noopener">TMDb API</a>.</p>
+                                    <ul>
+                                        <li class="techListItem">
+                                            <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                            <p>HTML5</p>
+                                        </li>
+                                        <li class="techListItem">
+                                            <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                            <p>SASS</p>
+                                        </li>
+                                        <li class="techListItem">
+                                            <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                            <p>JavaScript</p>
+                                        </li>
+                                        <li class="techListItem">
+                                            <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                            <p>RESTful API</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div> <!--.flexContainer end-->
-                            <ul>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                    <p>HTML5</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                    <p>SASS</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                    <p>JavaScript</p>
-                                </li>
-                                <li class="techListItem">
-                                    <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                    <p>RESTful API</p>
-                                </li>
-                            </ul>
                             <div class="linksContainer">
                                 <a href="https://github.com/TaglinesWithAVengeance/pairedProject" class="githubLink" target="_blank" rel="noopener">Code on GitHub</a>
                                 <a href="https://pairedproject.netlify.app/" class="viewLiveLink" target="_blank" rel="noopener">View Live</a>
