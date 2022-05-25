@@ -1,9 +1,9 @@
 // base styles
 html {
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 body {
+    max-width: 100%;
     background: white;
     @include boxReset;
 }
@@ -18,7 +18,12 @@ img {
     height: auto;
     display: block;
 }
+.overflowContainer {
+    max-width: fit-content;
+    overflow: hidden;
+}
 .wrapper {
+    @include boxReset;
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
@@ -48,7 +53,8 @@ i {
 
 section {
     @include boxReset;
-    padding: 150px 0;
+    padding: 10rem 0;
+    overflow: hidden;
 }
 
 button {

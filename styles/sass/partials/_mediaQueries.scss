@@ -276,20 +276,23 @@
         font-size: calc($heading4Size * 1.5);
         padding-top: 25px;
     }
+    .wrapper {
+        max-width: 1100px;
+    }
     // 940px header media queries
     header {
         h1 {
-            font-size: calc($bourgonHeadingSize * 2);
-            line-height: calc($bourgonHeadingHeight * 2);
+            font-size: calc($bourgonHeadingSize * 1.8);
+            line-height: calc($bourgonHeadingHeight * 1.8);
             
             .firstName {
-                font-size: calc($benHeadingSize * 2);
-                line-height: calc($benHeadingHeight * 2);
+                font-size: calc($benHeadingSize * 1.8);
+                line-height: calc($benHeadingHeight * 1.8);
             }
         }
 
         h3 {
-            font-size: calc($heading3Size * 2);
+            font-size: calc($heading3Size * 1.8);
         }
         .logoCircle {
             height: 80px;

@@ -190,9 +190,11 @@ header {
         margin: 25px 0;
         border-radius: 25px;
         width: 200px;
-        height: 39px;
-        text-align: center;
+        height: 50px;
         transition: 0.2s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
 
         &:hover,
@@ -208,6 +210,8 @@ header {
     .messageMe {
         color: $blue-jeans;
         border: 1px solid $blue-jeans;
+        display: flex;
+        justify-content: center;
 
         &:focus,
         &:hover {
@@ -222,7 +226,7 @@ header {
 
         &:focus,
         &:hover {
-            height: 100%;
+            height: 50px;
             font-weight: $bold;
         }
     }
@@ -289,6 +293,9 @@ header {
     a {
         color: white;
         margin: 15px 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
     }
     p {
         text-transform: uppercase;
