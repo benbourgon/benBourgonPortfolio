@@ -236,6 +236,8 @@
 // Contact section
 .contact {
     background-color: $blue-sapphire;
+    overflow-x: hidden;
+    width: 100%;
 
     form,
     .phoneEmailInputs {
@@ -244,6 +246,7 @@
         flex-wrap: wrap;
         align-items: center;
         width: 100%;
+        max-width: 100%;
     }
     input,
     textarea {
@@ -291,23 +294,26 @@
         cursor: pointer;
     }
     nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        max-width: 100%;
     }
     ul {
         display: flex;
         width: 100%;
-        max-width: 260px;
-        flex-wrap: wrap;
+        max-width: 100%;
         justify-content: space-evenly;
         li {
             display: flex;
             justify-content: center;
-            flex-basis: 20%;
+            max-width: 25%;
         }
         i {
             display: block;
+            width: 100%;
+
+            &:hover,
+            &:focus {
+                transform: none;
+            }
         }
     }
 

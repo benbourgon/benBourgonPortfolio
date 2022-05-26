@@ -3,11 +3,10 @@ html {
     @include boxReset;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    width: 100%;
+    max-width: 100%;
     background-color: greenyellow;
 }
 body {
-    width: 100vw;
     max-width: 100%;
     overflow-x: hidden;
     border: 1px solid red;
@@ -24,6 +23,7 @@ img {
     height: auto;
     display: block;
 }
+
 .overflowContainer {
     flex-basis: 100%;
     overflow-x: hidden;

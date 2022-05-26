@@ -10,6 +10,17 @@ mobileMenuApp.menuP = document.querySelector('navButtonText')
 mobileMenuApp.navigation = document.querySelector('.headerNav');
 mobileMenuApp.menuLink = document.querySelector('.mobileMenuLink')
 
+mobileMenuApp.docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > mobileMenuApp.docWidth) {
+      console.log(el);
+    }
+  }
+);
+
 // function to open the mobile navigation
 mobileMenuApp.openMobileNav = () => {
     // the menu is now open
@@ -59,6 +70,8 @@ mobileMenuApp.handleMobileLinkClick = () => {
 // add an event listeners for the menu buttons and links
 mobileMenuApp.menuButton.addEventListener('click', mobileMenuApp.handleMenuClick);
 mobileMenuApp.menuLink.addEventListener('click', mobileMenuApp.handleMobileLinkClick);
+
+
 
 
 mobileMenuApp.init = () => {

@@ -1347,12 +1347,11 @@ html {
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
   background-color: greenyellow;
 }
 
 body {
-  width: 100vw;
   max-width: 100%;
   overflow-x: hidden;
   border: 1px solid red;
@@ -1493,6 +1492,7 @@ header .wrapper {
 header .desktopNav {
   display: none;
   z-index: 20;
+  width: 100%;
 }
 header .headerNav {
   max-width: 100%;
@@ -1504,10 +1504,11 @@ header .headerNav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 header .mobileContainer {
   max-width: 100%;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1525,8 +1526,8 @@ header .mobileFlexContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
   max-width: 100%;
+  width: 100%;
   height: 100px;
 }
 header .logoContainer {
@@ -1564,7 +1565,6 @@ header .logoCircle {
 }
 header .mobileNavButton {
   padding: 1.5rem 2rem;
-  padding-right: 0.5rem;
   font-size: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1632,8 +1632,8 @@ header .mobileNavList a:active {
   font-weight: 700;
 }
 header .navOpen {
-  -webkit-transition: display display 0.3s;
-  transition: display display 0.3s;
+  -webkit-transition: display 0.3s;
+  transition: display 0.3s;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
   margin-bottom: 20rem;
@@ -1664,6 +1664,9 @@ header .navOpen .mobileNavList {
   top: 0;
   left: 0;
   margin-top: 100px;
+}
+header .navOpen .navButtonText {
+  display: none;
 }
 header .navOpen .logoCircle {
   -webkit-transition-delay: 200ms;
@@ -2061,6 +2064,8 @@ footer i {
 
 .contact {
   background-color: #135c71;
+  overflow-x: hidden;
+  width: 100%;
 }
 .contact form,
 .contact .phoneEmailInputs {
@@ -2077,6 +2082,7 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  max-width: 100%;
 }
 .contact input,
 .contact textarea {
@@ -2136,22 +2142,14 @@ footer i {
   cursor: pointer;
 }
 .contact nav {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 100%;
 }
 .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 260px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  max-width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -2163,11 +2161,15 @@ footer i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  max-width: 25%;
 }
 .contact ul i {
   display: block;
+  width: 100%;
+}
+.contact ul i:hover, .contact ul i:focus {
+  -webkit-transform: none;
+          transform: none;
 }
 
 @media (min-width: 360px) {
@@ -2241,6 +2243,7 @@ footer i {
     display: none;
   }
   header .desktopNav {
+    width: 100%;
     max-width: 100%;
     height: 125px;
     display: -webkit-box;
@@ -2319,8 +2322,11 @@ footer i {
             justify-content: center;
   }
   .skills li {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
+  }
+  .skills .problemSolving {
+    display: block;
   }
 
   .projects .flexContainer {
@@ -2400,15 +2406,14 @@ footer i {
     margin-top: 0;
     font-size: 2.4rem;
   }
+  .blog img {
+    max-width: 52%;
+  }
   .blog .flexContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .blog .flexContainer a {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
   }
   .blog .flexContainer .contentContainer {
     -ms-flex-preferred-size: 45%;
