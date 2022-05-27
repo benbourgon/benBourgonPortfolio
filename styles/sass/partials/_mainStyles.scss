@@ -88,6 +88,17 @@
         flex-direction: column;
         align-items: center;
     }
+    .projectTitle {
+        justify-self: center;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+            transform: none;
+            transition: 0.2s;
+            text-decoration: underline;
+        }
+    }
     .flexContainer {
         display: flex;
         flex-direction: column;
@@ -96,9 +107,6 @@
     }
     .projectListItem {
         margin: 25px 0;
-    }
-    .mockup {
-        transform: none;
     }
     .projectDescription {
         width: 100%;

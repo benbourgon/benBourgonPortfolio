@@ -1862,6 +1862,17 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
 }
+.projects .projectTitle {
+  justify-self: center;
+  width: 100%;
+}
+.projects .projectTitle:hover, .projects .projectTitle:focus {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  text-decoration: underline;
+}
 .projects .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1877,10 +1888,6 @@ footer i {
 }
 .projects .projectListItem {
   margin: 25px 0;
-}
-.projects .mockup {
-  -webkit-transform: none;
-          transform: none;
 }
 .projects .projectDescription {
   width: 100%;
@@ -2214,8 +2221,8 @@ footer i {
   }
 
   .projects .techListItem {
-    -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
   }
   .projects h3 {
     font-size: 2.499rem;
@@ -2231,15 +2238,15 @@ footer i {
   }
 
   header h1 {
-    font-size: 7.65rem;
-    line-height: 7.95rem;
+    font-size: 7.14rem;
+    line-height: 7.42rem;
   }
   header h1 .firstName {
-    font-size: 5.25rem;
-    line-height: 5.4rem;
+    font-size: 4.9rem;
+    line-height: 5.04rem;
   }
   header h3 {
-    font-size: 2.55rem;
+    font-size: 2.38rem;
   }
   header .mobileContainer {
     display: none;
@@ -2339,12 +2346,28 @@ footer i {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .projects .flexContainer img {
-    max-width: 50%;
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+    max-width: 49%;
+  }
+  .projects .projectContentContainer {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .projects .rowReverse {
     -webkit-box-orient: horizontal;
@@ -2355,9 +2378,8 @@ footer i {
   .projects .projectDescription {
     font-size: 2.08rem;
     line-height: 3.5rem;
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
   .projects .projectListItem {
     -webkit-box-orient: horizontal;
@@ -2371,11 +2393,6 @@ footer i {
             align-items: flex-start;
     margin: 50px 0;
   }
-  .projects .projectListItem ul {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin: 50px 0 25px 0;
-  }
   .projects h3 {
     display: block;
     width: 100%;
@@ -2384,7 +2401,7 @@ footer i {
   .projects .techListItem {
     -ms-flex-preferred-size: 24%;
         flex-basis: 24%;
-    margin: 25px 0;
+    margin-top: 10px;
   }
   .projects .linksContainer {
     -webkit-box-orient: horizontal;
@@ -2394,7 +2411,7 @@ footer i {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-top: 25px;
+    margin-top: 10px;
   }
   .projects .linksContainer a {
     -ms-flex-preferred-size: 30%;
@@ -2522,9 +2539,6 @@ footer i {
 
   .projects h3 {
     font-size: 4.25rem;
-  }
-  .projects .techListItem p {
-    font-size: 2.08rem;
   }
   .projects .techListItem i {
     font-size: 3.6rem;
