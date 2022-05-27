@@ -4,7 +4,6 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     max-width: 100%;
-    background-color: greenyellow;
 }
 body {
     max-width: 100%;
@@ -23,10 +22,6 @@ img {
     display: block;
 }
 
-.overflowContainer {
-    flex-basis: 100%;
-    overflow-x: hidden;
-}
 .wrapper {
     @include boxReset;
     max-width: 1100px;
@@ -55,7 +50,6 @@ i {
 section {
     @include boxReset;
     padding: 10rem 0;
-    overflow: hidden;
 
     .wrapper {
         display: flex;
@@ -73,6 +67,7 @@ button {
     &:focus {
         transform: scale(1.1);
     }
+    cursor: pointer;
 }
 
 .subHeadingContainer {

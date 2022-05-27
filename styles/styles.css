@@ -1348,7 +1348,6 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
-  background-color: greenyellow;
 }
 
 body {
@@ -1368,12 +1367,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.overflowContainer {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  overflow-x: hidden;
 }
 
 .wrapper {
@@ -1409,7 +1402,6 @@ section {
   margin: 0;
   padding: 0;
   padding: 10rem 0;
-  overflow: hidden;
 }
 section .wrapper {
   display: -webkit-box;
@@ -1431,6 +1423,7 @@ button {
   border: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 button:hover, button:focus {
   -webkit-transform: scale(1.1);
