@@ -1056,7 +1056,8 @@ h2 {
   font-size: 5.3rem;
   margin: 0;
   padding: 0;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
+  width: 100%;
 }
 
 h3 {
@@ -1091,7 +1092,7 @@ header .logo {
 header h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 5.3rem;
+  font-size: 5.1rem;
   display: block;
   text-transform: uppercase;
   font-weight: 700;
@@ -1192,6 +1193,7 @@ header a, header button {
 }
 .profile .profileInstructions {
   padding: 0 15px;
+  max-width: 80rem;
 }
 .profile .profileListItem i {
   font-size: 5rem;
@@ -1205,10 +1207,18 @@ header a, header button {
   margin: 25px 0;
   border-radius: 25px;
   width: 200px;
-  height: 39px;
-  text-align: center;
+  height: 50px;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .profile .profileLink:hover, .profile .profileLink:focus {
   text-decoration: none;
@@ -1221,19 +1231,32 @@ header a, header button {
 .profile .messageMe {
   color: #63adf2;
   border: 1px solid #63adf2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .profile .messageMe:focus, .profile .messageMe:hover {
   font-weight: 700;
   border: 2px solid #63adf2;
 }
-.profile .requestResume {
+.profile .requestResume,
+.profile .meetWithMe {
+  text-align: center;
   background-color: #a755c2;
   background-size: cover;
   color: white;
 }
-.profile .requestResume:focus, .profile .requestResume:hover {
-  height: 100%;
+.profile .requestResume:focus, .profile .requestResume:hover,
+.profile .meetWithMe:focus,
+.profile .meetWithMe:hover {
+  height: 50px;
   font-weight: 700;
+}
+.profile .meetWithMe {
+  padding-top: 15px;
 }
 
 .profileForm label {
@@ -1303,6 +1326,13 @@ header a, header button {
 .contact a {
   color: white;
   margin: 15px 0;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .contact p {
   text-transform: uppercase;
@@ -1320,11 +1350,15 @@ header a, header button {
 }
 
 html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
-  background: white;
+  max-width: 100%;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -1343,22 +1377,11 @@ img {
 }
 
 .wrapper {
-  max-width: 900px;
+  margin: 0;
+  padding: 0;
+  max-width: 1100px;
   width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 a {
@@ -1385,7 +1408,21 @@ i {
 section {
   margin: 0;
   padding: 0;
-  padding: 150px 0;
+  padding: 10rem 0;
+}
+section .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 button {
@@ -1393,6 +1430,7 @@ button {
   border: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 button:hover, button:focus {
   -webkit-transform: scale(1.1);
@@ -1434,31 +1472,48 @@ button:hover, button:focus {
 }
 
 header {
-  height: 100vh;
+  min-height: 320px;
+  max-width: 100%;
   background-color: #135c71;
 }
-header .mobileNavWrapper {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  max-width: 100vw;
-}
 header .wrapper {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header .desktopNav {
   display: none;
   z-index: 20;
+  width: 100%;
 }
 header .headerNav {
-  width: 100%;
+  max-width: 100%;
+  height: 60%;
   margin-top: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
 }
 header .mobileContainer {
+  max-width: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header .mobileFlexContainer {
   display: -webkit-box;
@@ -1470,10 +1525,9 @@ header .mobileFlexContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
   width: 100%;
   height: 100px;
-  max-width: 100%;
-  margin: 0 auto;
 }
 header .logoContainer {
   display: -webkit-box;
@@ -1509,15 +1563,27 @@ header .logoCircle {
   width: 65px;
 }
 header .mobileNavButton {
-  padding: 15px 20px;
+  padding: 1.5rem 2rem;
   font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   z-index: 20;
 }
+header .mobileNavButton p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
 header .mobileNavList {
   position: fixed;
-  top: -400px;
-  left: 0;
+  top: -1px;
+  left: -10000px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1528,6 +1594,7 @@ header .mobileNavList {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 100%;
   width: 100%;
   background-color: white;
   border-bottom: 5px solid #135c71;
@@ -1543,10 +1610,11 @@ header .mobileNavList li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
   width: 100%;
   z-index: 30;
   height: 50px;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 header .mobileNavList a {
   color: #135c71;
@@ -1563,12 +1631,11 @@ header .mobileNavList a:active {
   font-weight: 700;
 }
 header .navOpen {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: display 0.3s;
+  transition: display 0.3s;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  margin-bottom: 50%;
-  max-width: 100%;
+  margin-bottom: 20rem;
   display: block;
 }
 header .navOpen .mobileContainer {
@@ -1580,7 +1647,6 @@ header .navOpen .mobileContainer {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   background-color: white;
-  width: 100%;
   max-width: 100%;
 }
 header .navOpen button {
@@ -1595,7 +1661,11 @@ header .navOpen .mobileNavList {
   display: -ms-flexbox;
   display: flex;
   top: 0;
+  left: 0;
   margin-top: 100px;
+}
+header .navOpen .navButtonText {
+  display: none;
 }
 header .navOpen .logoCircle {
   -webkit-transition-delay: 200ms;
@@ -1617,7 +1687,7 @@ header .headingContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
+  margin: 10rem auto;
 }
 header .downArrowContainer {
   display: -webkit-box;
@@ -1627,7 +1697,7 @@ header .downArrowContainer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  margin-bottom: 60px;
+  margin: 6rem auto;
 }
 header .downArrowContainer .downArrow {
   padding: 20px;
@@ -1644,7 +1714,7 @@ header .downArrowContainer i {
 footer {
   background-color: #135c71;
   color: white;
-  max-width: 100vw;
+  width: 100%;
 }
 footer .wrapper {
   display: -webkit-box;
@@ -1656,6 +1726,9 @@ footer .wrapper {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer a {
   color: white;
@@ -1678,10 +1751,17 @@ footer i {
   font-size: 17px;
   font-size: 1.7rem;
 }
-.about .linkContainer {
+.about .aboutLinkContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1796,6 +1876,17 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
 }
+.projects .projectTitle {
+  justify-self: center;
+  width: 100%;
+}
+.projects .projectTitle:hover, .projects .projectTitle:focus {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  text-decoration: underline;
+}
 .projects .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1857,6 +1948,7 @@ footer i {
 
 .blog {
   color: black;
+  background-color: white;
 }
 .blog .subHeadingContainer h4 {
   padding-top: 16px;
@@ -1921,15 +2013,14 @@ footer i {
 .profile {
   color: black;
   background-color: #F7F7F7;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  width: 100%;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .profile .profileListItem {
   background-color: white;
-  padding: 30px 15px;
+  padding: 30px 30px;
   min-height: 570px;
-  min-width: 100%;
+  max-width: 70rem;
 }
 .profile .profileListItem ul {
   list-style-type: disc;
@@ -1986,6 +2077,12 @@ footer i {
 
 .contact {
   background-color: #135c71;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+.contact .wrapper {
+  overflow: hidden;
 }
 .contact form,
 .contact .phoneEmailInputs {
@@ -2002,6 +2099,7 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  max-width: 100%;
 }
 .contact input,
 .contact textarea {
@@ -2013,6 +2111,7 @@ footer i {
   border-bottom: 1px solid white;
   background-color: #135c71;
   width: 100%;
+  max-width: 100%;
   height: 50px;
 }
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
@@ -2038,13 +2137,14 @@ footer i {
 }
 .contact textarea {
   height: 275px;
+  max-width: 100%;
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
   border: 3px solid white;
 }
-.contact label {
-  padding: 25px 5px 5px 5px;
+.contact .yourMessageLabel {
+  padding: 25px 5px 5px 2px;
   color: white;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -2053,6 +2153,7 @@ footer i {
 }
 .contact .sendButton {
   width: 200px;
+  height: 50px;
   border: 1px solid white;
   border-radius: 25px;
   padding: 10px 0;
@@ -2060,20 +2161,15 @@ footer i {
   cursor: pointer;
 }
 .contact nav {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  max-width: 260px;
+  width: 95%;
+  max-width: 95%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -2087,11 +2183,16 @@ footer i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  width: 20%;
+  max-width: 20%;
+}
+.contact ul a {
+  max-width: 100%;
+  padding: 0 5px;
 }
 .contact ul i {
   display: block;
+  max-width: 100%;
 }
 
 @media (min-width: 360px) {
@@ -2115,7 +2216,7 @@ footer i {
 }
 @media (min-width: 428px) {
   header h1 {
-    font-size: 6.36rem;
+    font-size: 6.12rem;
     line-height: 6.36rem;
   }
   header h1 .firstName {
@@ -2134,8 +2235,8 @@ footer i {
   }
 
   .projects .techListItem {
-    -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
   }
   .projects h3 {
     font-size: 2.499rem;
@@ -2151,21 +2252,22 @@ footer i {
   }
 
   header h1 {
-    font-size: 7.95rem;
-    line-height: 7.95rem;
+    font-size: 7.14rem;
+    line-height: 7.42rem;
   }
   header h1 .firstName {
-    font-size: 5.25rem;
-    line-height: 5.4rem;
+    font-size: 4.9rem;
+    line-height: 5.04rem;
   }
   header h3 {
-    font-size: 2.55rem;
+    font-size: 2.38rem;
   }
   header .mobileContainer {
     display: none;
   }
   header .desktopNav {
     width: 100%;
+    max-width: 100%;
     height: 125px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2243,8 +2345,11 @@ footer i {
             justify-content: center;
   }
   .skills li {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
+  }
+  .skills .problemSolving {
+    display: block;
   }
 
   .projects .flexContainer {
@@ -2255,13 +2360,28 @@ footer i {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .projects .flexContainer a {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+  .projects .flexContainer img {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+    max-width: 49%;
+  }
+  .projects .projectContentContainer {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .projects .rowReverse {
     -webkit-box-orient: horizontal;
@@ -2272,9 +2392,8 @@ footer i {
   .projects .projectDescription {
     font-size: 2.08rem;
     line-height: 3.5rem;
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
   .projects .projectListItem {
     -webkit-box-orient: horizontal;
@@ -2288,11 +2407,6 @@ footer i {
             align-items: flex-start;
     margin: 50px 0;
   }
-  .projects .projectListItem ul {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin: 50px 0 25px 0;
-  }
   .projects h3 {
     display: block;
     width: 100%;
@@ -2301,7 +2415,7 @@ footer i {
   .projects .techListItem {
     -ms-flex-preferred-size: 24%;
         flex-basis: 24%;
-    margin: 25px 0;
+    margin-top: 10px;
   }
   .projects .linksContainer {
     -webkit-box-orient: horizontal;
@@ -2311,7 +2425,7 @@ footer i {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-top: 25px;
+    margin-top: 10px;
   }
   .projects .linksContainer a {
     -ms-flex-preferred-size: 30%;
@@ -2325,15 +2439,14 @@ footer i {
     margin-top: 0;
     font-size: 2.4rem;
   }
+  .blog img {
+    max-width: 52%;
+  }
   .blog .flexContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .blog .flexContainer a {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
   }
   .blog .flexContainer .contentContainer {
     -ms-flex-preferred-size: 45%;
@@ -2396,16 +2509,20 @@ footer i {
     padding-top: 25px;
   }
 
+  .wrapper {
+    max-width: 1100px;
+  }
+
   header h1 {
-    font-size: 10.6rem;
-    line-height: 10.6rem;
+    font-size: 9.18rem;
+    line-height: 9.54rem;
   }
   header h1 .firstName {
-    font-size: 7rem;
-    line-height: 7.2rem;
+    font-size: 6.3rem;
+    line-height: 6.48rem;
   }
   header h3 {
-    font-size: 3.4rem;
+    font-size: 3.06rem;
   }
   header .logoCircle {
     height: 80px;
@@ -2436,9 +2553,6 @@ footer i {
 
   .projects h3 {
     font-size: 4.25rem;
-  }
-  .projects .techListItem p {
-    font-size: 2.08rem;
   }
   .projects .techListItem i {
     font-size: 3.6rem;

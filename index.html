@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display&display=swap" rel="stylesheet">
@@ -12,27 +16,27 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="./styles/styles.css">
+
     <title>Ben Bourgon</title>
 </head>
 <body>
     <header>
-        <div class="mobileNavWrapper">
             <div class="wrapper">
                 <nav class="headerNav">
                     <div class="mobileContainer">
                         <ul class="mobileNavList">
                             <li>
-                                <a href="#projects">My Work</a>
+                                <a class="mobileMenuLink" href="#projects">My Work</a>
                             </li>
                             <li>
-                                <a href="#profile">Profile</a>
+                                <a class="mobileMenuLink" href="#profile">Profile</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a class="mobileMenuLink" href="#contact">Contact</a>
                             </li>
                         </ul>
                         <div class="mobileFlexContainer">
-                            <a href="#about" class="logoContainer">
+                            <a href="#about" class="logoContainer mobileMenuLink">
                                 <div class="logoCircle">
                                     <span class="sr-only">About</span>
                                     <h3 class="logo" aria-hidden="true">BB</h3>
@@ -40,11 +44,12 @@
                             </a>
                             <button class="mobileNavButton">
                                 <i class="fi fi-ss-menu-burger"></i>
+                                <p class="navButtonText">Menu</p>
                             </button> <!--.mobileNavButton end-->
                         </div>
                     </div> <!--.mobileContainer end-->
                     <ul class="desktopNav">
-                        <li class="desktopLogoContainer">
+                        <li class="desktopLogoContainer" class="mobileMenuLink">
                             <a href="#about">
                                 <div class="logoCircle">
                                     <span class="sr-only">About</span>
@@ -76,7 +81,6 @@
                     </a>
                 </div>
             </div> <!--header .wrapper end-->
-        </div> <!--.mobileNavWrapper end-->
     </header>
     <main>
         <section class="about" id="about">
@@ -94,8 +98,9 @@
                         <h3>I'm at my best when combining my analytic abilities with a creative instinct to solve tough problems and write clean, dry, and accessible code.</h3>
                         <h3>That and when eating pizza or ramen. The best foods.</h3>
                         <p>While you're here, please feel free to have a look at <a href="#projects">my work</a>, read about <a href="#blog">my journey</a> from TV & film production to web development, get to know more <a href="#profile">about me</a>, or <a href="#contact">reach out to me</a>. I'd love to hear from you!</p>
-                        <div class="linkContainer">
+                        <div class="linkContainer aboutLinkContainer">
                             <a href="#profile" class="myProfileLink">My Profile</a>
+                            <a href="#contact" class="myProfileLink">Message Me</a>
                         </div> <!--.linkContainer end-->
                     </div> <!--.contentContainer end-->
                 </div> <!--.flexContainer end-->
@@ -118,7 +123,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                        <p>Creative problem solving</p>
+                        <p>Creative <span class="problemSolving">problem-solving</span></p>
                     </li>
                     <li>
                         <i class="fa-solid fa-walkie-talkie" aria-hidden="true"></i>
@@ -153,7 +158,7 @@
                         <p>RESTful APIs</p>
                     </li>
                     <li>
-                        <img id="firebaseIcon" class="firebaseIcon" src="./assets/firebase-edit.svg" aria-hidden="true">
+                        <img id="firebaseIcon" class="firebaseIcon" src="./assets/firebase-plain.svg" aria-hidden="true">
                         <p>Firebase</p>
                     </li>
                     <li>
@@ -183,116 +188,116 @@
                 </div>
                 <ul>
                     <li class="projectListItem">
-                        <h3>Taglines...with a Vengeance!</h3>
+                        <a href="https://pairedproject.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Taglines...with a Vengeance!</h3></a>
                         <div class="flexContainer">
-                            <a href="https://pairedproject.netlify.app/">
-                                <img src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website">
-                            </a>
-                            <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the <a href="https://www.themoviedb.org/documentation/api">TMDb API</a>.</p>
+                            <img class="mockup" src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website">
+                            <div class="projectContentContainer">
+                                <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the <a href="https://www.themoviedb.org/documentation/api" target="_blank" rel="noopener">TMDb API</a>.</p>
+                                <ul>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                        <p>HTML5</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                        <p>SASS</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                        <p>RESTful API</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div> <!--.flexContainer end-->
-                        <ul>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                <p>HTML5</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                <p>SASS</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                <p>JavaScript</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                <p>RESTful API</p>
-                            </li>
-                        </ul>
                         <div class="linksContainer">
-                            <a href="https://github.com/TaglinesWithAVengeance/pairedProject" class="githubLink">Code on GitHub</a>
-                            <a href="https://pairedproject.netlify.app/" class="viewLiveLink">View Live</a>
+                            <a href="https://github.com/TaglinesWithAVengeance/pairedProject" class="githubLink" target="_blank" rel="noopener">Code on GitHub</a>
+                            <a href="https://pairedproject.netlify.app/" class="viewLiveLink" target="_blank" rel="noopener">View Live</a>
                         </div> <!--linksContainer end-->
                     </li>
                     <li class="projectListItem">
-                        <h3>Under the Sea</h3>
+                        <a href="https://benbourgon-project-one.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Under the Sea</h3></a>
                         <div class="flexContainer rowReverse">
-                            <a href="https://benbourgon-project-one.netlify.app/">
-                                <img src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website">
-                            </a>
-                            <p class="projectDescription">A multi-page responsive PSD conversion with an aquarium theme and a ton of elements breaking out of their containers!</p>
+                            <img class="mockup" src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website">
+                            <div class="projectContentContainer">
+                                <p class="projectDescription">A multi-page responsive PSD conversion with an aquarium theme and styled with a number of elements that expand beyond their containers.</p>
+                                <ul>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                        <p>HTML5</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                                        <p>SASS</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div> <!--.flexContainer end-->
-                        <ul>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                <p>HTML5</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                <p>SASS</p>
-                            </li>
-                        </ul>
                         <div class="linksContainer">
-                            <a href="https://github.com/benbourgon/benBourgonProjectOne" class="githubLink">Code on GitHub</a>
-                            <a href="https://benbourgon-project-one.netlify.app/" class="viewLiveLink">View Live</a>
+                            <a href="https://github.com/benbourgon/benBourgonProjectOne" class="githubLink" target="_blank" rel="noopener">Code on GitHub</a>
+                            <a href="https://benbourgon-project-one.netlify.app/" class="viewLiveLink" target="_blank" rel="noopener">View Live</a>
                         </div> <!--.linksContainer end-->
                     </li>
                     <li class="projectListItem">
-                        <h3>Good Good Games</h3>
+                        <a href="https://goodgoodgames.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Good Good Games</h3></a>
                         <div class="flexContainer">
-                            <a href="https://goodgoodgames.netlify.app/">
-                                <img src="./assets/projectScreenshots/goodGoodGamesMockupGreen.png"
-                                alt="The 'Good Good Games' website">
-                            </a>
-                            <p class="projectDescription">Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
+                            <img class="mockup" src="./assets/projectScreenshots/goodGoodGamesMockupGreen.png"
+                            alt="The 'Good Good Games' website">
+                            <div class="projectContentContainer">
+                                <p class="projectDescription">Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
+                                <ul>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                        <p>HTML5</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-css3" aria-hidden="true"></i>
+                                        <p>CSS3</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                        <p>RESTful API</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div> <!--.flexContainer end-->
-                        <ul>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                <p>HTML5</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-css3" aria-hidden="true"></i>
-                                <p>CSS3</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                <p>JavaScript</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                <p>RESTful API</p>
-                            </li>
-                        </ul>
                         <div class="linksContainer">
-                            <a href="https://github.com/benbourgon/goodGoodGames" class="githubLink">Code on GitHub</a>
-                            <a href="https://goodgoodgames.netlify.app/" class="viewLiveLink">View Live</a>
+                            <a href="https://github.com/benbourgon/goodGoodGames" class="githubLink" target="_blank" rel="noopener">Code on GitHub</a>
+                            <a href="https://goodgoodgames.netlify.app/" class="viewLiveLink" target="_blank" rel="noopener">View Live</a>
                         </div> <!--.linksContainer end-->
                     </li>
                     <li class="projectListItem">
-                        <h3>Game Boy Configurator</h3>
+                        <a href="https://gameboymodconfigurator.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Game Boy Configurator</h3></a>
                         <div class="flexContainer rowReverse">
-                            <a href="https://gameboymodconfigurator.netlify.app/">
-                                <img src="./assets/projectScreenshots/gameBoyConfiguratorMockupPurple.png" alt="The 'Game Boy Mod Configurator' website">
-                            </a>
-                            <p class="projectDescription">Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
+                            <img class="mockup" src="./assets/projectScreenshots/gameBoyConfiguratorMockupPurple.png" alt="The 'Game Boy Mod Configurator' website">
+                            <div class="projectContentContainer">
+                                <p class="projectDescription">Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
+                                <ul>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                        <p>HTML5</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-css3" aria-hidden="true"></i>
+                                        <p>CSS3</p>
+                                    </li>
+                                    <li class="techListItem">
+                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                        <p>JavaScript</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div> <!--.flexContainer end-->
-                        <ul>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                                <p>HTML5</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-css3" aria-hidden="true"></i>
-                                <p>CSS3</p>
-                            </li>
-                            <li class="techListItem">
-                                <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                <p>JavaScript</p>
-                            </li>
-                        </ul>
                         <div class="linksContainer">
-                            <a href="https://github.com/benbourgon/gameBoyModConfigurator" class="githubLink">Code on GitHub</a>
-                            <a href="https://gameboymodconfigurator.netlify.app/" class="viewLiveLink">View Live</a> <!--.linksContainer end-->
+                            <a href="https://github.com/benbourgon/gameBoyModConfigurator" class="githubLink" target="_blank" rel="noopener">Code on GitHub</a>
+                            <a href="https://gameboymodconfigurator.netlify.app/" class="viewLiveLink" target="_blank" rel="noopener">View Live</a> <!--.linksContainer end-->
                         </div>
                     </li>
                 </ul>
@@ -311,9 +316,7 @@
                                 <h3>Trading call sheets for style sheets</h3>
                             </a>
                             <div class="flexContainer">
-                                <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20">
-                                    <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
-                                </a>
+                                <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag">
                                 <div class="contentContainer">
                                     <p>Or why I'm pivoting to become a front-end web developer.</p>
                                     <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore">Read More</a>
@@ -369,8 +372,11 @@
                             </i>
                         </div> <!--.itemHeadingContainer-->
                         <p>I'd love to hear from you.</p>
-                        <p>Click the button below to message me for a coffee or Zoom chat.</p>
-                        <a href="#contact" class="coffeeLink messageMe profileLink">Message Me</a>
+                        <p>Click a button below to message me or schedule a coffee or Zoom chat.</p>
+                        <div class="linksContainer">
+                            <a href="#contact" class="coffeeLink messageMe profileLink">Message Me</a>
+                            <a href="https://calendly.com/benbourgon" target="_blank" rel="noopener" class="coffeeLink meetWithMe profileLink">Schedule Meeting</a>
+                        </div>
                     </li>
                 </ul>
                 <form class="profileForm">
@@ -398,7 +404,7 @@
                 <p class="profileInstructions">Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
                 <div class="linksContainer">
                     <a href="#contact" class="messageMe profileLink">Message Me</a>
-                    <a href="#contact" class="requestResume profileLink">Request Resume</a>
+                    <a class="requestResume profileLink">Request Resume</a>
                 </div>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
@@ -417,30 +423,29 @@
                         <label for="email" class="sr-only">Email</label>
                         <input type="text" name="email" id="email" class="emailInput" placeholder="Email">
                     </div>
-                    <label for="messageBox">Your Message:</label>
+                    <label for="messageBox" class="yourMessageLabel">Your Message:</label>
                     <textarea name="messageBox" id="messageBox" class="messageBox" cols="30" rows="10"></textarea>
                     <button type="submit" class="sendButton">Send</button>
                 </form>
                 <p class="or">or</p>
                 <a href="mailto:benjaminbourgon@gmail.com" class="contactEmailAddress">benjaminbourgon@gmail.com</a>
-                <a href="tel:16049289742" class="contactPhoneNumber">1.604.928.9742</a>
                 <nav>
                     <ul>
                         <li>
                             <label for="gitHubContact" class="sr-only">My GitHub profile</label>
-                            <a href="https://github.com/benbourgon">
+                            <a href="https://github.com/benbourgon" target="_blank" rel="noopener">
                                 <i id="gitHubContact" class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
                             <label for="linkedInContact" class="sr-only">My LinkedIn Profile</label>
-                            <a href="https://www.linkedin.com/in/benbourgon/">
+                            <a href="https://www.linkedin.com/in/benbourgon/" target="_blank" rel="noopener">
                                 <i id="linkedInContact" class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
                             <label for="twitterContact" class="sr-only">My Twitter profile</label>
-                            <a href="https://twitter.com/benbourgon">
+                            <a href="https://twitter.com/benbourgon" target="_blank" rel="noopener">
                                 <i id="twitterContact" class="icon-social-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -448,6 +453,12 @@
                             <label for="emailContactIcon" class="sr-only">Send me an email</label>
                             <a href="mailto:benjaminbourgon@gmail.com">
                                 <i id="emailContactIcon" class="icon-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="calendlyIcon" class="sr-only">Schedule a meeting with my Calendly</label>
+                            <a href="https://calendly.com/benbourgon" target="_blank" rel="noopener">
+                                <i id="calendlyIcon" class="icon-calendar" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>

@@ -6,7 +6,9 @@ const mobileMenuApp = {};
 // query the mobile menu and navigation elements
 mobileMenuApp.menuButton = document.querySelector('.mobileNavButton')
 mobileMenuApp.menuIcon = document.querySelector('.mobileNavButton i');
+mobileMenuApp.menuP = document.querySelector('navButtonText')
 mobileMenuApp.navigation = document.querySelector('.headerNav');
+mobileMenuApp.menuLink = document.querySelectorAll('.mobileMenuLink')
 
 // function to open the mobile navigation
 mobileMenuApp.openMobileNav = () => {
@@ -41,8 +43,25 @@ mobileMenuApp.handleMenuClick = () => {
     }
 }
 
-// add an event listener for the menu button
+// handles clicks on the mobile nav <a> elements
+mobileMenuApp.handleMobileLinkClick = () => {
+    console.log("link clicked")
+    // change the 'x' icon to the hamburger icon
+    mobileMenuApp.menuIcon.classList.toggle('fi-ss-cross');
+    mobileMenuApp.menuIcon.classList.toggle('fi-ss-menu-burger');
+    // remove the 'navOpen' class from the navList
+    mobileMenuApp.navigation.classList.toggle('navOpen')
+    // the menu is now closed
+    mobileMenuApp.menuOpen = false;
+}
+
+
+// add an event listeners for the menu buttons and links
 mobileMenuApp.menuButton.addEventListener('click', mobileMenuApp.handleMenuClick);
+mobileMenuApp.menuLink.addEventListener('click', mobileMenuApp.handleMobileLinkClick);
+
+
+
 
 mobileMenuApp.init = () => {
     // start the app with the menu closed
