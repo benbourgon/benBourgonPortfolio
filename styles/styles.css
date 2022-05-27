@@ -1242,14 +1242,21 @@ header a, header button {
   font-weight: 700;
   border: 2px solid #63adf2;
 }
-.profile .requestResume {
+.profile .requestResume,
+.profile .meetWithMe {
+  text-align: center;
   background-color: #a755c2;
   background-size: cover;
   color: white;
 }
-.profile .requestResume:focus, .profile .requestResume:hover {
+.profile .requestResume:focus, .profile .requestResume:hover,
+.profile .meetWithMe:focus,
+.profile .meetWithMe:hover {
   height: 50px;
   font-weight: 700;
+}
+.profile .meetWithMe {
+  padding-top: 15px;
 }
 
 .profileForm label {
@@ -1574,7 +1581,7 @@ header .mobileNavButton p {
   text-transform: uppercase;
 }
 header .mobileNavList {
-  position: absolute;
+  position: fixed;
   top: -1px;
   left: -10000px;
   -webkit-box-orient: vertical;
@@ -1632,7 +1639,7 @@ header .navOpen {
   display: block;
 }
 header .navOpen .mobileContainer {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   -webkit-box-orient: vertical;
@@ -1744,10 +1751,17 @@ footer i {
   font-size: 17px;
   font-size: 1.7rem;
 }
-.about .linkContainer {
+.about .aboutLinkContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

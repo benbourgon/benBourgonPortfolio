@@ -36,7 +36,7 @@
                             </li>
                         </ul>
                         <div class="mobileFlexContainer">
-                            <a href="#about" class="logoContainer">
+                            <a href="#about" class="logoContainer mobileMenuLink">
                                 <div class="logoCircle">
                                     <span class="sr-only">About</span>
                                     <h3 class="logo" aria-hidden="true">BB</h3>
@@ -98,8 +98,9 @@
                         <h3>I'm at my best when combining my analytic abilities with a creative instinct to solve tough problems and write clean, dry, and accessible code.</h3>
                         <h3>That and when eating pizza or ramen. The best foods.</h3>
                         <p>While you're here, please feel free to have a look at <a href="#projects">my work</a>, read about <a href="#blog">my journey</a> from TV & film production to web development, get to know more <a href="#profile">about me</a>, or <a href="#contact">reach out to me</a>. I'd love to hear from you!</p>
-                        <div class="linkContainer">
+                        <div class="linkContainer aboutLinkContainer">
                             <a href="#profile" class="myProfileLink">My Profile</a>
+                            <a href="#contact" class="myProfileLink">Message Me</a>
                         </div> <!--.linkContainer end-->
                     </div> <!--.contentContainer end-->
                 </div> <!--.flexContainer end-->
@@ -371,8 +372,11 @@
                             </i>
                         </div> <!--.itemHeadingContainer-->
                         <p>I'd love to hear from you.</p>
-                        <p>Click the button below to message me for a coffee or Zoom chat.</p>
-                        <a href="#contact" class="coffeeLink messageMe profileLink">Message Me</a>
+                        <p>Click a button below to message me or schedule a coffee or Zoom chat.</p>
+                        <div class="linksContainer">
+                            <a href="#contact" class="coffeeLink messageMe profileLink">Message Me</a>
+                            <a href="https://calendly.com/benbourgon" target="_blank" rel="noopener" class="coffeeLink meetWithMe profileLink">Schedule Meeting</a>
+                        </div>
                     </li>
                 </ul>
                 <form class="profileForm">
@@ -400,7 +404,7 @@
                 <p class="profileInstructions">Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
                 <div class="linksContainer">
                     <a href="#contact" class="messageMe profileLink">Message Me</a>
-                    <a href="#contact" class="requestResume profileLink">Request Resume</a>
+                    <a class="requestResume profileLink">Request Resume</a>
                 </div>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
@@ -429,19 +433,19 @@
                     <ul>
                         <li>
                             <label for="gitHubContact" class="sr-only">My GitHub profile</label>
-                            <a href="https://github.com/benbourgon">
+                            <a href="https://github.com/benbourgon" target="_blank" rel="noopener">
                                 <i id="gitHubContact" class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
                             <label for="linkedInContact" class="sr-only">My LinkedIn Profile</label>
-                            <a href="https://www.linkedin.com/in/benbourgon/">
+                            <a href="https://www.linkedin.com/in/benbourgon/" target="_blank" rel="noopener">
                                 <i id="linkedInContact" class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
                             <label for="twitterContact" class="sr-only">My Twitter profile</label>
-                            <a href="https://twitter.com/benbourgon">
+                            <a href="https://twitter.com/benbourgon" target="_blank" rel="noopener">
                                 <i id="twitterContact" class="icon-social-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -449,6 +453,12 @@
                             <label for="emailContactIcon" class="sr-only">Send me an email</label>
                             <a href="mailto:benjaminbourgon@gmail.com">
                                 <i id="emailContactIcon" class="icon-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <label for="calendlyIcon" class="sr-only">Schedule a meeting with my Calendly</label>
+                            <a href="https://calendly.com/benbourgon" target="_blank" rel="noopener">
+                                <i id="calendlyIcon" class="icon-calendar" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>

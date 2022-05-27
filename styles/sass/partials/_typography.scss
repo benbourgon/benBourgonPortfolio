@@ -221,7 +221,9 @@ header {
             border: 2px solid $blue-jeans;
         }
     }
-    .requestResume {
+    .requestResume,
+    .meetWithMe {
+        text-align: center;
         background-color: $purple-plum;
         background-size: cover;
         color: white;
@@ -231,6 +233,9 @@ header {
             height: 50px;
             font-weight: $bold;
         }
+    }
+    .meetWithMe {
+        padding-top: 15px;
     }
 }
 .profileForm {

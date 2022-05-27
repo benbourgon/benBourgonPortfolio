@@ -73,7 +73,7 @@ header {
         }
     }
     .mobileNavList {
-        position: absolute;
+        position: fixed;
         top: -1px;
         left: -10000px;
         flex-direction: column;
@@ -117,7 +117,7 @@ header {
         margin-bottom: 20rem;
         display: block;
         .mobileContainer {
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
             flex-direction: column-reverse;

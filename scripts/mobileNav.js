@@ -8,18 +8,7 @@ mobileMenuApp.menuButton = document.querySelector('.mobileNavButton')
 mobileMenuApp.menuIcon = document.querySelector('.mobileNavButton i');
 mobileMenuApp.menuP = document.querySelector('navButtonText')
 mobileMenuApp.navigation = document.querySelector('.headerNav');
-mobileMenuApp.menuLink = document.querySelector('.mobileMenuLink')
-
-mobileMenuApp.docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > mobileMenuApp.docWidth) {
-      console.log(el);
-    }
-  }
-);
+mobileMenuApp.menuLink = document.querySelectorAll('.mobileMenuLink')
 
 // function to open the mobile navigation
 mobileMenuApp.openMobileNav = () => {

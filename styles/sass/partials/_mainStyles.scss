@@ -12,8 +12,10 @@
     h3 {
         @include fontSize(17);
     }
-    .linkContainer {
+    .aboutLinkContainer {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
     .flexContainer {
