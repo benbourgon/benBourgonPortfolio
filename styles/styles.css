@@ -1354,7 +1354,6 @@ html {
 body {
   max-width: 100%;
   overflow-x: hidden;
-  border: 1px solid red;
   margin: 0;
   padding: 0;
 }
@@ -2066,6 +2065,10 @@ footer i {
   background-color: #135c71;
   overflow-x: hidden;
   width: 100%;
+  max-width: 100%;
+}
+.contact .wrapper {
+  overflow: hidden;
 }
 .contact form,
 .contact .phoneEmailInputs {
@@ -2094,6 +2097,7 @@ footer i {
   border-bottom: 1px solid white;
   background-color: #135c71;
   width: 100%;
+  max-width: 100%;
   height: 50px;
 }
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
@@ -2119,13 +2123,14 @@ footer i {
 }
 .contact textarea {
   height: 275px;
+  max-width: 100%;
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
   border: 3px solid white;
 }
-.contact label {
-  padding: 25px 5px 5px 5px;
+.contact .yourMessageLabel {
+  padding: 25px 5px 5px 2px;
   color: white;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -2143,13 +2148,16 @@ footer i {
 }
 .contact nav {
   max-width: 100%;
+  overflow: hidden;
 }
 .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  max-width: 100%;
+  width: 95%;
+  max-width: 95%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -2161,15 +2169,16 @@ footer i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 25%;
+  width: 20%;
+  max-width: 20%;
+}
+.contact ul a {
+  max-width: 100%;
+  padding: 0 5px;
 }
 .contact ul i {
   display: block;
-  width: 100%;
-}
-.contact ul i:hover, .contact ul i:focus {
-  -webkit-transform: none;
-          transform: none;
+  max-width: 100%;
 }
 
 @media (min-width: 360px) {
