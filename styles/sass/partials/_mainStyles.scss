@@ -13,10 +13,9 @@
         @include fontSize(17);
     }
     .aboutLinkContainer {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .flexContainer {
         display: flex;
@@ -86,13 +85,66 @@
         width: 100%;
     }
     li {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .taglinesProject {
+        background-color: $mandarin;
+
+        a {
+            background-color: $mandarin;
+        }
+    }
+    .underTheSeaProject {
+        background-color: $blue-sapphire;
+        color: white;
+
+        h3, i, a {
+            color: white;
+        }
+        a {
+            background-color: $blue-sapphire;
+        }
+
+        .githubLink,
+        .viewLiveLink {
+            border: 1px solid white;
+
+            &:hover,
+            &:focus {
+                border: 3px solid white;
+            }
+        }
+    }
+
+    .goodGamesProject {
+        background-color: $green-sheen;
+
+        a {
+            background-color: $green-sheen;
+        }
+    }
+
+    .gameBoyConfigProject {
+        background-color: $purple-plum;
+
+        a {
+            background-color: $purple-plum;
+        }
+    }
+
     .projectTitle {
         justify-self: center;
         width: 100%;
+        border: none;
+
+        h3 {
+            margin: 10px 0;
+            width: 100%;
+        }
 
         &:hover,
         &:focus {
@@ -109,22 +161,25 @@
     }
     .projectListItem {
         margin: 25px 0;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .projectDescription {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 10px;
 
         a {
             text-decoration: underline;
         }
     }
     .techListItem {
-        flex-basis: 49%;
+        flex-basis: 24%;
         margin-top: 10px;
         text-align: center;
+        border: none;
     }
     .linksContainer {
-        margin-top: 50px;
+        margin-top: 5px;
         flex-basis: 100%;
         display: flex;
         flex-direction: column;
@@ -198,6 +253,7 @@
         padding: 30px 30px;
         min-height: 570px;
         max-width: 70rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         ul {
             list-style-type: disc;
@@ -224,6 +280,7 @@
     .linksContainer {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
 }

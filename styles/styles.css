@@ -1752,19 +1752,13 @@ footer i {
   font-size: 1.7rem;
 }
 .about .aboutLinkContainer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .about .flexContainer {
   display: -webkit-box;
@@ -1865,6 +1859,7 @@ footer i {
   width: 100%;
 }
 .projects li {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1876,8 +1871,50 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
 }
+.projects .taglinesProject {
+  background-color: #ef8354;
+}
+.projects .taglinesProject a {
+  background-color: #ef8354;
+}
+.projects .underTheSeaProject {
+  background-color: #135c71;
+  color: white;
+}
+.projects .underTheSeaProject h3, .projects .underTheSeaProject i, .projects .underTheSeaProject a {
+  color: white;
+}
+.projects .underTheSeaProject a {
+  background-color: #135c71;
+}
+.projects .underTheSeaProject .githubLink,
+.projects .underTheSeaProject .viewLiveLink {
+  border: 1px solid white;
+}
+.projects .underTheSeaProject .githubLink:hover, .projects .underTheSeaProject .githubLink:focus,
+.projects .underTheSeaProject .viewLiveLink:hover,
+.projects .underTheSeaProject .viewLiveLink:focus {
+  border: 3px solid white;
+}
+.projects .goodGamesProject {
+  background-color: #83bca9;
+}
+.projects .goodGamesProject a {
+  background-color: #83bca9;
+}
+.projects .gameBoyConfigProject {
+  background-color: #a755c2;
+}
+.projects .gameBoyConfigProject a {
+  background-color: #a755c2;
+}
 .projects .projectTitle {
   justify-self: center;
+  width: 100%;
+  border: none;
+}
+.projects .projectTitle h3 {
+  margin: 10px 0;
   width: 100%;
 }
 .projects .projectTitle:hover, .projects .projectTitle:focus {
@@ -1902,22 +1939,26 @@ footer i {
 }
 .projects .projectListItem {
   margin: 25px 0;
+  padding: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .projects .projectDescription {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .projects .projectDescription a {
   text-decoration: underline;
 }
 .projects .techListItem {
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
   margin-top: 10px;
   text-align: center;
+  border: none;
 }
 .projects .linksContainer {
-  margin-top: 50px;
+  margin-top: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   display: -webkit-box;
@@ -2021,6 +2062,8 @@ footer i {
   padding: 30px 30px;
   min-height: 570px;
   max-width: 70rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .profile .profileListItem ul {
   list-style-type: disc;
@@ -2057,6 +2100,9 @@ footer i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profileForm {
@@ -2328,12 +2374,13 @@ footer i {
         -ms-flex-align: center;
             align-items: center;
   }
-  .about .imageContainer,
-.about .contentContainer {
+  .about .contentContainer {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
   }
   .about .imageContainer {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
     padding-bottom: 150px;
   }
 
@@ -2392,8 +2439,7 @@ footer i {
   .projects .projectDescription {
     font-size: 2.08rem;
     line-height: 3.5rem;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin: 25px 0 15px 0;
   }
   .projects .projectListItem {
     -webkit-box-orient: horizontal;
