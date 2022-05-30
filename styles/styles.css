@@ -1902,10 +1902,12 @@ footer i {
 .projects .goodGamesProject a {
   background-color: #83bca9;
 }
-.projects .gameBoyConfigProject {
+.projects .gameBoyConfigProject,
+.projects .whatDoYouNoProject {
   background-color: #a755c2;
 }
-.projects .gameBoyConfigProject a {
+.projects .gameBoyConfigProject a,
+.projects .whatDoYouNoProject a {
   background-color: #a755c2;
 }
 .projects .projectTitle {
@@ -1956,6 +1958,9 @@ footer i {
   margin-top: 10px;
   text-align: center;
   border: none;
+}
+.projects .firebaseIcon {
+  color: black;
 }
 .projects .linksContainer {
   margin-top: 5px;
