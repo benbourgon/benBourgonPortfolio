@@ -73,6 +73,7 @@
 .projects {
     background-color: $blue-jeans;
     color: black;
+
     a,
     i {
         color: black;
@@ -128,7 +129,8 @@
         }
     }
 
-    .gameBoyConfigProject {
+    .gameBoyConfigProject,
+    .whatDoYouNoProject {
         background-color: $purple-plum;
 
         a {
@@ -177,6 +179,9 @@
         margin-top: 10px;
         text-align: center;
         border: none;
+    }
+    .firebaseIcon {
+        color: black;
     }
     .linksContainer {
         margin-top: 5px;
