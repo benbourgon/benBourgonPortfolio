@@ -263,9 +263,9 @@
         }
     }
     // 768px footer section media queries
-    footer .wrapper {
+    footer ul {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     
 }

@@ -10,13 +10,20 @@ footer {
         flex-wrap: wrap;
         align-items: center;
     }
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
 
+    li {
+        flex-basis: 32%;
+        text-align: center;
+    }
 
     a {
         color: white;
         text-decoration: underline;
-    }
-    i {
-        font-size: $bodySize;
     }
 }
