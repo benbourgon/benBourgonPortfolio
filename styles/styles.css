@@ -1739,9 +1739,6 @@ footer ul {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 footer li {
   -ms-flex-preferred-size: 32%;
