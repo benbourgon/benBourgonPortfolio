@@ -59,6 +59,7 @@ header {
     }
     .mobileNavButton {
         padding: 1.5rem 2.0rem;
+        margin-bottom: 0.5rem;
         font-size: $iconSize;
         display: flex;
         align-items: center;
@@ -67,7 +68,6 @@ header {
 
         p {
             margin-top: 0;
-            margin-bottom: 0.5rem;
             padding: 1rem;
             text-transform: uppercase;
         }

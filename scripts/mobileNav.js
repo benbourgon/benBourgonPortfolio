@@ -15,17 +15,18 @@ mobileMenuApp.openMobileNav = () => {
     // the menu is now open
     mobileMenuApp.menuOpen = true;
     // change the hamburger icon to the 'x' icon
-    mobileMenuApp.menuIcon.classList.toggle('fi-ss-cross');
-    mobileMenuApp.menuIcon.classList.toggle('fi-ss-menu-burger');
+    mobileMenuApp.menuIcon.classList.toggle('fa-xmark');
+    mobileMenuApp.menuIcon.classList.toggle('fa-bars');
     // add the 'navOpen' class to the mobileContainer
     mobileMenuApp.navigation.classList.toggle('navOpen')
 }
 
 // function to close the mobile navigation
 mobileMenuApp.closeMobileNav = () => {
+
     // change the 'x' icon to the hamburger icon
-    mobileMenuApp.menuIcon.classList.toggle('fi-ss-cross');
-    mobileMenuApp.menuIcon.classList.toggle('fi-ss-menu-burger');
+    mobileMenuApp.menuIcon.classList.toggle('fa-xmark');
+    mobileMenuApp.menuIcon.classList.toggle('fa-bars');
     // remove the 'navOpen' class from the navList
     mobileMenuApp.navigation.classList.toggle('navOpen')
     // the menu is now closed
@@ -45,10 +46,9 @@ mobileMenuApp.handleMenuClick = () => {
 
 // handles clicks on the mobile nav <a> elements
 mobileMenuApp.handleMobileLinkClick = () => {
-    console.log("link clicked")
     // change the 'x' icon to the hamburger icon
-    mobileMenuApp.menuIcon.classList.toggle('fi-ss-cross');
-    mobileMenuApp.menuIcon.classList.toggle('fi-ss-menu-burger');
+    mobileMenuApp.menuIcon.classList.toggle('fa-xmark');
+    mobileMenuApp.menuIcon.classList.toggle('fa-bars');
     // remove the 'navOpen' class from the navList
     mobileMenuApp.navigation.classList.toggle('navOpen')
     // the menu is now closed
@@ -58,10 +58,8 @@ mobileMenuApp.handleMobileLinkClick = () => {
 
 // add an event listeners for the menu buttons and links
 mobileMenuApp.menuButton.addEventListener('click', mobileMenuApp.handleMenuClick);
-mobileMenuApp.menuLink.addEventListener('click', mobileMenuApp.handleMobileLinkClick);
-
-
-
+// loop through the array of menu links and add the event listeners
+mobileMenuApp.menuLink.forEach((link) => link.addEventListener('click', mobileMenuApp.handleMobileLinkClick));
 
 mobileMenuApp.init = () => {
     // start the app with the menu closed
