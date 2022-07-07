@@ -1730,12 +1730,24 @@ footer .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+footer li {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  text-align: center;
+}
 footer a {
   color: white;
   text-decoration: underline;
-}
-footer i {
-  font-size: 1.6rem;
 }
 
 .about {
@@ -2539,14 +2551,14 @@ footer i {
         flex-basis: 49%;
   }
 
-  footer .wrapper {
+  footer ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media (min-width: 940px) {
