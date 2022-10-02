@@ -115,7 +115,7 @@
                 <ul>
                     <li>
                         <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-                        <p>Accessibility</p>
+                        <p tabindex="0">Accessibility</p>
                     </li>
                     <li>
                         <i class="fa-solid fa-people-group" aria-hidden="true"></i>
@@ -187,46 +187,6 @@
                     <h2>My Work</h2>
                 </div>
                 <ul>
-                    <li class="projectListItem whatDoYouNoProject">
-                        <a href="https://pairedproject.netlify.app/" class="projectTitle" target="_blank" rel="noopener">
-                            <h3>What Do You No?</h3>
-                        </a>
-                        <div class="flexContainer rowReverse">
-                            <img class="mockup" src="./assets/projectScreenshots/whatDoYouNoTablet.png"
-                                alt="The 'What Do You No?' website"
-                                loading="lazy">
-                            <div class="projectContentContainer">
-                                <p class="projectDescription">Using words and definitions pulled from the <a
-                                        href="https://www.datamuse.com/api/" target="_blank" rel="noopener">Datamuse API</a>, and offering a leaderboard through Firebase, this educational app quizzes users on their knowledge of homophones: words that sound alike with different meanings (i.e. Know and No).</p>
-                                <ul>
-                                    <li class="techListItem">
-                                        <i class="fa-brands fa-sass" aria-hidden="true"></i>
-                                        <p>SASS</p>
-                                    </li>
-                                    <li class="techListItem">
-                                        <i class="fa-brands fa-react"
-                                        aria-hidden="true"></i>
-                                        <p>React</p>
-                                    </li>
-                                    <li class="techListItem">
-                                        <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
-                                        <p>REST API</p>
-                                    </li>
-                                    <li class="techListItem">
-                                        <i class="devicon-firebase-plain" aria-hidden="true"></i>
-                                        <p>Firebase</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--.flexContainer end-->
-                        <div class="linksContainer">
-                            <a href="https://github.com/WhatDoYouNo2022/what-do-you-no" class="githubLink" target="_blank"
-                                rel="noopener">Code on GitHub</a>
-                            <a href="https://whatdoyouno.netlify.app/" class="viewLiveLink" target="_blank" rel="noopener">View Live</a>
-                        </div>
-                        <!--linksContainer end-->
-                    </li>
                     <li class="projectListItem taglinesProject">
                         <a href="https://pairedproject.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Taglines...with a Vengeance!</h3></a>
                         <div class="flexContainer">
@@ -259,7 +219,7 @@
                         </div> <!--linksContainer end-->
                     </li>
                     <li class="projectListItem underTheSeaProject">
-                        <a href="https://benbourgon-project-one.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Under the Sea</h3></a>
+                        <a href="https://underthesea-benbourgon.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Under the Sea</h3></a>
                         <div class="flexContainer rowReverse">
                             <img class="mockup" src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website" loading="lazy">
                             <div class="projectContentContainer">
@@ -298,8 +258,8 @@
                                         <p>CSS3</p>
                                     </li>
                                     <li class="techListItem">
-                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                        <p>JavaScript</p>
+                                        <i class="devicon-jquery-plain" aria-hidden="true"></i>
+                                        <p>jQuery</p>
                                     </li>
                                     <li class="techListItem">
                                         <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
@@ -329,8 +289,8 @@
                                         <p>CSS3</p>
                                     </li>
                                     <li class="techListItem">
-                                        <i class="fa-brands fa-js-square" aria-hidden="true"></i>
-                                        <p>JavaScript</p>
+                                        <i class="devicon-jquery-plain" aria-hidden="true"></i>
+                                        <p>jQuery</p>
                                     </li>
                                 </ul>
                             </div>
@@ -422,21 +382,20 @@
                 <form class="profileForm">
                     <input type="radio" name="profileNav" id="profileAboutMe" class="hidden" value="aboutMe" checked>
                     <label for="profileAboutMe" class="profileFormIcon">
-                        <i class="icon-user">
+                        <i class="icon-user" tabindex="0">
                             <span class="sr-only">About Me</span>
                         </i>
                     </label>
-
                     <input type="radio" name="profileNav" id="profileInterests" class="hidden" value="interests">
                     <label for="profileInterests" class="profileFormIcon">
-                        <i class="icon-energy">
+                        <i class="icon-energy" tabindex="0">
                             <span class="sr-only">Interests</span>
                         </i>
                     </label>
 
                     <input type="radio" name="profileNav" id="profileCoffee" class="hidden" value="coffee">
                     <label for="profileCoffee" class="profileFormIcon">
-                        <i class="icon-cup">
+                        <i class="icon-cup" tabindex="0">
                             <span class="sr-only">Coffee</span>
                         </i>
                     </label>
@@ -444,7 +403,7 @@
                 <p class="profileInstructions">Click the icons above to learn a bit more about me or use the buttons below to message me or request my resume.</p>
                 <div class="linksContainer">
                     <a href="#contact" class="messageMe profileLink">Message Me</a>
-                    <a class="requestResume profileLink">Request Resume</a>
+                    <a href="#contact" class="requestResume profileLink">Request Resume</a>
                 </div>
             </div> <!--.wrapper end-->
         </section> <!--profile section ends-->
