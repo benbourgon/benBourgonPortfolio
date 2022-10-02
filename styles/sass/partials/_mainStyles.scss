@@ -142,6 +142,7 @@
         justify-self: center;
         width: 100%;
         border: none;
+        z-index: 10;
 
         h3 {
             margin: 10px 0;
@@ -220,6 +221,7 @@
             transform: none;
             text-decoration: underline;
         }
+        z-index: 10;
     }
     p {
         margin: 25px 0;
@@ -378,8 +380,7 @@
     }
     ul {
         display: flex;
-        width: 95%;
-        max-width: 95%;
+        width: 250px;
         flex-wrap: wrap;
         justify-content: space-evenly;
         li {
@@ -391,6 +392,7 @@
         a {
             max-width: 100%;
             padding: 0 5px;
+            z-index: 10;
         }
         i {
             display: block;

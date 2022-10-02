@@ -232,802 +232,46 @@ html {
   src: url("../assets/fonts/Simple-Line-Icons.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Simple-Line-Icons.woff") format("woff"), url("../assets/fonts/Simple-Line-Icons.ttf") format("truetype"), url("../assets/fonts/Simple-Line-Icons.svg#Simple-Line-Icons") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 .icon-user,
-.icon-trophy,
-.icon-screen-smartphone,
-.icon-screen-desktop,
-.icon-magnet,
 .icon-energy,
-.icon-emoticon-smile,
-.icon-disc,
-.icon-crop,
-.icon-credit-card,
-.icon-chemistry,
-.icon-speedometer,
 .icon-social-twitter,
-.icon-screen-tablet,
-.icon-ghost,
-.icon-game-controller,
-.icon-fire,
-.icon-eyeglasses,
-.icon-envelope-open,
-.icon-envelope-letter,
-.icon-bell,
-.icon-badge,
-.icon-anchor,
-.icon-wallet,
-.icon-vector,
-.icon-speech,
-.icon-puzzle,
-.icon-printer,
-.icon-present,
-.icon-playlist,
-.icon-pin,
-.icon-picture,
-.icon-map,
-.icon-layers,
-.icon-handbag,
-.icon-globe-alt,
-.icon-globe,
-.icon-frame,
-.icon-folder-alt,
-.icon-film,
-.icon-feed,
-.icon-earphones-alt,
-.icon-earphones,
-.icon-drop,
-.icon-drawer,
-.icon-docs,
-.icon-directions,
-.icon-direction,
-.icon-diamond,
 .icon-cup,
-.icon-compass,
-.icon-call-out,
-.icon-call-in,
-.icon-call-end,
-.icon-calculator,
-.icon-bubbles,
-.icon-briefcase,
-.icon-book-open,
-.icon-basket-loaded,
-.icon-basket,
-.icon-bag,
-.icon-action-undo,
-.icon-action-redo,
-.icon-wrench,
-.icon-umbrella,
-.icon-trash,
-.icon-tag,
-.icon-support,
-.icon-size-fullscreen,
-.icon-size-actual,
-.icon-shuffle,
-.icon-share-alt,
-.icon-share,
-.icon-rocket,
-.icon-question,
-.icon-pie-chart,
-.icon-pencil,
-.icon-note,
-.icon-music-tone-alt,
-.icon-music-tone,
-.icon-microphone,
-.icon-loop,
-.icon-logout,
-.icon-login,
-.icon-list,
-.icon-like,
-.icon-home,
-.icon-grid,
-.icon-graph,
-.icon-equalizer,
-.icon-dislike,
-.icon-cursor,
-.icon-control-start,
-.icon-control-rewind,
-.icon-control-play,
-.icon-control-pause,
-.icon-control-forward,
-.icon-control-end,
 .icon-calendar,
-.icon-bulb,
-.icon-bar-chart,
-.icon-arrow-up,
-.icon-arrow-right,
-.icon-arrow-left,
-.icon-arrow-down,
-.icon-ban,
-.icon-bubble,
-.icon-camcorder,
-.icon-camera,
-.icon-check,
-.icon-clock,
-.icon-close,
-.icon-cloud-download,
-.icon-cloud-upload,
-.icon-doc,
-.icon-envelope,
-.icon-eye,
-.icon-flag,
-.icon-folder,
-.icon-heart,
-.icon-info,
-.icon-key,
-.icon-link,
-.icon-lock,
-.icon-lock-open,
-.icon-magnifier,
-.icon-magnifier-add,
-.icon-magnifier-remove,
-.icon-paper-clip,
-.icon-paper-plane,
-.icon-plus,
-.icon-pointer,
-.icon-power,
-.icon-refresh,
-.icon-reload,
-.icon-settings,
-.icon-star,
-.icon-target,
-.icon-volume-1,
-.icon-volume-2 {
+.icon-envelope {
   font-family: "Simple-Line-Icons";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+  font-display: swap;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-}
-
-.icon-user-female:before {
-  content: "\e000";
-}
-
-.icon-user-follow:before {
-  content: "\e002";
-}
-
-.icon-user-following:before {
-  content: "\e003";
-}
-
-.icon-user-unfollow:before {
-  content: "\e004";
-}
-
-.icon-trophy:before {
-  content: "\e006";
-}
-
-.icon-screen-smartphone:before {
-  content: "\e010";
-}
-
-.icon-screen-desktop:before {
-  content: "\e011";
-}
-
-.icon-plane:before {
-  content: "\e012";
-}
-
-.icon-notebook:before {
-  content: "\e013";
-}
-
-.icon-moustache:before {
-  content: "\e014";
-}
-
-.icon-mouse:before {
-  content: "\e015";
-}
-
-.icon-magnet:before {
-  content: "\e016";
 }
 
 .icon-energy:before {
   content: "\e020";
 }
 
-.icon-emoticon-smile:before {
-  content: "\e021";
-}
-
-.icon-disc:before {
-  content: "\e022";
-}
-
-.icon-cursor-move:before {
-  content: "\e023";
-}
-
-.icon-crop:before {
-  content: "\e024";
-}
-
-.icon-credit-card:before {
-  content: "\e025";
-}
-
-.icon-chemistry:before {
-  content: "\e026";
-}
-
 .icon-user:before {
   content: "\e005";
-}
-
-.icon-speedometer:before {
-  content: "\e007";
-}
-
-.icon-social-youtube:before {
-  content: "\e008";
 }
 
 .icon-social-twitter:before {
   content: "\e009";
 }
 
-.icon-social-tumblr:before {
-  content: "\e00a";
-}
-
-.icon-social-facebook:before {
-  content: "\e00b";
-}
-
-.icon-social-dropbox:before {
-  content: "\e00c";
-}
-
-.icon-social-dribbble:before {
-  content: "\e00d";
-}
-
-.icon-shield:before {
-  content: "\e00e";
-}
-
-.icon-screen-tablet:before {
-  content: "\e00f";
-}
-
-.icon-magic-wand:before {
-  content: "\e017";
-}
-
-.icon-hourglass:before {
-  content: "\e018";
-}
-
-.icon-graduation:before {
-  content: "\e019";
-}
-
-.icon-ghost:before {
-  content: "\e01a";
-}
-
-.icon-game-controller:before {
-  content: "\e01b";
-}
-
-.icon-fire:before {
-  content: "\e01c";
-}
-
-.icon-eyeglasses:before {
-  content: "\e01d";
-}
-
-.icon-envelope-open:before {
-  content: "\e01e";
-}
-
-.icon-envelope-letter:before {
-  content: "\e01f";
-}
-
-.icon-bell:before {
-  content: "\e027";
-}
-
-.icon-badge:before {
-  content: "\e028";
-}
-
-.icon-anchor:before {
-  content: "\e029";
-}
-
-.icon-wallet:before {
-  content: "\e02a";
-}
-
-.icon-vector:before {
-  content: "\e02b";
-}
-
-.icon-speech:before {
-  content: "\e02c";
-}
-
-.icon-puzzle:before {
-  content: "\e02d";
-}
-
-.icon-printer:before {
-  content: "\e02e";
-}
-
-.icon-present:before {
-  content: "\e02f";
-}
-
-.icon-playlist:before {
-  content: "\e030";
-}
-
-.icon-pin:before {
-  content: "\e031";
-}
-
-.icon-picture:before {
-  content: "\e032";
-}
-
-.icon-map:before {
-  content: "\e033";
-}
-
-.icon-layers:before {
-  content: "\e034";
-}
-
-.icon-handbag:before {
-  content: "\e035";
-}
-
-.icon-globe-alt:before {
-  content: "\e036";
-}
-
-.icon-globe:before {
-  content: "\e037";
-}
-
-.icon-frame:before {
-  content: "\e038";
-}
-
-.icon-folder-alt:before {
-  content: "\e039";
-}
-
-.icon-film:before {
-  content: "\e03a";
-}
-
-.icon-feed:before {
-  content: "\e03b";
-}
-
-.icon-earphones-alt:before {
-  content: "\e03c";
-}
-
-.icon-earphones:before {
-  content: "\e03d";
-}
-
-.icon-drop:before {
-  content: "\e03e";
-}
-
-.icon-drawer:before {
-  content: "\e03f";
-}
-
-.icon-docs:before {
-  content: "\e040";
-}
-
-.icon-directions:before {
-  content: "\e041";
-}
-
-.icon-direction:before {
-  content: "\e042";
-}
-
-.icon-diamond:before {
-  content: "\e043";
-}
-
 .icon-cup:before {
   content: "\e044";
-}
-
-.icon-compass:before {
-  content: "\e045";
-}
-
-.icon-call-out:before {
-  content: "\e046";
-}
-
-.icon-call-in:before {
-  content: "\e047";
-}
-
-.icon-call-end:before {
-  content: "\e048";
-}
-
-.icon-calculator:before {
-  content: "\e049";
-}
-
-.icon-bubbles:before {
-  content: "\e04a";
-}
-
-.icon-briefcase:before {
-  content: "\e04b";
-}
-
-.icon-book-open:before {
-  content: "\e04c";
-}
-
-.icon-basket-loaded:before {
-  content: "\e04d";
-}
-
-.icon-basket:before {
-  content: "\e04e";
-}
-
-.icon-bag:before {
-  content: "\e04f";
-}
-
-.icon-action-undo:before {
-  content: "\e050";
-}
-
-.icon-action-redo:before {
-  content: "\e051";
-}
-
-.icon-wrench:before {
-  content: "\e052";
-}
-
-.icon-umbrella:before {
-  content: "\e053";
-}
-
-.icon-trash:before {
-  content: "\e054";
-}
-
-.icon-tag:before {
-  content: "\e055";
-}
-
-.icon-support:before {
-  content: "\e056";
-}
-
-.icon-size-fullscreen:before {
-  content: "\e057";
-}
-
-.icon-size-actual:before {
-  content: "\e058";
-}
-
-.icon-shuffle:before {
-  content: "\e059";
-}
-
-.icon-share-alt:before {
-  content: "\e05a";
-}
-
-.icon-share:before {
-  content: "\e05b";
-}
-
-.icon-rocket:before {
-  content: "\e05c";
-}
-
-.icon-question:before {
-  content: "\e05d";
-}
-
-.icon-pie-chart:before {
-  content: "\e05e";
-}
-
-.icon-pencil:before {
-  content: "\e05f";
-}
-
-.icon-note:before {
-  content: "\e060";
-}
-
-.icon-music-tone-alt:before {
-  content: "\e061";
-}
-
-.icon-music-tone:before {
-  content: "\e062";
-}
-
-.icon-microphone:before {
-  content: "\e063";
-}
-
-.icon-loop:before {
-  content: "\e064";
-}
-
-.icon-logout:before {
-  content: "\e065";
-}
-
-.icon-login:before {
-  content: "\e066";
-}
-
-.icon-list:before {
-  content: "\e067";
-}
-
-.icon-like:before {
-  content: "\e068";
-}
-
-.icon-home:before {
-  content: "\e069";
-}
-
-.icon-grid:before {
-  content: "\e06a";
-}
-
-.icon-graph:before {
-  content: "\e06b";
-}
-
-.icon-equalizer:before {
-  content: "\e06c";
-}
-
-.icon-dislike:before {
-  content: "\e06d";
-}
-
-.icon-cursor:before {
-  content: "\e06e";
-}
-
-.icon-control-start:before {
-  content: "\e06f";
-}
-
-.icon-control-rewind:before {
-  content: "\e070";
-}
-
-.icon-control-play:before {
-  content: "\e071";
-}
-
-.icon-control-pause:before {
-  content: "\e072";
-}
-
-.icon-control-forward:before {
-  content: "\e073";
-}
-
-.icon-control-end:before {
-  content: "\e074";
 }
 
 .icon-calendar:before {
   content: "\e075";
 }
 
-.icon-bulb:before {
-  content: "\e076";
-}
-
-.icon-bar-chart:before {
-  content: "\e077";
-}
-
-.icon-arrow-up:before {
-  content: "\e078";
-}
-
-.icon-arrow-right:before {
-  content: "\e079";
-}
-
-.icon-arrow-left:before {
-  content: "\e07a";
-}
-
-.icon-arrow-down:before {
-  content: "\e07b";
-}
-
-.icon-ban:before {
-  content: "\e07c";
-}
-
-.icon-bubble:before {
-  content: "\e07d";
-}
-
-.icon-camcorder:before {
-  content: "\e07e";
-}
-
-.icon-camera:before {
-  content: "\e07f";
-}
-
-.icon-check:before {
-  content: "\e080";
-}
-
-.icon-clock:before {
-  content: "\e081";
-}
-
-.icon-close:before {
-  content: "\e082";
-}
-
-.icon-cloud-download:before {
-  content: "\e083";
-}
-
-.icon-cloud-upload:before {
-  content: "\e084";
-}
-
-.icon-doc:before {
-  content: "\e085";
-}
-
 .icon-envelope:before {
   content: "\e086";
-}
-
-.icon-eye:before {
-  content: "\e087";
-}
-
-.icon-flag:before {
-  content: "\e088";
-}
-
-.icon-folder:before {
-  content: "\e089";
-}
-
-.icon-heart:before {
-  content: "\e08a";
-}
-
-.icon-info:before {
-  content: "\e08b";
-}
-
-.icon-key:before {
-  content: "\e08c";
-}
-
-.icon-link:before {
-  content: "\e08d";
-}
-
-.icon-lock:before {
-  content: "\e08e";
-}
-
-.icon-lock-open:before {
-  content: "\e08f";
-}
-
-.icon-magnifier:before {
-  content: "\e090";
-}
-
-.icon-magnifier-add:before {
-  content: "\e091";
-}
-
-.icon-magnifier-remove:before {
-  content: "\e092";
-}
-
-.icon-paper-clip:before {
-  content: "\e093";
-}
-
-.icon-paper-plane:before {
-  content: "\e094";
-}
-
-.icon-plus:before {
-  content: "\e095";
-}
-
-.icon-pointer:before {
-  content: "\e096";
-}
-
-.icon-power:before {
-  content: "\e097";
-}
-
-.icon-refresh:before {
-  content: "\e098";
-}
-
-.icon-reload:before {
-  content: "\e099";
-}
-
-.icon-settings:before {
-  content: "\e09a";
-}
-
-.icon-star:before {
-  content: "\e09b";
-}
-
-.icon-symbol-female:before {
-  content: "\e09c";
-}
-
-.icon-symbol-male:before {
-  content: "\e09d";
-}
-
-.icon-target:before {
-  content: "\e09e";
-}
-
-.icon-volume-1:before {
-  content: "\e09f";
-}
-
-.icon-volume-2:before {
-  content: "\e0a0";
-}
-
-.icon-volume-off:before {
-  content: "\e0a1";
-}
-
-.icon-users:before {
-  content: "\e001";
 }
 
 html {
@@ -1039,6 +283,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: auto;
+  font-display: swap;
   color: white;
 }
 
@@ -1391,12 +636,7 @@ a {
   transition: 0.1s;
   border: none;
 }
-a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-a:focus {
-  border: 5px solid #63adf2;
+a:hover, a:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -1487,11 +727,13 @@ header .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow-x: visible;
 }
 header .desktopNav {
   display: none;
   z-index: 20;
   width: 100%;
+  padding: 0 20px;
 }
 header .headerNav {
   max-width: 100%;
@@ -1514,6 +756,7 @@ header .mobileContainer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 10px;
 }
 header .mobileFlexContainer {
   display: -webkit-box;
@@ -1542,10 +785,11 @@ header .logoContainer {
   z-index: 20;
   height: 80px;
   width: 80px;
+  padding: 0;
 }
 header .logoContainer:focus, header .logoContainer:hover {
-  -webkit-transform: none;
-          transform: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 header .logoCircle {
   border: 3px solid white;
@@ -1687,7 +931,7 @@ header .headingContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10rem auto;
+  margin: 10rem auto 15rem auto;
 }
 header .downArrowContainer {
   display: -webkit-box;
@@ -1698,10 +942,16 @@ header .downArrowContainer {
           justify-content: center;
   width: 100%;
   margin: 6rem auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 header .downArrowContainer .downArrow {
   padding: 20px;
   color: white;
+  position: absolute;
+  bottom: 2rem;
 }
 header .downArrowContainer .downArrow:visited {
   color: white;
@@ -1926,6 +1176,7 @@ footer a {
   justify-self: center;
   width: 100%;
   border: none;
+  z-index: 10;
 }
 .projects .projectTitle h3 {
   margin: 10px 0;
@@ -2010,6 +1261,9 @@ footer a {
 }
 .blog .subHeadingContainer h4 {
   padding-top: 16px;
+}
+.blog .blogTitle {
+  z-index: 10;
 }
 .blog .blogTitle:hover, .blog .blogTitle:focus {
   -webkit-transform: none;
@@ -2231,8 +1485,7 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 95%;
-  max-width: 95%;
+  width: 250px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -2252,6 +1505,7 @@ footer a {
 .contact ul a {
   max-width: 100%;
   padding: 0 5px;
+  z-index: 10;
 }
 .contact ul i {
   display: block;
@@ -2262,7 +1516,6 @@ footer a {
   h2 {
     font-size: 5.9996rem;
   }
-
   header h3,
 .about h3,
 .about p,
@@ -2272,7 +1525,6 @@ footer a {
     font-size: 1.87rem;
     line-height: 3.08rem;
   }
-
   .about .imageContainer {
     width: 75%;
   }
@@ -2290,13 +1542,14 @@ footer a {
     font-size: 2.04rem;
   }
   header .headingContainer {
-    margin-bottom: 25px;
+    margin-bottom: 20rem;
   }
-
+  header .downArrowContainer {
+    margin-top: 1rem;
+  }
   .about .imageContainer {
     width: 60%;
   }
-
   .projects .techListItem {
     -ms-flex-preferred-size: 24%;
         flex-basis: 24%;
@@ -2313,7 +1566,6 @@ footer a {
   h2 {
     font-size: 7.95rem;
   }
-
   header h1 {
     font-size: 7.14rem;
     line-height: 7.42rem;
@@ -2358,19 +1610,27 @@ footer a {
   header .navOpen {
     margin-bottom: 0;
   }
-  header .desktopLogoContainer a {
-    width: 100%;
-    height: 100%;
-  }
   header .desktopLogoContainer a:hover, header .desktopLogoContainer a:focus {
+    outline: none;
     border: none;
+  }
+  header .desktopLogoContainer a:hover .logoCircle, header .desktopLogoContainer a:focus .logoCircle {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    outline: medium auto currentColor;
+    outline: medium auto invert;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  header .desktopLogoContainer a:focus .logoCircle {
+    outline: 3px solid #A1D2FF;
   }
   header .desktopLogoContainer a .logoCircle {
     color: white;
     border: 3px solid white;
     font-size: 2.21rem;
+    -webkit-transition: 200ms ease-out;
+    transition: 200ms ease-out;
   }
-
   .about h3,
 .about p,
 .about .myProfileLink {
@@ -2400,7 +1660,6 @@ footer a {
         flex-basis: 40%;
     padding-bottom: 150px;
   }
-
   .skills ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2415,7 +1674,6 @@ footer a {
   .skills .problemSolving {
     display: block;
   }
-
   .projects .flexContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2494,7 +1752,6 @@ footer a {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
-
   .blog h3 {
     font-size: 3.4rem;
   }
@@ -2521,7 +1778,6 @@ footer a {
   .blog .readMore {
     padding-top: 62px;
   }
-
   .profile p,
 .profile .profileListItem li {
     font-size: 1.92rem;
@@ -2536,7 +1792,6 @@ footer a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-
   .contact .phoneEmailInputs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2550,7 +1805,6 @@ footer a {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
-
   footer ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2566,16 +1820,13 @@ footer a {
     font-size: 10.6rem;
     line-height: 10.6rem;
   }
-
   .subHeadingContainer h4 {
     font-size: 2.4rem;
     padding-top: 25px;
   }
-
   .wrapper {
     max-width: 1100px;
   }
-
   header h1 {
     font-size: 9.18rem;
     line-height: 9.54rem;
@@ -2594,7 +1845,6 @@ footer a {
   header .downArrow i {
     font-size: 5.1rem;
   }
-
   .about h3,
 .about p,
 .about .myProfileLink {
@@ -2606,14 +1856,12 @@ footer a {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-
   .skills p {
     font-size: 1.92rem;
   }
   .skills i {
     font-size: 3.6rem;
   }
-
   .projects h3 {
     font-size: 4.25rem;
   }
@@ -2624,7 +1872,6 @@ footer a {
     font-size: 2.56rem;
     line-height: 4.16rem;
   }
-
   .blog .subHeadingContainer h4 {
     height: 60px;
     padding-top: 7px;
@@ -2634,7 +1881,6 @@ footer a {
     font-size: 2.55rem;
     line-height: 3.4rem;
   }
-
   .profile .profileListItem p,
 .profile .profileListItem li,
 .profile .profileInstructions {

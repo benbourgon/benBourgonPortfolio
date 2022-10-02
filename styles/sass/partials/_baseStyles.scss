@@ -34,11 +34,8 @@ a {
     transition: 0.1s;
     border: none;
     
-    &:hover {
-        transform: scale(1.1);
-    }
+    &:hover,
     &:focus {
-        border: 5px solid $blue-jeans;
         transform: scale(1.1);
     }
 }
