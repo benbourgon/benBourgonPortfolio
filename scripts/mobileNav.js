@@ -9,6 +9,7 @@ mobileMenuApp.menuIcon = document.querySelector('.mobileNavButton i');
 mobileMenuApp.menuP = document.querySelector('navButtonText')
 mobileMenuApp.navigation = document.querySelector('.headerNav');
 mobileMenuApp.menuLink = document.querySelectorAll('.mobileMenuLink')
+mobileMenuApp.logoLink = document.querySelector(".logoLink")
 
 // function to open the mobile navigation
 mobileMenuApp.openMobileNav = () => {
@@ -54,10 +55,19 @@ mobileMenuApp.handleMobileLinkClick = () => {
     // the menu is now closed
     mobileMenuApp.menuOpen = false;
 }
-
+mobileMenuApp.handleLogoClick = () => {
+    if(!mobileMenuApp.menuOpen){
+        return
+    } else {
+        mobileMenuApp.handleMobileLinkClick();
+    }
+}
 
 // add an event listeners for the menu buttons and links
 mobileMenuApp.menuButton.addEventListener('click', mobileMenuApp.handleMenuClick);
+// event listener for the header's logo element
+mobileMenuApp.logoLink.addEventListener('click', mobileMenuApp.handleLogoClick)
+
 // loop through the array of menu links and add the event listeners
 mobileMenuApp.menuLink.forEach((link) => link.addEventListener('click', mobileMenuApp.handleMobileLinkClick));
 
