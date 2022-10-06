@@ -112,6 +112,9 @@
                 &:focus {
                     border-bottom: 3px solid white;
                 }
+                &:focus {
+                    outline:3px solid $inverse-blue;
+                }
             }
         }
         .navOpen {
@@ -125,14 +128,11 @@
 
                 .logoCircle {
                     transform: scale(1.1);
-                    outline: medium auto currentColor;
-                    outline: medium auto invert;
-                    outline: 5px auto -webkit-focus-ring-color;
                 }
             }
             &:focus {
                 .logoCircle {
-                    outline: 3px solid #A1D2FF
+                    outline: 3px solid $inverse-blue;
                 }
             }
             .logoCircle {

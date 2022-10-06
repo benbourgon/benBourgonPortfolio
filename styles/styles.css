@@ -716,6 +716,10 @@ header {
   max-width: 100%;
   background-color: #135c71;
 }
+header a:focus,
+header button:focus {
+  outline: 3px solid #eca38e;
+}
 header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -790,6 +794,10 @@ header .logoContainer {
 header .logoContainer:focus, header .logoContainer:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  outline: none;
+}
+header .logoContainer:focus .logoCircle {
+  outline: 3px solid #eca38e;
 }
 header .logoCircle {
   border: 3px solid white;
@@ -823,6 +831,12 @@ header .mobileNavButton p {
   margin-top: 0;
   padding: 1rem;
   text-transform: uppercase;
+}
+header .mobileNavButton:active {
+  outline: none;
+}
+header .mobileNavButton:active p {
+  font-weight: 700;
 }
 header .mobileNavList {
   position: fixed;
@@ -872,6 +886,7 @@ header .mobileNavList a:hover, header .mobileNavList a:focus {
 }
 header .mobileNavList a:active {
   border: none;
+  outline: none;
   font-weight: 700;
 }
 header .navOpen {
@@ -881,6 +896,7 @@ header .navOpen {
           transition-delay: 0.3s;
   margin-bottom: 20rem;
   display: block;
+  z-index: 100;
 }
 header .navOpen .mobileContainer {
   position: fixed;
@@ -898,6 +914,9 @@ header .navOpen button {
   -webkit-transition-delay: 100ms;
           transition-delay: 100ms;
 }
+header .navOpen button:focus {
+  outline: 3px solid #a755c2;
+}
 header .navOpen .mobileNavList {
   -webkit-transition-delay: 300ms;
           transition-delay: 300ms;
@@ -911,11 +930,17 @@ header .navOpen .mobileNavList {
 header .navOpen .navButtonText {
   display: none;
 }
+header .navOpen .logoContainer:focus .logoCircle {
+  outline: 3px solid #a755c2;
+}
 header .navOpen .logoCircle {
   -webkit-transition-delay: 200ms;
           transition-delay: 200ms;
   color: #135c71;
   border: 3px solid #135c71;
+}
+header .navOpen .mobileMenuLink:focus {
+  outline: 3px solid #a755c2;
 }
 header .headingContainer {
   display: -webkit-box;
@@ -955,6 +980,9 @@ header .downArrowContainer .downArrow {
 }
 header .downArrowContainer .downArrow:visited {
   color: white;
+}
+header .downArrowContainer .downArrow:focus {
+  outline: 3px solid #eca38e;
 }
 header .downArrowContainer i {
   font-size: 35px;
@@ -998,6 +1026,9 @@ footer li {
 footer a {
   color: white;
   text-decoration: underline;
+}
+footer a:focus {
+  outline: 3px solid #eca38e;
 }
 
 .about {
@@ -1415,8 +1446,13 @@ footer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.contact form {
+  width: 99%;
+  max-width: 99%;
+}
+.contact .phoneEmailInputs {
   width: 100%;
-  max-width: 100%;
 }
 .contact input,
 .contact textarea {
@@ -1450,7 +1486,13 @@ footer a {
 .contact input:focus, .contact input:hover,
 .contact textarea:focus,
 .contact textarea:hover {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #eca38e;
+}
+.contact input:focus,
+.contact textarea:focus {
+  background-color: #eca38e;
+  color: black;
+  outline: 3px solid #eca38e;
 }
 .contact textarea {
   height: 275px;
@@ -1458,7 +1500,7 @@ footer a {
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
-  border: 3px solid white;
+  border: 3px solid #eca38e;
 }
 .contact .yourMessageLabel {
   padding: 25px 5px 5px 2px;
@@ -1476,6 +1518,18 @@ footer a {
   padding: 10px 0;
   margin: 25px 0;
   cursor: pointer;
+}
+.contact .sendButton:focus {
+  outline: 3px solid #eca38e;
+}
+.contact .sendButton:active {
+  background-color: #eca38e;
+  color: black;
+  border: none;
+  outline: none;
+}
+.contact a:focus {
+  outline: 3px solid #eca38e;
 }
 .contact nav {
   max-width: 100%;
@@ -1607,6 +1661,9 @@ footer a {
   header .desktopNav a:hover, header .desktopNav a:focus {
     border-bottom: 3px solid white;
   }
+  header .desktopNav a:focus {
+    outline: 3px solid #eca38e;
+  }
   header .navOpen {
     margin-bottom: 0;
   }
@@ -1617,12 +1674,9 @@ footer a {
   header .desktopLogoContainer a:hover .logoCircle, header .desktopLogoContainer a:focus .logoCircle {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    outline: medium auto currentColor;
-    outline: medium auto invert;
-    outline: 5px auto -webkit-focus-ring-color;
   }
   header .desktopLogoContainer a:focus .logoCircle {
-    outline: 3px solid #A1D2FF;
+    outline: 3px solid #eca38e;
   }
   header .desktopLogoContainer a .logoCircle {
     color: white;

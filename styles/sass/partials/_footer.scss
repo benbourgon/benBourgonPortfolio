@@ -24,5 +24,9 @@ footer {
     a {
         color: white;
         text-decoration: underline;
+
+        &:focus {
+            outline: 3px solid $inverse-blue;
+        }
     }
 }
