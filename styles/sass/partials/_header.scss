@@ -3,6 +3,11 @@ header {
     min-height: 320px;
     max-width: 100%;
     background-color: $blue-sapphire;
+
+    a:focus,
+    button:focus {
+        outline: 3px solid $inverse-blue;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -50,6 +55,12 @@ header {
         &:focus,
         &:hover {
             transform: scale(1.1);
+            outline: none;
+        }
+        &:focus {
+            .logoCircle {
+                outline: 3px solid $inverse-blue;
+            }
         }
     }
     .logoCircle {
@@ -75,6 +86,14 @@ header {
             padding: 1rem;
             text-transform: uppercase;
         }
+
+        &:active {
+            p {
+                font-weight: $bold;
+            }
+            outline: none;
+        }
+
     }
     .mobileNavList {
         position: fixed;
@@ -111,6 +130,7 @@ header {
             }
             &:active {
                 border: none;
+                outline: none;
                 font-weight: $bold;
             }
         }
@@ -120,6 +140,8 @@ header {
         transition-delay: 0.3s;
         margin-bottom: 20rem;
         display: block;
+        z-index: 100;
+
         .mobileContainer {
             position: fixed;
             left: 0;
@@ -131,6 +153,10 @@ header {
         button {
             color: $blue-sapphire;
             transition-delay: 100ms;
+
+            &:focus {
+                outline: 3px solid $purple-plum;
+            }
         }
         .mobileNavList {
             transition-delay: 300ms;
@@ -142,12 +168,21 @@ header {
         .navButtonText {
             display: none;
         }
+        .logoContainer {
+            &:focus {
+                .logoCircle {
+                    outline: 3px solid $purple-plum;
+                }
+            }
+        }
         .logoCircle {
             transition-delay: 200ms;
             color: $blue-sapphire;
             border: 3px solid $blue-sapphire;
         }
-
+        .mobileMenuLink:focus {
+            outline: 3px solid $purple-plum;
+        }
     }
     .headingContainer {
         display: flex;
@@ -172,6 +207,10 @@ header {
             &:visited {
                 color: white;
             }
+            &:focus {
+                outline: 3px solid $inverse-blue;
+            }
+            
         }
         i {
             @include fontSize(35);

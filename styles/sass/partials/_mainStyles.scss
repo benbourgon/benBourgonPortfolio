@@ -324,8 +324,13 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+    }
+    form {
+        width: 99%;
+        max-width: 99%;
+    }
+    .phoneEmailInputs {
         width: 100%;
-        max-width: 100%;
     }
     input,
     textarea {
@@ -345,7 +350,12 @@
 
         &:focus,
         &:hover {
-            border-bottom: 3px solid white;
+            border-bottom: 3px solid $inverse-blue;
+        }
+        &:focus {
+            background-color: $inverse-blue;
+            color: black;
+            outline: 3px solid $inverse-blue;
         }
     }
     textarea {
@@ -354,7 +364,7 @@
         border: 1px solid white;
         &:focus,
         &:hover {
-            border: 3px solid white;
+            border: 3px solid $inverse-blue;
         }
     }
     .yourMessageLabel {
@@ -373,6 +383,19 @@
         padding: 10px 0;
         margin: 25px 0;
         cursor: pointer;
+
+        &:focus {
+            outline: 3px solid $inverse-blue;
+        }
+        &:active {
+            background-color: $inverse-blue;
+            color: black;
+            border: none;
+            outline: none;
+        }
+    }
+    a:focus {
+        outline: 3px solid $inverse-blue;
     }
     nav {
         max-width: 100%;
