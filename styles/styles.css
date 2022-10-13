@@ -438,7 +438,6 @@ header a, header button {
 }
 .profile .profileInstructions {
   padding: 0 15px;
-  max-width: 80rem;
 }
 .profile .profileListItem {
   font-size: 14px;
@@ -473,7 +472,7 @@ header a, header button {
   text-decoration: none;
 }
 .profile .coffeeLink {
-  margin-top: 50px;
+  margin-top: 25px;
   width: 200px;
   display: block;
 }
@@ -506,6 +505,7 @@ header a, header button {
 }
 .profile .meetWithMe {
   padding-top: 15px;
+  margin-top: 0;
 }
 
 .profileForm label {
@@ -1361,12 +1361,14 @@ footer a:focus {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
+.profile .profileList {
+  width: 100%;
+}
 .profile .profileListItem {
   background-color: white;
   padding: 20px 20px;
   min-height: 611px;
   width: 100%;
-  max-width: 70rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -1412,7 +1414,7 @@ footer a:focus {
 .profileForm label {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  padding: 25px;
+  padding: 15px 20px;
 }
 .profileForm fieldset {
   display: -webkit-box;
@@ -1423,7 +1425,7 @@ footer a:focus {
           justify-content: space-between;
   border: none;
   padding: 0;
-  margin: 25px 0;
+  margin: 15px 0;
 }
 .profileForm .profileFormIcon:hover, .profileForm .profileFormIcon:focus {
   -webkit-transform: scale(1.4);
@@ -1621,6 +1623,9 @@ footer a:focus {
   .projects p {
     font-size: 2rem;
     line-height: calc(auto * 1.25);
+  }
+  .profile .profileListItem {
+    min-height: 555px;
   }
 }
 @media (min-width: 768px) {
@@ -1845,6 +1850,7 @@ footer a:focus {
   }
   .profile .profileListItem {
     padding: 30px 30px;
+    min-height: 512px;
   }
   .profile p,
 .profile .profileListItem li {
@@ -1859,6 +1865,9 @@ footer a:focus {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  .profile .meetWithMe {
+    margin-top: 25px;
   }
   .contact .phoneEmailInputs {
     -webkit-box-orient: horizontal;
@@ -1950,7 +1959,7 @@ footer a:focus {
     line-height: 3.4rem;
   }
   .profile .profileListItem {
-    min-height: 679px;
+    min-height: 607px;
   }
   .profile .profileListItem p,
 .profile .profileListItem li,
