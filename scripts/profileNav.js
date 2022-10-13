@@ -2,7 +2,6 @@
 
 // create the namespace object
 const profileNavApp = {};
-
 // query the form elements
 profileNavApp.profileForm = document.querySelector(".profileForm");
 profileNavApp.radioButtons = document.querySelectorAll(".profileForm input");
@@ -38,9 +37,13 @@ profileNavApp.handleChange = (event) => {
 
 // Handle keyboard input when the profile navigation is in focus
 profileNavApp.handleKeypress = (event) => {
-    if (event.code === "Enter") {
-        event.target.control.checked = true;
-        profileNavApp.currentValue = event.target.control.value;
+    if (!event.target.control) return
+    profileNavApp.focusedInput = event.target.control;
+    if (event.code !== "Enter") {
+        return
+    } else {
+        profileNavApp.focusedInput.checked = true;
+        profileNavApp.currentValue = profileNavApp.focusedInput.value;
         profileNavApp.displayContent();
     }
 }
