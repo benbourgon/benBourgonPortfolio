@@ -37,7 +37,7 @@ profileNavApp.handleChange = (event) => {
 
 profileNavApp.handleKeypress = (event) => {
     if (event.code === "Enter") {
-        console.log("Enter pressed");
+        return;
     }
 }
 
