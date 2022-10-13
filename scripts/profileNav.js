@@ -12,11 +12,8 @@ profileNavApp.aboutMeContents = document.querySelector(".aboutMeItem");
 profileNavApp.interestsContents = document.querySelector(".interestsItem");
 profileNavApp.coffeeContents = document.querySelector(".coffeeItem");
 
-
-// When the user clicks a radio button label in the form
-profileNavApp.handleChange = (event) => {
-    profileNavApp.currentValue = event.target.value;
-
+// Display the correct content
+profileNavApp.displayContent = () => {
     // hide or display the correct contents depending on the value of the selected radio button
     if (profileNavApp.currentValue === "aboutMe"){
         profileNavApp.interestsContents.classList.add("hidden");
@@ -33,11 +30,18 @@ profileNavApp.handleChange = (event) => {
     }
 }
 
-// Handle keyboard input when the profile navigation is in focus
+// When the user clicks a radio button label in the form
+profileNavApp.handleChange = (event) => {
+    profileNavApp.currentValue = event.target.value;
+    profileNavApp.displayContent();
+}
 
+// Handle keyboard input when the profile navigation is in focus
 profileNavApp.handleKeypress = (event) => {
     if (event.code === "Enter") {
-        return;
+        event.target.control.checked = true;
+        profileNavApp.currentValue = event.target.control.value;
+        profileNavApp.displayContent();
     }
 }
 
@@ -49,7 +53,9 @@ profileNavApp.profileForm.addEventListener('keydown', profileNavApp.handleKeypre
 
 // create the init to run on start and set the current value of the form to be "aboutMe"
 profileNavApp.init = () => {
+    // always load the page with the aboutMe radio button checked
     profileNavApp.currentValue = "aboutMe";
+    profileNavApp.radioButtons[0].checked = true;
 }
 
 // initialize the app

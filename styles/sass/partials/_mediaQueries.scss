@@ -65,6 +65,10 @@
             line-height: calc($bodyHeight * 1.25);
         }
     }
+    // 428px profile media queries
+    .profile .profileListItem {
+        min-height: 555px;
+    }
 }
 
 // Portrait tablet to small desktops
@@ -261,6 +265,7 @@
         }
         .profileListItem {
             padding: 30px 30px;
+            min-height: 512px;
         }
         p,
         .profileListItem li {
@@ -270,6 +275,10 @@
             width: 100%;
             flex-direction: row;
             justify-content: space-evenly;
+        }
+
+        .meetWithMe {
+            margin-top: 25px;
         }
     }
     // 768px contact section media queries
@@ -379,7 +388,7 @@
     // 940px profile section media queries
     .profile {
         .profileListItem {
-            min-height: 679px;
+            min-height: 607px;
         }
         .profileListItem p,
         .profileListItem li,
