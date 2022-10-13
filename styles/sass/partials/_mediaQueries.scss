@@ -256,6 +256,12 @@
     }
     // 768px profile section media queries
     .profile {
+        a {
+            @include fontSize(16)
+        }
+        .profileListItem {
+            padding: 30px 30px;
+        }
         p,
         .profileListItem li {
             font-size: ($bodySize * 1.2);
@@ -372,6 +378,9 @@
     }
     // 940px profile section media queries
     .profile {
+        .profileListItem {
+            min-height: 679px;
+        }
         .profileListItem p,
         .profileListItem li,
         .profileInstructions {

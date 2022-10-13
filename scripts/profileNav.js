@@ -16,7 +16,6 @@ profileNavApp.coffeeContents = document.querySelector(".coffeeItem");
 // When the user clicks a radio button label in the form
 profileNavApp.handleChange = (event) => {
     profileNavApp.currentValue = event.target.value;
-    console.log(profileNavApp.currentValue);
 
     // hide or display the correct contents depending on the value of the selected radio button
     if (profileNavApp.currentValue === "aboutMe"){
@@ -34,8 +33,19 @@ profileNavApp.handleChange = (event) => {
     }
 }
 
+// Handle keyboard input when the profile navigation is in focus
+
+profileNavApp.handleKeypress = (event) => {
+    if (event.code === "Enter") {
+        console.log("Enter pressed");
+    }
+}
+
 // create an event listener for when the radio button selection is changed
 profileNavApp.profileForm.addEventListener('change', profileNavApp.handleChange)
+
+// event listener for keyboard navigation
+profileNavApp.profileForm.addEventListener('keydown', profileNavApp.handleKeypress)
 
 // create the init to run on start and set the current value of the form to be "aboutMe"
 profileNavApp.init = () => {

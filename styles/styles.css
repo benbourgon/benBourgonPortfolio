@@ -440,6 +440,10 @@ header a, header button {
   padding: 0 15px;
   max-width: 80rem;
 }
+.profile .profileListItem {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
 .profile .profileListItem i {
   font-size: 5rem;
   color: #a755c2;
@@ -474,8 +478,8 @@ header a, header button {
   display: block;
 }
 .profile .messageMe {
-  color: #63adf2;
-  border: 1px solid #63adf2;
+  color: black;
+  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,7 +489,7 @@ header a, header button {
 }
 .profile .messageMe:focus, .profile .messageMe:hover {
   font-weight: 700;
-  border: 2px solid #63adf2;
+  border: 2px solid black;
 }
 .profile .requestResume,
 .profile .meetWithMe {
@@ -1195,12 +1199,10 @@ footer a:focus {
 .projects .goodGamesProject a {
   background-color: #83bca9;
 }
-.projects .gameBoyConfigProject,
-.projects .whatDoYouNoProject {
+.projects .gameBoyConfigProject {
   background-color: #a755c2;
 }
-.projects .gameBoyConfigProject a,
-.projects .whatDoYouNoProject a {
+.projects .gameBoyConfigProject a {
   background-color: #a755c2;
 }
 .projects .projectTitle {
@@ -1361,8 +1363,9 @@ footer a:focus {
 }
 .profile .profileListItem {
   background-color: white;
-  padding: 30px 30px;
-  min-height: 570px;
+  padding: 20px 20px;
+  min-height: 611px;
+  width: 100%;
   max-width: 70rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -1374,7 +1377,6 @@ footer a:focus {
 }
 .profile .profileListItem li {
   margin: 20px 0;
-  font-size: 1.6rem;
   text-align: left;
 }
 .profile .itemHeadingContainer {
@@ -1407,16 +1409,21 @@ footer a:focus {
           align-items: center;
 }
 
-.profileForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 25px 0;
-}
 .profileForm label {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   padding: 25px;
+}
+.profileForm fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 25px 0;
 }
 .profileForm .profileFormIcon:hover, .profileForm .profileFormIcon:focus {
   -webkit-transform: scale(1.4);
@@ -1832,6 +1839,13 @@ footer a:focus {
   .blog .readMore {
     padding-top: 62px;
   }
+  .profile a {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .profile .profileListItem {
+    padding: 30px 30px;
+  }
   .profile p,
 .profile .profileListItem li {
     font-size: 1.92rem;
@@ -1934,6 +1948,9 @@ footer a:focus {
 .blog .readMore {
     font-size: 2.55rem;
     line-height: 3.4rem;
+  }
+  .profile .profileListItem {
+    min-height: 679px;
   }
   .profile .profileListItem p,
 .profile .profileListItem li,

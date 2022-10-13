@@ -180,9 +180,13 @@ header {
         padding: 0 15px;
         max-width: 80rem;
     }
-    .profileListItem i {
-        font-size: 5.0rem;
-        color: $purple-plum;
+    .profileListItem {
+        @include fontSize(14);
+        
+        i {
+            font-size: 5.0rem;
+            color: $purple-plum;
+        }
     }
 
     .profileLink {
@@ -211,15 +215,15 @@ header {
         display: block;
     }
     .messageMe {
-        color: $blue-jeans;
-        border: 1px solid $blue-jeans;
+        color: black;
+        border: 1px solid black;
         display: flex;
         justify-content: center;
 
         &:focus,
         &:hover {
             font-weight: $bold;
-            border: 2px solid $blue-jeans;
+            border: 2px solid black;
         }
     }
     .requestResume,

@@ -129,8 +129,7 @@
         }
     }
 
-    .gameBoyConfigProject,
-    .whatDoYouNoProject {
+    .gameBoyConfigProject {
         background-color: $purple-plum;
 
         a {
@@ -257,8 +256,9 @@
     
     .profileListItem {
         background-color: white;
-        padding: 30px 30px;
-        min-height: 570px;
+        padding: 20px 20px;
+        min-height: 611px;
+        width: 100%;
         max-width: 70rem;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -270,7 +270,6 @@
 
         li {
             margin: 20px 0;
-            font-size: $bodySize;
             text-align: left;
         }
     }
@@ -293,11 +292,16 @@
 }
 // Profile radio buttons
 .profileForm {
-    display: flex;
-    margin: 25px 0;
     label {
         transition: 0.2s;
         padding: 25px;
+    }
+    fieldset {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        padding: 0;
+        margin: 25px 0;
     }
     .profileFormIcon {
         &:hover,
