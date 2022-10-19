@@ -420,7 +420,7 @@ header a, header button {
   width: 100%;
 }
 .blog a:visited {
-  color: #a755c2;
+  color: #135c71;
 }
 .blog p {
   font-size: 1.6rem;
@@ -445,7 +445,7 @@ header a, header button {
 }
 .profile .profileListItem i {
   font-size: 5rem;
-  color: #a755c2;
+  color: #135c71;
 }
 .profile .profileLink {
   font-weight: 600;
@@ -493,7 +493,7 @@ header a, header button {
 .profile .requestResume,
 .profile .meetWithMe {
   text-align: center;
-  background-color: #a755c2;
+  background-color: #135c71;
   background-size: cover;
   color: white;
 }
@@ -514,7 +514,7 @@ header a, header button {
   transition: none;
 }
 .profileForm input[type=radio]:checked + label {
-  color: #a755c2;
+  color: #135c71;
 }
 
 .contact {
