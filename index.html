@@ -174,7 +174,7 @@
                         <p>Pair programming</p>
                     </li>
                     <li>
-                        <img id="adobeIcon" class="adobeIcon" src="./assets/Adobe-Creative-Cloud-edited.svg" aria-hidden="true" loading="lazy">
+                        <img id="adobeIcon" class="adobeIcon" src="./assets/Adobe-Creative-Cloud-edited.svg" aria-hidden="true" loading="lazy" alt="">
                         <p>Adobe Creative Cloud</p>
                     </li>
                 </ul>
@@ -319,7 +319,7 @@
                                 <img src="https://miro.medium.com/max/1400/1*ptgEgd-MZ4d3pHFxiLTFfg.jpeg" alt="A stylized html closing tag" loading="lazy">
                                 <div class="contentContainer">
                                     <p>Or why I'm pivoting to become a front-end web developer.</p>
-                                    <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore">Read More</a>
+                                    <a href="https://benbourgon.medium.com/trading-call-sheets-for-style-sheets-ad82a2f12d20" class="readMore" aria-hidden="true">Read More</a>
                                 </div> <!--.contentContainer end-->
                             </div> <!--.flexContainer end-->
                         </article>
@@ -381,6 +381,7 @@
                 </ul>
                 <form class="profileForm">
                     <fieldset class="profileNavFieldset">
+                        <legend class="sr-only">Choose an option to learn more about me</legend>
                         <input type="radio" name="profileNav" id="profileAboutMe" class="sr-only" value="aboutMe" checked>
                         <label for="profileAboutMe" class="profileFormIcon" tabindex="0">
                             <i class="icon-user">
@@ -433,32 +434,27 @@
                 <nav>
                     <ul>
                         <li>
-                            <label for="gitHubContact" class="sr-only">My GitHub profile</label>
-                            <a href="https://github.com/benbourgon" target="_blank" rel="noopener">
+                            <a href="https://github.com/benbourgon" target="_blank" rel="noopener" aria-label="My GitHub Profile">
                                 <i id="gitHubContact" class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <label for="linkedInContact" class="sr-only">My LinkedIn Profile</label>
-                            <a href="https://www.linkedin.com/in/benbourgon/" target="_blank" rel="noopener">
+                            <a href="https://www.linkedin.com/in/benbourgon/" target="_blank" rel="noopener" aria-label="My LinkedIn Profile">
                                 <i id="linkedInContact" class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <label for="twitterContact" class="sr-only">My Twitter profile</label>
-                            <a href="https://twitter.com/benbourgon" target="_blank" rel="noopener">
+                            <a href="https://twitter.com/benbourgon" target="_blank" rel="noopener" aria-label="My Twitter Profile">
                                 <i id="twitterContact" class="icon-social-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <label for="emailContactIcon" class="sr-only">Send me an email</label>
-                            <a href="mailto:benjaminbourgon@gmail.com">
+                            <a href="mailto:benjaminbourgon@gmail.com" aria-label="Send me an email">
                                 <i id="emailContactIcon" class="icon-envelope" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <label for="calendlyIcon" class="sr-only">Schedule a meeting with my Calendly</label>
-                            <a href="https://calendly.com/benbourgon" target="_blank" rel="noopener">
+                            <a href="https://calendly.com/benbourgon" target="_blank" rel="noopener" aria-label="Schedule a meeting with me with Calendly">
                                 <i id="calendlyIcon" class="icon-calendar" aria-hidden="true"></i>
                             </a>
                         </li>

@@ -157,7 +157,7 @@ header {
         width: 100%;
     }
     a:visited {
-        color: $purple-plum;
+        color: $blue-sapphire;
     }
     p {
         font-size: $bodySize;
@@ -184,7 +184,7 @@ header {
         
         i {
             font-size: 5.0rem;
-            color: $purple-plum;
+            color: $blue-sapphire;
         }
     }
 
@@ -228,7 +228,7 @@ header {
     .requestResume,
     .meetWithMe {
         text-align: center;
-        background-color: $purple-plum;
+        background-color: $blue-sapphire;
         background-size: cover;
         color: white;
 
@@ -251,7 +251,7 @@ header {
     input[type="radio"] {
         &:checked {
             + label {
-                color: $purple-plum;
+                color: $blue-sapphire;
             }
         }
     }
