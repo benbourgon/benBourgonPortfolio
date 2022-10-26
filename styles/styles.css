@@ -720,6 +720,21 @@ header {
   max-width: 100%;
   background-color: #135c71;
 }
+header .skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+}
+header .skipLink:focus {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 header a:focus,
 header button:focus {
   outline: 3px solid #eca38e;
@@ -1167,43 +1182,6 @@ footer a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.projects .taglinesProject {
-  background-color: #ef8354;
-}
-.projects .taglinesProject a {
-  background-color: #ef8354;
-}
-.projects .underTheSeaProject {
-  background-color: #135c71;
-  color: white;
-}
-.projects .underTheSeaProject h3, .projects .underTheSeaProject i, .projects .underTheSeaProject a {
-  color: white;
-}
-.projects .underTheSeaProject a {
-  background-color: #135c71;
-}
-.projects .underTheSeaProject .githubLink,
-.projects .underTheSeaProject .viewLiveLink {
-  border: 1px solid white;
-}
-.projects .underTheSeaProject .githubLink:hover, .projects .underTheSeaProject .githubLink:focus,
-.projects .underTheSeaProject .viewLiveLink:hover,
-.projects .underTheSeaProject .viewLiveLink:focus {
-  border: 3px solid white;
-}
-.projects .goodGamesProject {
-  background-color: #83bca9;
-}
-.projects .goodGamesProject a {
-  background-color: #83bca9;
-}
-.projects .gameBoyConfigProject {
-  background-color: #a755c2;
-}
-.projects .gameBoyConfigProject a {
-  background-color: #a755c2;
 }
 .projects .projectTitle {
   justify-self: center;

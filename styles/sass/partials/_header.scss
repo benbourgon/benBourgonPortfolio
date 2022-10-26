@@ -4,6 +4,22 @@ header {
     max-width: 100%;
     background-color: $blue-sapphire;
 
+    .skipLink {
+            position: absolute;
+            left: -1000px;
+            top: 5px;
+            z-index: 999;
+            background: white;
+            color: black;
+            padding: 10px 15px;
+            margin-bottom: 25px;
+        }
+    
+    .skipLink:focus {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+    
     a:focus,
     button:focus {
         outline: 3px solid $inverse-blue;

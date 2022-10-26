@@ -92,51 +92,6 @@
         align-items: center;
     }
 
-    .taglinesProject {
-        background-color: $mandarin;
-
-        a {
-            background-color: $mandarin;
-        }
-    }
-    .underTheSeaProject {
-        background-color: $blue-sapphire;
-        color: white;
-
-        h3, i, a {
-            color: white;
-        }
-        a {
-            background-color: $blue-sapphire;
-        }
-
-        .githubLink,
-        .viewLiveLink {
-            border: 1px solid white;
-
-            &:hover,
-            &:focus {
-                border: 3px solid white;
-            }
-        }
-    }
-
-    .goodGamesProject {
-        background-color: $green-sheen;
-
-        a {
-            background-color: $green-sheen;
-        }
-    }
-
-    .gameBoyConfigProject {
-        background-color: $purple-plum;
-
-        a {
-            background-color: $purple-plum;
-        }
-    }
-
     .projectTitle {
         justify-self: center;
         width: 100%;

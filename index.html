@@ -21,66 +21,67 @@
 </head>
 <body>
     <header>
-            <div class="wrapper">
-                <nav class="headerNav">
-                    <div class="mobileContainer">
-                        <ul class="mobileNavList">
-                            <li>
-                                <a class="mobileMenuLink" href="#projects">My Work</a>
-                            </li>
-                            <li>
-                                <a class="mobileMenuLink" href="#profile">Profile</a>
-                            </li>
-                            <li>
-                                <a class="mobileMenuLink" href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="mobileFlexContainer">
-                            <a href="#about" class="logoContainer logoLink">
-                                <div class="logoCircle">
-                                    <span class="sr-only">About</span>
-                                    <h3 class="logo" aria-hidden="true">BB</h3>
-                                </div>
-                            </a>
-                            <button class="mobileNavButton">
-                                <i class="fa-solid fa-bars"></i>
-                                <p class="navButtonText">Menu</p>
-                            </button> <!--.mobileNavButton end-->
-                        </div>
-                    </div> <!--.mobileContainer end-->
-                    <ul class="desktopNav">
-                        <li class="desktopLogoContainer" class="mobileMenuLink">
-                            <a href="#about">
-                                <div class="logoCircle">
-                                    <span class="sr-only">About</span>
-                                    <h3 class="logo" aria-hidden="true">BB</h3>
-                                </div>
-                            </a>
-                        </li> <!--.desktopLogoContainer-->
+        <a href="#about" class="skipLink">Skip to Main Content</a>
+        <div class="wrapper">
+            <nav class="headerNav">
+                <div class="mobileContainer">
+                    <ul class="mobileNavList">
                         <li>
-                            <a href="#projects">My Work</a>
+                            <a class="mobileMenuLink" href="#projects">My Work</a>
                         </li>
                         <li>
-                            <a href="#profile">Profile</a>
+                            <a class="mobileMenuLink" href="#profile">Profile</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a class="mobileMenuLink" href="#contact">Contact</a>
                         </li>
-                    </ul> <!--.desktopNav end-->
-                </nav>
-                <div class="headingContainer">
-                    <h1>
-                        <span class="firstName">Ben</span>Bourgon
-                    </h1>
-                    <h3>Front-End Developer</h3>
-                </div> <!---headingContainer end-->
-                <div class="downArrowContainer">
-                    <a class="downArrow" href="#about">
-                        <span class="sr-only">Skip to About Section</span>
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </a>
-                </div>
-            </div> <!--header .wrapper end-->
+                    </ul>
+                    <div class="mobileFlexContainer">
+                        <a href="#about" class="logoContainer logoLink">
+                            <div class="logoCircle">
+                                <span class="sr-only">About</span>
+                                <h3 class="logo" aria-hidden="true">BB</h3>
+                            </div>
+                        </a>
+                        <button class="mobileNavButton">
+                            <i class="fa-solid fa-bars"></i>
+                            <p class="navButtonText">Menu</p>
+                        </button> <!--.mobileNavButton end-->
+                    </div>
+                </div> <!--.mobileContainer end-->
+                <ul class="desktopNav">
+                    <li class="desktopLogoContainer" class="mobileMenuLink">
+                        <a href="#about">
+                            <div class="logoCircle">
+                                <span class="sr-only">About</span>
+                                <h3 class="logo" aria-hidden="true">BB</h3>
+                            </div>
+                        </a>
+                    </li> <!--.desktopLogoContainer-->
+                    <li>
+                        <a href="#projects">My Work</a>
+                    </li>
+                    <li>
+                        <a href="#profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul> <!--.desktopNav end-->
+            </nav>
+            <div class="headingContainer">
+                <h1>
+                    <span class="firstName">Ben</span>Bourgon
+                </h1>
+                <h3>Front-End Developer</h3>
+            </div> <!---headingContainer end-->
+            <div class="downArrowContainer">
+                <a class="downArrow" href="#about">
+                    <span class="sr-only">Skip to About Section</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div> <!--header .wrapper end-->
     </header>
     <main>
         <section class="about" id="about">
@@ -91,7 +92,7 @@
                 </div>
                 <div class="flexContainer">
                     <div class="imageContainer">
-                        <img src="./assets/benBioCropped.png" alt="A picture of me, Ben Bourgon, the web developer writing this alt text!" loading="lazy">
+                        <img src="./assets/benBioCropped.webp" alt="A picture of me, Ben Bourgon, the web developer writing this alt text!" loading="lazy">
                     </div> <!--.imageContainer end-->
                     <div class="contentContainer">
                         <h3>I'm Ben, a Front-End Developer based in Toronto, ON.</h3>
@@ -190,7 +191,7 @@
                     <li class="projectListItem taglinesProject">
                         <a href="https://pairedproject.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Taglines...with a Vengeance!</h3></a>
                         <div class="flexContainer">
-                            <img class="mockup" src="./assets/projectScreenshots/taglinesMockupOrange.png" alt="The 'Taglines..with a Vengeance!' website" loading="lazy">
+                            <img class="mockup" src="./assets/projectScreenshots/taglinesMockupBlue.webp" alt="The 'Taglines..with a Vengeance!' website" loading="lazy">
                             <div class="projectContentContainer">
                                 <p class="projectDescription">Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the <a href="https://www.themoviedb.org/documentation/api" target="_blank" rel="noopener">TMDb API</a>.</p>
                                 <ul>
@@ -221,7 +222,7 @@
                     <li class="projectListItem underTheSeaProject">
                         <a href="https://underthesea-benbourgon.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Under the Sea</h3></a>
                         <div class="flexContainer rowReverse">
-                            <img class="mockup" src="./assets/projectScreenshots/underTheSeaMockupSapphire.png" alt="The 'Under the Sea' website" loading="lazy">
+                            <img class="mockup" src="./assets/projectScreenshots/underTheSeaMockupBlueJeans.webp" alt="The 'Under the Sea' website" loading="lazy">
                             <div class="projectContentContainer">
                                 <p class="projectDescription">A multi-page responsive PSD conversion with an aquarium theme and styled with a number of elements that expand beyond their containers.</p>
                                 <ul>
@@ -248,7 +249,7 @@
                     <li class="projectListItem goodGamesProject">
                         <a href="https://goodgoodgames.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Good Good Games</h3></a>
                         <div class="flexContainer">
-                            <img class="mockup" src="./assets/projectScreenshots/goodGoodGamesMockupGreen.png"
+                            <img class="mockup" src="./assets/projectScreenshots/goodGoodGamesMockupBlue.webp"
                             alt="The 'Good Good Games' website" loading="lazy">
                             <div class="projectContentContainer">
                                 <p class="projectDescription">Recommends video games based on the user's chosen genre and console, providing a random game with a score above 75% on Metacritic.</p>
@@ -280,7 +281,7 @@
                     <li class="projectListItem gameBoyConfigProject">
                         <a href="https://gameboymodconfigurator.netlify.app/" class="projectTitle" target="_blank" rel="noopener"><h3>Game Boy Configurator</h3></a>
                         <div class="flexContainer rowReverse">
-                            <img class="mockup" src="./assets/projectScreenshots/gameBoyConfiguratorMockupPurple.png" alt="The 'Game Boy Mod Configurator' website" loading="lazy">
+                            <img class="mockup" src="./assets/projectScreenshots/gameBoyConfiguratorMockupBlue.webp" alt="The 'Game Boy Mod Configurator' website" loading="lazy">
                             <div class="projectContentContainer">
                                 <p class="projectDescription">Inspired by my hobby of modifying gaming consoles and controllers, this tool will help to plan your ultimate custom Game Boy.</p>
                                 <ul>
