@@ -71,13 +71,7 @@
 }
 // Projects section
 .projects {
-    background-color: $blue-jeans;
-    color: black;
-
-    a,
-    i {
-        color: black;
-    }
+    background-color: $blue-sapphire;
 
     ul {
         display: flex;
@@ -97,18 +91,9 @@
         width: 100%;
         border: none;
         z-index: 10;
+        margin: 10px 0;
+        width: 100%;
 
-        h3 {
-            margin: 10px 0;
-            width: 100%;
-        }
-
-        &:hover,
-        &:focus {
-            transform: none;
-            transition: 0.2s;
-            text-decoration: underline;
-        }
     }
     .flexContainer {
         display: flex;
@@ -118,8 +103,9 @@
     }
     .projectListItem {
         margin: 25px 0;
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 50px;
+        box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+        background-color: white;
     }
     .projectDescription {
         width: 100%;
@@ -147,7 +133,7 @@
     .githubLink,
     .viewLiveLink {
         text-align: center;
-        background-color: $blue-jeans;
+        background-color: white;
         margin-top: 25px;
         width: 200px;
         height: 50px;
