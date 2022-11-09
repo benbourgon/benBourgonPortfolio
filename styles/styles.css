@@ -389,11 +389,23 @@ header a, header button {
   line-height: 2.8rem;
 }
 
+.projects h2, .projects h4 {
+  color: white;
+}
+.projects .subHeadingContainer h4 {
+  border-left: 1px solid white;
+}
 .projects h3 {
   font-size: 18px;
   font-size: 1.8rem;
   text-align: center;
   margin: 50px 0 40px 0;
+  color: black;
+}
+.projects a,
+.projects i,
+.projects p {
+  color: black;
 }
 .projects p {
   font-size: 16px;
@@ -418,6 +430,7 @@ header a, header button {
   text-align: left;
   font-size: 1.7rem;
   width: 100%;
+  margin-top: 0;
 }
 .blog a:visited {
   color: #135c71;
@@ -1152,12 +1165,7 @@ footer a:focus {
 }
 
 .projects {
-  background-color: #63adf2;
-  color: black;
-}
-.projects a,
-.projects i {
-  color: black;
+  background-color: #135c71;
 }
 .projects ul {
   display: -webkit-box;
@@ -1188,17 +1196,8 @@ footer a:focus {
   width: 100%;
   border: none;
   z-index: 10;
-}
-.projects .projectTitle h3 {
   margin: 10px 0;
   width: 100%;
-}
-.projects .projectTitle:hover, .projects .projectTitle:focus {
-  -webkit-transform: none;
-          transform: none;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  text-decoration: underline;
 }
 .projects .flexContainer {
   display: -webkit-box;
@@ -1215,9 +1214,10 @@ footer a:focus {
 }
 .projects .projectListItem {
   margin: 25px 0;
-  padding: 20px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+  background-color: white;
 }
 .projects .projectDescription {
   width: 100%;
@@ -1251,7 +1251,7 @@ footer a:focus {
 .projects .githubLink,
 .projects .viewLiveLink {
   text-align: center;
-  background-color: #63adf2;
+  background-color: white;
   margin-top: 25px;
   width: 200px;
   height: 50px;

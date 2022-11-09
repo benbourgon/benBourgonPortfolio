@@ -126,10 +126,22 @@ header {
 
 // projects section typography
 .projects {
+    h2, h4 {
+        color: white;
+    }
+    .subHeadingContainer h4 {
+        border-left: 1px solid white;
+    }
     h3 {
         @include fontSize(18);
         text-align: center;
         margin: 50px 0 40px 0;
+        color: black;
+    }
+    a,
+    i,
+    p {
+        color: black;
     }
     p {
         @include fontSize(16);
@@ -155,6 +167,7 @@ header {
         text-align: left;
         font-size: $heading3Size;
         width: 100%;
+        margin-top: 0;
     }
     a:visited {
         color: $blue-sapphire;
