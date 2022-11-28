@@ -156,11 +156,14 @@
         .myProfileLink {
             font-size: calc($bodySize * 1.2)
         }
+        h3 {
+            margin-top: 0;
+        }
         .flexContainer {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
         }
         .contentContainer {
             flex-basis: 47%;
@@ -345,8 +348,10 @@
             font-size: calc($heading3Size * 1.4);
             line-height: calc($heading3Size * 2);
         }
+
         .imageContainer {
-            justify-content: flex-start;
+            justify-content: center;
+            padding-bottom: 0;        
         }
     }
     // 940px skills media queries
