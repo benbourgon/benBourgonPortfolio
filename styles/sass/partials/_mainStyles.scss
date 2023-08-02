@@ -25,6 +25,7 @@
 	}
 	.imageContainer {
 		width: 85%;
+		aspect-ratio: 2 / 3;
 	}
 }
 .myProfileLink,
@@ -285,8 +286,8 @@
 		padding: 10px 5px;
 		margin: 10px 0;
 		border: none;
-		transition: 0.1s;
 		border-bottom: 1px solid white;
+		transition: 0.1s;
 		background-color: $blue-sapphire;
 		width: 100%;
 		max-width: 100%;
@@ -298,12 +299,12 @@
 
 		&:focus,
 		&:hover {
-			border-bottom: 3px solid $inverse-blue;
+			border-bottom: 3px solid white;
 		}
 		&:focus {
-			background-color: $inverse-blue;
+			background-color: white;
 			color: black;
-			outline: 3px solid $inverse-blue;
+			outline: 3px solid white;
 		}
 	}
 	textarea {
@@ -312,7 +313,7 @@
 		border: 1px solid white;
 		&:focus,
 		&:hover {
-			border: 3px solid $inverse-blue;
+			border: 3px solid white;
 		}
 	}
 	.yourMessageLabel {
@@ -333,17 +334,17 @@
 		cursor: pointer;
 
 		&:focus {
-			outline: 3px solid $inverse-blue;
+			outline: 3px solid white;
 		}
 		&:active {
-			background-color: $inverse-blue;
+			background-color: white;
 			color: black;
 			border: none;
 			outline: none;
 		}
 	}
 	a:focus {
-		outline: 3px solid $inverse-blue;
+		outline: 3px solid white;
 	}
 	nav {
 		max-width: 100%;

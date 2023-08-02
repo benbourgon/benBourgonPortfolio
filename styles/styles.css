@@ -720,7 +720,6 @@ button:hover, button:focus {
   height: 50px;
   margin-left: 40%;
   padding-left: 10px;
-  padding-top: 34px;
   text-align: left;
   border-left: 1px solid black;
 }
@@ -1118,6 +1117,7 @@ footer a:focus {
 }
 .about .imageContainer {
   width: 85%;
+  aspect-ratio: 2/3;
 }
 
 .myProfileLink,
@@ -1464,9 +1464,9 @@ footer a:focus {
   padding: 10px 5px;
   margin: 10px 0;
   border: none;
+  border-bottom: 1px solid white;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  border-bottom: 1px solid white;
   background-color: #135c71;
   width: 100%;
   max-width: 100%;
@@ -1491,13 +1491,13 @@ footer a:focus {
 .contact input:focus, .contact input:hover,
 .contact textarea:focus,
 .contact textarea:hover {
-  border-bottom: 3px solid #eca38e;
+  border-bottom: 3px solid white;
 }
 .contact input:focus,
 .contact textarea:focus {
-  background-color: #eca38e;
+  background-color: white;
   color: black;
-  outline: 3px solid #eca38e;
+  outline: 3px solid white;
 }
 .contact textarea {
   height: 275px;
@@ -1505,7 +1505,7 @@ footer a:focus {
   border: 1px solid white;
 }
 .contact textarea:focus, .contact textarea:hover {
-  border: 3px solid #eca38e;
+  border: 3px solid white;
 }
 .contact .yourMessageLabel {
   padding: 25px 5px 5px 2px;
@@ -1525,16 +1525,16 @@ footer a:focus {
   cursor: pointer;
 }
 .contact .sendButton:focus {
-  outline: 3px solid #eca38e;
+  outline: 3px solid white;
 }
 .contact .sendButton:active {
-  background-color: #eca38e;
+  background-color: white;
   color: black;
   border: none;
   outline: none;
 }
 .contact a:focus {
-  outline: 3px solid #eca38e;
+  outline: 3px solid white;
 }
 .contact nav {
   max-width: 100%;
