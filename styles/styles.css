@@ -233,6 +233,7 @@ html {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  -webkit-font-smoothing: antialiased;
 }
 .icon-user,
 .icon-energy,
