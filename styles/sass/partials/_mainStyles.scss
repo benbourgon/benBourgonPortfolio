@@ -2,373 +2,372 @@
 
 // About section
 .about {
-    background-color: white;
-    color: black;
-    img {
-        flex-basis: 100%;
-        box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
-    }
+	background-color: white;
+	color: black;
+	img {
+		flex-basis: 100%;
+		box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+	}
 
-    h3 {
-        @include fontSize(17);
-    }
-    .aboutLinkContainer {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .flexContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .imageContainer {
-        width: 85%;
-    }
+	h3 {
+		@include fontSize(17);
+	}
+	.aboutLinkContainer {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.flexContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.imageContainer {
+		width: 85%;
+	}
 }
 .myProfileLink,
 .readMore {
-    margin-top: 50px;
-    transition: 0.2s ease-out;
-    text-decoration: underline;
-    padding: 10px 2px 5px 2px;
+	margin-top: 50px;
+	transition: 0.2s ease-out;
+	text-decoration: underline;
+	padding: 10px 2px 5px 2px;
 
-    &:hover,
-    &:focus {
-        font-weight: $bold;
-        transform: scale(1.1);
-    }
+	&:hover,
+	&:focus {
+		font-weight: $bold;
+		transform: scale(1.1);
+	}
 }
 
 // Skills section
 .skills {
-    background-color: $grey;
-    ul {
-        color: $blue-sapphire;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    li {
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        flex-basis: 42%;
-    }
-    h2, h4 {
-        color: black;
-    }
-    .firebaseIcon,
-    .adobeIcon {
-        max-width: 40px;
-        height: auto;
-    }
+	background-color: $grey;
+	ul {
+		color: $blue-sapphire;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	li {
+		margin: 10px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		flex-basis: 42%;
+	}
+	h2,
+	h4 {
+		color: black;
+	}
+	.firebaseIcon,
+	.adobeIcon {
+		max-width: 40px;
+		height: auto;
+	}
 }
 // Projects section
 .projects {
-    background-color: $blue-sapphire;
+	background-color: $blue-sapphire;
 
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-    li {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+	li {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .projectTitle {
-        justify-self: center;
-        width: 100%;
-        border: none;
-        z-index: 10;
-        margin: 10px 0;
-        width: 100%;
+	.projectTitle {
+		justify-self: center;
+		width: 100%;
+		border: none;
+		z-index: 10;
+		margin: 10px 0;
+		width: 100%;
+	}
+	.flexContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	.projectListItem {
+		margin: 25px 0;
+		padding: 50px;
+		box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+		background-color: white;
+	}
+	.projectDescription {
+		width: 100%;
+		margin-top: 10px;
 
-    }
-    .flexContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .projectListItem {
-        margin: 25px 0;
-        padding: 50px;
-        box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
-        background-color: white;
-    }
-    .projectDescription {
-        width: 100%;
-        margin-top: 10px;
+		a {
+			text-decoration: underline;
+		}
+	}
+	.techListItem {
+		flex-basis: 24%;
+		margin-top: 10px;
+		text-align: center;
+		border: none;
+	}
+	.sanityIcon {
+		width: 36px;
+		height: 36px;
+	}
+	.linksContainer {
+		margin-top: 5px;
+		flex-basis: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.githubLink,
+	.viewLiveLink {
+		text-align: center;
+		background-color: white;
+		margin-top: 25px;
+		width: 200px;
+		height: 50px;
+		border-radius: 25px;
+		padding: 15px 10px;
+		border: 1px solid black;
 
-        a {
-            text-decoration: underline;
-        }
-    }
-    .techListItem {
-        flex-basis: 24%;
-        margin-top: 10px;
-        text-align: center;
-        border: none;
-    }
-    .firebaseIcon {
-        color: black;
-    }
-    .linksContainer {
-        margin-top: 5px;
-        flex-basis: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .githubLink,
-    .viewLiveLink {
-        text-align: center;
-        background-color: white;
-        margin-top: 25px;
-        width: 200px;
-        height: 50px;
-        border-radius: 25px;
-        padding: 15px 10px;
-        border: 1px solid black;
-
-        &:hover,
-        &:focus {
-            border: 3px solid black;
-            font-weight: $bold;
-        }
-    }
+		&:hover,
+		&:focus {
+			border: 3px solid black;
+			font-weight: $bold;
+		}
+	}
 }
 // Blog section
 .blog {
-    color: black;
-    background-color: white;
-    .subHeadingContainer h4 {
-        padding-top: 16px;
-    }
-    .blogTitle {
-        &:hover,
-        &:focus {
-            transform: none;
-            text-decoration: underline;
-        }
-        z-index: 10;
-    }
-    p {
-        margin: 25px 0;
-    }
-    article {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .flexContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .readMore {
-        padding: 39px 2px 5px 2px;
-        width: fit-content;
-        margin: 0;
-    }
-    .contentContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+	color: black;
+	background-color: white;
+	.subHeadingContainer h4 {
+		padding-top: 16px;
+	}
+	.blogTitle {
+		&:hover,
+		&:focus {
+			transform: none;
+			text-decoration: underline;
+		}
+		z-index: 10;
+	}
+	p {
+		margin: 25px 0;
+	}
+	article {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+	}
+	.flexContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.readMore {
+		padding: 39px 2px 5px 2px;
+		width: fit-content;
+		margin: 0;
+	}
+	.contentContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
 // Profile section
 .profile {
-    color: black;
-    background-color: $grey;
-    transition: 0.3s ease-out;
+	color: black;
+	background-color: $grey;
+	transition: 0.3s ease-out;
 
-    .profileList {
-        width: 100%;
-    }
-    
-    .profileListItem {
-        background-color: white;
-        padding: 20px 20px;
-        min-height: 611px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	.profileList {
+		width: 100%;
+	}
 
-        ul {
-            list-style-type: disc;
-            list-style-position: inside;
-            display: block;
-        }
+	.profileListItem {
+		background-color: white;
+		padding: 20px 20px;
+		min-height: 611px;
+		width: 100%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-        li {
-            margin: 20px 0;
-            text-align: left;
-        }
-    }
-    .itemHeadingContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition-delay: 500ms;
-        i {
-            margin-right: 5px;
-            margin-bottom: 20px;
-        }
-    }
-    .linksContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+		ul {
+			list-style-type: disc;
+			list-style-position: inside;
+			display: block;
+		}
 
+		li {
+			margin: 20px 0;
+			text-align: left;
+		}
+	}
+	.itemHeadingContainer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition-delay: 500ms;
+		i {
+			margin-right: 5px;
+			margin-bottom: 20px;
+		}
+	}
+	.linksContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 // Profile radio buttons
 .profileForm {
-    label {
-        transition: 0.2s;
-        padding: 15px 20px;
-    }
-    fieldset {
-        display: flex;
-        justify-content: space-between;
-        border: none;
-        padding: 0;
-        margin: 15px 0;
-    }
-    .profileFormIcon {
-        &:hover,
-        &:focus {
-            transform: scale(1.4)
-        }
-    }
+	label {
+		transition: 0.2s;
+		padding: 15px 20px;
+	}
+	fieldset {
+		display: flex;
+		justify-content: space-between;
+		border: none;
+		padding: 0;
+		margin: 15px 0;
+	}
+	.profileFormIcon {
+		&:hover,
+		&:focus {
+			transform: scale(1.4);
+		}
+	}
 }
 
 // Contact section
 .contact {
-    background-color: $blue-sapphire;
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
+	background-color: $blue-sapphire;
+	overflow-x: hidden;
+	width: 100%;
+	max-width: 100%;
 
-    .wrapper {
-        overflow: hidden;
-    }
+	.wrapper {
+		overflow: hidden;
+	}
 
-    form,
-    .phoneEmailInputs {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    form {
-        width: 99%;
-        max-width: 99%;
-    }
-    .phoneEmailInputs {
-        width: 100%;
-    }
-    input,
-    textarea {
-        padding: 10px 5px;
-        margin: 10px 0;
-        border: none;
-        transition: 0.1s;
-        border-bottom: 1px solid white;
-        background-color: $blue-sapphire;
-        width: 100%;
-        max-width: 100%;
-        height: 50px;
+	form,
+	.phoneEmailInputs {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	form {
+		width: 99%;
+		max-width: 99%;
+	}
+	.phoneEmailInputs {
+		width: 100%;
+	}
+	input,
+	textarea {
+		padding: 10px 5px;
+		margin: 10px 0;
+		border: none;
+		transition: 0.1s;
+		border-bottom: 1px solid white;
+		background-color: $blue-sapphire;
+		width: 100%;
+		max-width: 100%;
+		height: 50px;
 
-        &::placeholder {
-            opacity: 1;
-        }
+		&::placeholder {
+			opacity: 1;
+		}
 
-        &:focus,
-        &:hover {
-            border-bottom: 3px solid $inverse-blue;
-        }
-        &:focus {
-            background-color: $inverse-blue;
-            color: black;
-            outline: 3px solid $inverse-blue;
-        }
-    }
-    textarea {
-        height: 275px;
-        max-width: 100%;
-        border: 1px solid white;
-        &:focus,
-        &:hover {
-            border: 3px solid $inverse-blue;
-        }
-    }
-    .yourMessageLabel {
-        padding: 25px 5px 5px 2px;
-        color: white;
-        align-self: flex-start;
-        width: 90%;
-        display: block;
-    }
+		&:focus,
+		&:hover {
+			border-bottom: 3px solid $inverse-blue;
+		}
+		&:focus {
+			background-color: $inverse-blue;
+			color: black;
+			outline: 3px solid $inverse-blue;
+		}
+	}
+	textarea {
+		height: 275px;
+		max-width: 100%;
+		border: 1px solid white;
+		&:focus,
+		&:hover {
+			border: 3px solid $inverse-blue;
+		}
+	}
+	.yourMessageLabel {
+		padding: 25px 5px 5px 2px;
+		color: white;
+		align-self: flex-start;
+		width: 90%;
+		display: block;
+	}
 
-    .sendButton {
-        width: 200px;
-        height: 50px;
-        border: 1px solid white;
-        border-radius: 25px;
-        padding: 10px 0;
-        margin: 25px 0;
-        cursor: pointer;
+	.sendButton {
+		width: 200px;
+		height: 50px;
+		border: 1px solid white;
+		border-radius: 25px;
+		padding: 10px 0;
+		margin: 25px 0;
+		cursor: pointer;
 
-        &:focus {
-            outline: 3px solid $inverse-blue;
-        }
-        &:active {
-            background-color: $inverse-blue;
-            color: black;
-            border: none;
-            outline: none;
-        }
-    }
-    a:focus {
-        outline: 3px solid $inverse-blue;
-    }
-    nav {
-        max-width: 100%;
-        overflow: hidden;
-    }
-    ul {
-        display: flex;
-        width: 250px;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        li {
-            display: flex;
-            justify-content: center;
-            width: 20%;
-            max-width: 20%;
-        }
-        a {
-            max-width: 100%;
-            padding: 0 5px;
-            z-index: 10;
-        }
-        i {
-            display: block;
-            max-width: 100%;
-        }
-    }
-
+		&:focus {
+			outline: 3px solid $inverse-blue;
+		}
+		&:active {
+			background-color: $inverse-blue;
+			color: black;
+			border: none;
+			outline: none;
+		}
+	}
+	a:focus {
+		outline: 3px solid $inverse-blue;
+	}
+	nav {
+		max-width: 100%;
+		overflow: hidden;
+	}
+	ul {
+		display: flex;
+		width: 250px;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		li {
+			display: flex;
+			justify-content: center;
+			width: 20%;
+			max-width: 20%;
+		}
+		a {
+			max-width: 100%;
+			padding: 0 5px;
+			z-index: 10;
+		}
+		i {
+			display: block;
+			max-width: 100%;
+		}
+	}
 }

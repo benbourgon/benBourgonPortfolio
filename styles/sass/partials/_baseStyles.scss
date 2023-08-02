@@ -1,90 +1,91 @@
 // base styles
 html {
-    @include boxReset;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    max-width: 100%;
+	@include boxReset;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	max-width: 100%;
+	scroll-padding-top: var(--scroll-padding, 0px);
 }
 body {
-    max-width: 100%;
-    overflow-x: hidden;
-    @include boxReset;
+	max-width: 100%;
+	overflow-x: hidden;
+	@include boxReset;
 }
 
 ul {
-    @include boxReset;
-    list-style: none;
+	@include boxReset;
+	list-style: none;
 }
 
-img { 
-    max-width: 100%;
-    height: auto;
-    display: block;
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 .wrapper {
-    @include boxReset;
-    max-width: 1100px;
-    width: 90%;
-    margin: 0 auto;
+	@include boxReset;
+	max-width: 1100px;
+	width: 90%;
+	margin: 0 auto;
 }
 
 a {
-    @include boxReset;
-    transition: 0.1s;
-    border: none;
-    
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-    }
+	@include boxReset;
+	transition: 0.1s;
+	border: none;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.1);
+	}
 }
 
 i {
-    font-size: $iconSize;
+	font-size: $iconSize;
 }
 
 section {
-    @include boxReset;
-    padding: 10rem 0;
+	@include boxReset;
+	padding: 10rem 0;
 
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 }
 
 button {
-    background-color: transparent;
-    border: none;
-    transition: 0.2s;
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-    }
-    cursor: pointer;
+	background-color: transparent;
+	border: none;
+	transition: 0.2s;
+	&:hover,
+	&:focus {
+		transform: scale(1.1);
+	}
+	cursor: pointer;
 }
 
 .subHeadingContainer {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
 
-    h4 {
-        width: fit-content;
-        height: 50px;
-        margin-left: 40%;
-        padding-left: 10px;
-        padding-top: 34px;
-        text-align: left;
-        border-left: 1px solid black;
-    }
+	h4 {
+		width: fit-content;
+		height: 50px;
+		margin-left: 40%;
+		padding-left: 10px;
+		padding-top: 34px;
+		text-align: left;
+		border-left: 1px solid black;
+	}
 }
 
 .hidden {
-    display: none;
+	display: none;
 }

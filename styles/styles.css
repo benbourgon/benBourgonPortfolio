@@ -617,6 +617,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
+  scroll-padding-top: var(--scroll-padding, 0px);
 }
 
 body {
@@ -743,13 +744,13 @@ header .skipLink {
   padding: 10px 15px;
   margin-bottom: 25px;
 }
-header .skipLink:focus {
+header .skipLink:focus-visible {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-header a:focus,
-header button:focus {
+header a:focus-visible,
+header button:focus-visible {
   outline: 3px solid #eca38e;
 }
 header .wrapper {
@@ -760,9 +761,9 @@ header .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   overflow-x: visible;
 }
 header .desktopNav {
@@ -781,7 +782,14 @@ header .headerNav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   overflow: hidden;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 header .mobileContainer {
   max-width: 100%;
@@ -789,9 +797,13 @@ header .mobileContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   padding: 0 10px;
 }
 header .mobileFlexContainer {
@@ -823,12 +835,12 @@ header .logoContainer {
   width: 80px;
   padding: 0;
 }
-header .logoContainer:focus, header .logoContainer:hover {
+header .logoContainer:focus-visible, header .logoContainer:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   outline: none;
 }
-header .logoContainer:focus .logoCircle {
+header .logoContainer:focus-visible .logoCircle {
   outline: 3px solid #eca38e;
 }
 header .logoCircle {
@@ -883,7 +895,7 @@ header .mobileNavList {
           justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start;
+          align-items: start;
   max-width: 100%;
   width: 100%;
   background-color: white;
@@ -911,7 +923,7 @@ header .mobileNavList a {
   padding: 5px 5px;
   width: 100px;
 }
-header .mobileNavList a:hover, header .mobileNavList a:focus {
+header .mobileNavList a:hover, header .mobileNavList a:focus-visible {
   border-bottom: 3px solid #135c71;
   -webkit-transform: none;
           transform: none;
@@ -926,14 +938,17 @@ header .navOpen {
   transition: display 0.3s;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  margin-bottom: 20rem;
   display: block;
   z-index: 100;
+  position: sticky;
+  top: 0;
 }
 header .navOpen .mobileContainer {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 20rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -946,7 +961,7 @@ header .navOpen button {
   -webkit-transition-delay: 100ms;
           transition-delay: 100ms;
 }
-header .navOpen button:focus {
+header .navOpen button:focus-visible {
   outline: 3px solid #a755c2;
 }
 header .navOpen .mobileNavList {
@@ -962,7 +977,7 @@ header .navOpen .mobileNavList {
 header .navOpen .navButtonText {
   display: none;
 }
-header .navOpen .logoContainer:focus .logoCircle {
+header .navOpen .logoContainer:focus-v .logoCircle {
   outline: 3px solid #a755c2;
 }
 header .navOpen .logoCircle {
@@ -971,7 +986,7 @@ header .navOpen .logoCircle {
   color: #135c71;
   border: 3px solid #135c71;
 }
-header .navOpen .mobileMenuLink:focus {
+header .navOpen .mobileMenuLink:focus-within {
   outline: 3px solid #a755c2;
 }
 header .headingContainer {
@@ -1013,7 +1028,7 @@ header .downArrowContainer .downArrow {
 header .downArrowContainer .downArrow:visited {
   color: white;
 }
-header .downArrowContainer .downArrow:focus {
+header .downArrowContainer .downArrow:focus-visible {
   outline: 3px solid #eca38e;
 }
 header .downArrowContainer i {
@@ -1156,7 +1171,8 @@ footer a:focus {
   -ms-flex-preferred-size: 42%;
       flex-basis: 42%;
 }
-.skills h2, .skills h4 {
+.skills h2,
+.skills h4 {
   color: black;
 }
 .skills .firebaseIcon,
@@ -1234,8 +1250,9 @@ footer a:focus {
   text-align: center;
   border: none;
 }
-.projects .firebaseIcon {
-  color: black;
+.projects .sanityIcon {
+  width: 36px;
+  height: 36px;
 }
 .projects .linksContainer {
   margin-top: 5px;
@@ -1559,11 +1576,11 @@ footer a:focus {
     font-size: 5.9996rem;
   }
   header h3,
-.about h3,
-.about p,
-.projects h3,
-.myProfileLink,
-.readMore {
+  .about h3,
+  .about p,
+  .projects h3,
+  .myProfileLink,
+  .readMore {
     font-size: 1.87rem;
     line-height: 3.08rem;
   }
@@ -1677,8 +1694,8 @@ footer a:focus {
     transition: 200ms ease-out;
   }
   .about h3,
-.about p,
-.about .myProfileLink {
+  .about p,
+  .about .myProfileLink {
     font-size: 1.92rem;
   }
   .about h3 {
@@ -1835,7 +1852,7 @@ footer a:focus {
     min-height: 512px;
   }
   .profile p,
-.profile .profileListItem li {
+  .profile .profileListItem li {
     font-size: 1.92rem;
   }
   .profile .linksContainer {
@@ -1905,8 +1922,8 @@ footer a:focus {
     font-size: 5.1rem;
   }
   .about h3,
-.about p,
-.about .myProfileLink {
+  .about p,
+  .about .myProfileLink {
     font-size: 2.38rem;
     line-height: 3.4rem;
   }
@@ -1937,7 +1954,7 @@ footer a:focus {
     padding-top: 7px;
   }
   .blog p,
-.blog .readMore {
+  .blog .readMore {
     font-size: 2.55rem;
     line-height: 3.4rem;
   }
@@ -1945,8 +1962,8 @@ footer a:focus {
     min-height: 607px;
   }
   .profile .profileListItem p,
-.profile .profileListItem li,
-.profile .profileInstructions {
+  .profile .profileListItem li,
+  .profile .profileInstructions {
     font-size: 2.38rem;
     line-height: 3.57rem;
   }
