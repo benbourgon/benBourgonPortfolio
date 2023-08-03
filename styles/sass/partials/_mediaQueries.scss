@@ -116,7 +116,7 @@
 					border-bottom: 3px solid white;
 				}
 				&:focus {
-					outline: 3px solid $inverse-blue;
+					outline: 3px solid white;
 				}
 			}
 		}
@@ -133,9 +133,10 @@
 					transform: scale(1.1);
 				}
 			}
-			&:focus {
+			&:focus-visible {
 				.logoCircle {
-					outline: 3px solid $inverse-blue;
+					outline-offset: 0.5rem;
+					outline: 3px solid white;
 				}
 			}
 			.logoCircle {
@@ -232,30 +233,6 @@
 			a {
 				flex-basis: 30%;
 			}
-		}
-	}
-
-	// 768px blog section media queries
-	.blog {
-		h3 {
-			font-size: calc($heading3Size * 2);
-		}
-		p {
-			margin-top: 0;
-			font-size: calc($bodySize * 1.5);
-		}
-		img {
-			max-width: 52%;
-		}
-		.flexContainer {
-			flex-direction: row;
-			.contentContainer {
-				flex-basis: 45%;
-				justify-content: flex-start;
-			}
-		}
-		.readMore {
-			padding-top: 62px;
 		}
 	}
 	// 768px profile section media queries
@@ -372,18 +349,6 @@
 		.projectDescription {
 			font-size: calc($bodySize * 1.6);
 			line-height: calc($bodySize * 2.6);
-		}
-	}
-	.blog {
-		.subHeadingContainer h4 {
-			height: 60px;
-			padding-top: 7px;
-		}
-
-		p,
-		.readMore {
-			font-size: calc($heading3Size * 1.5);
-			line-height: calc($heading3Size * 2);
 		}
 	}
 	// 940px profile section media queries

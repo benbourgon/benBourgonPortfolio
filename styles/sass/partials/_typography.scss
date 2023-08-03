@@ -1,340 +1,345 @@
 // TYPOGRAPHY
 
 html {
-    font-size: 62.5%; // base font size of 10px;
+	font-size: 62.5%; // base font size of 10px;
 }
 
 // Universal font styling
 body {
-    font-family: $bodyFont, sans-serif;
-    font-size: $bodySize;
-    font-weight: $regular;
-    line-height: $bodyHeight;
-    font-display: swap;
-    color: white;
+	font-family: $bodyFont, sans-serif;
+	font-size: $bodySize;
+	font-weight: $regular;
+	line-height: $bodyHeight;
+	font-display: swap;
+	color: white;
 }
 
 p {
-    line-height: $roomyLineHeight;
+	line-height: $roomyLineHeight;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 h2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: $heading2Size;
-    @include boxReset;
-    margin: 0 auto 50px auto;
-    width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: $heading2Size;
+	@include boxReset;
+	margin: 0 auto 50px auto;
+	width: 100%;
 }
 
 h3 {
-    font-size: $heading3Size;
+	font-size: $heading3Size;
 }
 
 h4 {
-    @include boxReset;
-    font-family: $subHeadingFont, serif;
-    font-size: $heading4Size;
-    font-weight: $regular;
-    text-transform: lowercase;
-    text-align: center;
+	@include boxReset;
+	font-family: $subHeadingFont, serif;
+	font-size: $heading4Size;
+	font-weight: $regular;
+	text-transform: lowercase;
+	text-align: center;
 }
 
 .myProfileLink,
 .readMore {
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-align: center;
-    color: $blue-sapphire;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-align: center;
+	color: $blue-sapphire;
 }
 
 // header typography
 header {
-    color: white;
-    .logo {
-        font-family: "Montserrat",
-            sans-serif;
-        font-weight: $bold;
-    }
+	color: white;
+	.logo {
+		font-family: "Montserrat", sans-serif;
+		font-weight: $bold;
+	}
 
-    h1 {
-        text-align: center;
-    
-        .firstName {
-            display: block;
-            font-size: $benHeadingSize;
-            line-height: $benHeadingHeight;
-        }
-    
-        font-family: $headingFont,
-        sans-serif;
-        font-size: $bourgonHeadingSize;
-        display: block;
-        text-transform: uppercase;
-        font-weight: $bold;
-        line-height: $bourgonHeadingHeight;
-        @include boxReset;
-    }
-    
-    h3 {
-        font-family: $headingFont, sans-serif;
-        font-weight: $regular;
-        font-size: $heading3Size;
-        display: block;
-        @include boxReset;
-    }
-    
-    p {
-        font-family: $bodyFont,
-            sans-serif;
-        font-weight: $regular;
-        font-size: $bodySize;
-        display: block;
-        @include boxReset;
-        margin-top: 100px;
-    }
-    a, button {
-        color: white;
-    }
+	h1 {
+		text-align: center;
+
+		.firstName {
+			display: block;
+			font-size: $benHeadingSize;
+			line-height: $benHeadingHeight;
+		}
+
+		font-family: $headingFont, sans-serif;
+		font-size: $bourgonHeadingSize;
+		display: block;
+		text-transform: uppercase;
+		font-weight: $bold;
+		line-height: $bourgonHeadingHeight;
+		@include boxReset;
+	}
+
+	h3 {
+		font-family: $headingFont, sans-serif;
+		font-weight: $regular;
+		font-size: $heading3Size;
+		display: block;
+		@include boxReset;
+	}
+
+	p {
+		font-family: $bodyFont, sans-serif;
+		font-weight: $regular;
+		font-size: $bodySize;
+		display: block;
+		@include boxReset;
+		margin-top: 100px;
+	}
+	a,
+	button {
+		color: white;
+	}
 }
 // about section typography
 .about {
-    h3,
-    p {
-        font-size:  $heading3Size;
-        line-height: $roomyLineHeight;
-    }
-    a {
-        color: $blue-sapphire;
-        font-weight: $semiBold;
-        padding: 2px;
-    }
+	h3,
+	p {
+		font-size: $heading3Size;
+		line-height: $roomyLineHeight;
+	}
+	a {
+		color: $blue-sapphire;
+		font-weight: $semiBold;
+		padding: 2px;
+	}
 }
 
 // skills section typography
 .skills {
-    p {
-        @include fontSize(14);
-        text-align: center;
-        line-height: $roomyLineHeight;
-    }
+	p {
+		@include fontSize(14);
+		text-align: center;
+		line-height: $roomyLineHeight;
+	}
 }
 
 // projects section typography
 .projects {
-    h2, h4 {
-        color: white;
-    }
-    .subHeadingContainer h4 {
-        border-left: 1px solid white;
-    }
-    h3 {
-        @include fontSize(18);
-        text-align: center;
-        margin: 50px 0 40px 0;
-        color: black;
-    }
-    a,
-    i,
-    p {
-        color: black;
-    }
-    p {
-        @include fontSize(16);
-        line-height: $roomyLineHeight;
-    }
-    .techListItem p {
-        @include fontSize(14);
-    }
-    .githubLink,
-    .viewLiveLink {
-        font-weight: $semiBold;
-        text-transform: uppercase;
-        line-height: $bodyHeight;
-    }
+	h2,
+	h4 {
+		color: white;
+	}
+	.subHeadingContainer h4 {
+		border-left: 1px solid white;
+	}
+	h3 {
+		@include fontSize(18);
+		text-align: center;
+		margin: 50px 0 40px 0;
+		color: black;
+	}
+	i,
+	p {
+		color: black;
+	}
+	a {
+		color: $blue-sapphire;
+		text-underline-offset: 0.5rem;
+	}
+	a:visited {
+		color: $purple-plum;
+	}
+	p {
+		@include fontSize(16);
+		line-height: $roomyLineHeight;
+	}
+	.techListItem p {
+		@include fontSize(14);
+	}
+	.githubLink,
+	.viewLiveLink {
+		font-weight: $semiBold;
+		text-transform: uppercase;
+		line-height: $bodyHeight;
+	}
 }
 
 // blog section typography
 .blog {
-    .writing {
-        display: block;
-    }
-    h3 {
-        text-align: left;
-        font-size: $heading3Size;
-        width: 100%;
-        margin-top: 0;
-    }
-    a:visited {
-        color: $blue-sapphire;
-    }
-    p {
-        font-size: $bodySize;
-        line-height: $roomyLineHeight;
-    }
-    .readMore {
-        text-align: left;
-        font-weight: $semiBold;
-    }
+	.writing {
+		display: block;
+	}
+	h3 {
+		text-align: left;
+		font-size: $heading3Size;
+		width: 100%;
+		margin-top: 0;
+	}
+	p {
+		font-size: $bodySize;
+		line-height: $roomyLineHeight;
+	}
+	.readMore {
+		text-align: left;
+		font-weight: $semiBold;
+	}
 }
 
 // profile section typography
 .profile {
-    h3 {
-        text-transform: uppercase;
-        font-weight: $regular;
-        font-size: 3.0rem;
-    }
-    .profileInstructions {
-        padding: 0 15px;
-    }
-    .profileListItem {
-        @include fontSize(14);
-        
-        i {
-            font-size: 5.0rem;
-            color: $blue-sapphire;
-        }
-    }
+	h3 {
+		text-transform: uppercase;
+		font-weight: $regular;
+		font-size: 3rem;
+	}
+	.profileInstructions {
+		padding: 0 15px;
+	}
+	.profileListItem {
+		@include fontSize(14);
 
-    .profileLink {
-        font-weight: $semiBold;
-        text-transform: uppercase;
-        line-height: $bodyHeight;
-        padding: 10px 0;
-        margin: 25px 0;
-        border-radius: 25px;
-        width: 200px;
-        height: 50px;
-        transition: 0.2s ease-out;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+		i {
+			font-size: 5rem;
+			color: $blue-sapphire;
+		}
+	}
 
+	.profileLink {
+		font-weight: $semiBold;
+		text-transform: uppercase;
+		line-height: $bodyHeight;
+		padding: 10px 0;
+		margin: 25px 0;
+		border-radius: 25px;
+		width: 200px;
+		height: 50px;
+		transition: 0.2s ease-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-        &:hover,
-        &:focus {
-            text-decoration: none;
-        }
-    }
-    .coffeeLink {
-        margin-top: 25px;
-        width: 200px;
-        display: block;
-    }
-    .messageMe {
-        color: black;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+		&:focus-visible {
+			outline-offset: 0.2rem;
+			outline: 3px solid $blue-sapphire;
+		}
+	}
+	.coffeeLink {
+		margin-top: 25px;
+		width: 200px;
+		display: block;
+	}
+	.messageMe {
+		color: black;
+		border: 1px solid black;
+		display: flex;
+		justify-content: center;
 
-        &:focus,
-        &:hover {
-            font-weight: $bold;
-            border: 2px solid black;
-        }
-    }
-    .requestResume,
-    .meetWithMe {
-        text-align: center;
-        background-color: $blue-sapphire;
-        background-size: cover;
-        color: white;
+		&:focus,
+		&:hover {
+			font-weight: $bold;
+			border: 2px solid black;
+		}
+	}
+	.requestResume,
+	.meetWithMe {
+		text-align: center;
+		background-color: $blue-sapphire;
+		background-size: cover;
+		color: white;
 
-        &:focus,
-        &:hover {
-            height: 50px;
-            font-weight: $bold;
-        }
-    }
-    .meetWithMe {
-        padding-top: 15px;
-        margin-top: 0;
-    }
+		&:focus,
+		&:hover {
+			height: 50px;
+			font-weight: $bold;
+		}
+	}
+	.meetWithMe {
+		padding-top: 15px;
+		margin-top: 0;
+	}
 }
 .profileForm {
-    label {
-        line-height: $benHeadingHeight;
-        transition: none;
-    }
-    input[type="radio"] {
-        &:checked {
-            + label {
-                color: $blue-sapphire;
-            }
-        }
-    }
+	label {
+		line-height: $benHeadingHeight;
+		transition: none;
+	}
+	input[type="radio"] {
+		&:checked {
+			+ label {
+				color: $blue-sapphire;
+			}
+		}
+	}
 }
 // contact section typography
 .contact {
-    color: white;
+	color: white;
 
-    .subHeadingContainer h4 {
-        border-left: 1px solid white;
-    }
-    form {
-        font-family: $bodyFont,
-        sans-serif;
-        color: white;
+	.subHeadingContainer h4 {
+		border-left: 1px solid white;
+	}
+	form {
+		font-family: $bodyFont, sans-serif;
+		color: white;
 
-        input,
-        textarea {
-            font-family: $bodyFont,
-            sans-serif;
-        }
-    }
-    input,
-    textarea {
-        color: white;
-        &::-webkit-input-placeholder {
-            color: white;
-        }
+		input,
+		textarea {
+			font-family: $bodyFont, sans-serif;
+		}
+	}
+	input,
+	textarea {
+		color: white;
+		&::-webkit-input-placeholder {
+			color: white;
+		}
 
-        &:focus,
-        &:hover {
-            font-weight: $semiBold;
-            &::placeholder {
-                font-weight: $semiBold;
-            }
-        }
+		&:focus,
+		&:hover {
+			font-weight: $semiBold;
+			&::placeholder {
+				font-weight: $semiBold;
+			}
+		}
+	}
+	.sendButton {
+		text-transform: uppercase;
+		font-weight: $semiBold;
+		color: white;
+		font-family: $bodyFont, sans-serif;
 
-    }
-    .sendButton {
-        text-transform: uppercase;
-        font-weight: $semiBold;
-        color: white;
-        font-family: $bodyFont, sans-serif;
-
-        &:focus,
-        &:hover {
-            font-weight: $bold;
-            transform: scale(1.1);
-        }
-    }
-    a {
-        color: white;
-        margin: 15px 0;
-        height: 50px;
-        display: flex;
-        align-items: center;
-    }
-    p {
-        text-transform: uppercase;
-    }
-    .contactPhoneNumber,
-    .contactEmailAddress {
-        &:hover,
-        &:focus {
-            transform: none;
-            font-weight: $semiBold;
-        }
-    }
-    .contactPhoneNumber {
-        font-size: $phoneNumberSize;
-        margin-top: 0;
-    }
+		&:focus,
+		&:hover {
+			font-weight: $bold;
+			transform: scale(1.1);
+		}
+		&:focus-visible {
+			outline-offset: 0.2rem;
+			outline: 3px solid white;
+		}
+	}
+	a {
+		color: white;
+		margin: 15px 0;
+		height: 50px;
+		display: flex;
+		align-items: center;
+	}
+	p {
+		text-transform: uppercase;
+	}
+	.contactEmailAddress {
+		&:hover,
+		&:focus {
+			transform: none;
+			font-weight: $semiBold;
+		}
+		&:focus-visible {
+			outline-offset: 0.2rem;
+			outline: 3px solid white;
+		}
+	}
 }

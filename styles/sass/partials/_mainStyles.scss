@@ -4,9 +4,20 @@
 .about {
 	background-color: white;
 	color: black;
+
 	img {
 		flex-basis: 100%;
 		box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+	}
+
+	a {
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 0.5rem;
+		}
+		&:focus-visible {
+			outline: 3px solid $blue-sapphire;
+		}
 	}
 
 	h3 {
@@ -39,6 +50,10 @@
 	&:focus {
 		font-weight: $bold;
 		transform: scale(1.1);
+	}
+	&:focus-visible {
+		outline: 3px solid $blue-sapphire;
+		outline-offset: 0.5rem;
 	}
 }
 
@@ -113,7 +128,19 @@
 		margin-top: 10px;
 
 		a {
-			text-decoration: underline;
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:visited {
+				color: $purple-plum;
+			}
+
+			&:focus-visible {
+				text-decoration: underline;
+				outline-offset: 0.1rem;
+				outline: 3px solid $blue-sapphire;
+			}
 		}
 	}
 	.techListItem {
@@ -143,52 +170,19 @@
 		padding: 15px 10px;
 		border: 1px solid black;
 
-		&:hover,
-		&:focus {
+		&:hover {
 			border: 3px solid black;
 			font-weight: $bold;
 		}
-	}
-}
-// Blog section
-.blog {
-	color: black;
-	background-color: white;
-	.subHeadingContainer h4 {
-		padding-top: 16px;
-	}
-	.blogTitle {
-		&:hover,
-		&:focus {
-			transform: none;
-			text-decoration: underline;
+		&:focus-visible {
+			border: 3px solid black;
+			font-weight: $bold;
+			outline-offset: 0.2rem;
+			outline: 3px solid $blue-sapphire;
 		}
-		z-index: 10;
-	}
-	p {
-		margin: 25px 0;
-	}
-	article {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		justify-content: center;
-	}
-	.flexContainer {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-	.readMore {
-		padding: 39px 2px 5px 2px;
-		width: fit-content;
-		margin: 0;
-	}
-	.contentContainer {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		&:visited {
+			color: black;
+		}
 	}
 }
 // Profile section
@@ -253,9 +247,12 @@
 		&:focus {
 			transform: scale(1.4);
 		}
+		&:focus-visible {
+			outline: 3px solid $blue-sapphire;
+			outline-offset: -1rem;
+		}
 	}
 }
-
 // Contact section
 .contact {
 	background-color: $blue-sapphire;
@@ -293,8 +290,11 @@
 		max-width: 100%;
 		height: 50px;
 
-		&::placeholder {
+		&::placeholder,
+		&::-webkit-input-placeholder,
+		&::-moz-placeholder {
 			opacity: 1;
+			color: white;
 		}
 
 		&:focus,
@@ -305,6 +305,11 @@
 			background-color: white;
 			color: black;
 			outline: 3px solid white;
+			&::placeholder,
+			&::-webkit-input-placeholder,
+			&::-moz-placeholder {
+				color: black;
+			}
 		}
 	}
 	textarea {

@@ -10,6 +10,7 @@ mobileMenuApp.menuP = document.querySelector("navButtonText");
 mobileMenuApp.navigation = document.querySelector(".headerNav");
 mobileMenuApp.menuLink = document.querySelectorAll(".mobileMenuLink");
 mobileMenuApp.logoLink = document.querySelector(".logoLink");
+mobileMenuApp.skipLink = document.querySelector(".skipLink");
 
 // function to open the mobile navigation
 mobileMenuApp.openMobileNav = () => {
@@ -20,6 +21,8 @@ mobileMenuApp.openMobileNav = () => {
 	mobileMenuApp.menuIcon.classList.toggle("fa-bars");
 	// add the 'navOpen' class to the mobileContainer
 	mobileMenuApp.navigation.classList.toggle("navOpen");
+	// add the 'navIsOpen' class to the skip link
+	mobileMenuApp.skipLink.classList.toggle("navIsOpen");
 };
 
 // function to close the mobile navigation
@@ -29,6 +32,8 @@ mobileMenuApp.closeMobileNav = () => {
 	mobileMenuApp.menuIcon.classList.toggle("fa-bars");
 	// remove the 'navOpen' class from the navList
 	mobileMenuApp.navigation.classList.toggle("navOpen");
+	// remove the 'navIsOpen' class to the skip link
+	mobileMenuApp.skipLink.classList.toggle("navIsOpen");
 	// the menu is now closed
 	mobileMenuApp.menuOpen = false;
 };
@@ -51,6 +56,10 @@ mobileMenuApp.handleMobileLinkClick = () => {
 	mobileMenuApp.menuIcon.classList.toggle("fa-bars");
 	// remove the 'navOpen' class from the navList
 	mobileMenuApp.navigation.classList.toggle("navOpen");
+	// remove the 'navOpen' class to the skip link if it's there
+	if (mobileMenuApp.skipLink.classList.contains("navOpen")) {
+		mobileMenuApp.skipLink.classList.toggle("navIsOpen");
+	}
 	// the menu is now closed
 	mobileMenuApp.menuOpen = false;
 };
@@ -73,6 +82,12 @@ mobileMenuApp.logoLink.addEventListener("click", mobileMenuApp.handleLogoClick);
 // loop through the array of menu links and add the event listeners
 mobileMenuApp.menuLink.forEach(link =>
 	link.addEventListener("click", mobileMenuApp.handleMobileLinkClick)
+);
+
+// event listener for the skip link
+mobileMenuApp.skipLink.addEventListener(
+	"click",
+	mobileMenuApp.handleMobileLinkClick
 );
 
 mobileMenuApp.init = () => {

@@ -15,15 +15,22 @@ header {
 		margin-bottom: 25px;
 	}
 
+	a:focus-visible,
+	button:focus-visible {
+		outline-offset: 0.2rem;
+		outline: 3px solid white;
+	}
 	.skipLink:focus-visible {
 		left: 50%;
 		transform: translateX(-50%);
+
+		&.navIsOpen {
+			background-color: $blue-sapphire;
+			color: white;
+			outline: 3px solid $blue-sapphire;
+		}
 	}
 
-	a:focus-visible,
-	button:focus-visible {
-		outline: 3px solid $inverse-blue;
-	}
 	.wrapper {
 		display: flex;
 		flex-direction: column;
@@ -82,7 +89,8 @@ header {
 		}
 		&:focus-visible {
 			.logoCircle {
-				outline: 3px solid $inverse-blue;
+				outline-offset: 0.5rem;
+				outline: 3px solid white;
 			}
 		}
 	}
@@ -115,6 +123,10 @@ header {
 				font-weight: $bold;
 			}
 			outline: none;
+		}
+		&:focus-visible {
+			outline-offset: -1rem;
+			outline: 3px solid white;
 		}
 	}
 	.mobileNavList {
@@ -180,7 +192,7 @@ header {
 			transition-delay: 100ms;
 
 			&:focus-visible {
-				outline: 3px solid $purple-plum;
+				outline: 3px solid $blue-sapphire;
 			}
 		}
 		.mobileNavList {
@@ -194,9 +206,9 @@ header {
 			display: none;
 		}
 		.logoContainer {
-			&:focus-v {
+			&:focus-visible {
 				.logoCircle {
-					outline: 3px solid $purple-plum;
+					outline: 3px solid $blue-sapphire;
 				}
 			}
 		}
@@ -206,7 +218,7 @@ header {
 			border: 3px solid $blue-sapphire;
 		}
 		.mobileMenuLink:focus-within {
-			outline: 3px solid $purple-plum;
+			outline: 3px solid $blue-sapphire;
 		}
 	}
 	.headingContainer {
@@ -233,7 +245,8 @@ header {
 				color: white;
 			}
 			&:focus-visible {
-				outline: 3px solid $inverse-blue;
+				outline-offset: -1rem;
+				outline: 3px solid white;
 			}
 		}
 		i {

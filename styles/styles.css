@@ -368,7 +368,8 @@ header p {
   padding: 0;
   margin-top: 100px;
 }
-header a, header button {
+header a,
+header button {
   color: white;
 }
 
@@ -390,7 +391,8 @@ header a, header button {
   line-height: 2.8rem;
 }
 
-.projects h2, .projects h4 {
+.projects h2,
+.projects h4 {
   color: white;
 }
 .projects .subHeadingContainer h4 {
@@ -403,10 +405,16 @@ header a, header button {
   margin: 50px 0 40px 0;
   color: black;
 }
-.projects a,
 .projects i,
 .projects p {
   color: black;
+}
+.projects a {
+  color: #135c71;
+  text-underline-offset: 0.5rem;
+}
+.projects a:visited {
+  color: #a755c2;
 }
 .projects p {
   font-size: 16px;
@@ -432,9 +440,6 @@ header a, header button {
   font-size: 1.7rem;
   width: 100%;
   margin-top: 0;
-}
-.blog a:visited {
-  color: #135c71;
 }
 .blog p {
   font-size: 1.6rem;
@@ -484,6 +489,10 @@ header a, header button {
 }
 .profile .profileLink:hover, .profile .profileLink:focus {
   text-decoration: none;
+}
+.profile .profileLink:focus-visible {
+  outline-offset: 0.2rem;
+  outline: 3px solid #135c71;
 }
 .profile .coffeeLink {
   margin-top: 25px;
@@ -586,6 +595,10 @@ header a, header button {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+.contact .sendButton:focus-visible {
+  outline-offset: 0.2rem;
+  outline: 3px solid white;
+}
 .contact a {
   color: white;
   margin: 15px 0;
@@ -600,16 +613,14 @@ header a, header button {
 .contact p {
   text-transform: uppercase;
 }
-.contact .contactPhoneNumber:hover, .contact .contactPhoneNumber:focus,
-.contact .contactEmailAddress:hover,
-.contact .contactEmailAddress:focus {
+.contact .contactEmailAddress:hover, .contact .contactEmailAddress:focus {
   -webkit-transform: none;
           transform: none;
   font-weight: 600;
 }
-.contact .contactPhoneNumber {
-  font-size: 3.5rem;
-  margin-top: 0;
+.contact .contactEmailAddress:focus-visible {
+  outline-offset: 0.2rem;
+  outline: 3px solid white;
 }
 
 html {
@@ -744,14 +755,20 @@ header .skipLink {
   padding: 10px 15px;
   margin-bottom: 25px;
 }
+header a:focus-visible,
+header button:focus-visible {
+  outline-offset: 0.2rem;
+  outline: 3px solid white;
+}
 header .skipLink:focus-visible {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-header a:focus-visible,
-header button:focus-visible {
-  outline: 3px solid #eca38e;
+header .skipLink:focus-visible.navIsOpen {
+  background-color: #135c71;
+  color: white;
+  outline: 3px solid #135c71;
 }
 header .wrapper {
   display: -webkit-box;
@@ -841,7 +858,8 @@ header .logoContainer:focus-visible, header .logoContainer:hover {
   outline: none;
 }
 header .logoContainer:focus-visible .logoCircle {
-  outline: 3px solid #eca38e;
+  outline-offset: 0.5rem;
+  outline: 3px solid white;
 }
 header .logoCircle {
   border: 3px solid white;
@@ -881,6 +899,10 @@ header .mobileNavButton:active {
 }
 header .mobileNavButton:active p {
   font-weight: 700;
+}
+header .mobileNavButton:focus-visible {
+  outline-offset: -1rem;
+  outline: 3px solid white;
 }
 header .mobileNavList {
   position: fixed;
@@ -962,7 +984,7 @@ header .navOpen button {
           transition-delay: 100ms;
 }
 header .navOpen button:focus-visible {
-  outline: 3px solid #a755c2;
+  outline: 3px solid #135c71;
 }
 header .navOpen .mobileNavList {
   -webkit-transition-delay: 300ms;
@@ -977,8 +999,8 @@ header .navOpen .mobileNavList {
 header .navOpen .navButtonText {
   display: none;
 }
-header .navOpen .logoContainer:focus-v .logoCircle {
-  outline: 3px solid #a755c2;
+header .navOpen .logoContainer:focus-visible .logoCircle {
+  outline: 3px solid #135c71;
 }
 header .navOpen .logoCircle {
   -webkit-transition-delay: 200ms;
@@ -987,7 +1009,7 @@ header .navOpen .logoCircle {
   border: 3px solid #135c71;
 }
 header .navOpen .mobileMenuLink:focus-within {
-  outline: 3px solid #a755c2;
+  outline: 3px solid #135c71;
 }
 header .headingContainer {
   display: -webkit-box;
@@ -1029,7 +1051,8 @@ header .downArrowContainer .downArrow:visited {
   color: white;
 }
 header .downArrowContainer .downArrow:focus-visible {
-  outline: 3px solid #eca38e;
+  outline-offset: -1rem;
+  outline: 3px solid white;
 }
 header .downArrowContainer i {
   font-size: 35px;
@@ -1075,7 +1098,7 @@ footer a {
   text-decoration: underline;
 }
 footer a:focus {
-  outline: 3px solid #eca38e;
+  outline: 3px solid white;
 }
 
 .about {
@@ -1087,6 +1110,13 @@ footer a:focus {
       flex-basis: 100%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+}
+.about a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+.about a:focus-visible {
+  outline: 3px solid #135c71;
 }
 .about h3 {
   font-size: 17px;
@@ -1136,9 +1166,14 @@ footer a:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+.myProfileLink:focus-visible,
+.readMore:focus-visible {
+  outline: 3px solid #135c71;
+  outline-offset: 0.5rem;
+}
 
 .skills {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 .skills ul {
   color: #135c71;
@@ -1241,8 +1276,16 @@ footer a:focus {
   width: 100%;
   margin-top: 10px;
 }
-.projects .projectDescription a {
+.projects .projectDescription a:hover {
   text-decoration: underline;
+}
+.projects .projectDescription a:visited {
+  color: #a755c2;
+}
+.projects .projectDescription a:focus-visible {
+  text-decoration: underline;
+  outline-offset: 0.1rem;
+  outline: 3px solid #135c71;
 }
 .projects .techListItem {
   -ms-flex-preferred-size: 24%;
@@ -1278,83 +1321,26 @@ footer a:focus {
   padding: 15px 10px;
   border: 1px solid black;
 }
-.projects .githubLink:hover, .projects .githubLink:focus,
-.projects .viewLiveLink:hover,
-.projects .viewLiveLink:focus {
+.projects .githubLink:hover,
+.projects .viewLiveLink:hover {
   border: 3px solid black;
   font-weight: 700;
 }
-
-.blog {
+.projects .githubLink:focus-visible,
+.projects .viewLiveLink:focus-visible {
+  border: 3px solid black;
+  font-weight: 700;
+  outline-offset: 0.2rem;
+  outline: 3px solid #135c71;
+}
+.projects .githubLink:visited,
+.projects .viewLiveLink:visited {
   color: black;
-  background-color: white;
-}
-.blog .subHeadingContainer h4 {
-  padding-top: 16px;
-}
-.blog .blogTitle {
-  z-index: 10;
-}
-.blog .blogTitle:hover, .blog .blogTitle:focus {
-  -webkit-transform: none;
-          transform: none;
-  text-decoration: underline;
-}
-.blog p {
-  margin: 25px 0;
-}
-.blog article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.blog .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.blog .readMore {
-  padding: 39px 2px 5px 2px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0;
-}
-.blog .contentContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .profile {
   color: black;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
@@ -1428,6 +1414,10 @@ footer a:focus {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
+.profileForm .profileFormIcon:focus-visible {
+  outline: 3px solid #135c71;
+  outline-offset: -1rem;
+}
 
 .contact {
   background-color: #135c71;
@@ -1475,19 +1465,14 @@ footer a:focus {
 }
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
   opacity: 1;
+  color: white;
 }
-.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+.contact input::placeholder, .contact input::-webkit-input-placeholder, .contact input::-moz-placeholder,
+.contact textarea::placeholder,
+.contact textarea::-webkit-input-placeholder,
+.contact textarea::-moz-placeholder {
   opacity: 1;
-}
-.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
-  opacity: 1;
-}
-.contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder {
-  opacity: 1;
-}
-.contact input::placeholder,
-.contact textarea::placeholder {
-  opacity: 1;
+  color: white;
 }
 .contact input:focus, .contact input:hover,
 .contact textarea:focus,
@@ -1499,6 +1484,15 @@ footer a:focus {
   background-color: white;
   color: black;
   outline: 3px solid white;
+}
+.contact input:focus::-webkit-input-placeholder, .contact textarea:focus::-webkit-input-placeholder {
+  color: black;
+}
+.contact input:focus::placeholder, .contact input:focus::-webkit-input-placeholder, .contact input:focus::-moz-placeholder,
+.contact textarea:focus::placeholder,
+.contact textarea:focus::-webkit-input-placeholder,
+.contact textarea:focus::-moz-placeholder {
+  color: black;
 }
 .contact textarea {
   height: 275px;
@@ -1671,7 +1665,7 @@ footer a:focus {
     border-bottom: 3px solid white;
   }
   header .desktopNav a:focus {
-    outline: 3px solid #eca38e;
+    outline: 3px solid white;
   }
   header .navOpen {
     margin-bottom: 0;
@@ -1684,8 +1678,9 @@ footer a:focus {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
-  header .desktopLogoContainer a:focus .logoCircle {
-    outline: 3px solid #eca38e;
+  header .desktopLogoContainer a:focus-visible .logoCircle {
+    outline-offset: 0.5rem;
+    outline: 3px solid white;
   }
   header .desktopLogoContainer a .logoCircle {
     color: white;
@@ -1818,32 +1813,6 @@ footer a:focus {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
-  .blog h3 {
-    font-size: 3.4rem;
-  }
-  .blog p {
-    margin-top: 0;
-    font-size: 2.4rem;
-  }
-  .blog img {
-    max-width: 52%;
-  }
-  .blog .flexContainer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .blog .flexContainer .contentContainer {
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .blog .readMore {
-    padding-top: 62px;
-  }
   .profile a {
     font-size: 16px;
     font-size: 1.6rem;
@@ -1949,15 +1918,6 @@ footer a:focus {
   .projects .projectDescription {
     font-size: 2.56rem;
     line-height: 4.16rem;
-  }
-  .blog .subHeadingContainer h4 {
-    height: 60px;
-    padding-top: 7px;
-  }
-  .blog p,
-  .blog .readMore {
-    font-size: 2.55rem;
-    line-height: 3.4rem;
   }
   .profile .profileListItem {
     min-height: 607px;

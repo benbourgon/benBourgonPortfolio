@@ -1,32 +1,32 @@
 // Footer styling
 
 footer {
-    background-color: $blue-sapphire;
-    color: white;
-    width: 100%;
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+	background-color: $blue-sapphire;
+	color: white;
+	width: 100%;
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
 
-    li {
-        flex-basis: 32%;
-        text-align: center;
-    }
+	li {
+		flex-basis: 32%;
+		text-align: center;
+	}
 
-    a {
-        color: white;
-        text-decoration: underline;
+	a {
+		color: white;
+		text-decoration: underline;
 
-        &:focus {
-            outline: 3px solid $inverse-blue;
-        }
-    }
+		&:focus {
+			outline: 3px solid white;
+		}
+	}
 }
