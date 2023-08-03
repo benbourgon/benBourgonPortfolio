@@ -63,9 +63,8 @@
 	ul {
 		color: $blue-sapphire;
 		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 	li {
 		margin: 10px;
@@ -74,16 +73,10 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
-		flex-basis: 42%;
 	}
 	h2,
 	h4 {
 		color: black;
-	}
-	.firebaseIcon,
-	.adobeIcon {
-		max-width: 40px;
-		height: auto;
 	}
 }
 // Projects section
