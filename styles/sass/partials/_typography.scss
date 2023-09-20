@@ -56,7 +56,7 @@ h4 {
 header {
 	color: white;
 	.logo {
-		font-family: "Montserrat", sans-serif;
+		font-family: $headingFont, sans-serif;
 		font-weight: $bold;
 	}
 
@@ -86,13 +86,17 @@ header {
 		@include boxReset;
 	}
 
-	p {
+	p,
+	.navButtonText {
 		font-family: $bodyFont, sans-serif;
 		font-weight: $regular;
 		font-size: $bodySize;
 		display: block;
 		@include boxReset;
 		margin-top: 100px;
+	}
+	.navButtonText {
+		text-transform: uppercase;
 	}
 	a,
 	button {

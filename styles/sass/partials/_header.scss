@@ -112,10 +112,9 @@ header {
 		cursor: pointer;
 		z-index: 20;
 
-		p {
-			margin-top: 0;
+		span.navButtonText {
+			margin: 0 auto;
 			padding: 1rem;
-			text-transform: uppercase;
 		}
 
 		&:active {

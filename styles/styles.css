@@ -359,7 +359,8 @@ header h3 {
   margin: 0;
   padding: 0;
 }
-header p {
+header p,
+header .navButtonText {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -367,6 +368,9 @@ header p {
   margin: 0;
   padding: 0;
   margin-top: 100px;
+}
+header .navButtonText {
+  text-transform: uppercase;
 }
 header a,
 header button {
@@ -889,10 +893,9 @@ header .mobileNavButton {
   cursor: pointer;
   z-index: 20;
 }
-header .mobileNavButton p {
-  margin-top: 0;
+header .mobileNavButton span.navButtonText {
+  margin: 0 auto;
   padding: 1rem;
-  text-transform: uppercase;
 }
 header .mobileNavButton:active {
   outline: none;
@@ -1178,14 +1181,8 @@ footer a:focus {
 .skills ul {
   color: #135c71;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .skills li {
   margin: 10px;
@@ -1204,17 +1201,10 @@ footer a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-preferred-size: 42%;
-      flex-basis: 42%;
 }
 .skills h2,
 .skills h4 {
   color: black;
-}
-.skills .firebaseIcon,
-.skills .adobeIcon {
-  max-width: 40px;
-  height: auto;
 }
 
 .projects {
@@ -1720,20 +1710,6 @@ footer a:focus {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     padding-bottom: 150px;
-  }
-  .skills ul {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .skills li {
-    -ms-flex-preferred-size: 22%;
-        flex-basis: 22%;
-  }
-  .skills .problemSolving {
-    display: block;
   }
   .projects .flexContainer {
     -webkit-box-orient: horizontal;
