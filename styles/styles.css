@@ -1711,6 +1711,9 @@ footer a:focus {
         flex-basis: 40%;
     padding-bottom: 150px;
   }
+  .skills ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .projects .flexContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1878,6 +1881,9 @@ footer a:focus {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 0;
+  }
+  .skills ul {
+    grid-template-columns: repeat(4, 1fr);
   }
   .skills p {
     font-size: 1.92rem;

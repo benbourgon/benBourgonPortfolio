@@ -172,6 +172,12 @@
 			padding-bottom: 150px;
 		}
 	}
+  // 768px skills section media queries
+  .skills {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 	// 768px projects section media queries
 	.projects {
 		.flexContainer {
@@ -315,6 +321,9 @@
 	}
 	// 940px skills media queries
 	.skills {
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
 		p {
 			font-size: calc($bodySize * 1.2);
 		}
