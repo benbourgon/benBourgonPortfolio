@@ -1,10 +1,27 @@
 {
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
+  "stylelint.validate": [
+    // Add "html" language.
+    "html",
+    // Add "vue" language.
+    "vue",
+    // Add "svelte" language.
+    "svelte",
+    // Add "astro" language.
+    "astro"
+  ],
   "workbench.colorCustomizations": {
     "editorGutter.background": "#00000000" // no gutter color
   },
   "editor.renderLineHighlight": "all",
-  "editor.lineNumbers": "off",
-  "editor.folding": false,
+  "editor.lineNumbers": "on",
+  "editor.folding": true,
   "editor.guides.indentation": false,
   "breadcrumbs.enabled": true,
   "editor.guides.bracketPairs": false,
@@ -15,7 +32,6 @@
   // bumping mouse scroll goofs with eidting, so we "turn off" scrolling with this feature
   "editor.scrollBeyondLastLine": true,
   "editor.scrollbar.verticalScrollbarSize": 0,
-  "workbench.activityBar.visible": true,
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
@@ -28,5 +44,13 @@
     "/.vscode/**"
   ],
   "liveSassCompile.settings.generateMap": false,
-  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "editor.formatOnSave": false,
+  "cSpell.words": [
+    "devicon",
+    "xlarge",
+    "xsmall",
+    "xxlarge",
+    "xxsmall"
+  ]
 }

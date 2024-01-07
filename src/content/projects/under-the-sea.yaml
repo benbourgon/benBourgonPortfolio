@@ -1,0 +1,12 @@
+title: "Under the Sea"
+image:
+  url: "@images/projectScreenshots/underTheSeaMockupClear.webp"
+  alt: "The 'Taglines..with a Vengeance!' website"
+description: "A multi-page responsive PSD conversion with an aquarium theme and styled with a number of elements that expand beyond their containers."
+techStack:
+  - "HTML5": "devicon-plain:html5"
+  - "SASS": "fa6-brands:sass"
+  - "JavaScript" : "devicon-plain:javascript"
+links:
+  - "code on github": "https://github.com/benbourgon/benBourgonProjectOne"
+  - "view live": "https://underthesea-benbourgon.netlify.app/"

@@ -1,0 +1,20 @@
+<button class="button"></button>
+<style lang="scss">
+@use "../abstracts" as *;
+.button {
+  display: inline-block;
+  font-weight: $semi-bold;
+  font-size: var(--fs-300);
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  padding: 0.95em 1.75em 0.85em;
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-800);
+  border-radius: 100vw;
+  box-shadow: $box-shadow;
+  @include hover-lift;
+}
+</style>

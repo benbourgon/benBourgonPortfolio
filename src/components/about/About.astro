@@ -1,0 +1,128 @@
+---
+/* components/AboutSection/About.astro */
+import SectionHeading from "@components/ui/SectionHeading.astro";
+import Headshot from "@images/benHeadshotDesktop.webp";
+---
+<section class="about | section | bg-neutral-0 text-neutral-900" id="about">
+  <div class="wrapper">
+    <SectionHeading
+      heading={"hello"}
+      preamble={"nice to meet you: "}
+      colour={"text-neutral-900"}
+    />
+    <div class="grid-container">
+      <div class="image-container">
+        <img
+          src={Headshot.src}
+          alt="Ben Bourgon, web developer"
+          loading="lazy"
+          width="440"
+          height="660"
+          class="box-shadow-5"
+        />
+      </div>
+      <!--.image-container end-->
+      <div class="content-container flow">
+        <h3 class="fw-bold fs-500">
+          I'm Ben, a Web Developer from Toronto, Ontario.</h3>
+        <p class="fw-medium">
+          I'm at my best when combining my analytic abilities with a creative
+          instinct to solve tough problems and write clean, dry, and accessible
+          code.
+        </p>
+        <p class="fw-medium">
+          While you're here, please feel free to have a look at <a
+            href="#projects">my work</a
+          >, get to know more <a href="#profile">about me</a>, or <a
+            href="#contact">reach out to me</a
+          >. I'd love to hear from you!
+        </p>
+        <div class="link-container about-link-container">
+          <a href="#profile" class="my-profile-link fs-500">My Profile</a>
+          <a href="#contact" class="my-profile-link fs-500">Message Me</a>
+        </div>
+        <!--.link-container end-->
+      </div>
+      <!--.content-container end-->
+    </div>
+    <!--.flex-container end-->
+  </div>
+  <!--.wrapper end-->
+</section>
+<!--About section end-->
+<style lang="scss">
+@use "../../sass/abstracts" as *;
+@use "../../sass/utilities" as *;
+.about {
+	a {
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 0.5rem;
+		}
+		&:focus-visible {
+			outline: 3px solid $blue-sapphire;
+		}
+	}
+	.about-link-container {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.image-container {
+		width: 90%;
+    margin: 0 auto;
+	}
+  .content-container {
+    margin-top: 2em;
+    padding: 0 1rem;
+  }
+}
+.my-profile-link,
+.read-more {
+	margin-top: 2rem;
+	transition: 200ms ease-in-out;
+	text-decoration: underline;
+	padding: 10px 2px 5px 2px;
+
+	&:hover,
+	&:focus {
+		font-weight: $bold;
+		transform: scale(1.05);
+    text-underline-offset: 0rem;
+	}
+	&:focus-visible {
+		outline: 3px solid $blue-sapphire;
+		outline-offset: 0.5rem;
+	}
+}
+/* 768px About section media queries */
+  @include mq("small") {
+	.about {
+		h3 {
+			margin-top: 0;
+		}
+		.grid-container {
+			grid-template-columns: 1fr fr;
+		}
+		.content-container {
+			flex-basis: 47%;
+		}
+		.image-container {
+			padding-bottom: 150px;
+		}
+	}
+};
+/* 1024px about section media queries */
+@include mq("medium") {
+	.about {
+		.image-container {
+			justify-content: center;
+			padding-bottom: 0;
+		}
+	}
+};
+</style>

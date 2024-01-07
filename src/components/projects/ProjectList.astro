@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import ProjectListItem from "./ProjectListItem.astro";
+const allProjects = await getCollection("projects");
+---
+<ul class="project-list">
+  {allProjects.map((project) => {
+    if (project) return (
+        <ProjectListItem
+          project={project}
+        />
+      )
+    })}
+</ul>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  .project-list {
+    @include box-reset;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+</style>

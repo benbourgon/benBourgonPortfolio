@@ -1,0 +1,143 @@
+---
+import { getEntry, type CollectionEntry } from "astro:content"
+import SkillListItem from "@components/ui/SkillListItem.astro";
+interface Props {
+  project: CollectionEntry<'projects'>
+}
+const {project} = Astro.props;
+const techStack = await getEntry(project.data.techStack);
+const links = await getEntry(project.data.links);
+console.log("techStack:", techStack, "links:",links);
+const {title, description, image} = data;
+---
+<li class="project-list-item bg-neutral-100 box-shadow-5">
+  <h3 class="project-title text-neutral-900 fs-700 fw-bold">{title}</h3>
+  <div class="flex-container row-reverse">
+    <img
+      class="mockup"
+      src={image?.src}
+      alt={image?.alt}
+      loading="lazy"
+      width="490"
+      height="368"
+    />
+    <div class="project-content-container flow">
+      <p class="project-description">
+        {description}
+      </p>
+      <ul class="tech-list">
+        {techStack.map((tech) => (
+          <SkillListItem {...tech} size={24} colour={`var(--clr-neutral-900)`}/>
+        ))}
+      </ul>
+    </div>
+  </div>
+  <!--.flex-container end-->
+  <ul class="links-container">
+    {links.map((link) => {
+      if(link.label === "view live") {
+        return (
+          <a
+            href={link.url}
+            class="view-live-link fs-500"
+            target="_blank"
+            rel="noopener"
+          >
+            {link.label}
+          </a>
+        )
+      }
+      if(link.label === "code on github") {
+        return (
+          <a
+            href={link.url}
+            class="github-link fs-500"
+            target="_blank"
+            rel="noopener"
+          >
+            {link.label}
+          </a>
+        )
+      }
+      })}
+    </ul>
+    <!--.links-container end-->
+</li>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  li {
+      width: 100%;
+      @include flex-column;
+      align-items: center;
+    }
+    .flex-container {
+      @include flex-column;
+      align-items: center;
+      width: 100%;
+    }
+  .project-list-item {
+      margin: 25px 0;
+      padding: 50px;
+    }
+    .project-title {
+      width: 100%;
+      border: none;
+      z-index: 10;
+      margin: 10px 0;
+      width: 100%;
+    };
+    .project-description {
+      width: 100%;
+      margin-top: 10px;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:visited {
+          color: $purple-plum;
+        }
+
+        &:focus-visible {
+          text-decoration: underline;
+          outline-offset: 0.1rem;
+          outline: 3px solid $blue-sapphire;
+        }
+      }
+    }
+    .tech-list {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2em;
+    }
+    .tech-list-item {
+      flex-basis: 24%;
+    }
+    .links-container {
+      margin-top: 5px;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+    .view-live-link,
+    .github-link {
+      margin-top: 2rem;
+      transition: 200ms ease-in-out;
+      text-decoration: underline;
+      padding: 10px 2px 5px 2px;
+
+      &:hover,
+      &:focus {
+        font-weight: $bold;
+        transform: scale(1.05);
+      }
+      &:focus-visible {
+        outline: 3px solid $blue-sapphire;
+        outline-offset: 0.5rem;
+      }
+    }
+</style>

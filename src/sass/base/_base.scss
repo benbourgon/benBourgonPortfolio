@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+@use "../abstracts" as *;
+
+html {
+  @include box-reset;
+  max-width: 100%;
+}
+
+body {
+  max-width: 100%;
+  @include box-reset;
+}
+
+ul {
+  @include box-reset;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  @include box-reset;
+  transition: 200ms;
+  border: none;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  @include hover-lift;
+  cursor: pointer;
+}

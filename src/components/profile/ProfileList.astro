@@ -1,0 +1,67 @@
+---
+/* components/ProfileSection/ProfileList.astro */
+import {Icon} from "astro-icon/components"
+---
+<ul class="profile-list">
+  <li class="profile-list-item about-me-item">
+    <div class="item-heading-container">
+      <h3>About Me</h3>
+      <Icon name="material-symbols:sentiment-very-satisfied-outline-rounded" size={48}/>
+    </div>
+    <!--.item-heading-container-->
+    <div class="flow">
+      <p>
+        I am a creative and analytical web developer driven to build accessible,
+        user-friendly applications through clean, responsive, and organized code.
+      </p>
+      <p>
+        After a decade working in TV & film production, I excel at
+        problem-solving, project management strategies, and communicating with
+        colleagues of all technical abilities.
+      </p>
+      <p>
+        Bringing my passion for continuous learning, an artistic eye for detail,
+        and strong skills in JavaScript, React, CSS, and HTML, among other web
+        technologies, I am seeking my next opportunity for challenge and growth as
+        a developer.
+      </p>
+    </div>
+  </li>
+  <li class="profile-list-item hidden interests-item">
+    <div class="item-heading-container">
+      <h3>Interests</h3>
+      <Icon name="material-symbols:interests-outline-rounded" size={48}/>
+    </div>
+    <!--.item-heading-container-->
+    <div class="flow">
+      <p>When I'm not writing or thinking about code, I can usually be found:</p>
+      <ul>
+        <li>listening to music or playing bass & guitar</li>
+        <li>modding old Game Boys</li>
+        <li>playing video and tabletop games</li>
+        <li>enjoying podcasts, movies & TV</li>
+        <li>exercising, playing basketball and hiking</li>
+      </ul>
+    </div>
+  </li>
+  <li class="profile-list-item hidden coffee-item">
+    <div class="item-heading-container">
+      <h3>Coffee</h3>
+      <Icon name="material-symbols:coffee-outline-rounded" size={48}/>
+    </div>
+    <!--.item-heading-container-->
+    <div class="flow">
+      <p>I'd love to hear from you.</p>
+      <p>Click a button below to message me or schedule a coffee or Zoom chat.</p>
+      <div class="links-container">
+        <a href="#contact" class="coffee-link message-me profile-link">Message Me</a>
+        <a
+          href="https://calendly.com/benbourgon"
+          target="_blank"
+          rel="noopener"
+          class="coffeeLink meet-with-me profile-link">Schedule Meeting</a
+        >
+      </div>
+    </div>
+  </li>
+</ul>

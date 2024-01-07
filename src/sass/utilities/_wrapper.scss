@@ -1,0 +1,8 @@
+//wrapper class
+.wrapper {
+  @include box-reset;
+  padding: 0 1.5rem;
+  max-width: 62.5rem;
+  width: 95%;
+  margin: 0 auto;
+};

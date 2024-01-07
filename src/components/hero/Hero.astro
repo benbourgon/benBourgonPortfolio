@@ -1,0 +1,36 @@
+---
+/* components/Hero/Hero.astro */
+const {firstName="ben", lastName="bourgon", jobTitle="web developer"} = Astro.props;
+---
+<section class="hero | section bg-primary-500" id="hero">
+  <h1 class="my-name | uppercase fw-bold">
+    <span class="heading-ben | fs-900">{firstName}</span>
+    <span class="heading-bourgon | fs-950">{lastName}</span>
+  </h1>
+  <h2 class="heading-size-md job-title fw-regular capitalize">{jobTitle}</h2>
+</section>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  @use "../../sass/utilities" as *;
+  .my-name {
+    @include flex-column;
+    @include box-reset;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $heading-font;
+    display: block;
+    line-height: $bourgon-heading-height;
+  }
+  .heading-ben,
+  .heading-bourgon,
+  .job-title {
+    display: block;
+  }
+  .job-title {
+    @include box-reset;
+    margin-top: 1rem;
+    font-family: $heading-font;
+  }
+</style>

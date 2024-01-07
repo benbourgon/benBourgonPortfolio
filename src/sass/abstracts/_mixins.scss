@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+@mixin font-size($sizeValue) {
+  font-size: calc($sizeValue * 1px);
+  font-size: calc(($sizeValue / 10) * 1rem);
+}
+
+@mixin box-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-wrap-reverse {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+@mixin flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-justify-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@mixin flex-justify-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin pseudo(
+  $location: before,
+  $content: "",
+  $position: absolute,
+  $top: 0,
+  $bottom: 0,
+  $left: 0,
+  $right: 0
+) {
+  position: relative;
+
+  &::#{$location} {
+    content: $content;
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    @content;
+  }
+}
+
+@mixin hover-lift($speed: 350ms, $timing-function: ease-in-out, $scale: 1.05) {
+  transition: transform $speed $timing-function;
+  box-shadow: 0 0.25em 0.5em 0 rgba(black, 0.2);
+
+  @include pseudo($location: after) {
+    box-shadow: 0 0 1.25em 0 rgba(black, 0.4);
+    transition: transform $speed $timing-function;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale($scale);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}

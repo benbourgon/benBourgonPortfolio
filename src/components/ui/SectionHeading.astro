@@ -1,0 +1,29 @@
+---
+const { preamble, heading, colour="text-neutral-900"} = Astro.props;
+---
+<div class="section-heading-container">
+  <h2 class=`uppercase ${colour} fw-bold fs-900`>
+    <span class="fw-regular heading-size-sm lowercase">{preamble}</span>
+    {heading}
+  </h2>
+</div>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  .section-heading-container {
+    width: 100%;
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    span {
+      width: fit-content;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-family: $subheading-font;
+      height: 50px;
+      display: block;
+      border-left: 1px solid currentColor;
+      padding-left: 1rem;
+    }
+}
+</style>

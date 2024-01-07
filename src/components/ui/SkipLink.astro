@@ -1,0 +1,23 @@
+---
+/* components/UI/SkipLink.astro */
+const {href="#about", content="Skip to main content"} = Astro.props
+---
+<a href={href} class="skip-link">{content}</a>
+<style lang="scss">
+  .skip-link {
+		position: absolute;
+		left: -9000px;
+    top: 5px;
+		z-index: 999;
+		background: white;
+		color: black;
+		padding: 10px 15px;
+    width: 80%;
+		margin-bottom: 25px;
+    text-align: center;
+  }
+	.skip-link:focus-visible {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+</style>

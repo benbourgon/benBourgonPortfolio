@@ -1,0 +1,26 @@
+---
+/* components/ProjectsSection/Projects.astro */
+import SectionHeading from "@components/ui/SectionHeading.astro";
+import ProjectList from "@components/projects/ProjectList.astro";
+---
+<section class="projects | section | bg-primary-500" id="projects">
+  <div class="wrapper">
+    <SectionHeading
+      preamble={"what I have done: "}
+      heading="my work"
+      colour={"text-neutral-0"}
+    />
+    <ProjectList />
+  </div>
+  <!--.wrapper end-->
+</section>
+<!-- projects section end -->
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  .wrapper {
+    padding: 0 1.5rem;
+    max-width: 62.5rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+</style>

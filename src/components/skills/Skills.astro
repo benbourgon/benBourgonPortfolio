@@ -1,0 +1,38 @@
+---
+/* components/SkillsSection/Skills.astro */
+import SectionHeading from "@components/ui/SectionHeading.astro";
+import SkillsList from "./SkillsList.astro";
+---
+<section class="skills | section | bg-neutral-100" id="skills">
+  <SectionHeading
+    preamble={"check out my: "}
+    heading={"skills"}
+    colour={"text-neutral-900"}
+  />
+  <SkillsList />
+</section>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  .skills {
+    h2,
+    h4 {
+      color: black;
+    }
+  }
+  /* 768px skills section media queries */
+  @include mq("medium") {
+    .skills {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  /* 940px skills media queries */
+  @include mq("large") {
+    .skills {
+      ul {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  };
+</style>

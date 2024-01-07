@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+$font-weight-scale: (
+  light: $light,
+  regular: $regular,
+  medium: $medium,
+  semi-bold: $semi-bold,
+  bold: $bold,
+);

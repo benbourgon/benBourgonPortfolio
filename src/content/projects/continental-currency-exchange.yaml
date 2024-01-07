@@ -1,0 +1,12 @@
+title: "Continental Currency Exchange"
+image:
+  url: "@images/projectScreenshots/cceMockupClear.webp"
+  alt: "Continental Currency Exchange website shown on a laptop and a phone"
+description: "A ground-up redesign and rebuild of a financial services website using a modern stack. The site's content is authored in Sanity and connected to the front end via Rest API."
+techStack:
+  - "Next.js" : "akar-icons:nextjs-fill"
+  - "React": "fa6-brands:react"
+  - "Tailwind CSS" : "simple-icons:tailwindcss"
+  - "Sanity": "devicon-plain:sanity"
+links:
+  - "view live": "https://www.continentalcurrency.ca"

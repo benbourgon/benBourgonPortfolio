@@ -1,0 +1,20 @@
+---
+/* components/Footer/Footer.astro */
+---
+<footer class="bg-primary-500 text-neutral-000">
+  <div class="wrapper">
+    <p>© 2024 Ben Bourgon</p>
+  </div>
+  <!--.wrapper end-->
+</footer>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  footer {
+    width: 100%;
+    .wrapper {
+      @include flex-column;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+</style>
