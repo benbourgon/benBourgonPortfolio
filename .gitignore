@@ -5,6 +5,6 @@ node_modules
 *.psd
 designs/
 .astro
-
+dist/
 # Local Netlify folder
 .netlify
