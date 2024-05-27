@@ -1,6 +1,8 @@
 ---
+import ProfileNav from "@profile/ProfileNav.astro";
+
 /* components/ProfileSection/Profile.astro */
-import ProfileNav from "./ProfileNav.astro";
+
 ---
 <section class="profile | section | bg-neutral-100 text-neutral-900" id="profile">
   <ProfileNav />
@@ -78,13 +80,13 @@ import ProfileNav from "./ProfileNav.astro";
     }
   }
   /* 428px profile media queries */
-  @media screen and (min-width: 428px) {
+  @media screen and (width > 428px) {
     .profile .profile-list-item {
       min-height: 555px;
     }
   }
   /* 768px profile section media queries */
-  @media screen and (min-width: 768px) {
+  @media screen and (width > 768px) {
   .profile {
     a {
       @include font-size(16);

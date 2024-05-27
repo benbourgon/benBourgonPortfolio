@@ -1,12 +1,12 @@
 ---
 /* components/ProfileSection/ProfileSection.astro */
 import SectionHeading from "@components/ui/SectionHeading.astro";
-import ProfileList from "./ProfileList.astro";
+import ProfileList from "@profile/ProfileList.astro";
 import { Icon } from "astro-icon/components";
 ---
 <SectionHeading
-  preamble={"more about me: "}
-  heading={"Profile"}
+  preamble={"more about me"}
+  heading={"profile"}
   colour={"text-neutral-900"}
 />
 
@@ -56,6 +56,7 @@ import { Icon } from "astro-icon/components";
 <!-- profile section end-->
 <script>
   {/* Profile section navigation through radio button set /*
+import type { ComponentProps } from "astro/types";
   /* Query the DOM for the profile form and the radio buttons */}
   const profileForm: HTMLFormElement | null = document.querySelector(".profileForm");
   {/* The current value of the radio button set */}
@@ -102,16 +103,16 @@ import { Icon } from "astro-icon/components";
 
   {/* Handle keyboard input when the profile navigation is in focus */}
   const handleKeypress = (event: KeyboardEvent) => {
-    const selectedInput = event.target as HTMLInputElement;
+    const selectedInput = event.target
     console.log(selectedInput)
-    // const focusedInput = event.target.control;
-    // if (event.code !== "Enter") {
-    //   return;
-    // } else {
-    //   focusedInput.checked = true;
-    //   currentValue = focusedInput.value;
-    //   updateContent(currentValue);
-    // }
+    const focusedInput = event?.target;
+    if (event.code !== "Enter") {
+      return;
+    } else {
+      focusedInput.checked = true;
+      currentValue = focusedInput.value;
+      updateContent(currentValue);
+    }
   };
   if (profileForm) {
     {/* create an event listener for when the radio button selection is changed */}

@@ -28,13 +28,16 @@ a {
 h2 {
   text-align: center;
   font-size: $heading-size-lg;
+
   @include box-reset;
-  margin: 0 auto 50px auto;
+
+  margin: 0 auto 50px;
   width: 100%;
 }
 
 h4 {
   @include box-reset;
+
   font-family: $subheading-font;
   font-weight: $regular;
   text-transform: lowercase;
@@ -48,15 +51,19 @@ h4 {
   text-align: center;
   color: $blue-sapphire;
 }
+
 .heading-size-lg {
   font-size: $heading-size-lg;
 }
+
 .heading-size-md {
   font-size: $heading-size-md;
 }
+
 .heading-size-sm {
   font-size: $heading-size-sm;
 }
+
 // about section typography
 .about {
   h3,
@@ -64,6 +71,7 @@ h4 {
     font-size: $heading-size-md;
     line-height: $roomy-line-height;
   }
+
   a {
     color: $blue-sapphire;
     font-weight: $semi-bold;
@@ -75,9 +83,11 @@ h4 {
 .skills {
   p {
     @include font-size(14);
+
     text-align: center;
     line-height: $roomy-line-height;
   }
+
 }
 
 // projects section typography
@@ -86,55 +96,43 @@ h4 {
   h4 {
     color: white;
   }
+
   h3 {
     @include font-size(18);
+
     text-align: center;
-    margin: 50px 0 40px 0;
+    margin: 50px 0 40px;
   }
+
   i,
   p {
     color: black;
   }
+
   a {
     color: $blue-sapphire;
     text-underline-offset: 0.5rem;
   }
+
   a:visited {
     color: $purple-plum;
   }
+
   p {
     @include font-size(16);
+
     line-height: $roomy-line-height;
   }
+
   .tech-list-item p {
     @include font-size(14);
   }
+
   .github-link,
   .view-live-link {
     font-weight: $semi-bold;
     text-transform: uppercase;
     line-height: $body-height;
-  }
-}
-
-// blog section typography
-.blog {
-  .writing {
-    display: block;
-  }
-  h3 {
-    text-align: left;
-    font-size: $heading-size-md;
-    width: 100%;
-    margin-top: 0;
-  }
-  p {
-    font-size: $body-size;
-    line-height: $roomy-line-height;
-  }
-  .read-more {
-    text-align: left;
-    font-weight: $semi-bold;
   }
 }
 
@@ -145,9 +143,11 @@ h4 {
     font-weight: $regular;
     font-size: 3rem;
   }
+
   .profile-instructions {
     padding: 0 15px;
   }
+
   .profile-list-item {
     @include font-size(14);
 
@@ -175,16 +175,19 @@ h4 {
     &:focus {
       text-decoration: none;
     }
+
     &:focus-visible {
       outline-offset: 0.2rem;
       outline: 3px solid $blue-sapphire;
     }
   }
+
   .coffee-link {
     margin-top: 25px;
     width: 200px;
     display: block;
   }
+
   .message-me {
     color: black;
     border: 1px solid black;
@@ -197,6 +200,12 @@ h4 {
       border: 2px solid black;
     }
   }
+
+  .meet-with-me {
+    padding-top: 15px;
+    margin-top: 0;
+  }
+
   .request-resume,
   .meet-with-me {
     text-align: center;
@@ -210,16 +219,14 @@ h4 {
       font-weight: $bold;
     }
   }
-  .meet-with-me {
-    padding-top: 15px;
-    margin-top: 0;
-  }
 }
+
 .profile-form {
   label {
     line-height: $ben-heading-height;
     transition: none;
   }
+
   input[type="radio"] {
     &:checked {
       + label {
@@ -228,13 +235,45 @@ h4 {
     }
   }
 }
+
 // contact section typography
 .contact {
   color: white;
 
+  a {
+    color: white;
+    margin: 15px 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    text-transform: uppercase;
+  }
+
   .section-heading-container h4 {
     border-left: 1px solid white;
   }
+
+  input,
+  textarea {
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:focus,
+    &:hover {
+      font-weight: $semi-bold;
+
+      &::placeholder {
+        font-weight: $semi-bold;
+      }
+    }
+  }
+
   form {
     font-family: $body-font, sans-serif;
     color: white;
@@ -244,21 +283,7 @@ h4 {
       font-family: $body-font, sans-serif;
     }
   }
-  input,
-  textarea {
-    color: white;
-    &::-webkit-input-placeholder {
-      color: white;
-    }
 
-    &:focus,
-    &:hover {
-      font-weight: $semi-bold;
-      &::placeholder {
-        font-weight: $semi-bold;
-      }
-    }
-  }
   .send-button {
     text-transform: uppercase;
     font-weight: $semi-bold;
@@ -270,27 +295,20 @@ h4 {
       font-weight: $bold;
       transform: scale(1.1);
     }
+
     &:focus-visible {
       outline-offset: 0.2rem;
       outline: 3px solid white;
     }
   }
-  a {
-    color: white;
-    margin: 15px 0;
-    height: 50px;
-    display: flex;
-    align-items: center;
-  }
-  p {
-    text-transform: uppercase;
-  }
+
   .contact-email-address {
     &:hover,
     &:focus {
       transform: none;
       font-weight: $semi-bold;
     }
+
     &:focus-visible {
       outline-offset: 0.2rem;
       outline: 3px solid white;

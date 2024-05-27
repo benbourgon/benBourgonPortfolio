@@ -1,5 +1,6 @@
 ---
 /* components/AboutSection/About.astro */
+import { Image } from "astro:assets";
 import SectionHeading from "@components/ui/SectionHeading.astro";
 import Headshot from "@images/benHeadshotDesktop.webp";
 ---
@@ -7,15 +8,14 @@ import Headshot from "@images/benHeadshotDesktop.webp";
   <div class="wrapper">
     <SectionHeading
       heading={"hello"}
-      preamble={"nice to meet you: "}
+      preamble={"nice to meet you"}
       colour={"text-neutral-900"}
     />
     <div class="grid-container">
       <div class="image-container">
-        <img
-          src={Headshot.src}
-          alt="Ben Bourgon, web developer"
-          loading="lazy"
+        <Image
+          src={Headshot}
+          alt="Ben Bourgon, the web developer who wrote this alt text"
           width="440"
           height="660"
           class="box-shadow-5"

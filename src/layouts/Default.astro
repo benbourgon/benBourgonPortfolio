@@ -1,14 +1,9 @@
 ---
+import "../sass/main.scss";
 import BaseHead from "@components/BaseHead.astro"
-import Header from "@components/Header/Header.astro"
-import Hero from "@components/Hero/Hero.astro"
-import Footer from "@components/Footer/Footer.astro"
+import Header from "@components/header/Header.astro"
+import Footer from "@components/footer/Footer.astro"
 const { title } = Astro.props;
-const HeroData = {
-  firstName: "ben",
-  lastName: "bourgon",
-  jobTitle: "web developer",
-};
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/playfair-display"
 ---
@@ -16,7 +11,6 @@ import "@fontsource-variable/playfair-display"
   <BaseHead title={title} />
   <body>
     <Header />
-    <Hero firstName={HeroData.firstName} lastName={HeroData.lastName} jobTitle={HeroData.jobTitle} />
     <main>
       <slot />
     </main>

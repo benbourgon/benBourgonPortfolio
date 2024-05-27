@@ -1,14 +1,7 @@
-import { z } from 'astro:content';
+import { z } from "astro:content";
 
-const skill = z.object(
-  {
-    name: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-  },
-  { strict: false }
-  );
-
+const skill = z.object({
+  label: z.string(),
+  name: z.string(),
+});
 export default skill;

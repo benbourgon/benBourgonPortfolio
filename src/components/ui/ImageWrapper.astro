@@ -1,0 +1,43 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+interface imageObject {
+  src: string | ImageMetadata;
+  format: "webp" | "jpeg" | "png" | "avif";
+  width: number;
+  height: number;
+}
+
+interface Props {
+  mobileImg: imageObject;
+  desktopImg: imageObject;
+  alt: string;
+  breakpoints: {
+    mobile: string;
+    desktop: string;
+  };
+}
+const { mobileImg, desktopImg, breakpoints, alt } = Astro.props;
+
+const mobile = await getImage({
+    src: mobileImg.src,
+    format: mobileImg.format,
+    width: mobileImg.width,
+    height: mobileImg.height,
+    alt: alt,
+});
+
+const desktop = await getImage({
+    src: desktopImg.src,
+    format: desktopImg.format,
+    width: desktopImg.width,
+    height: desktopImg.height,
+    alt: alt,
+});
+---
+<picture>
+    <source media={`(max-width: ${breakpoints.mobile})`} srcset={mobile.src} />
+    <source media={`(min-width: ${breakpoints.desktop})`} srcset={desktop.src} />
+    <img src={desktop.src} alt={alt} />
+</picture>

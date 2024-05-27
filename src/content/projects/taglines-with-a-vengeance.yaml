@@ -1,13 +1,15 @@
 title: "Taglines...with a Vengeance!"
 image:
-  url: "@images/projectScreenshots/taglinesMockupClear.webp"
-  alt: "The 'Taglines..with a Vengeance!' website"
-description: "Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the [TMDb Api](https://developer.themoviedb.org/docs/getting-started)"
+  url: "src/images/projectScreenshots/taglinesMockupClear.webp"
+  alt: "'Taglines..with a Vengeance!' website shown on a laptop and a phone"
+description: "Match the given tagline with the correct movie! Built as a pair programming project, this quiz creates random questions generated with data from the TMDb API."
 techStack:
-  - "HTML5": "devicon-plain:html5"
-  - "SASS": "fa6-brands:sass"
-  - "JavaScript" : "devicon-plain:javascript"
-  - "REST API": "material-symbols:api-rounded"
+  - html5
+  - sass
+  - javascript
+  - rest-api
 links:
-  - "code on github": "https://github.com/TaglinesWithAVengeance/pairedProject"
-  - "view live": "https://pairedproject.netlify.app/"
+  - label: "code on github"
+    url: "https://github.com/TaglinesWithAVengeance/pairedProject"
+  - label: "view live"
+    url: "https://pairedproject.netlify.app/"

@@ -4,17 +4,21 @@ const {href="#about", content="Skip to main content"} = Astro.props
 ---
 <a href={href} class="skip-link">{content}</a>
 <style lang="scss">
+  @use "../../sass/abstracts" as *;
   .skip-link {
 		position: absolute;
 		left: -9000px;
-    top: 5px;
+    top: 0.5rem;
 		z-index: 999;
-		background: white;
-		color: black;
+		background: $white;
+		color: $black;
 		padding: 10px 15px;
     width: 80%;
-		margin-bottom: 25px;
+		margin-block-end: 25px;
     text-align: center;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: left 100ms ease-in-out, transform 100ms ease-in-out;
+    }
   }
 	.skip-link:focus-visible {
 		left: 50%;

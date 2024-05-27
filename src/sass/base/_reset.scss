@@ -3,6 +3,7 @@
    ========================================================================== */
 
 /* CSS Reset */
+
 /* Sources:
 https://piccalil.li/blog/a-more-modern-css-reset/
 https://chriscoyier.net/2023/10/03/being-picky-about-a-css-reset-for-fun-pleasure/
@@ -15,17 +16,16 @@ https://codepen.io/kevinpowell/pen/abMdOpp
 *::after {
   box-sizing: border-box;
 }
-/* Remove default spacing */
-/* force styling of type through styling, rather than elements */
+
+/* Remove default spacing & force styling of type through styling, rather than elements */
 * {
   margin: 0;
   padding: 0;
   font: inherit;
 }
+
 /* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
   line-height: 1.5;
   color-scheme: dark light;
@@ -33,21 +33,7 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-dl,
-dd,
-ol,
-ul,
-pre {
+:is(body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, ol, ul, pre) {
   margin-block-end: 0;
 }
 
@@ -65,29 +51,17 @@ body {
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-input,
-label {
+:is(h1, h2, h3, h4, h5, h6, button, input, label) {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
 }
 
 /* improve readability with max-width on paragraphs and lists */
+
 /* prevent orphans in supported browsers */
 p,
 li,
@@ -96,18 +70,21 @@ dd {
   max-width: var(--p-max-width, 65ch);
   text-wrap: pretty;
 }
+
 /* Allow smooth-scrolling for users with no reduced motion preference */
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
   }
 }
+
 :has(:target) {
-  scroll-padding-top: var(--scroll-padding, 0rem);
+  scroll-padding-top: var(--scroll-padding, 0);
 }
-/* A elements that don't have a class get default styles */
+
+/* Anchor elements that don't have a class get default styles */
 a:not([class]) {
-  color: currentColor;
+  color: currentcolor;
 }
 
 /* Make images easier to work with */

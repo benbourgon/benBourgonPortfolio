@@ -1,8 +1,13 @@
-//wrapper class
+/* wrapper class */
+@use "../abstracts/mixins" as *;
+
 .wrapper {
+  --content-max-width: 1160px;
+  --padding-inline: 2rem;
+
   @include box-reset;
-  padding: 0 1.5rem;
-  max-width: 62.5rem;
-  width: 95%;
-  margin: 0 auto;
+
+  width: min(var(--content-max-width), 100% - var(--padding-inline));
+  max-width: var(--content-max-width);
+  margin-inline: auto;
 };

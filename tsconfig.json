@@ -48,10 +48,12 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@profile/*": ["src/components/profile/*"],
       "@layouts/*": ["src/layouts/*"],
       "@images/*": ["src/images/*"],
       "@assets/*": ["public/assets/*"],
-      "@sass/*": ["src/sass/*"]
-    }
-  }
+      "@sass/*": ["src/sass/*"],
+    },
+  },
 }

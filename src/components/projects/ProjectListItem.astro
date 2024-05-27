@@ -1,40 +1,46 @@
 ---
-import { getEntry, type CollectionEntry } from "astro:content"
+import { getEntries, type CollectionEntry } from "astro:content"
 import SkillListItem from "@components/ui/SkillListItem.astro";
+import Card from "@components/ui/Card.astro";
 interface Props {
   project: CollectionEntry<'projects'>
 }
-const {project} = Astro.props;
-const techStack = await getEntry(project.data.techStack);
-const links = await getEntry(project.data.links);
-console.log("techStack:", techStack, "links:",links);
-const {title, description, image} = data;
+const { project } = Astro.props;
+const getTechStack = async () => {
+  const res = await getEntries(project?.data?.techStack);
+  const techStack = [...res].length > 0 ? [...res] : null;
+  return techStack;
+}
+const techStackArr = await getTechStack();
+const { title, description, image, links } = project.data;
 ---
-<li class="project-list-item bg-neutral-100 box-shadow-5">
+<Card title={title}>
   <h3 class="project-title text-neutral-900 fs-700 fw-bold">{title}</h3>
-  <div class="flex-container row-reverse">
     <img
+      slot="image"
       class="mockup"
-      src={image?.src}
+      src={image?.url}
       alt={image?.alt}
       loading="lazy"
       width="490"
       height="368"
     />
-    <div class="project-content-container flow">
       <p class="project-description">
         {description}
       </p>
       <ul class="tech-list">
-        {techStack.map((tech) => (
-          <SkillListItem {...tech} size={24} colour={`var(--clr-neutral-900)`}/>
+        {techStackArr?.map(tech => (
+          tech ? <SkillListItem name={tech.data.name} label={tech.data.label} size={25} colour="var(--clr-neutral-900" /> : null
         ))}
       </ul>
     </div>
   </div>
   <!--.flex-container end-->
-  <ul class="links-container">
-    {links.map((link) => {
+  <ul
+    slot="footer"
+    class="links-container"
+  >
+    {links.map(link => {
       if(link.label === "view live") {
         return (
           <a
@@ -62,22 +68,13 @@ const {title, description, image} = data;
       })}
     </ul>
     <!--.links-container end-->
-</li>
+</Card>
 <style lang="scss">
   @use "../../sass/abstracts" as *;
-  li {
-      width: 100%;
-      @include flex-column;
-      align-items: center;
-    }
     .flex-container {
       @include flex-column;
       align-items: center;
       width: 100%;
-    }
-  .project-list-item {
-      margin: 25px 0;
-      padding: 50px;
     }
     .project-title {
       width: 100%;
@@ -87,7 +84,6 @@ const {title, description, image} = data;
       width: 100%;
     };
     .project-description {
-      width: 100%;
       margin-top: 10px;
 
       a {

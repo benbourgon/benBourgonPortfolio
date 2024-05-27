@@ -1,22 +1,20 @@
 ---
 /* components/Header/Header.astro */
-import SkipLink from "../ui/SkipLink.astro"
 ---
 <header class="bg-primary-500 text-neutral-000">
-  <SkipLink href="#about" className=".skip-link" content="Skip to main content"/>
   <div class="wrapper">
     <nav class="top-nav" aria-roledescription="primary navigation">
       <ul class="top-nav-list">
         <li>
-          <a class="capitalize" href="#about">about</a>
+          <a class="top-nav-link capitalize" href="#about">about</a>
           <li>
-            <a class="capitalize" href="#projects">my work</a>
+            <a class="top-nav-link capitalize" href="#projects">my work</a>
           </li>
           <li>
-            <a class="capitalize" href="#profile">profile</a>
+            <a class="top-nav-link capitalize" href="#profile">profile</a>
           </li>
           <li>
-            <a class="capitalize" href="#contact">contact</a>
+            <a class="top-nav-link capitalize" href="#contact">contact</a>
           </li>
         </li>
         <!--.top-nav-list end-->
@@ -27,45 +25,17 @@ import SkipLink from "../ui/SkipLink.astro"
   </div>
 </header>
 <style lang="scss">
-  @use "../../sass/abstracts" as *;
-  header {
-    .top-nav-list {
-      z-index: 20;
-      width: 100%;
-      padding: 0 20px;
-    }
-    .top-nav {
-      max-width: 100%;
-      height: 60%;
-      margin-top: 20px auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+  @use "../../sass/abstracts/" as *;
+  .top-nav-list {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+  .top-nav-link {
+    color: $white;
+    &:is(:hover, :focus-visible){
+      border-bottom: 2px solid $white;
     }
   }
-	// 768px header media queries
-  @include mq("medium") {
-		.top-nav-list {
-			width: 100%;
-			max-width: 100%;
-			height: 125px;
-			@include flex-row;
-			justify-content: space-between;
-			align-items: center;
-
-			a {
-				padding: 25px 10px;
-				transition: border-bottom 0.2s;
-				font-size: calc($heading-size-md * 1.3);
-				&:hover,
-				&:focus {
-					border-bottom: 3px solid white;
-				}
-				&:focus {
-					outline: 3px solid white;
-          border: none;
-				}
-			}
-		}
-  };
 </style>

@@ -1,0 +1,27 @@
+---
+const { title, image } = Astro.props;
+---
+<li class="card box-shadow-5 rounded">
+  <h3 class="card-title text-neutral-900 fs-700 fw-bold"><strong>{title}</strong></h3>
+  <div class="flex-container">
+    <slot name="image">
+    <div class="card-flow-content flow">
+        <slot name="flow"/>
+    </div> <!--.card-flow-content end-->
+    <div class="card-footer">
+      <slot name="footer" />
+    </div>
+  </div> <!--.flex-container end-->
+</li>
+<style lang="scss">
+  @use "../../sass/abstracts" as *;
+  @use "../../sass/utilities" as *;
+  .card {
+    --card-padding: 1rem;
+    --card-max-width: 300px;
+    max-width: var(--card-max-width, 300px);
+    background-color: $grey;
+    padding: var(--card-padding, 1rem);
+
+  }
+</style>

@@ -6,8 +6,7 @@
 :root {
   --scroll-padding: 0rem;
 
-  /* colour each loop */
-  @each $colour, $shade-map in $colours {
+  @each $colour, $shade-map in $colours { /* colour each loop */
     @each $shade, $value in $shade-map {
       --clr-#{$colour}-#{$shade}: #{$value};
       .text-#{$colour}-#{$shade} {
@@ -18,8 +17,8 @@
       }
     }
   }
-  /* type-scale each loop */
-  @each $screen-size, $font-size in $type-scale {
+
+  @each $screen-size, $font-size in $type-scale { /* type-scale each loop */
     @if $screen-size == small {
       @each $size, $value in $font-size {
         --fs-#{$size}: #{$value};
@@ -38,8 +37,8 @@
       }
     }
   }
-  /* font-weight each loop */
-  @each $weight, $value in $font-weight-scale {
+
+  @each $weight, $value in $font-weight-scale { /* font-weight each loop */
     --fw-#{$weight}: #{$value};
     .fw-#{$weight} {
       font-weight: var(--fw-#{$weight});

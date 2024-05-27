@@ -1,9 +1,12 @@
-import {z} from 'astro:content';
-const viewLive = z.literal("view live");
-const codeOnGithub = z.literal("code on github");
-const linkLabel = z.union([viewLive, codeOnGithub]);
-const url = z.string().url();
+import { z } from "astro:content";
+const linkLabel = z.union([
+  z.literal("view live"),
+  z.literal("code on github"),
+]);
+const href = z.string().url();
 
-export const link = z.map(
-  linkLabel, url
-);
+const link = z.object({
+  label: linkLabel,
+  url: href,
+});
+export default link;

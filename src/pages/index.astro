@@ -1,16 +1,20 @@
 ---
 /* pages/index.astro */
-import "../sass/main.scss";
-import Default from "../layouts/Default.astro";
-import About from "../components/About/About.astro";
-import Skills from "../components/Skills/Skills.astro";
-import Projects from "../components/Projects/Projects.astro";
-import Profile from "../components/Profile/Profile.astro";
-import Contact from "../components/Contact/Contact.astro";
+import Default from "@layouts/Default.astro";
+import About from "@components/about/About.astro";
+import Projects from "@components/projects/Projects.astro";
+import Profile from "@components/profile/Profile.astro";
+import Contact from "@components/contact/Contact.astro";
+import Hero from "@components/hero/Hero.astro";
+const HeroData = {
+  firstName: "ben",
+  lastName: "bourgon",
+  jobTitle: "web developer",
+};
 ---
 <Default title="Ben Bourgon - Web Developer">
+  <Hero firstName={HeroData.firstName} lastName={HeroData.lastName} jobTitle={HeroData.jobTitle} />
   <About />
-  <Skills />
   <Projects />
   <Profile />
   <Contact />

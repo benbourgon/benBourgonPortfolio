@@ -1,20 +1,21 @@
 /* ==========================================================================
    Variables
    ========================================================================== */
+
 /* Colour variables */
 $blue-sapphire: var(--clr-primary-500);
 $grey: var(--clr-neutral-100);
-$purple-plum: #a755c2;
-$blue-jeans: #00c4ff;
-$green-sheen: #83bca9;
+$white: var(--clr-neutral-000);
+$purple-plum: var(--clr-secondary-500);
+$black: var(--clr-neutral-900);
 
 /* Font variables */
 $heading-font: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $body-font: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$subheading-font: "Playfair Display", ui-serif, Georgia, Cambria,
-  "Times New Roman", Times, serif;
+$subheading-font: "Playfair Display", ui-serif, georgia, cambria,
+  "Times New Roman", times, serif;
 
 /* Font weight variables */
 $bold: 700;
@@ -39,18 +40,10 @@ $roomy-line-height: 2.8rem;
 $body-height: auto;
 
 /* Box shadow variables */
-$box-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-$box-shadow:
-  0 1px 3px 0 rgb(0 0 0 / 0.1),
-  0 1px 2px -1px rgb(0 0 0 / 0.1);
-$box-shadow-2:
-  0 4px 6px -1px rgb(0 0 0 / 0.1),
-  0 2px 4px -2px rgb(0 0 0 / 0.1);
-$box-shadow-3:
-  0 10px 15px -3px rgb(0 0 0 / 0.1),
-  0 4px 6px -4px rgb(0 0 0 / 0.1);
-$box-shadow-4:
-  0 20px 25px -5px rgb(0 0 0 / 0.1),
-  0 8px 10px -6px rgb(0 0 0 / 0.1);
-$box-shadow-5: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-$box-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+$box-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+$box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+$box-shadow-2: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+$box-shadow-3: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+$box-shadow-4: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
+$box-shadow-5: 0 25px 50px -12px rgb(0 0 0 / 25%);
+$box-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 5%);
