@@ -1,12 +1,10 @@
+/* src/schemaTypes/link.ts */
 import { z } from "astro:content";
 const linkLabel = z.union([
   z.literal("view live"),
   z.literal("code on github"),
 ]);
-const href = z.string().url();
-
-const link = z.object({
+export const link = z.object({
   label: linkLabel,
-  url: href,
+  url: z.string().url(),
 });
-export default link;

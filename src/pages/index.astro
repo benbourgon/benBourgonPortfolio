@@ -2,20 +2,21 @@
 /* pages/index.astro */
 import Default from "@layouts/Default.astro";
 import About from "@components/about/About.astro";
-import Projects from "@components/projects/Projects.astro";
-import Profile from "@components/profile/Profile.astro";
 import Contact from "@components/contact/Contact.astro";
 import Hero from "@components/hero/Hero.astro";
-const HeroData = {
+const heroData = {
   firstName: "ben",
   lastName: "bourgon",
   jobTitle: "web developer",
 };
 ---
 <Default title="Ben Bourgon - Web Developer">
-  <Hero firstName={HeroData.firstName} lastName={HeroData.lastName} jobTitle={HeroData.jobTitle} />
+  <Hero props={heroData} />
   <About />
+  <!--
+  Temporarily removing these sections
   <Projects />
   <Profile />
+  -->
   <Contact />
 </Default>

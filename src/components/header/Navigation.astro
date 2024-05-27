@@ -1,0 +1,22 @@
+---
+/* src/components/header/Navigation.astro */
+import { getCollection } from "astro:content";
+import NavListItem from "./NavListItem.astro";
+const navItems = await getCollection("navItems");
+---
+
+<nav class="top-nav" aria-roledescription="primary navigation">
+  <ul class="top-nav-list bg-primary-500">
+    {navItems.map((navItem) => <NavListItem {...navItem} />)}
+  </ul>
+  <!--.top-nav-list end-->
+</nav>
+<!--.top-nav end-->
+<style lang="scss">
+  @use "../../sass/abstracts/" as *;
+  ul.top-nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 1rem;
+  }
+</style>

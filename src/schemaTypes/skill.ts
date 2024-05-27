@@ -1,7 +1,7 @@
+/* src/schemaTypes/skill.ts */
 import { z } from "astro:content";
 
-const skill = z.object({
+export const skill = z.object({
   label: z.string(),
   name: z.string(),
 });
-export default skill;

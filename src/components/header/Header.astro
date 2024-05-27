@@ -1,41 +1,12 @@
 ---
 /* components/Header/Header.astro */
+import Navigation from "./Navigation.astro";
 ---
 <header class="bg-primary-500 text-neutral-000">
   <div class="wrapper">
-    <nav class="top-nav" aria-roledescription="primary navigation">
-      <ul class="top-nav-list">
-        <li>
-          <a class="top-nav-link capitalize" href="#about">about</a>
-          <li>
-            <a class="top-nav-link capitalize" href="#projects">my work</a>
-          </li>
-          <li>
-            <a class="top-nav-link capitalize" href="#profile">profile</a>
-          </li>
-          <li>
-            <a class="top-nav-link capitalize" href="#contact">contact</a>
-          </li>
-        </li>
-        <!--.top-nav-list end-->
-      </ul>
-      <!--.top-nav end-->
-    </nav>
-    <!--header .wrapper end-->
-  </div>
+    <Navigation />
+  </div> <!--header .wrapper end-->
 </header>
 <style lang="scss">
   @use "../../sass/abstracts/" as *;
-  .top-nav-list {
-    display: flex;
-    text-decoration: none;
-    justify-content: space-between;
-    padding-block: 1rem;
-  }
-  .top-nav-link {
-    color: $white;
-    &:is(:hover, :focus-visible){
-      border-bottom: 2px solid $white;
-    }
-  }
 </style>

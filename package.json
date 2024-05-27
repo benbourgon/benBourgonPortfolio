@@ -46,17 +46,13 @@
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
     "astro-eslint-parser": "^1.0.2",
-    "eslint": "^9.3.0",
-    "eslint-plugin-astro": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "postcss-html": "^1.7.0",
     "sass": "^1.77.2",
-    "stylelint": "^16.5.0",
     "stylelint-config-astro": "^1.0.4",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.10.0"
+    "typescript": "^5.4.5"
   }
 }
