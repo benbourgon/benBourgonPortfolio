@@ -1,22 +1,42 @@
-// @ts-check
 import eslintPluginAstro from "eslint-plugin-astro";
+import parser from "astro-eslint-parser";
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
+  {
+    ignores: [
+      "node_modules/*",
+      "dist/*",
+      "public/*",
+      "build/*",
+      "out/*",
+      ".astro",
+      ".cache/*",
+      ".netlify/*",
+      ".vercel/*",
+      ".vite/*",
+      ".yarn/*",
+      "yarn.lock",
+      "package-lock.json",
+      "tsconfig.json",
+      "postcss.config.mjs",
+    ],
+  },
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
+      parser: tseslint.parser,
+      parser: parser,
       parserOptions: {
-        project: true,
+        project: ["./tsconfig.json"],
         tsconfigRootDir: import.meta.dirname,
+        extraFileExtensions: [".astro"],
       },
     },
-  },
-  {
-    ignores: ["node_modules/*", "dist/*", "public/*", "build/*", "out/*", ".astro/*", ".cache/*", ".netlify/*", ".vercel/*", ".vite/*", ".yarn/*", "yarn.lock", "package-lock.json", "tsconfig.json", "eslint.config.mjs, *.cjs"]
-  },
-  ...tseslint.configs.stylisticTypeChecked,
-  ...eslintPluginAstro.configs.recommended,
+    ...eslintPluginAstro.configs.recommended,
+    ...eslintPluginAstro.configs["jsx-a11y-strict"],
+  }
 );
