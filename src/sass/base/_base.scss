@@ -4,47 +4,46 @@
 @use "../abstracts" as *;
 
 html {
-  @include box-reset;
+    @include box-reset;
 
-  max-width: 100%;
+    max-width: 100%;
 }
 
 body {
-  @include box-reset;
+    @include box-reset;
 
-  max-width: 100%;
-
+    max-width: 100%;
 }
 
 ul {
-  @include box-reset;
+    @include box-reset;
 
-  list-style: none;
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
-  @include box-reset;
+    @include box-reset;
 
-  transition: 200ms;
-  border: none;
+    transition: 200ms;
+    border: none;
 
-  &:hover,
-  &:focus {
-    transform: scale(1.05);
-  }
+    &:hover,
+    &:focus {
+        transform: scale(1.05);
+    }
 }
 
 button {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 
-  @include hover-lift;
+    @include hover-lift;
 
-  cursor: pointer;
+    cursor: pointer;
 }

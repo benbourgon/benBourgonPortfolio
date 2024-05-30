@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 
 .section {
-  @include box-reset;
+    @include box-reset;
 
-  padding: 10rem 0;
+    padding: 10rem 0;
 }
