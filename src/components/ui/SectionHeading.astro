@@ -1,9 +1,14 @@
 ---
-const { preamble, heading, colour="text-neutral-900"} = Astro.props;
+interface Props {
+  preamble: string;
+  heading: string;
+  colour?: string;
+}
+const { preamble, heading, colour} = Astro.props;
 ---
 <div class="section-heading-container">
   <h2 class=`uppercase ${colour} fw-bold fs-900`>
-    <span class="fw-regular heading-size-sm lowercase">{preamble}
+    <span class={`fw-regular heading-size-sm lowercase ${colour}`}>{preamble}
       <span class="sr-only">:</span>
     </span>
     {heading}
@@ -11,6 +16,7 @@ const { preamble, heading, colour="text-neutral-900"} = Astro.props;
 </div>
 <style lang="scss">
   @use "../../sass/abstracts" as *;
+  @use "../../sass/utilities" as *;
   .section-heading-container {
     width: 100%;
     @include flex-column;
@@ -23,10 +29,10 @@ const { preamble, heading, colour="text-neutral-900"} = Astro.props;
       width: fit-content;
 
       span:not(.sr-only) {
-        color: currentColor;
-        width: fit-content;
+        width: 50%;
         z-index: 30;
         max-height: 50px;
+        min-height: fit-content;
         position: absolute;
         left: 100%;
         transform: translateX(-100%) translateY(-90%);

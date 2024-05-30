@@ -10,7 +10,7 @@ import { Icon } from "astro-icon/components";
       heading={"contact"}
       colour={"text-neutral-0"}
     />
-    <form
+    <!-- <form
       action="https://formspree.io/f/mgedpvld"
       method="POST"
       class="contact-form"
@@ -52,12 +52,12 @@ import { Icon } from "astro-icon/components";
         cols="30"
         rows="10"></textarea>
       <button type="submit" class="send-button">Send</button>
-    </form>
-    <p class="or">or</p>
+    </form> -->
+    <!-- <p class="or">or</p>
     <a
       href="mailto:benjaminbourgon@gmail.com"
       class="contact-email-address">benjaminbourgon@gmail.com
-    </a>
+    </a> -->
     <nav>
       <ul>
         <li>
@@ -110,10 +110,6 @@ import { Icon } from "astro-icon/components";
 .contact {
 	width: 100%;
 	max-width: 100%;
-
-	.wrapper {
-		overflow: hidden;
-	}
 
 	form,
 	.phone-email-inputs {
@@ -205,6 +201,8 @@ import { Icon } from "astro-icon/components";
 	nav {
 		max-width: 100%;
 		overflow: hidden;
+    display: flex;
+    justify-content: center;
 	}
 	ul {
 		display: flex;

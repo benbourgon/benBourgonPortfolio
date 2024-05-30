@@ -1,6 +1,7 @@
+/* src/schemaTypes/project.ts */
 import { z, reference } from "astro:content";
-import link from "./link.ts";
-const project = z.object({
+import { link } from "./link.ts";
+export const project = z.object({
   title: z.string(),
   image: z.object({
     url: z.string(),
@@ -10,5 +11,3 @@ const project = z.object({
   techStack: z.array(reference("skills")),
   links: z.array(link),
 });
-
-export default project;

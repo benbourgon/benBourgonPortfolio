@@ -109,9 +109,15 @@ import type { ComponentProps } from "astro/types";
     if (event.code !== "Enter") {
       return;
     } else {
+      if (!focusedInput) throw new Error("No focused input found");
+      if (!(focusedInput instanceof HTMLInputElement)) throw new Error("Focused input is not an input element");
       focusedInput.checked = true;
-      currentValue = focusedInput.value;
-      updateContent(currentValue);
+      if (!focusedInput.value) throw new Error("Focused input has no value");
+      if (focusedInput.value === currentValue) return;
+      if (focusedInput.value === "aboutMe" || focusedInput.value === "interests" || focusedInput.value === "coffee") {
+        currentValue = focusedInput.value;
+        updateContent(currentValue);
+      }
     }
   };
   if (profileForm) {
