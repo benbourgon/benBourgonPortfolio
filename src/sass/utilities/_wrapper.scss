@@ -2,12 +2,12 @@
 @use "../abstracts/mixins" as *;
 
 .wrapper {
-  --content-max-width: 1160px;
-  --padding-inline: 2rem;
+    --content-max-width: 1160px;
+    --padding-inline: 2rem;
 
-  @include box-reset;
+    @include box-reset;
 
-  width: min(var(--content-max-width), 100% - var(--padding-inline));
-  max-width: var(--content-max-width);
-  margin-inline: auto;
-};
+    width: min(var(--content-max-width), 100% - var(--padding-inline));
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+}

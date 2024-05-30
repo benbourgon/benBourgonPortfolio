@@ -62,7 +62,7 @@ import Headshot from "@images/benHeadshotDesktop.webp";
   @use "../../sass/utilities" as *;
   .about {
     h3 {
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     a {
       &:hover {
@@ -119,6 +119,7 @@ import Headshot from "@images/benHeadshotDesktop.webp";
       }
       .grid-container {
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: mixmax()
       }
       .content-container {
         flex-basis: 47%;
