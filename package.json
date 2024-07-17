@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro check && astro build",
+        "build": "astro check && astro build --legacy-peer-deps",
         "preview": "astro preview",
         "lint": "eslint",
         "lint:fix": "eslint --fix",
@@ -39,7 +39,6 @@
         "purgecss": "^6.0.0"
     },
     "devDependencies": {
-        "@eslint/js": "^9.7.0",
         "@iconify-json/akar-icons": "^1.1.24",
         "@iconify-json/devicon-plain": "^1.1.45",
         "@iconify-json/fa6-brands": "^1.1.20",
@@ -48,9 +47,6 @@
         "@iconify-json/simple-icons": "^1.1.109",
         "@rollup/plugin-yaml": "^4.1.2",
         "@total-typescript/ts-reset": "^0.5.1",
-        "eslint": "^9.7.0",
-        "eslint-plugin-astro": "^1.2.3",
-        "eslint-plugin-jsx-a11y": "^6.9.0",
         "globals": "^15.8.0",
         "postcss": "^8.4.39",
         "postcss-cli": "^11.0.0",
@@ -65,7 +61,6 @@
         "stylelint-config-html": "^1.1.0",
         "stylelint-config-standard": "^36.0.1",
         "stylelint-config-standard-scss": "^13.1.0",
-        "typescript": "^5.5.3",
-        "typescript-eslint": "^7.16.1"
+        "typescript": "^5.5.3"
     }
 }
