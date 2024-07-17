@@ -3,19 +3,53 @@
    ========================================================================== */
 
 /* Colour variables */
-$blue-sapphire: var(--clr-primary-500);
-$grey: var(--clr-neutral-100);
-$white: var(--clr-neutral-000);
-$purple-plum: var(--clr-secondary-500);
-$black: var(--clr-neutral-900);
+$neutral-0: var(--clr-neutral-0);
+$neutral-50: var(--clr-neutral-50);
+$neutral-100: var(--clr-neutral-100);
+$neutral-200: var(--clr-neutral-200);
+$neutral-300: var(--clr-neutral-300);
+$neutral-400: var(--clr-neutral-400);
+$neutral-500: var(--clr-neutral-500);
+$neutral-600: var(--clr-neutral-600);
+$neutral-700: var(--clr-neutral-700);
+$neutral-800: var(--clr-neutral-800);
+$neutral-900: var(--clr-neutral-900);
+$primary-50: var(--clr-primary-50);
+$primary-100: var(--clr-primary-100);
+$primary-200: var(--clr-primary-200);
+$primary-300: var(--clr-primary-300);
+$primary-400: var(--clr-primary-400);
+$primary-500: var(--clr-primary-500);
+$primary-600: var(--clr-primary-600);
+$primary-700: var(--clr-primary-700);
+$primary-800: var(--clr-primary-800);
+$primary-900: var(--clr-primary-900);
+$primary-950: var(--clr-primary-950);
+$secondary-50: var(--clr-secondary-50);
+$secondary-100: var(--clr-secondary-100);
+$secondary-200: var(--clr-secondary-200);
+$secondary-300: var(--clr-secondary-300);
+$secondary-400: var(--clr-secondary-400);
+$secondary-500: var(--clr-secondary-500);
+$secondary-600: var(--clr-secondary-600);
+$secondary-700: var(--clr-secondary-700);
+$secondary-800: var(--clr-secondary-800);
+$secondary-900: var(--clr-secondary-900);
+$secondary-950: var(--clr-secondary-950);
+/* Named colours */
+$blue-sapphire: $primary-800;
+$light-grey: $neutral-100;
+$white: $neutral-0;
+$purple-plum: $secondary-500;
+$black: $neutral-900;
+$body-bg: $blue-sapphire;
 
 /* Font variables */
-$heading-font: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$body-font: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$subheading-font: "Playfair Display", ui-serif, georgia, cambria,
-  "Times New Roman", times, serif;
+$heading-font: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$body-font: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$subheading-font: "Playfair Display", ui-serif, georgia, cambria, "Times New Roman", times, serif;
 
 /* Font weight variables */
 $bold: 700;
@@ -25,25 +59,44 @@ $regular: 400;
 $light: 300;
 
 /* Font size variables */
-$ben-heading-size: var(--fs-900);
-$bourgon-heading-size: var(--fs-950);
-$heading-size-lg: var(--fs-600);
-$heading-size-md: var(--fs-500);
-$heading-size-sm: var(--fs-400);
-$body-size: var(--fs-300);
-$icon-size: var(--fs-500);
+$fs-100: var(--fs-100);
+$fs-200: var(--fs-200);
+$fs-300: var(--fs-300);
+$fs-400: var(--fs-400);
+$fs-500: var(--fs-500);
+$fs-600: var(--fs-600);
+$fs-700: var(--fs-700);
+$fs-800: var(--fs-800);
+$fs-900: var(--fs-900);
+$fs-950: var(--fs-950);
+$ben-heading-size: $fs-900;
+$bourgon-heading-size: $fs-950;
+$heading-size-lg: $fs-600;
+$heading-size-md: $fs-500;
+$heading-size-sm: $fs-400;
+$body-size: $fs-300;
+$body-size-sm: $fs-200;
+$icon-size: $fs-500;
 
 /* Line height variables */
-$ben-heading-height: 3.6rem;
-$bourgon-heading-height: 5.3rem;
-$roomy-line-height: 2.8rem;
+$ben-heading-height: var(--fs-800);
+$bourgon-heading-height: var(--fs-900);
+$roomy-line-height: var(--fs-600);
 $body-height: auto;
 
 /* Box shadow variables */
 $box-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
-$box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
-$box-shadow-2: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
-$box-shadow-3: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
-$box-shadow-4: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
+$box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 10%),
+    0 1px 2px -1px rgb(0 0 0 / 10%);
+$box-shadow-2:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -2px rgb(0 0 0 / 10%);
+$box-shadow-3:
+    0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -4px rgb(0 0 0 / 10%);
+$box-shadow-4:
+    0 20px 25px -5px rgb(0 0 0 / 10%),
+    0 8px 10px -6px rgb(0 0 0 / 10%);
 $box-shadow-5: 0 25px 50px -12px rgb(0 0 0 / 25%);
 $box-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 5%);

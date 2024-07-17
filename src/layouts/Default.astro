@@ -1,19 +1,76 @@
 ---
+// layouts/Default.astro'
+
+// Styles
 import "../sass/main.scss";
-import BaseHead from "@components/baseHead/BaseHead.astro"
-// import Header from "@components/header/Header.astro"
-import Footer from "@components/footer/Footer.astro"
-const { title } = Astro.props;
+
+// Astro utilities
+import { getCollection } from "astro:content";
+
+// Components
+import BaseHead from "@components/baseHead/BaseHead.astro";
+import Navigation from "@components/ui/navigation/Navigation.astro";
+import Footer from "@components/footer/Footer.astro";
+
+// Fonts
 import "@fontsource-variable/montserrat";
-import "@fontsource-variable/playfair-display"
+import "@fontsource-variable/playfair-display";
+
+// Types
+import type { HTMLAttributes } from "astro/types";
+interface Props extends HTMLAttributes<"html"> {
+    title: string;
+}
+
+// Props
+const { title, ...attributes } = Astro.props;
+
+// Get navigation items
+const navItems = await getCollection("navItems");
+if (!navItems) {
+    throw new Error("No nav items found");
+}
 ---
-<html lang="en">
-  <BaseHead title={title} />
-  <body>
-    <!-- <Header /> -->
-    <main>
-      <slot />
-    </main>
-    <Footer />
-  </body>
+
+<html lang="en" {...attributes}>
+    <BaseHead title={title} />
+    <body>
+        <Navigation navItems={navItems} class="primary-navigation" />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+        <style lang="scss">
+            @use "../sass/abstracts/" as *;
+            .primary-navigation {
+                grid-area: navigation;
+            }
+            main {
+                grid-area: main;
+            }
+            footer {
+                grid-area: footer;
+            }
+            body {
+                @include box-reset;
+                background-color: $body-bg;
+                display: grid;
+                grid-template-areas:
+                    "main"
+                    "footer"
+                    "navigation";
+            }
+            @include mq("small") {
+                body {
+                    min-height: 100vh;
+                    min-height: 100dvh;
+                    grid-template-columns: auto 1fr;
+                    grid-template-rows: auto 1fr auto;
+                    grid-template-areas:
+                        "navigation main"
+                        "footer footer";
+                }
+            }
+        </style>
+    </body>
 </html>

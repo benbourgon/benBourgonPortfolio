@@ -1,23 +1,35 @@
 ---
+/* components/ui/SkillListItem */
+
+// Components
 import { Icon } from "astro-icon/components";
-interface Props {
-  name: string; // Iconify name of the icon
-  size: number;
-  label: string; // Label for the icon
-  colour?: string;
+
+// Props
+import type { HTMLAttributes } from "astro/types";
+interface Props extends HTMLAttributes<"li"> {
+    name: string; // Iconify name of the icon
+    size: number;
+    label: string; // Label for the icon
+    colour?: string;
 }
-const { name, size, label, colour} = Astro.props
+const { name, size, label, colour, ...attributes } = Astro.props;
 ---
-<li>
-  <Icon name={name} size={size} color={colour} />
-  <p>{label}</p>
+
+<li class:list={["tech-list-item", attributes.class]} {...attributes}>
+    <Icon name={name} size={size} color={colour} aria-labelledby=`tech-list-item-text-${label}` />
+    <p class=`tech-list-item-text` id=`tech-list-item-text-${label}`>{label}</p>
 </li>
-<style>
-  li {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
+<style lang="scss" define:vars={colour}>
+    @use "../../sass/abstracts" as *;
+    .tech-list-item {
+        color: var(--colour, $primary-800);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        place-items: center;
+    }
+    .tech-list-item-text {
+        font-size: $fs-400;
+        text-align: center;
     }
 </style>

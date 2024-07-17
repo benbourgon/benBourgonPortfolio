@@ -1,10 +1,11 @@
-node_modules
+node_modules/
 .DS_Store
 *.pdf
 *.zip
 *.psd
 designs/
-.astro
-
+.astro/
+dist/
+.vscode/
 # Local Netlify folder
 .netlify

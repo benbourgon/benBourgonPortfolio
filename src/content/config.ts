@@ -1,24 +1,34 @@
 /* Import utilities from `astro:content` */
 import { defineCollection } from "astro:content";
 /* Import schema definitions */
-import { project, skill, navItem } from "../schemaTypes/";
+import { project, skill, navItem, siteSettings, aboutSection } from "../schemaTypes/";
 
-/* 2. Define a `type` and `schema` for each collection */
+/* Define a `type` and `schema` for each collection */
 const projects = defineCollection({
-  type: "data",
-  schema: project,
+    type: "data",
+    schema: project,
 });
 const skills = defineCollection({
-  type: "data",
-  schema: skill,
+    type: "data",
+    schema: skill,
 });
 const navItems = defineCollection({
-  type: "data",
-  schema: navItem,
+    type: "data",
+    schema: navItem,
 });
-// 3. Export a single `collections` object to register your collections
+const settings = defineCollection({
+    type: "data",
+    schema: siteSettings,
+});
+const about = defineCollection({
+    type: "data",
+    schema: aboutSection,
+});
+// Export a single `collections` object to register your collections
 export const collections = {
-  projects: projects,
-  skills: skills,
-  navItems: navItems,
+    projects,
+    skills,
+    navItems,
+    settings,
+    about,
 };

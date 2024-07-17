@@ -14,50 +14,50 @@ https://codepen.io/kevinpowell/pen/abMdOpp
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Remove default spacing & force styling of type through styling, rather than elements */
 * {
-  margin: 0;
-  padding: 0;
-  font: inherit;
+    margin: 0;
+    padding: 0;
+    font: inherit;
 }
 
 /* Prevent font size inflation */
 html {
-  text-size-adjust: none;
-  line-height: 1.5;
-  color-scheme: dark light;
-  hanging-punctuation: first last;
+    text-size-adjust: none;
+    line-height: 1.5;
+    color-scheme: dark light;
+    hanging-punctuation: first last;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
 :is(body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, ol, ul, pre) {
-  margin-block-end: 0;
+    margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[class],
 ol[class] {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100svh;
+    min-height: 100svh;
 }
 
 /* Set shorter line heights on headings and interactive elements */
 :is(h1, h2, h3, h4, h5, h6, button, input, label) {
-  line-height: 1.1;
+    line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
 :is(h1, h2, h3, h4, h5, h6) {
-  text-wrap: balance;
+    text-wrap: balance;
 }
 
 /* improve readability with max-width on paragraphs and lists */
@@ -67,24 +67,24 @@ p,
 li,
 .intro-text,
 dd {
-  max-width: var(--p-max-width, 65ch);
-  text-wrap: pretty;
+    max-width: var(--p-max-width, 65ch);
+    text-wrap: pretty;
 }
 
 /* Allow smooth-scrolling for users with no reduced motion preference */
 @media (prefers-reduced-motion: no-preference) {
-  :has(:target) {
-    scroll-behavior: smooth;
-  }
+    :has(:target) {
+        scroll-behavior: smooth;
+    }
 }
 
 :has(:target) {
-  scroll-padding-top: var(--scroll-padding, 0);
+    scroll-padding-bottom: var(--scroll-padding, 6rem);
 }
 
 /* Anchor elements that don't have a class get default styles */
 a:not([class]) {
-  color: currentcolor;
+    color: currentcolor;
 }
 
 /* Make images easier to work with */
@@ -92,8 +92,8 @@ img,
 picture,
 svg,
 video {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -101,15 +101,15 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-  min-height: 10em;
+    min-height: 10em;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 5ex;
+    scroll-margin-block: 5ex;
 }

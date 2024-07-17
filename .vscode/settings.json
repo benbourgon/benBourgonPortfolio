@@ -1,51 +1,48 @@
 {
-  "eslint.validate": [
-  
-    "javascript",
-    "javascriptreact",
-    "astro", // Enable .astro
-    "typescript", // Enable .ts
-    "typescriptreact" // Enable .tsx
-  ],
-  "stylelint.validate": [
-    // Add "html" language.
-    "html",
-    // Add "vue" language.
-    "vue",
-    // Add "svelte" language.
-    "svelte",
-    // Add "astro" language.
-    "astro"
-  ],
-  "workbench.colorCustomizations": {
-    "editorGutter.background": "#00000000" // no gutter color
-  },
-  "editor.renderLineHighlight": "all",
-  "editor.lineNumbers": "on",
-  "editor.folding": true,
-  "editor.guides.indentation": false,
-  "breadcrumbs.enabled": true,
-  "editor.guides.bracketPairs": false,
-  "editor.matchBrackets": "never",
-  "editor.rulers": [],
-  "editor.minimap.enabled": false,
-  "editor.padding.top": 10,
-  // bumping mouse scroll goofs with eidting, so we "turn off" scrolling with this feature
-  "editor.scrollBeyondLastLine": true,
-  "editor.scrollbar.verticalScrollbarSize": 0,
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "/styles"
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "astro", // Enable .astro
+        "typescript", // Enable .ts
+        "typescriptreact" // Enable .tsx
+    ],
+    "stylelint.validate": [
+        // Add "html" language.
+        "html",
+        // Add "astro" language.
+        "astro"
+    ],
+    "workbench.colorCustomizations": {
+        "editorGutter.background": "#00000000" // no gutter color
+    },
+    "editor.renderLineHighlight": "all",
+    "editor.lineNumbers": "on",
+    "editor.folding": true,
+    "editor.guides.indentation": false,
+    "breadcrumbs.enabled": true,
+    "editor.guides.bracketPairs": false,
+    "editor.matchBrackets": "never",
+    "editor.rulers": [],
+    "editor.minimap.enabled": false,
+    "editor.padding.top": 10,
+    // bumping mouse scroll goofs with eidting, so we "turn off" scrolling with this feature
+    "editor.scrollBeyondLastLine": true,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/styles"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**"],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+    "editor.formatOnSave": true,
+    "cSpell.words": ["devicon", "nocheck", "xlarge", "xsmall", "xxlarge", "xxsmall"],
+    "prettier.documentSelectors": ["[\"**/*.astro\"]"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
     }
-  ],
-  "liveSassCompile.settings.excludeList": [
-    "/**/node_modules/**",
-    "/.vscode/**"
-  ],
-  "liveSassCompile.settings.generateMap": false,
-  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
-  "editor.formatOnSave": false,
-  "cSpell.words": ["devicon", "xlarge", "xsmall", "xxlarge", "xxsmall"]
 }

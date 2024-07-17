@@ -1,136 +1,109 @@
 ---
 /* components/AboutSection/About.astro */
-import { Image } from "astro:assets";
+// Components
 import SectionHeading from "@components/ui/SectionHeading.astro";
-import Headshot from "@images/benHeadshotDesktop.webp";
+import { Cloudinary } from "astro-cloudinary-image";
+// Modules
+import { getEntry } from "astro:content";
+
+// Media
+import imageNotFound from "@images/imageNotFoundSquare.svg";
+
+// Schema Types
+import { aboutSection } from "../../schemaTypes/about";
+
+// Get the about section data
+const about = await getEntry("about", "index");
+const data = aboutSection.parse(about.data);
+const { title, preamble, image, flow } = data;
 ---
 
-<section class="about | section | bg-neutral-0 text-neutral-900" id="about">
-  <div class="wrapper">
-    <SectionHeading
-      heading={"hello"}
-      preamble={"nice to meet you"}
-      colour={"text-neutral-900"}
-    />
-    <div class="grid-container">
-      <div class="image-container">
-        <Image
-          src={Headshot}
-          alt="Ben Bourgon, the web developer who wrote this alt text"
-          width="440"
-          height="660"
-          class="box-shadow-5"
-        />
-      </div>
-      <!--.image-container end-->
-      <div class="content-container flow">
-        <h3 class="fw-bold fs-500">
-          I'm Ben, a Web Developer from Toronto, Ontario.
-        </h3>
-        <p class="fw-medium">
-          I design and build great websites and apps. I'm passionate about
-          creating accessible, performant experiences, and finding effective
-          solutions for your business.
-        </p>
-        <p class="fw-medium">
-          Right now, I'm rebuilding this site in <a href="https://astro.build/"
-            >Astro</a
-          >, so check back soon for more updates!
-        </p>
-        <!-- <p class="fw-medium">
-          While you're here, please feel free to have a look at <a
-            href="#projects">my work</a
-          >, get to know more <a href="#profile">about me</a>, or <a
-            href="#contact">reach out to me</a
-          >. I'd love to hear from you!
-        </p>
-        <div class="link-container about-link-container">
-          <a href="#profile" class="my-profile-link fs-500">My Profile</a>
-          <a href="#contact" class="my-profile-link fs-500">Message Me</a>
-        </div> -->
-        <!--.link-container end-->
-      </div>
-      <!--.content-container end-->
+<section class="about | section" id="about">
+    <div class="wrapper">
+        <SectionHeading heading={title} preamble={preamble} colour={"text-primary-950"} />
+        <div class="grid-container">
+            <div class="image-container | rounded-lg">
+                <Cloudinary
+                    src={image.src}
+                    alt={image.alt ?? "Ben Bourgon, the web developer who wrote this alt text."}
+                    errorImage={imageNotFound.src}
+                    width="350"
+                    height="525"
+                    resize="fill"
+                    gravity="face"
+                />
+            </div>
+            <!--.image-container end-->
+            <div class="content-container | flow | fs-500">
+                <h3 class="fw-bold">{flow.heading}</h3>
+                {flow.content.map((paragraph) => <p class="fw-medium">{paragraph}</p>)}
+            </div>
+        </div>
+        <!--.content-container end-->
     </div>
     <!--.flex-container end-->
-  </div>
-  <!--.wrapper end-->
 </section>
+<!--.wrapper end-->
+
 <!--About section end-->
 <style lang="scss">
-  @use "../../sass/abstracts" as *;
-  @use "../../sass/utilities" as *;
-  .about {
+    @use "../../sass/abstracts" as *;
+    @use "../../sass/utilities" as *;
+    .about {
+        background-color: $primary-50;
+        color: $primary-950;
+    }
     h3 {
-      text-wrap: pretty;
+        text-wrap: pretty;
     }
     a {
-      &:hover {
-        text-decoration: underline;
-        text-underline-offset: 0.5rem;
-      }
-      &:focus-visible {
-        outline: 3px solid $blue-sapphire;
-      }
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+        }
+        &:focus-visible {
+            outline: 3px solid $blue-sapphire;
+        }
     }
     .about-link-container {
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
     .grid-container {
-      display: grid;
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     .image-container {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
+        aspect-ratio: 2 / 3;
+        width: 85%;
+        max-width: 350px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
     .content-container {
-      margin-block-start: 2em;
-      padding: 0 1rem;
+        margin-block-start: 2em;
+        padding: 0 1rem;
     }
-  }
-  .my-profile-link,
-  .read-more {
-    margin-top: 2rem;
-    transition: 200ms ease-in-out;
-    text-decoration: underline;
-    padding: 10px 2px 5px 2px;
-
-    &:hover,
-    &:focus {
-      font-weight: $bold;
-      transform: scale(1.05);
-      text-underline-offset: 0rem;
+    /* 1024px about section media queries */
+    @include mq("medium") {
+        .image-container {
+            padding-bottom: 0;
+        }
+        .grid-container {
+            grid-template-columns: 1fr 1fr;
+        }
+        .content-container {
+            margin-block-start: 0;
+        }
+        h3 {
+            text-wrap: balance;
+        }
     }
-    &:focus-visible {
-      outline: 3px solid $blue-sapphire;
-      outline-offset: 0.5rem;
+    /* 1440px about section media queries */
+    @include mq("large") {
+        .grid-container {
+            grid-template-columns: 1fr 3fr;
+        }
     }
-  }
-  /* 768px About section media queries */
-  @include mq("small") {
-    .about {
-      h3 {
-        margin-top: 0;
-      }
-      .grid-container {
-        grid-template-columns: 1fr 1fr;
-      }
-      .content-container {
-        flex-basis: 47%;
-      }
-    }
-  }
-  /* 1024px about section media queries */
-  @include mq("medium") {
-    .about {
-      .image-container {
-        padding-bottom: 0;
-      }
-    }
-  }
 </style>
