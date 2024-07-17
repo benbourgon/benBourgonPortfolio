@@ -29,6 +29,7 @@ const { navItems, ...attributes } = Astro.props;
 
 <style lang="scss">
     @use "../../../sass/abstracts/" as *;
+
     nav {
         background-color: $neutral-800;
         opacity: 0.95;
@@ -38,12 +39,14 @@ const { navItems, ...attributes } = Astro.props;
         bottom: 0;
         z-index: 50;
     }
+
     .navigation-list {
         display: grid;
         grid-template-columns: repeat(3, minmax(3rem, 1fr));
         margin: 0;
         list-style: none;
     }
+
     @include mq("small") {
         nav {
             position: sticky;
@@ -52,11 +55,14 @@ const { navItems, ...attributes } = Astro.props;
             width: 100%;
             max-height: 100vh;
             max-height: 100dvh;
+            min-width: max-content;
             border-radius: 0;
         }
+
         .navigation-list {
-            position: sticky;
             @include flex-column;
+
+            position: sticky;
             justify-content: start;
             padding-inline: 0.5rem;
             padding-block: 1rem;
@@ -64,6 +70,7 @@ const { navItems, ...attributes } = Astro.props;
             gap: 2rem;
             height: 100%;
         }
+
         .navigation-list-item:last-child {
             margin-block-start: auto;
             padding-block-end: 3rem;

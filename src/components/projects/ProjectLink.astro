@@ -41,9 +41,11 @@ const { label, url } = link;
 
 <style lang="scss">
     @use "../../sass/abstracts" as *;
+
     .project-link-container {
         position: relative;
     }
+
     .project-link-anchor {
         font-size: $fs-500;
         text-transform: capitalize;
@@ -53,20 +55,23 @@ const { label, url } = link;
         margin-top: 2rem;
         transition: 200ms ease-in-out;
         text-decoration: underline;
-        padding: 10px 2px 5px 2px;
+        padding: 10px 2px 5px;
 
         &:hover,
         &:focus-visible {
             font-weight: $bold;
         }
+
         &:focus-visible {
             outline: 3px solid $blue-sapphire;
             outline-offset: -0.26rem;
         }
+
         &:visited {
             color: $primary-800;
         }
     }
+
     .link-tooltip {
         display: none;
         background: $neutral-900;
@@ -80,6 +85,7 @@ const { label, url } = link;
         top: 0;
         left: 0;
     }
+
     .link-tooltip-arrow {
         position: absolute;
         background: $neutral-900;

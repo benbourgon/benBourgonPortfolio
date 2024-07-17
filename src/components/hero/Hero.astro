@@ -23,12 +23,15 @@ const { firstName, lastName, subtitle } = data;
 <style lang="scss">
     @use "../../sass/abstracts" as *;
     @use "../../sass/utilities" as *;
+
     .hero {
         color: $primary-50;
     }
+
     .my-name {
         @include flex-column;
         @include box-reset;
+
         justify-content: center;
         align-items: center;
         margin: 0 auto;
@@ -37,13 +40,16 @@ const { firstName, lastName, subtitle } = data;
         display: block;
         line-height: $bourgon-heading-height;
     }
+
     .heading-ben,
     .heading-bourgon,
     .job-title {
         display: block;
     }
+
     .job-title {
         @include box-reset;
+
         margin-top: 1rem;
         font-family: $heading-font;
     }

@@ -89,37 +89,44 @@ import { Icon } from "astro-icon/components";
                 }
             }
         }
-        a:focus-visible {
-            outline: 3px solid white;
-        }
+
         .flex-container {
             max-width: 100%;
             clip-path: border-box;
             display: flex;
             justify-content: center;
         }
+
         ul {
             display: flex;
             width: 250px;
             flex-wrap: wrap;
             justify-content: space-evenly;
+
             li {
                 display: flex;
                 justify-content: center;
                 width: 20%;
                 max-width: 20%;
             }
+
             a {
                 max-width: 100%;
                 padding: 0 5px;
                 z-index: 10;
+
+                &:focus-visible {
+                    outline: 3px solid white;
+                }
             }
+
             i {
                 display: block;
                 max-width: 100%;
             }
         }
     }
+
     /* 768px Contact section media queries */
     @include mq("medium") {
         .phone-email-inputs {

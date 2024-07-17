@@ -21,6 +21,7 @@ const { name, size, label, colour, ...attributes } = Astro.props;
 </li>
 <style lang="scss" define:vars={colour}>
     @use "../../sass/abstracts" as *;
+
     .tech-list-item {
         color: var(--colour, $primary-800);
         display: grid;
@@ -28,6 +29,7 @@ const { name, size, label, colour, ...attributes } = Astro.props;
         gap: 0.5rem;
         place-items: center;
     }
+
     .tech-list-item-text {
         font-size: $fs-400;
         text-align: center;

@@ -49,30 +49,37 @@ const { title, preamble, image, flow } = data;
 <style lang="scss">
     @use "../../sass/abstracts" as *;
     @use "../../sass/utilities" as *;
+
     .about {
         background-color: $primary-50;
         color: $primary-950;
     }
+
     h3 {
         text-wrap: pretty;
     }
+
     a {
         &:hover {
             text-decoration: underline;
             text-underline-offset: 0.5rem;
         }
+
         &:focus-visible {
             outline: 3px solid $blue-sapphire;
         }
     }
+
     .about-link-container {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
     }
+
     .grid-container {
         grid-template-columns: 1fr;
     }
+
     .image-container {
         aspect-ratio: 2 / 3;
         width: 85%;
@@ -81,25 +88,31 @@ const { title, preamble, image, flow } = data;
         display: flex;
         justify-content: center;
     }
+
     .content-container {
         margin-block-start: 2em;
         padding: 0 1rem;
     }
+
     /* 1024px about section media queries */
     @include mq("medium") {
         .image-container {
             padding-bottom: 0;
         }
+
         .grid-container {
             grid-template-columns: 1fr 1fr;
         }
+
         .content-container {
             margin-block-start: 0;
         }
+
         h3 {
             text-wrap: balance;
         }
     }
+
     /* 1440px about section media queries */
     @include mq("large") {
         .grid-container {
