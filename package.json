@@ -8,8 +8,8 @@
         "start": "astro dev",
         "build": "astro check && astro build",
         "preview": "astro preview",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
         "format": "prettier --write .",
         "stylelint": "stylelint \"**/*.scss\"",
         "stylelint:fix": "stylelint \"**/*.scss\" --fix"
@@ -48,17 +48,9 @@
         "@iconify-json/simple-icons": "^1.1.109",
         "@rollup/plugin-yaml": "^4.1.2",
         "@total-typescript/ts-reset": "^0.5.1",
-        "@types/eslint__js": "^8.42.3",
-        "@typescript-eslint/eslint-plugin": "^7.16.1",
-        "@typescript-eslint/parser": "^7.16.1",
-        "astro-eslint-parser": "^1.0.2",
         "eslint": "^9.7.0",
-        "eslint-config-standard-with-typescript": "^43.0.1",
         "eslint-plugin-astro": "^1.2.3",
-        "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jsx-a11y": "^6.9.0",
-        "eslint-plugin-n": "^17.9.0",
-        "eslint-plugin-promise": "^6.4.0",
         "globals": "^15.8.0",
         "postcss": "^8.4.39",
         "postcss-cli": "^11.0.0",
@@ -75,8 +67,5 @@
         "stylelint-config-standard-scss": "^13.1.0",
         "typescript": "^5.5.3",
         "typescript-eslint": "^7.16.1"
-    },
-    "overrides": {
-        "eslint": "^9.7.0"
     }
 }

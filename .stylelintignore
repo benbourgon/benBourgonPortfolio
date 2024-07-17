@@ -14,7 +14,7 @@ README.md
 astro.config.mjs
 package.json
 package-lock.json
-postcss.config.cjs
+postcss.config.mjs
 prettier.config.mjs
 tsconfig.json
 public/robots.txt
