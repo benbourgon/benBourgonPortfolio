@@ -59,6 +59,7 @@
         "eslint-plugin-jsx-a11y": "^6.9.0",
         "eslint-plugin-n": "^17.9.0",
         "eslint-plugin-promise": "^6.4.0",
+        "globals": "^15.8.0",
         "postcss": "^8.4.39",
         "postcss-cli": "^11.0.0",
         "postcss-combine-duplicated-selectors": "^10.0.3",
@@ -74,5 +75,8 @@
         "stylelint-config-standard-scss": "^13.1.0",
         "typescript": "^5.5.3",
         "typescript-eslint": "^7.16.1"
+    },
+    "overrides": {
+        "eslint": "^9.7.0"
     }
 }

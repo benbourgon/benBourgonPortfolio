@@ -1,42 +1,20 @@
-import eslintPluginAstro from "eslint-plugin-astro";
-import parser from "astro-eslint-parser";
-import eslint from "@eslint/js";
+import globals from "globals";
+import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
+import eslintPluginAstro from "eslint-plugin-astro";
 
-export default tseslint.config(
+export default [
     {
-        ignores: [
-            "node_modules/",
-            "dist/",
-            "public/",
-            "build/",
-            "out/",
-            ".astro/",
-            ".cache/",
-            ".netlify/",
-            ".vercel/",
-            ".vite/",
-            ".yarn/",
-            "yarn.lock",
-            "package-lock.json",
-            "tsconfig.json",
-            "postcss.config.mjs",
-        ],
+        ignores: ["node_modules", "dist", "build", ".astro/", "src/env.d.ts"],
     },
-    eslint.configs.recommended,
-    ...tseslint.configs.strictTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
     {
-        languageOptions: {
-            parser: tseslint.parser,
-            parser: parser,
-            parserOptions: {
-                project: ["./tsconfig.json"],
-                tsconfigRootDir: import.meta.dirname,
-                extraFileExtensions: [".astro"],
-            },
-        },
-        ...eslintPluginAstro.configs.recommended,
-        ...eslintPluginAstro.configs["jsx-a11y-strict"],
-    }
-);
+        files: ["**/*.{js,mjs,cjs,ts,astro}"],
+    },
+    {
+        languageOptions: { globals: globals.browser },
+    },
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
+    ...eslintPluginAstro.configs.recommended,
+    ...eslintPluginAstro.configs["jsx-a11y-strict"],
+];
