@@ -79,7 +79,7 @@ dd {
 }
 
 :has(:target) {
-    scroll-padding-top: var(--scroll-padding, 0);
+    scroll-padding-bottom: var(--scroll-padding, 6rem);
 }
 
 /* Anchor elements that don't have a class get default styles */

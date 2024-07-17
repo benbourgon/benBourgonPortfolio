@@ -4,12 +4,13 @@
 @use "breakpoints" as *;
 
 :root {
-    --scroll-padding: 0rem;
-
+    --scroll-padding: 6rem;
     @each $colour, $shade-map in $colours {
         /* colour each loop */
         @each $shade, $value in $shade-map {
-            --clr-#{$colour}-#{$shade}: #{$value};
+            & {
+                --clr-#{$colour}-#{$shade}: #{$value};
+            }
             .text-#{$colour}-#{$shade} {
                 color: var(--clr-#{$colour}-#{$shade});
             }
@@ -23,7 +24,9 @@
         /* type-scale each loop */
         @if $screen-size == small {
             @each $size, $value in $font-size {
-                --fs-#{$size}: #{$value};
+                & {
+                    --fs-#{$size}: #{$value};
+                }
                 .fs-#{$size} {
                     font-size: var(--fs-#{$size});
                 }
@@ -31,7 +34,9 @@
         } @else {
             @include mq(small) {
                 @each $size, $value in $font-size {
-                    --fs-#{$size}: #{$value};
+                    & {
+                        --fs-#{$size}: #{$value};
+                    }
                     .fs-#{$size} {
                         font-size: var(--fs-#{$size});
                     }
@@ -42,7 +47,9 @@
 
     @each $weight, $value in $font-weight-scale {
         /* font-weight each loop */
-        --fw-#{$weight}: #{$value};
+        & {
+            --fw-#{$weight}: #{$value};
+        }
         .fw-#{$weight} {
             font-weight: var(--fw-#{$weight});
         }

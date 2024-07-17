@@ -2,22 +2,36 @@
 import { getCollection } from "astro:content";
 import ProjectListItem from "./ProjectListItem.astro";
 const allProjects = await getCollection("projects");
+if (!allProjects) {
+    throw new Error("No project collection found.");
+}
+const getProjectCount = () => (allProjects.length >= 3 ? 3 : allProjects.length);
+const projectCount = getProjectCount();
 ---
-<ul class="project-list">
-  {allProjects.map((project) => {
-    if (project) return (
-        <ProjectListItem
-          project={project}
-        />
-      )
-    })}
+
+<ul class="project-list | cards">
+    {
+        allProjects.map((project) => {
+            if (!project) throw new Error("No project found.");
+            return <ProjectListItem project={project} />;
+        })
+    }
 </ul>
-<style lang="scss">
-  @use "../../sass/abstracts" as *;
-  .project-list {
-    @include box-reset;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+<style lang="scss" define:vars={{ projectCount }}>
+    @use "../../sass/abstracts" as *;
+    .project-list {
+        --card-padding: 1.5rem;
+        @include box-reset;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(var(--card-max-width), 1fr));
+        gap: 2rem;
+        place-items: center;
+        margin: 0 auto;
+    }
+    @include mq("medium") {
+        .project-list {
+            grid-template-columns: repeat(var(--projectCount, 2), minmax(350px, 1fr));
+        }
+    }
 </style>

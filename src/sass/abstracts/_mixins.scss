@@ -66,7 +66,7 @@
     display: flex;
     align-items: flex-end;
 }
-
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 @mixin sticky($top: 0, $bottom: 0, $left: 0, $right: 0) {
     position: sticky;
     top: $top;
@@ -87,8 +87,6 @@
     position: relative;
     &::#{$location} {
         content: $content;
-
-        /* stylelint-disable declaration-block-no-redundant-longhand-properties */
         position: $position;
         top: $top;
         bottom: $bottom;

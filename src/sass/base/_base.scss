@@ -42,8 +42,5 @@ a {
 button {
     background-color: transparent;
     border: none;
-
-    @include hover-lift;
-
     cursor: pointer;
 }

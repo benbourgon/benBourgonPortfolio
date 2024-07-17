@@ -1,0 +1,48 @@
+<a class="logo-container" href="#hero">
+    <span class="logo-initials">BB</span>
+    <span class="logo-top-link">top</span>
+</a>
+<style lang="scss">
+    @use "../../sass/abstracts" as *;
+    .logo-container {
+        display: none;
+    }
+    @include mq("small") {
+        .logo-top-link {
+            display: none;
+        }
+        .logo-container {
+            display: flex;
+            margin: 0 auto;
+            margin-block: 1rem;
+            letter-spacing: 0.1em;
+            width: 6rem;
+            height: 6rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100vw;
+            border: 0.5rem solid $white;
+
+            span {
+                padding: 10px;
+                color: $white;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            &:hover,
+            &:focus-visible {
+                background-color: $white;
+                span {
+                    color: $black;
+                }
+                .logo-initials {
+                    display: none;
+                }
+                .logo-top-link {
+                    display: block;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+</style>

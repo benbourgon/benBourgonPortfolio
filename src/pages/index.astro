@@ -4,19 +4,27 @@ import Default from "@layouts/Default.astro";
 import About from "@components/about/About.astro";
 import Contact from "@components/contact/Contact.astro";
 import Hero from "@components/hero/Hero.astro";
-const heroData = {
-  firstName: "ben",
-  lastName: "bourgon",
-  jobTitle: "web developer",
-};
+import Projects from "@components/projects/Projects.astro";
+
+import { getEntry } from "astro:content";
+
+// Get the site metadata and settings
+const siteSettings = await getEntry("settings", "site-settings");
+if (!siteSettings) {
+    throw new Error("No site settings found");
+}
+const metadata = siteSettings.data;
 ---
-<Default title="Ben Bourgon - Web Developer">
-  <Hero props={heroData} />
-  <About />
-  <!--
-  Temporarily removing these sections
-  <Projects />
-  <Profile />
-  -->
-  <Contact />
+
+<Default title={metadata.siteTitle}>
+    <Hero
+        data={{
+            subtitle: metadata.subtitle,
+            firstName: metadata.firstName,
+            lastName: metadata.lastName,
+        }}
+    />
+    <About />
+    <Projects />
+    <Contact />
 </Default>

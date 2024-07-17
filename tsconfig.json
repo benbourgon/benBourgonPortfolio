@@ -44,17 +44,17 @@
         "allowUnreachableCode": false,
         // Report an error for unused labels instead of just a warning.
         "allowUnusedLabels": false,
-        // Disallow JavaScript files from being imported
-        "allowJs": false,
+        "experimentalDecorators": true,
+        "allowJs": true,
         "baseUrl": ".",
         "paths": {
             "@components/*": ["src/components/*"],
             "@pages/*": ["src/pages/*"],
-            "@profile/*": ["src/components/profile/*"],
             "@layouts/*": ["src/layouts/*"],
             "@images/*": ["src/images/*"],
             "@assets/*": ["public/assets/*"],
-            "@sass/*": ["src/sass/*"]
+            "@sass/*": ["src/sass/*"],
+            "@utils/*": ["src/utils/*"]
         }
     }
 }
