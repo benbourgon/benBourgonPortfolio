@@ -66,17 +66,21 @@ const { title, description, image, links } = project.data;
 
 <style lang="scss">
     @use "../../sass/abstracts" as *;
+
     .card {
         min-height: 100%;
         margin: 0 auto;
-        background-colour: $primary-100;
+        background-color: $primary-100;
         place-items: center;
     }
+
     .flex-container {
         @include flex-column;
+
         align-items: center;
         width: 100%;
     }
+
     .project-title {
         color: $primary-950;
         font-size: $fs-500;
@@ -87,17 +91,22 @@ const { title, description, image, links } = project.data;
         padding-inline: 1rem;
         margin-block-end: 2rem;
     }
+
     .tech-list {
         @include flex-justify-evenly;
+
         align-items: center;
         gap: 1rem;
         margin-block: 1em;
     }
+
     .project-description {
         color: $primary-950;
     }
+
     .links-container {
         @include flex-justify-evenly;
+
         padding: 0;
         align-items: center;
         gap: 1rem;

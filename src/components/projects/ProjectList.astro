@@ -19,9 +19,12 @@ const projectCount = getProjectCount();
 </ul>
 <style lang="scss" define:vars={{ projectCount }}>
     @use "../../sass/abstracts" as *;
+
     .project-list {
         --card-padding: 1.5rem;
+
         @include box-reset;
+
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(var(--card-max-width), 1fr));
@@ -29,8 +32,11 @@ const projectCount = getProjectCount();
         place-items: center;
         margin: 0 auto;
     }
+
     @include mq("medium") {
         .project-list {
+            // Allow up to three columns
+            // stylelint-disable-next-line custom-property-pattern
             grid-template-columns: repeat(var(--projectCount, 2), minmax(350px, 1fr));
         }
     }

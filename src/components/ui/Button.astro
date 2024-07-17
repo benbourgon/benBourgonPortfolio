@@ -1,6 +1,7 @@
 <button class="button"></button>
 <style lang="scss">
     @use "../abstracts" as *;
+
     .button {
         display: inline-block;
         font-weight: $semi-bold;
@@ -15,6 +16,7 @@
         background-color: $primary-500;
         border-radius: 100vw;
         box-shadow: $box-shadow;
+
         @include hover-lift;
 
         &:hover,
@@ -22,10 +24,12 @@
             color: $primary-950;
             background-color: $primary-600;
         }
+
         &:active {
             color: $primary-950;
             background-color: $primary-700;
         }
+
         &:disabled {
             color: $primary-400;
             background-color: $primary-100;
