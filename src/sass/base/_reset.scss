@@ -9,6 +9,7 @@ https://piccalil.li/blog/a-more-modern-css-reset/
 https://chriscoyier.net/2023/10/03/being-picky-about-a-css-reset-for-fun-pleasure/
 https://codepen.io/kevinpowell/pen/abMdOpp
 */
+@use "../abstracts" as *;
 
 /* Box sizing rules */
 *,
@@ -52,7 +53,7 @@ body {
 
 /* Set shorter line heights on headings and interactive elements */
 :is(h1, h2, h3, h4, h5, h6, button, input, label) {
-    line-height: 1.1;
+    line-height: $tighter-line-height;
 }
 
 /* Balance text wrapping on headings */
@@ -65,7 +66,6 @@ body {
 /* prevent orphans in supported browsers */
 p,
 li,
-.intro-text,
 dd {
     max-width: var(--p-max-width, 65ch);
     text-wrap: pretty;

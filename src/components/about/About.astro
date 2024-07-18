@@ -56,7 +56,10 @@ const { title, preamble, image, flow } = data;
     }
 
     h3 {
-        text-wrap: pretty;
+        font-size: $heading-size-lg;
+        text-wrap: balance;
+        word-break: break-word;
+        hyphens: manual;
     }
 
     a {
@@ -78,6 +81,7 @@ const { title, preamble, image, flow } = data;
 
     .grid-container {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
 
     .image-container {
@@ -106,10 +110,6 @@ const { title, preamble, image, flow } = data;
 
         .content-container {
             margin-block-start: 0;
-        }
-
-        h3 {
-            text-wrap: balance;
         }
     }
 

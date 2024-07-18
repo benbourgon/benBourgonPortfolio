@@ -39,7 +39,17 @@
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
     "editor.formatOnSave": true,
-    "cSpell.words": ["devicon", "nocheck", "xlarge", "xsmall", "xxlarge", "xxsmall"],
+    "cSpell.words": [
+        "devicon",
+        "keydown",
+        "mouseenter",
+        "mouseleave",
+        "nocheck",
+        "xlarge",
+        "xsmall",
+        "xxlarge",
+        "xxsmall"
+    ],
     "prettier.documentSelectors": ["[\"**/*.astro\"]"],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[astro]": {
