@@ -73,7 +73,7 @@ dd {
 
 /* Allow smooth-scrolling for users with no reduced motion preference */
 @media (prefers-reduced-motion: no-preference) {
-    :has(:target) {
+    html {
         scroll-behavior: smooth;
     }
 }

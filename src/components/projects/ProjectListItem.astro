@@ -61,7 +61,7 @@ const { title, description, image, links } = project.data;
     </p>
     <!--.flex-container end-->
     <ul slot="footer" class="links-container">
-        {links.map((link) => <ProjectLink link={link} projectName={title} />)}
+        {links.map((link) => <ProjectLink link={link} />)}
     </ul>
     <!--.links-container end-->
 </Card>
