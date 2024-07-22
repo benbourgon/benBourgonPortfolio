@@ -37,6 +37,8 @@ const { title, description, image, links } = project.data;
         src={image.src}
         alt={image.alt ?? `${title} screenshot`}
         resize="fill"
+        width="430"
+        height="323"
         errorImage={imageNotFound.src}
     />
     <h3 class="project-title" slot="header">{title}</h3>

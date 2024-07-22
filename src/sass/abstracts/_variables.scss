@@ -80,9 +80,10 @@ $body-size-sm: $fs-200;
 $icon-size: $fs-500;
 
 /* Line height variables */
-$ben-heading-height: var(--fs-800);
-$bourgon-heading-height: var(--fs-900);
-$roomy-line-height: var(--fs-600);
+$ben-heading-height: $fs-800;
+$bourgon-heading-height: $fs-900;
+$tighter-line-height: 1.2;
+$roomy-line-height: 1.6666666667;
 $body-height: auto;
 
 /* Box shadow variables */
