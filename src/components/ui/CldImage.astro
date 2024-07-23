@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import type { RemoteImageProps } from "astro:assets";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { CLOUDINARY_CLOUD_NAME } from "astro:env/server";
+
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: CLOUDINARY_CLOUD_NAME,
+    },
+    url: {
+        secure: true,
+    },
+});
+
+type Props = RemoteImageProps & {
+    height: number;
+    width: number;
+};
+
+const { src, alt, height, width, ...props } = Astro.props;
+
+const image = cld.image(src);
+
+// auto format and quality
+image.format("auto").quality("auto");
+
+const imgSrc = image.toURL();
+---
+
+<Image alt={alt} width={width} height={height} loading="lazy" {...props} src={imgSrc} />
+
+<style>
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+</style>
