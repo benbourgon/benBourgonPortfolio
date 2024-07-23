@@ -7,7 +7,7 @@ import type { HTMLAttributes } from "astro/types";
 import Card from "@components/ui/Card.astro";
 import SkillListItem from "@components/ui/SkillListItem.astro";
 import ProjectLink from "@components/projects/ProjectLink.astro";
-import { Cloudinary } from "astro-cloudinary-image";
+import CldImage from "@components/ui/CldImage.astro";
 import imageNotFound from "@images/imageNotFoundSquare.svg";
 
 // interface
@@ -32,14 +32,12 @@ const { title, description, image, links } = project.data;
 ---
 
 <Card class:list={["| bg-primary-50", attributes.class]} {...attributes}>
-    <Cloudinary
+    <CldImage
         slot="image"
         src={image.src}
         alt={image.alt ?? `${title} screenshot`}
-        resize="fill"
-        width="430"
-        height="323"
-        errorImage={imageNotFound.src}
+        width={430}
+        height={323}
     />
     <h3 class="project-title" slot="header">{title}</h3>
     <ul class="tech-list" slot="flow">

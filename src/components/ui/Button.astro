@@ -1,4 +1,10 @@
-<button class="button"></button>
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"button"> {}
+---
+
+<button class:list={"button"}></button>
 <style lang="scss">
     @use "../abstracts" as *;
 

@@ -26,7 +26,6 @@
         "@fontsource-variable/playfair-display": "^5.0.25",
         "@webcomponents/template-shadowroot": "^0.2.1",
         "astro": "^4.11.6",
-        "astro-cloudinary-image": "^0.0.6",
         "astro-icon": "^1.1.0",
         "astro-purgecss": "^4.1.1",
         "autoprefixer": "^10.4.19",
