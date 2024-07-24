@@ -6,9 +6,6 @@ import CldImage from "@components/ui/CldImage.astro";
 // Modules
 import { getEntry } from "astro:content";
 
-// Media
-// import imageNotFound from "@images/imageNotFoundSquare.svg";
-
 // Schema Types
 import { aboutSection } from "../../schemaTypes/about";
 
@@ -23,15 +20,6 @@ const { title, preamble, image, flow } = data;
         <SectionHeading heading={title} preamble={preamble} colour={"text-primary-950"} />
         <div class="grid-container">
             <div class="image-container | rounded-lg">
-                <!-- <Cloudinary
-                    src={image.src}
-                    alt={image.alt ?? "Ben Bourgon, the web developer who wrote this alt text."}
-                    errorImage={imageNotFound.src}
-                    width="500"
-                    height="750"
-                    resize="fill"
-                    gravity="face"
-                /> -->
                 <CldImage
                     src={image.src}
                     alt={image.alt ?? "Ben Bourgon, the web developer who wrote this alt text."}
