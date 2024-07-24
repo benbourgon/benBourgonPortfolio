@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import type { RemoteImageProps } from "astro:assets";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { CLOUDINARY_CLOUD_NAME } from "astro:env/server";
+import imageNotFound from "@images/imageNotFoundSquare.svg";
 
 const cld = new Cloudinary({
     cloud: {
@@ -14,21 +15,29 @@ const cld = new Cloudinary({
 });
 
 type Props = RemoteImageProps & {
-    height: number;
-    width: number;
+    height: number | `${number}`;
+    width: number | `${number}`;
 };
 
 const { src, alt, height, width, ...props } = Astro.props;
 
+if (!src) {
+    throw new Error("CldImage component requires a src prop.");
+}
+const imageNotFoundSrc = imageNotFound.src;
 const image = cld.image(src);
-
-// auto format and quality
 image.format("auto").quality("auto");
-
 const imgSrc = image.toURL();
 ---
 
-<Image alt={alt} width={width} height={height} loading="lazy" {...props} src={imgSrc} />
+<Image
+    alt={alt}
+    width={width}
+    height={height}
+    loading="lazy"
+    {...props}
+    src={typeof imgSrc === "string" ? imgSrc : imageNotFoundSrc}
+/>
 
 <style>
     img {
