@@ -26,6 +26,8 @@ const { title, preamble, image, flow } = data;
                     width={500}
                     height={750}
                     loading="eager"
+                    type="person"
+                    fetchpriority="high"
                 />
             </div>
             <!--.image-container end-->
@@ -66,12 +68,6 @@ const { title, preamble, image, flow } = data;
         &:focus-visible {
             outline: 3px solid $blue-sapphire;
         }
-    }
-
-    .about-link-container {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
     }
 
     .grid-container {

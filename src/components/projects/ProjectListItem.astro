@@ -37,6 +37,9 @@ const { title, description, image, links } = project.data;
         alt={image.alt ?? `${title} screenshot`}
         width={430}
         height={323}
+        loading="lazy"
+        type="project"
+        decoding="async"
     />
     <h3 class="project-title" slot="header">{title}</h3>
     <ul class="tech-list" slot="flow">

@@ -10,11 +10,11 @@ const { preamble, heading, colour, ...attributes } = Astro.props;
 
 <div class:list={["section-heading-container", attributes.class]}>
     <h2 class=`uppercase ${colour} fw-bold fs-900`>
-        <span class={`fw-regular heading-size-sm lowercase ${colour}`}>
-            {preamble}
-            <span class="sr-only">:</span>
-        </span>
         {heading}
+        <span class={`fw-regular heading-size-sm lowercase ${colour}`}>
+            <span class="sr-only">:</span>
+            {preamble}
+        </span>
     </h2>
 </div>
 <style lang="scss">
