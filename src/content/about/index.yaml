@@ -1,7 +1,7 @@
 title: "hello"
 preamble: "nice to meet you"
 image:
-    src: "Headshots/osm4kjukdthiuzvticll"
+    src: "headshots/osm4kjukdthiuzvticll"
     alt: "Ben Bourgon, the web developer who wrote this alt text"
 flow:
     heading: "I'm Ben, a Web Dev­eloper from Toronto, Ontario."
