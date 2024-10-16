@@ -25,7 +25,7 @@
         "@fontsource-variable/montserrat": "^5.0.19",
         "@fontsource-variable/playfair-display": "^5.0.25",
         "@webcomponents/template-shadowroot": "^0.2.1",
-        "astro": "^4.12.3",
+        "astro": "^4.16.3",
         "astro-critters": "^2.1.10",
         "astro-icon": "^1.1.0",
         "astro-purgecss": "^4.1.1",
