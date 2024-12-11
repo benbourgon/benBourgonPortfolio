@@ -1,7 +1,8 @@
 /* src/schemaTypes/project.ts */
 import { z, reference } from "astro:content";
-import { link } from "./link.ts";
+import { link } from "./link";
 export const project = z.object({
+    order: z.number(),
     title: z.string(),
     image: z.object({
         src: z.string().min(1),

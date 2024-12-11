@@ -1,0 +1,5 @@
+---
+content: "about"
+href: "#about"
+icon: "lucide:info"
+---

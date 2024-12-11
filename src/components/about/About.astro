@@ -11,6 +11,11 @@ import { aboutSection } from "../../schemaTypes/about";
 
 // Get the about section data
 const about = await getEntry("about", "index");
+if (!about) {
+    throw new Error(
+        "Failed to load about section data. Please verify content/about/index.md exists."
+    );
+}
 const data = aboutSection.parse(about.data);
 const { title, preamble, image, flow } = data;
 ---
