@@ -31,6 +31,7 @@
         "astro-purgecss": "^5.0.0",
         "autoprefixer": "^10.4.19",
         "cssnano": "^7.0.4",
+        "netlify-cli": "^17.38.0",
         "normalize.css": "^8.0.1",
         "npm-check-updates": "^17.1.11",
         "prettier": "^3.4.2",
