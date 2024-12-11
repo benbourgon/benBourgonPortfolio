@@ -12,6 +12,7 @@ interface Props extends HTMLAttributes<"nav"> {
 
 // Props
 const { navItems, ...attributes } = Astro.props;
+const sortedNavItems = navItems.toSorted((a, b) => a.data.order - b.data.order);
 ---
 
 <nav
@@ -20,7 +21,11 @@ const { navItems, ...attributes } = Astro.props;
     {...attributes}
 >
     <ul class="navigation-list">
-        {navItems.map((navItem) => <NavListItem entry={navItem} class="navigation-list-item" />)}
+        {
+            sortedNavItems.map((navItem) => (
+                <NavListItem entry={navItem} class="navigation-list-item" />
+            ))
+        }
         <li class="navigation-list-item">
             <Logo />
         </li>

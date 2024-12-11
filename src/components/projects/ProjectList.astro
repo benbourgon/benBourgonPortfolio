@@ -7,11 +7,12 @@ if (!allProjects) {
 }
 const getProjectCount = () => (allProjects.length >= 3 ? 3 : allProjects.length);
 const projectCount = getProjectCount();
+const allProjectsSorted = allProjects.toSorted((a, b) => a.data.order - b.data.order);
 ---
 
 <ul class="project-list | cards">
     {
-        allProjects.map((project) => {
+        allProjectsSorted.map((project) => {
             if (!project) throw new Error("No project found.");
             return <ProjectListItem project={project} />;
         })
