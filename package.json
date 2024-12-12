@@ -21,21 +21,14 @@
         "@astrojs/netlify": "^6.0.0",
         "@astrojs/sitemap": "^3.2.1",
         "@cloudinary/url-gen": "^1.21.0",
-        "@floating-ui/dom": "^1.6.12",
         "@fontsource-variable/montserrat": "^5.1.0",
         "@fontsource-variable/playfair-display": "^5.1.0",
-        "@webcomponents/template-shadowroot": "^0.2.1",
         "astro": "^5.0.5",
-        "astro-critters": "^2.1.10",
         "astro-icon": "^1.1.0",
-        "astro-purgecss": "^5.0.0",
         "autoprefixer": "^10.4.19",
         "cssnano": "^7.0.4",
-        "netlify-cli": "^17.38.0",
         "normalize.css": "^8.0.1",
-        "npm-check-updates": "^17.1.11",
-        "prettier": "^3.4.2",
-        "purgecss": "^7.0.2"
+        "prettier": "^3.4.2"
     },
     "devDependencies": {
         "@iconify-json/akar-icons": "^1.2.1",
