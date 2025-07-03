@@ -1,15 +1,16 @@
 ---
 // components/ui/navigation/NavListItem.astro
 
-// Components
-import { Icon } from "astro-icon/components";
+// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
+import type { CollectionEntry } from "astro:content";
 
 // Types & Interfaces
 import type { HTMLAttributes } from "astro/types";
-import type { CollectionEntry } from "astro:content";
+// Components
+import { Icon } from "astro-icon/components";
 export type navListItemProps = CollectionEntry<"navItems">;
 interface Props extends HTMLAttributes<"li"> {
-    entry: navListItemProps;
+  entry: navListItemProps;
 }
 // Props
 const { entry, ...attributes } = Astro.props;
@@ -19,35 +20,35 @@ const { href, content, icon } = entry.data;
 ---
 
 <li class:list={["navigation-list-item", attributes.class]} {...attributes}>
-    <a class="navigation-link" href={href}>
-        <Icon name={icon} class="icon" size={25} />
-        <span class="content">{content}</span>
-    </a>
+  <a class="navigation-link" href={href}>
+    <Icon name={icon} class="icon" size={25} />
+    <span class="content">{content}</span>
+  </a>
 </li>
 <style lang="scss">
-    @use "../../../sass/abstracts/" as *;
+  @use "../../../sass/abstracts/" as *;
+  a {
+    color: $neutral-50;
+    display: grid;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 50vw;
+  }
+  .content {
+    font-size: $fs-500;
+    width: fit-content;
+    text-transform: capitalize;
+  }
+  @include mq("small") {
     a {
-        color: $neutral-50;
-        display: grid;
-        padding-block: 0.5rem;
-        padding-inline: 1rem;
-        place-items: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        border-radius: 50vw;
+      place-items: center start;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 1fr;
+      column-gap: 1rem;
+      grid-template-rows: 1fr;
     }
-    .content {
-        font-size: $fs-500;
-        width: fit-content;
-        text-transform: capitalize;
-    }
-    @include mq("small") {
-        a {
-            place-items: center start;
-            grid-template-columns: 1fr 3fr;
-            grid-template-rows: 1fr;
-            column-gap: 1rem;
-            grid-template-rows: 1fr;
-        }
-    }
+  }
 </style>

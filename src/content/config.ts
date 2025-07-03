@@ -1,7 +1,7 @@
-/* Import utilities from `astro:content` */
+// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
 import { defineCollection } from "astro:content";
 /* Import schema definitions */
-import { project, skill, navItem, siteSettings, aboutSection } from "../schemaTypes/";
+import { aboutSection, navItem, project, siteSettings, skill } from "../schemaTypes/index.ts";
 
 /* Define a `type` and `schema` for each collection */
 const projects = defineCollection({

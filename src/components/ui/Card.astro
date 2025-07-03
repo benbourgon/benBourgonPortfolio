@@ -1,60 +1,64 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+
 interface Props extends HTMLAttributes<"li"> {}
 const { ...attributes } = Astro.props;
 ---
 
-<li class:list={["card | box-shadow-5 rounded-lg", attributes.class]} {...attributes}>
-    <article class="card-article | rounded-lg">
-        <header>
-            <div class="image-container">
-                <slot name="image" />
-            </div>
-            <slot name="header" />
-        </header>
-        <div class="grid-container">
-            <!--.image-container end-->
-            <div class="card-flow-content | flow | text-neutral-900 fs-500">
-                <slot name="flow" />
-            </div>
-            <!--.card-flow-content end-->
-        </div>
-        <!--.grid-container end-->
-        <footer class="card-footer">
-            <slot name="footer" />
-        </footer>
-    </article>
+<li
+  class:list={["card | box-shadow-5 rounded-lg", attributes.class]}
+  {...attributes}
+>
+  <article class="card-article | rounded-lg">
+    <header>
+      <div class="image-container">
+        <slot name="image" />
+      </div>
+      <slot name="header" />
+    </header>
+    <div class="grid-container">
+      <!--.image-container end-->
+      <div class="card-flow-content | flow | text-neutral-900 fs-500">
+        <slot name="flow" />
+      </div>
+      <!--.card-flow-content end-->
+    </div>
+    <!--.grid-container end-->
+    <footer class="card-footer">
+      <slot name="footer" />
+    </footer>
+  </article>
 </li>
 <!--.card end-->
 <style lang="scss">
-    @use "../../sass/abstracts" as *;
-    @use "../../sass/utilities" as *;
-    .card {
-        height: 100%;
-    }
-    .card-article {
-        min-height: 100%;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-    .image-container {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-    .card img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-    }
-    .card-flow-content {
-        padding-inline: 1rem;
-        margin-block-end: 1rem;
-    }
-    .card-footer {
-        width: 100%;
-        padding-inline: 1rem;
-        padding-block: 1rem;
-        border-radius: 0 0 0.5rem 0.5rem;
-    }
+  @use "../../sass/abstracts" as *;
+  @use "../../sass/utilities" as *;
+  .card {
+    height: 100%;
+  }
+  .card-article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .card img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  .card-flow-content {
+    padding-inline: 1rem;
+    margin-block-end: 1rem;
+  }
+  .card-footer {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
 </style>

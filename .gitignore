@@ -5,7 +5,8 @@ node_modules/
 *.psd
 designs/
 .astro/
+.astro/**
 dist/
 .vscode/
 # Local Netlify folder
-.netlify
+.netlify/

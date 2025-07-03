@@ -1,13 +1,14 @@
 ---
 /* src/components/ui/navigation/Navigation.astro */
-// Components
-import NavListItem from "@components/ui/navigation/NavListItem.astro";
-import Logo from "@components/ui/Logo.astro";
 // Types and Interfaces
 import type { HTMLAttributes } from "astro/types";
-import type { navListItemProps } from "@components/ui/navigation/NavListItem.astro";
+// Components
+import Logo from "@/components/ui/Logo.astro";
+import type { navListItemProps } from "@/components/ui/navigation/NavListItem.astro";
+import NavListItem from "@/components/ui/navigation/NavListItem.astro";
+
 interface Props extends HTMLAttributes<"nav"> {
-    navItems: navListItemProps[];
+  navItems: navListItemProps[];
 }
 
 // Props
@@ -15,58 +16,62 @@ const { navItems, ...attributes } = Astro.props;
 ---
 
 <nav
-    aria-roledescription="primary navigation"
-    class:list={["navigation", attributes.class]}
-    {...attributes}
+  aria-roledescription="primary navigation"
+  class:list={["navigation", attributes.class]}
+  {...attributes}
 >
-    <ul class="navigation-list">
-        {navItems.map((navItem) => <NavListItem entry={navItem} class="navigation-list-item" />)}
-        <li class="navigation-list-item">
-            <Logo />
-        </li>
-    </ul>
+  <ul class="navigation-list">
+    {
+      navItems.map((navItem) => (
+        <NavListItem entry={navItem} class="navigation-list-item" />
+      ))
+    }
+    <li class="navigation-list-item">
+      <Logo />
+    </li>
+  </ul>
 </nav>
 
 <style lang="scss">
-    @use "../../../sass/abstracts/" as *;
+  @use "../../../sass/abstracts/" as *;
+  nav {
+    background-color: $neutral-800;
+    opacity: 0.95;
+    position: fixed;
+    width: 100%;
+    min-height: 4rem;
+    bottom: 0;
+    z-index: 50;
+  }
+  .navigation-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(3rem, 1fr));
+    margin: 0;
+    list-style: none;
+  }
+  @include mq("small") {
     nav {
-        background-color: $neutral-800;
-        opacity: 0.95;
-        position: fixed;
-        width: 100%;
-        min-height: 4rem;
-        bottom: 0;
-        z-index: 50;
+      position: sticky;
+      opacity: 1;
+      top: 0;
+      width: 100%;
+      max-height: 100vh;
+      max-height: 100dvh;
+      border-radius: 0;
     }
     .navigation-list {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(3rem, 1fr));
-        margin: 0;
-        list-style: none;
+      position: sticky;
+      @include flex-column;
+      justify-content: start;
+      padding-inline: 0.5rem;
+      padding-block: 1rem;
+      margin-block-start: 3rem;
+      gap: 2rem;
+      height: 100%;
     }
-    @include mq("small") {
-        nav {
-            position: sticky;
-            opacity: 1;
-            top: 0;
-            width: 100%;
-            max-height: 100vh;
-            max-height: 100dvh;
-            border-radius: 0;
-        }
-        .navigation-list {
-            position: sticky;
-            @include flex-column;
-            justify-content: start;
-            padding-inline: 0.5rem;
-            padding-block: 1rem;
-            margin-block-start: 3rem;
-            gap: 2rem;
-            height: 100%;
-        }
-        .navigation-list-item:last-child {
-            margin-block-start: auto;
-            padding-block-end: 2rem;
-        }
+    .navigation-list-item:last-child {
+      margin-block-start: auto;
+      padding-block-end: 2rem;
     }
+  }
 </style>
