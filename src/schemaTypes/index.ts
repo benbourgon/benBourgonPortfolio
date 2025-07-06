@@ -1,8 +1,8 @@
 /* src/schemaTypes/index.ts */
 
-export { project } from "./project";
-export { skill } from "./skill";
-export { link } from "./link";
-export { navItem } from "./navItem";
-export { siteSettings } from "./siteSettings";
-export { aboutSection } from "./about";
+export { aboutSection } from "./about.ts";
+export { link } from "./link.ts";
+export { navItem } from "./navItem.ts";
+export { project } from "./project.ts";
+export { siteSettings } from "./siteSettings.ts";
+export { skill } from "./skill.ts";

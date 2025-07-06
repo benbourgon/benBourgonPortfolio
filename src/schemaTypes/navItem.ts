@@ -1,4 +1,5 @@
 /* src/schemaTypes/navItem.ts */
+// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
 import { z } from "astro:content";
 export const navItem = z.object({
     content: z.string(),

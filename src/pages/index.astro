@@ -1,30 +1,28 @@
 ---
-/* pages/index.astro */
-import Default from "@layouts/Default.astro";
-import About from "@components/about/About.astro";
-import Contact from "@components/contact/Contact.astro";
-import Hero from "@components/hero/Hero.astro";
-import Projects from "@components/projects/Projects.astro";
-
+// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
 import { getEntry } from "astro:content";
+import About from "@/components/about/About.astro";
+import Contact from "@/components/contact/Contact.astro";
+import Hero from "@/components/hero/Hero.astro";
+/* pages/index.astro */
+import Default from "@/layouts/Default.astro";
 
 // Get the site metadata and settings
 const siteSettings = await getEntry("settings", "site-settings");
 if (!siteSettings) {
-    throw new Error("No site settings found");
+  throw new Error("No site settings found");
 }
 const metadata = siteSettings.data;
 ---
 
 <Default title={metadata.siteTitle}>
-    <Hero
-        data={{
-            subtitle: metadata.subtitle,
-            firstName: metadata.firstName,
-            lastName: metadata.lastName,
-        }}
-    />
-    <About />
-    <Projects />
-    <Contact />
+  <Hero
+    data={{
+      subtitle: metadata.subtitle,
+      firstName: metadata.firstName,
+      lastName: metadata.lastName,
+    }}
+  />
+  <About />
+  <Contact />
 </Default>

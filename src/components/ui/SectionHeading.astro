@@ -1,38 +1,36 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+
 interface Props extends HTMLAttributes<"div"> {
-    preamble: string;
-    heading: string;
-    colour?: string;
+  preamble: string;
+  heading: string;
+  colour?: string;
 }
 const { preamble, heading, colour, ...attributes } = Astro.props;
 ---
 
 <div class:list={["section-heading-container", attributes.class]}>
     <h2 class=`uppercase ${colour} fw-bold fs-900`>
-        {heading}
         <span class={`fw-regular heading-size-sm lowercase ${colour}`}>
-            <span class="sr-only">:</span>
             {preamble}
+            <span class="sr-only">:</span>
         </span>
+        {heading}
     </h2>
 </div>
 <style lang="scss">
     @use "../../sass/abstracts" as *;
     @use "../../sass/utilities" as *;
-
     .section-heading-container {
         width: 100%;
-
         @include flex-column;
-
         justify-content: center;
         align-items: center;
 
-        h2 {
-            position: relative;
-            display: flex;
-            width: fit-content;
+    h2 {
+      position: relative;
+      display: flex;
+      width: fit-content;
 
             span:not(.sr-only) {
                 width: 50%;
@@ -45,7 +43,7 @@ const { preamble, heading, colour, ...attributes } = Astro.props;
                 font-family: $subheading-font;
                 display: block;
                 text-align: left;
-                border-left: 1px solid currentcolor;
+                border-left: 1px solid currentColor;
                 padding: 2ex 0 2ex 0.5em;
                 margin-bottom: 5ex;
                 text-wrap: balance;

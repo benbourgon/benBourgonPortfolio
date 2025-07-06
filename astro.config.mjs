@@ -1,25 +1,23 @@
-import { defineConfig, passthroughImageService, envField } from "astro/config";
-import icon from "astro-icon";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import yaml from "@rollup/plugin-yaml";
+import { defineConfig, envField } from "astro/config";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
     output: "static",
     site: "https://www.benbourgon.com",
     integrations: [icon(), mdx(), sitemap()],
-    image: {
-        domains: ["res.cloudinary.com"],
-        service: passthroughImageService(),
-        provider: "cloudinary",
-        dir: "images",
+    vite: {
+        plugins: [yaml()],
     },
     env: {
-        schema: {
-            CLOUDINARY_CLOUD_NAME: envField.string({
-                context: "server",
-                access: "secret",
-            }),
-        },
+      schema: {
+        PUBLIC_CLOUDINARY_CLOUD_NAME: envField.string({
+          context: "client",
+          access: "public",
+        }),
+      }
     },
 });

@@ -1,118 +1,114 @@
 ---
 /* components/AboutSection/About.astro */
-// Components
-import SectionHeading from "@components/ui/SectionHeading.astro";
-import CldImage from "@components/ui/CldImage.astro";
+/** biome-ignore-all lint/nursery/noUnresolvedImports: <biome can't resolve imports from astro> */
 // Modules
+import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
-
+// Components
+import SectionHeading from "@/components/ui/SectionHeading.astro";
+// Image Assets
+import headshot from "../../content/assets/headshot-cloudinary-edit.jpg";
 // Schema Types
-import { aboutSection } from "../../schemaTypes/about";
+import { aboutSection } from "../../schemaTypes/about.ts";
 
 // Get the about section data
 const about = await getEntry("about", "index");
 if (!about) {
-    throw new Error(
-        "Failed to load about section data. Please verify content/about/index.md exists."
-    );
+  throw new Error("No about section found");
 }
 const data = aboutSection.parse(about.data);
 const { title, preamble, image, flow } = data;
 ---
 
 <section class="about | section" id="about">
-    <div class="wrapper">
-        <SectionHeading heading={title} preamble={preamble} colour={"text-primary-950"} />
-        <div class="grid-container">
-            <div class="image-container | rounded-lg">
-                <CldImage
-                    src={image.src}
-                    alt={image.alt ?? "Ben Bourgon, the web developer who wrote this alt text."}
-                    width={500}
-                    height={750}
-                    loading="eager"
-                    type="person"
-                    fetchpriority="high"
-                />
-            </div>
-            <!--.image-container end-->
-            <div class="content-container | flow | fs-500">
-                <h3 class="fw-bold">{flow.heading}</h3>
-                {flow.content.map((paragraph) => <p class="fw-medium">{paragraph}</p>)}
-            </div>
-        </div>
-        <!--.content-container end-->
+  <div class="wrapper">
+    <SectionHeading
+      heading={title}
+      preamble={preamble}
+      colour={"text-primary-950"}
+    />
+    <div class="grid-container">
+      <div class="image-container | rounded-lg">
+        <Image
+          src={headshot}
+          alt={image.alt ??
+            "Ben Bourgon, the developer who wrote this alt text."}
+          width={350}
+          height={525}
+          loading="eager"
+        />
+      </div>
+      <!--.image-container end-->
+      <div class="content-container | flow | fs-500">
+        <h3 class="fw-bold">{flow.heading}</h3>
+        {flow.content.map((paragraph) => <p class="fw-medium">{paragraph}</p>)}
+      </div>
     </div>
-    <!--.flex-container end-->
+    <!--.content-container end-->
+  </div>
+  <!--.flex-container end-->
 </section>
 <!--.wrapper end-->
 
 <!--About section end-->
 <style lang="scss">
-    @use "../../sass/abstracts" as *;
-    @use "../../sass/utilities" as *;
-
-    .about {
-        background-color: $primary-50;
-        color: $primary-950;
+  @use "../../sass/abstracts" as *;
+  @use "../../sass/utilities" as *;
+  .about {
+    background-color: $primary-50;
+    color: $primary-950;
+  }
+  h3 {
+    text-wrap: pretty;
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
     }
-
-    h3 {
-        font-size: $heading-size-lg;
-        text-wrap: balance;
-        word-break: break-word;
-        hyphens: manual;
+    &:focus-visible {
+      outline: 3px solid $blue-sapphire;
     }
-
-    a {
-        &:hover {
-            text-decoration: underline;
-            text-underline-offset: 0.5rem;
-        }
-
-        &:focus-visible {
-            outline: 3px solid $blue-sapphire;
-        }
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-
+  }
+  .about-link-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .image-container {
+    aspect-ratio: 2 / 3;
+    width: 85%;
+    max-width: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .content-container {
+    margin-block-start: 2em;
+    padding: 0 1rem;
+  }
+  /* 1024px about section media queries */
+  @include mq("medium") {
     .image-container {
-        aspect-ratio: 2 / 3;
-        width: 85%;
-        max-width: 350px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
+      padding-bottom: 0;
     }
-
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
     .content-container {
-        margin-block-start: 2em;
-        padding: 0 1rem;
+      margin-block-start: 0;
     }
-
-    /* 1024px about section media queries */
-    @include mq("medium") {
-        .image-container {
-            padding-bottom: 0;
-        }
-
-        .grid-container {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .content-container {
-            margin-block-start: 0;
-        }
+    h3 {
+      text-wrap: balance;
     }
-
-    /* 1440px about section media queries */
-    @include mq("large") {
-        .grid-container {
-            grid-template-columns: 1fr 3fr;
-        }
+  }
+  /* 1440px about section media queries */
+  @include mq("large") {
+    .grid-container {
+      grid-template-columns: 1fr 3fr;
     }
+  }
 </style>

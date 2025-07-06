@@ -1,56 +1,55 @@
 ---
 /* components/Hero/Hero.astro */
 import type { HTMLAttributes } from "astro/types";
+
 interface Props extends HTMLAttributes<"section"> {
-    data: {
-        firstName: string;
-        lastName: string;
-        subtitle: string;
-    };
+  data: {
+    firstName: string;
+    lastName: string;
+    subtitle: string;
+  };
 }
 const { data, ...attributes } = Astro.props;
 const { firstName, lastName, subtitle } = data;
 ---
 
-<section class:list={["hero | section", attributes.class]} id="hero" {...attributes}>
-    <h1 class="my-name | uppercase fw-bold">
-        <span class="heading-ben | fs-800">{firstName}</span>
-        <span class="heading-bourgon | fs-900">{lastName}</span>
-    </h1>
-    <h2 class="job-title | heading-size-md fw-regular capitalize">{subtitle}</h2>
+<section
+  class:list={["hero | section", attributes.class]}
+  id="hero"
+  {...attributes}
+>
+  <h1 class="my-name | uppercase fw-bold">
+    <span class="heading-ben | fs-800">{firstName}</span>
+    <span class="heading-bourgon | fs-900">{lastName}</span>
+  </h1>
+  <h2 class="job-title | heading-size-md fw-regular capitalize">{subtitle}</h2>
 </section>
 <!-- hero section end -->
 <style lang="scss">
-    @use "../../sass/abstracts" as *;
-    @use "../../sass/utilities" as *;
-
-    .hero {
-        color: $primary-50;
-    }
-
-    .my-name {
-        @include flex-column;
-        @include box-reset;
-
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        text-align: center;
-        font-family: $heading-font;
-        display: block;
-        line-height: $bourgon-heading-height;
-    }
-
-    .heading-ben,
-    .heading-bourgon,
-    .job-title {
-        display: block;
-    }
-
-    .job-title {
-        @include box-reset;
-
-        margin-top: 1rem;
-        font-family: $heading-font;
-    }
+  @use "../../sass/abstracts" as *;
+  @use "../../sass/utilities" as *;
+  .hero {
+    color: $primary-50;
+  }
+  .my-name {
+    @include flex-column;
+    @include box-reset;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $heading-font;
+    display: block;
+    line-height: $bourgon-heading-height;
+  }
+  .heading-ben,
+  .heading-bourgon,
+  .job-title {
+    display: block;
+  }
+  .job-title {
+    @include box-reset;
+    margin-top: 1rem;
+    font-family: $heading-font;
+  }
 </style>

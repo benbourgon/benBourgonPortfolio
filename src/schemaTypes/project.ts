@@ -1,6 +1,7 @@
 /* src/schemaTypes/project.ts */
-import { z, reference } from "astro:content";
-import { link } from "./link";
+// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
+import { reference, z } from "astro:content";
+import { link } from "./link.ts";
 export const project = z.object({
     order: z.number(),
     title: z.string(),
