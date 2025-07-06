@@ -5,6 +5,7 @@
 
 :root {
     --scroll-padding: 6rem;
+
     @each $colour, $shade-map in $colours {
         /* colour each loop */
         @each $shade, $value in $shade-map {

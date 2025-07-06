@@ -3,7 +3,8 @@
 import type { HTMLAttributes } from "astro/types";
 // Components
 import { Icon } from "astro-icon/components";
-
+// Types
+import type { HTMLAttributes } from "astro/types";
 interface Props extends HTMLAttributes<"li"> {
     link: {
         label: string;
@@ -19,73 +20,41 @@ if (!link.url) throw new Error("No url provided for ProjectLink.");
 const { label, url } = link;
 ---
 
-<li class:list={["project-link-container", attributes.class]} {...attributes}>
-    <project-link>
-        <a
-            href={url}
-            class="project-link-anchor"
-            target="_blank"
-            rel="noopener"
-            aria-describedby="tooltip"
-        >
-            <Icon
-                name={label === "view live" ? "lucide:external-link" : "lucide:github"}
-                size={30}
-            />
-        </a>
-        <div class="link-tooltip" id="tooltip" role="tooltip">
-            {label}
-            <div class="link-tooltip-arrow" id="arrow"></div>
-        </div>
-    </project-link>
-</li>
-
+<a
+    href={url}
+    class:list={["project-link-anchor", attributes.class]}
+    target="_blank"
+    rel="noopener"
+    {...attributes}
+>
+    <Icon
+        name={label === "view live" ? "lucide:external-link" : "lucide:github"}
+        size={30}
+        aria-hidden="true"
+    />
+    <span class="link-label">{label}</span>
+</a>
 <style lang="scss">
     @use "../../sass/abstracts" as *;
-    .project-link-container {
-        position: relative;
-    }
+
     .project-link-anchor {
-        font-size: $fs-500;
-        text-transform: capitalize;
+        font-size: $fs-400;
         color: $primary-800;
         display: grid;
         place-items: center;
-        margin-top: 2rem;
         transition: 200ms ease-in-out;
-        text-decoration: underline;
-        padding: 10px 2px 5px 2px;
+        padding: 10px 2px 5px;
 
-        &:hover,
-        &:focus-visible {
-            font-weight: $bold;
+        span {
+            font-weight: $semi-bold;
         }
+
         &:focus-visible {
             outline: 3px solid $blue-sapphire;
-            outline-offset: -0.26rem;
         }
+
         &:visited {
             color: $primary-800;
         }
-    }
-    .link-tooltip {
-        display: none;
-        background: $neutral-900;
-        color: $primary-50;
-        font-weight: $semi-bold;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        font-size: $fs-400;
-        width: max-content;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .link-tooltip-arrow {
-        position: absolute;
-        background: $neutral-900;
-        width: 0.5rem;
-        height: 0.5rem;
-        transform: rotate(45deg);
     }
 </style>

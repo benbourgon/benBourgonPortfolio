@@ -4,13 +4,16 @@
 </a>
 <style lang="scss">
     @use "../../sass/abstracts" as *;
+
     .logo-container {
         display: none;
     }
+
     @include mq("small") {
         .logo-top-link {
             display: none;
         }
+
         .logo-container {
             display: flex;
             margin: 0 auto;
@@ -29,15 +32,19 @@
                 font-size: 2rem;
                 font-weight: bold;
             }
+
             &:hover,
             &:focus-visible {
                 background-color: $white;
+
                 span {
                     color: $black;
                 }
+
                 .logo-initials {
                     display: none;
                 }
+
                 .logo-top-link {
                     display: block;
                     text-transform: capitalize;

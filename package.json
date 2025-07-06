@@ -1,7 +1,7 @@
 {
     "name": "ben-bourgon-portfolio",
     "version": "1.0.0",
-    "description": "",
+    "description": "Ben Bourgon's personal portfolio website",
     "main": "index.js",
     "scripts": {
         "dev": "astro dev",

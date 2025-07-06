@@ -3,6 +3,7 @@
 import { reference, z } from "astro:content";
 import { link } from "./link.ts";
 export const project = z.object({
+    order: z.number(),
     title: z.string(),
     image: z.object({
         src: z.string().min(1),

@@ -10,12 +10,15 @@
 </footer>
 <style lang="scss">
     @use "../../sass/abstracts" as *;
+
     footer {
         color: $primary-50;
         width: 100%;
         grid-column: 1 / -1;
         padding-bottom: var(--scroll-padding, 6rem);
+
         @include font-size(18);
+
         .wrapper {
             padding: 1.5rem 0;
             display: flex;
@@ -26,9 +29,11 @@
             }
         }
     }
+
     @include mq("small") {
         footer {
             --scroll-padding: 1rem;
+
             grid-column: 2 / -1;
             padding-bottom: var(--scroll-padding, 1rem);
         }

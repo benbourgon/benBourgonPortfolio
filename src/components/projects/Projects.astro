@@ -9,7 +9,7 @@ import ProjectList from "@components/projects/ProjectList.astro";
 
 <section class:list={["projects | section", attributes.class]} id="projects" {...attributes}>
     <div class="wrapper">
-        <SectionHeading preamble={"check out"} heading="my work" colour={"text-primary-50"} />
+        <SectionHeading preamble={"check it out"} heading="my work" colour={"text-primary-50"} />
         <ProjectList />
     </div>
     <!--.wrapper end-->
@@ -18,6 +18,7 @@ import ProjectList from "@components/projects/ProjectList.astro";
 <style lang="scss">
     @use "../../sass/abstracts" as *;
     @use "../../sass/utilities" as *;
+
     .projects {
         background-color: $primary-950;
         color: $primary-50;
