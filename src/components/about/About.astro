@@ -1,14 +1,13 @@
 ---
-// Modules
-// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
-import { getEntry } from "astro:content";
-import { Cloudinary } from "astro-cloudinary-image";
 /* components/AboutSection/About.astro */
+/** biome-ignore-all lint/nursery/noUnresolvedImports: <biome can't resolve imports from astro> */
+// Modules
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 // Components
 import SectionHeading from "@/components/ui/SectionHeading.astro";
-// Media
-import imageNotFound from "@/images/imageNotFoundSquare.svg";
-
+// Image Assets
+import headshot from "../../content/assets/headshot-cloudinary-edit.jpg";
 // Schema Types
 import { aboutSection } from "../../schemaTypes/about.ts";
 
@@ -30,15 +29,13 @@ const { title, preamble, image, flow } = data;
     />
     <div class="grid-container">
       <div class="image-container | rounded-lg">
-        <Cloudinary
-          src={image.src}
+        <Image
+          src={headshot}
           alt={image.alt ??
             "Ben Bourgon, the developer who wrote this alt text."}
-          errorImage={imageNotFound.src}
-          width="350"
-          height="525"
-          resize="fill"
-          gravity="face"
+          width={350}
+          height={525}
+          loading="eager"
         />
       </div>
       <!--.image-container end-->

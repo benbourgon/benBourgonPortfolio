@@ -1,27 +1,29 @@
+// content.config.ts
 // biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
 import { defineCollection } from "astro:content";
+import { glob } from 'astro/loaders';
 /* Import schema definitions */
-import { aboutSection, navItem, project, siteSettings, skill } from "../schemaTypes/index.ts";
+import { aboutSection, navItem, project, siteSettings, skill } from "./schemaTypes/index.ts";
 
-/* Define a `type` and `schema` for each collection */
+/* Define a loader and a schema for each content type*/
 const projects = defineCollection({
-    type: "data",
+    loader: glob({ pattern: "*.yaml", base: "./src/content/projects/" }),
     schema: project,
 });
 const skills = defineCollection({
-    type: "data",
+    loader: glob({ pattern: "*.yaml", base: "./src/content/skills/" }),
     schema: skill,
 });
 const navItems = defineCollection({
-    type: "data",
+    loader: glob({ pattern: "*.yaml", base: "./src/content/navItems/" }),
     schema: navItem,
 });
 const settings = defineCollection({
-    type: "data",
+    loader: glob({ pattern: "site-settings.json", base: "./src/content/settings/" }),
     schema: siteSettings,
 });
 const about = defineCollection({
-    type: "data",
+    loader: glob({ pattern: "index.yaml", base: "./src/content/about/" }),
     schema: aboutSection,
 });
 // Export a single `collections` object to register your collections

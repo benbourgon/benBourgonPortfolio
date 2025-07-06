@@ -1,10 +1,5 @@
 {
     "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
-    "vcs": {
-    "enabled": false,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
     "files": { "ignoreUnknown": false },
     "formatter": {
         "enabled": true,
@@ -57,6 +52,11 @@
     "assist": {
         "enabled": true,
         "actions": { "source": { "organizeImports": "on" } }
+    },
+    "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": true
     },
     "overrides": [
     {

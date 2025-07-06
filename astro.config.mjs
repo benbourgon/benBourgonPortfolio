@@ -1,7 +1,7 @@
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import yaml from "@rollup/plugin-yaml";
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import icon from "astro-icon";
 
 // https://astro.build/config
@@ -12,10 +12,12 @@ export default defineConfig({
     vite: {
         plugins: [yaml()],
     },
-    image: {
-        domains: ["res.cloudinary.com"],
-        service: passthroughImageService(),
-        provider: "cloudinary",
-        dir: "images",
+    env: {
+      schema: {
+        PUBLIC_CLOUDINARY_CLOUD_NAME: envField.string({
+          context: "client",
+          access: "public",
+        }),
+      }
     },
 });
