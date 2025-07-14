@@ -7,15 +7,15 @@ import { aboutSection, navItem, project, siteSettings, skill } from "./schemaTyp
 
 /* Define a loader and a schema for each content type*/
 const projects = defineCollection({
-    loader: glob({ pattern: "*.yaml", base: "./src/content/projects/" }),
+    loader: glob({ pattern: "*.md", base: "./src/content/projects/" }),
     schema: project,
 });
 const skills = defineCollection({
-    loader: glob({ pattern: "*.yaml", base: "./src/content/skills/" }),
+    loader: glob({ pattern: "*.md", base: "./src/content/skills/" }),
     schema: skill,
 });
 const navItems = defineCollection({
-    loader: glob({ pattern: "*.yaml", base: "./src/content/navItems/" }),
+    loader: glob({ pattern: "*.md", base: "./src/content/navItems/" }),
     schema: navItem,
 });
 const settings = defineCollection({
@@ -23,7 +23,7 @@ const settings = defineCollection({
     schema: siteSettings,
 });
 const about = defineCollection({
-    loader: glob({ pattern: "index.yaml", base: "./src/content/about/" }),
+    loader: glob({ pattern: "index.md", base: "./src/content/about/" }),
     schema: aboutSection,
 });
 // Export a single `collections` object to register your collections

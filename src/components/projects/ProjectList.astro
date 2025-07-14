@@ -10,32 +10,46 @@ if (!allProjects) {
 const getProjectCount = () =>
   allProjects.length >= 3 ? 3 : allProjects.length;
 const projectCount = getProjectCount();
-const allProjectsSorted = allProjects.toSorted((a, b) => a.data.order - b.data.order);
+export const allProjectsSorted = allProjects.toSorted(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <ul class="project-list | cards">
-    {
-        allProjects.map((project) => {
-            if (!project) throw new Error("No project found.");
-            return <ProjectListItem project={project} />;
-        })
-    }
+  {
+    allProjects.map((project) => {
+      if (!project) throw new Error("No project found.");
+      return <ProjectListItem project={project} />;
+    })
+  }
 </ul>
 <style lang="scss" define:vars={{ projectCount }}>
-    @use "../../sass/abstracts" as *;
+  @use "../../sass/abstracts" as *;
+
+  .project-list {
+    --card-padding: 1.5rem;
+
+    @include box-reset;
+
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--card-max-width), 1fr)
+    );
+    gap: 2rem;
+    place-items: center;
+    margin: 0 auto;
+  }
+
+  @include mq("medium") {
+    --project-count: 2;
+
     .project-list {
-        --card-padding: 1.5rem;
-        @include box-reset;
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(var(--card-max-width), 1fr));
-        gap: 2rem;
-        place-items: center;
-        margin: 0 auto;
+      grid-template-columns: repeat(
+        var(--project-count, 2),
+        minmax(350px, 1fr)
+      );
     }
-    @include mq("medium") {
-        .project-list {
-            grid-template-columns: repeat(var(--projectCount, 2), minmax(350px, 1fr));
-        }
-    }
+  }
 </style>

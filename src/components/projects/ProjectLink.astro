@@ -1,15 +1,13 @@
 ---
-// Types
-import type { HTMLAttributes } from "astro/types";
 // Components
 import { Icon } from "astro-icon/components";
 // Types
 import type { HTMLAttributes } from "astro/types";
 interface Props extends HTMLAttributes<"li"> {
-    link: {
-        label: string;
-        url: string;
-    };
+  link: {
+    label: string;
+    url: string;
+  };
 }
 // Props
 const { link, ...attributes } = Astro.props;
@@ -21,40 +19,40 @@ const { label, url } = link;
 ---
 
 <a
-    href={url}
-    class:list={["project-link-anchor", attributes.class]}
-    target="_blank"
-    rel="noopener"
-    {...attributes}
+  href={url}
+  class:list={["project-link-anchor", attributes.class]}
+  target="_blank"
+  rel="noopener"
+  {...attributes}
 >
-    <Icon
-        name={label === "view live" ? "lucide:external-link" : "lucide:github"}
-        size={30}
-        aria-hidden="true"
-    />
-    <span class="link-label">{label}</span>
+  <Icon
+    name={label === "view live" ? "lucide:external-link" : "lucide:github"}
+    size={30}
+    aria-hidden="true"
+  />
+  <span class="link-label">{label}</span>
 </a>
 <style lang="scss">
-    @use "../../sass/abstracts" as *;
+  @use "../../sass/abstracts" as *;
 
-    .project-link-anchor {
-        font-size: $fs-400;
-        color: $primary-800;
-        display: grid;
-        place-items: center;
-        transition: 200ms ease-in-out;
-        padding: 10px 2px 5px;
+  .project-link-anchor {
+    font-size: $fs-400;
+    color: $primary-800;
+    display: grid;
+    place-items: center;
+    transition: 200ms ease-in-out;
+    padding: 10px 2px 5px;
 
-        span {
-            font-weight: $semi-bold;
-        }
-
-        &:focus-visible {
-            outline: 3px solid $blue-sapphire;
-        }
-
-        &:visited {
-            color: $primary-800;
-        }
+    span {
+      font-weight: $semi-bold;
     }
+
+    &:focus-visible {
+      outline: 3px solid $blue-sapphire;
+    }
+
+    &:visited {
+      color: $primary-800;
+    }
+  }
 </style>
