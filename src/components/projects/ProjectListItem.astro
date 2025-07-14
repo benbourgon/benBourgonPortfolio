@@ -4,12 +4,12 @@
 // biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
 import { type CollectionEntry, getEntries } from "astro:content";
 import type { HTMLAttributes } from "astro/types";
+// Astro components
+import { Image } from "astro:assets";
 // Components
-import Card from "@components/ui/Card.astro";
-import SkillListItem from "@components/ui/SkillListItem.astro";
-import ProjectLink from "@components/projects/ProjectLink.astro";
-import { Cloudinary } from "astro-cloudinary-image";
-import imageNotFound from "@images/imageNotFoundSquare.svg";
+import Card from "@/components/ui/Card.astro";
+import SkillListItem from "@/components/ui/SkillListItem.astro";
+import ProjectLink from "@/components/projects/ProjectLink.astro";
 
 // interface
 interface Props extends HTMLAttributes<"li"> {
@@ -34,74 +34,91 @@ const { title, description, image, links } = project.data;
 ---
 
 <Card class:list={["| bg-primary-50", attributes.class]} {...attributes}>
-    <Cloudinary
-        slot="image"
-        src={image.src}
-        alt={image.alt ?? `${title} screenshot`}
-        resize="fill"
-        errorImage={imageNotFound.src}
-    />
-    <h3 class="project-title" slot="header">{title}</h3>
-    <ul class="tech-list" slot="flow">
-        {
-            techStackArr?.map((tech) =>
-                tech ? (
-                    <SkillListItem
-                        name={tech.data.name}
-                        label={tech.data.label}
-                        size={25}
-                        colour={"var(--clr-primary-800)"}
-                    />
-                ) : null
-            )
-        }
-    </ul>
-    <p class="project-description" slot="flow">
-        {description}
-    </p>
-    <!--.flex-container end-->
-    <ul slot="footer" class="links-container">
-        {links.map((link) => <ProjectLink link={link} />)}
-    </ul>
-    <!--.links-container end-->
+  <Image
+    slot="image"
+    src={image.src}
+    alt={image.alt ?? `${title} screenshot`}
+    width={430}
+    height={323}
+    loading="lazy"
+    decoding="async"
+  />
+  <h3 class="project-title" slot="header">{title}</h3>
+  <ul class="tech-list" slot="flow">
+    {
+      techStackArr?.map((tech) =>
+        tech ? (
+          <SkillListItem
+            name={tech.data.name}
+            label={tech.data.label}
+            size={25}
+            colour={"var(--clr-primary-800)"}
+          />
+        ) : null,
+      )
+    }
+  </ul>
+  <p class="project-description" slot="flow">
+    {description}
+  </p>
+  <!--.flex-container end-->
+  <ul slot="footer" class="links-container">
+    {
+      links.map((link) => (
+        <li>
+          <ProjectLink link={link} />
+        </li>
+      ))
+    }
+  </ul>
+  <!--.links-container end-->
 </Card>
 
 <style lang="scss">
-    @use "../../sass/abstracts" as *;
-    .card {
-        min-height: 100%;
-        margin: 0 auto;
-        background-colour: $primary-100;
-        place-items: center;
-    }
-    .flex-container {
-        @include flex-column;
-        align-items: center;
-        width: 100%;
-    }
-    .project-title {
-        color: $primary-950;
-        font-size: $fs-500;
-        font-weight: $bold;
-        text-align: center;
-        width: 100%;
-        text-transform: capitalize;
-        padding-inline: 1rem;
-        margin-block-end: 2rem;
-    }
-    .tech-list {
-        @include flex-justify-evenly;
-        align-items: center;
-        gap: 1rem;
-        margin-block: 1em;
-    }
-    .project-description {
-        color: $primary-950;
-    }
-    .links-container {
-        @include flex-justify-evenly;
-        padding: 0;
-        align-items: center;
-        gap: 1rem;
-    }
+  @use "../../sass/abstracts" as *;
+
+  .card {
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: $primary-100;
+    place-items: center;
+  }
+
+  .flex-container {
+    @include flex-column;
+
+    align-items: center;
+    width: 100%;
+  }
+
+  .project-title {
+    color: $primary-950;
+    font-size: $fs-500;
+    font-weight: $bold;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+    padding-inline: 1rem;
+    margin-block-end: 2rem;
+  }
+
+  .tech-list {
+    @include flex-justify-evenly;
+
+    align-items: center;
+    gap: 1rem;
+    margin-block: 1em;
+  }
+
+  .project-description {
+    color: $primary-950;
+  }
+
+  .links-container {
+    @include flex-justify-evenly;
+
+    padding: 0;
+    align-items: center;
+    gap: 1rem;
+  }
 </style>

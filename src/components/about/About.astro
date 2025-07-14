@@ -1,20 +1,20 @@
 ---
 /* components/AboutSection/About.astro */
-/** biome-ignore-all lint/nursery/noUnresolvedImports: <biome can't resolve imports from astro> */
+// Components
+import SectionHeading from "@/components/ui/SectionHeading.astro";
 // Modules
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
-// Components
-import SectionHeading from "@/components/ui/SectionHeading.astro";
-// Image Assets
-import headshot from "../../content/assets/headshot-cloudinary-edit.jpg";
+// Media
+import Headshot from "../../content/assets/headshot-cloudinary-edit.jpg";
 // Schema Types
-import { aboutSection } from "../../schemaTypes/about.ts";
-
+import { aboutSection } from "../../schemaTypes/about";
 // Get the about section data
 const about = await getEntry("about", "index");
 if (!about) {
-  throw new Error("No about section found");
+  throw new Error(
+    "Failed to load about section data. Please verify content/about/index.md exists.",
+  );
 }
 const data = aboutSection.parse(about.data);
 const { title, preamble, image, flow } = data;
@@ -30,12 +30,13 @@ const { title, preamble, image, flow } = data;
     <div class="grid-container">
       <div class="image-container | rounded-lg">
         <Image
-          src={headshot}
+          src={Headshot}
           alt={image.alt ??
-            "Ben Bourgon, the developer who wrote this alt text."}
-          width={350}
-          height={525}
+            "Ben Bourgon, the web developer who wrote this alt text."}
+          width={500}
+          height={750}
           loading="eager"
+          fetchpriority="high"
         />
       </div>
       <!--.image-container end-->
@@ -54,30 +55,35 @@ const { title, preamble, image, flow } = data;
 <style lang="scss">
   @use "../../sass/abstracts" as *;
   @use "../../sass/utilities" as *;
+
   .about {
     background-color: $primary-50;
     color: $primary-950;
   }
+
   h3 {
-    text-wrap: pretty;
+    font-size: $heading-size-lg;
+    text-wrap: balance;
+    word-break: break-word;
+    hyphens: manual;
   }
+
   a {
     &:hover {
       text-decoration: underline;
       text-underline-offset: 0.5rem;
     }
+
     &:focus-visible {
       outline: 3px solid $blue-sapphire;
     }
   }
-  .about-link-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-  }
+
   .grid-container {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
+
   .image-container {
     aspect-ratio: 2 / 3;
     width: 85%;
@@ -86,25 +92,27 @@ const { title, preamble, image, flow } = data;
     display: flex;
     justify-content: center;
   }
+
   .content-container {
     margin-block-start: 2em;
     padding: 0 1rem;
   }
+
   /* 1024px about section media queries */
   @include mq("medium") {
     .image-container {
       padding-bottom: 0;
     }
+
     .grid-container {
       grid-template-columns: 1fr 1fr;
     }
+
     .content-container {
       margin-block-start: 0;
     }
-    h3 {
-      text-wrap: balance;
-    }
   }
+
   /* 1440px about section media queries */
   @include mq("large") {
     .grid-container {

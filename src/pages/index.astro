@@ -1,11 +1,11 @@
 ---
-// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
-import { getEntry } from "astro:content";
+/* pages/index.astro */
+import Default from "@/layouts/Default.astro";
 import About from "@/components/about/About.astro";
 import Contact from "@/components/contact/Contact.astro";
 import Hero from "@/components/hero/Hero.astro";
-/* pages/index.astro */
-import Default from "@/layouts/Default.astro";
+
+import { getEntry } from "astro:content";
 
 // Get the site metadata and settings
 const siteSettings = await getEntry("settings", "site-settings");
