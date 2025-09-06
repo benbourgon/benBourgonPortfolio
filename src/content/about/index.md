@@ -2,11 +2,10 @@
 title: "hello"
 preamble: "nice to meet you"
 image:
-    alt: "Ben Bourgon, the developer who wrote this alt text"
+    alt: "Headshot of Ben Bourgon"
 flow:
-    heading: "I'm Ben, a Developer from Toronto."
+    heading: "I'm Ben, an IT Professional & Developer from Toronto."
     content:
-        - "I love bringing my creative and technical sides together as a dev."
-        - "My focus is on building composable, content-driven, fast, and accessible websites that serve the needs of businesses and individual users."
-        - " Let's make something cool together!"
+        - "I love bringing my creative and technical sides together to solve complex problems."
+        - "I'm currently working as a Meeting Room Technology Coordinator at the University of Toronto. I manage the AV systems and provide IT client services. As a developer, I am always seeking new challenges with the ultimate goal of building tools, websites and apps that people can extract real value from."
 ---

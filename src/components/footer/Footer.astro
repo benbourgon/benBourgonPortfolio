@@ -1,41 +1,42 @@
 ---
 /* components/Footer/Footer.astro */
+const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
-    <div class="wrapper">
-        <p>© 2024 Ben Bourgon</p>
-    </div>
-    <!--.wrapper end-->
+  <div class="wrapper">
+    <p>© {year} Ben Bourgon</p>
+  </div>
+  <!--.wrapper end-->
 </footer>
 <style lang="scss">
-    @use "../../sass/abstracts" as *;
+  @use "../../sass/abstracts" as *;
 
+  footer {
+    color: $primary-50;
+    width: 100%;
+    grid-column: 1 / -1;
+    padding-bottom: var(--scroll-padding, 6rem);
+
+    @include font-size(18);
+
+    .wrapper {
+      padding: 1.5rem 0;
+      display: flex;
+      place-content: center;
+
+      p {
+        width: fit-content;
+      }
+    }
+  }
+
+  @include mq("small") {
     footer {
-        color: $primary-50;
-        width: 100%;
-        grid-column: 1 / -1;
-        padding-bottom: var(--scroll-padding, 6rem);
+      --scroll-padding: 1rem;
 
-        @include font-size(18);
-
-        .wrapper {
-            padding: 1.5rem 0;
-            display: flex;
-            place-content: center;
-
-            p {
-                width: fit-content;
-            }
-        }
+      grid-column: 2 / -1;
+      padding-bottom: var(--scroll-padding, 1rem);
     }
-
-    @include mq("small") {
-        footer {
-            --scroll-padding: 1rem;
-
-            grid-column: 2 / -1;
-            padding-bottom: var(--scroll-padding, 1rem);
-        }
-    }
+  }
 </style>
