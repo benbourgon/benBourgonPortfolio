@@ -31,8 +31,7 @@ const { title, preamble, image, flow } = data;
       <div class="image-container | rounded-lg">
         <Image
           src={Headshot}
-          alt={image.alt ??
-            "Ben Bourgon, the web developer who wrote this alt text."}
+          alt={image.alt ?? "Headshot of Ben Bourgon."}
           width={500}
           height={750}
           loading="eager"
@@ -63,7 +62,7 @@ const { title, preamble, image, flow } = data;
 
   h3 {
     font-size: $heading-size-lg;
-    text-wrap: balance;
+    text-wrap: pretty;
     word-break: break-word;
     hyphens: manual;
   }
