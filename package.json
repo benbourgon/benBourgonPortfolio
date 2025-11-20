@@ -23,7 +23,7 @@
         "@cloudinary/url-gen": "^1.22.0",
         "@fontsource-variable/montserrat": "^5.2.8",
         "@fontsource-variable/playfair-display": "^5.2.8",
-        "astro": "^5.15.6",
+        "astro": "^5.15.9",
         "astro-icon": "^1.1.5",
         "autoprefixer": "^10.4.21",
         "cssnano": "^7.1.1",
