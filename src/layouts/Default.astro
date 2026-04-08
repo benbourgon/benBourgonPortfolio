@@ -1,11 +1,11 @@
 ---
-// layouts/Default.astro'
-
+// layouts/Default.astro
+// biome-ignore-all lint: correctness/noUnresolvedImports
 // Styles
 import "../sass/main.scss";
 
 // Astro utilities
-// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
+
 import { getCollection } from "astro:content";
 
 // Components
@@ -13,12 +13,8 @@ import BaseHead from "@/components/baseHead/BaseHead.astro";
 import Footer from "@/components/footer/Footer.astro";
 import Navigation from "@/components/ui/navigation/Navigation.astro";
 
-// Fonts
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/playfair-display";
-
 // Types
-import type { HTMLAttributes } from "astro/types";
+import type { HTMLAttributes} from "astro/types";
 
 interface Props extends HTMLAttributes<"html"> {
   title: string;
