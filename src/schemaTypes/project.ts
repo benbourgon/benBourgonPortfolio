@@ -1,15 +1,16 @@
 /* src/schemaTypes/project.ts */
-// biome-ignore lint/nursery/noUnresolvedImports: <biome does not support Astro imports>
-import { reference, z } from "astro:content";
+import { z } from "astro/zod";
+//biome-ignore lint: correctness/noUnresolvedImports: biome does not find astro imports
+import { reference } from "astro:content";
 import { link } from "./link.ts";
 export const project = z.object({
-    order: z.number(),
-    title: z.string(),
-    image: z.object({
-        src: z.string().min(1),
-        alt: z.string().min(1),
-    }),
-    description: z.string(),
-    techStack: z.array(reference("skills")),
-    links: z.array(link),
+  order: z.number(),
+  title: z.string(),
+  image: z.object({
+    src: z.string().min(1),
+    alt: z.string().min(1),
+  }),
+  description: z.string(),
+  techStack: z.array(reference("skills")),
+  links: z.array(link),
 });
