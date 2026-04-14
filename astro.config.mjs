@@ -1,11 +1,19 @@
 import sitemap from "@astrojs/sitemap";
-import { defineConfig, fontProviders } from "astro/config";
+import {
+  defineConfig,
+  fontProviders,
+  passthroughImageService,
+} from "astro/config";
 import icon from "astro-icon";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   output: "static",
   site: "https://www.benbourgon.com",
+  image: {
+    service: passthroughImageService(),
+  },
   fonts: [
     {
       provider: fontProviders.fontsource(),
@@ -18,5 +26,11 @@ export default defineConfig({
       cssVariable: "--font-playfair-display",
     },
   ],
+
   integrations: [icon(), sitemap()],
+  adapter: cloudflare({
+    imageService: {
+      service: "passthrough",
+    },
+  }),
 });
